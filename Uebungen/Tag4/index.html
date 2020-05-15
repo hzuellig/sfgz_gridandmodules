@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font: 150% sans-serif;
+            background: #000000;
+        }
+        .raster div {
+            font-size: calc(100vh / 10);
+            line-height:100%;
+            color:white;
+            text-transform: uppercase;
+            position:relative;
+
+
+        }
+        .raster {
+            width: 100vw;
+            height: 100vh;
+            overflow:hidden;
+            display: grid;
+            grid-template-rows: repeat(10, 1fr);
+            justify-content: space-between;
+            align-items: center;
+            writing-mode: vertical-lr;
+        }
+
+        .animation_left{
+            animation-name: bewegen;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        .animation_right{
+            animation-name: schrumpfen;
+            transform-origin: 0% 0%;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes bewegen {
+            0% {
+                transform: translate(0px, 0px);
+                top: 0%;
+                text-shadow: 0 0 0px #FFFFFF, 0 0 0px #FFFFFF;
+
+
+            }
+            50% {
+                transform: translate(0vw, 50vh) scale(1.2,1.2);
+                top: -50%;
+                text-shadow: 0 0 10px #FFFFFF, 0 0 10px #FFFFFF;
+
+            }
+            100% {
+                transform: translate(0vw, 100vh) scale(1.5,1.5);
+                top: -100%;
+                text-shadow: 0 0 20px #FFFFFF, 0 0 20px #FFFFFF;
+
+            }
+        }
+
+        @keyframes schrumpfen {
+            0% {
+                transform: scale(1,1);
+
+
+
+            }
+            50% {
+                transform: scale(0.5,0.5);
+
+            }
+            100% {
+                transform: scale(1,1);
+
+            }
+        }
+
+
+
+
+    </style>
+    <title>Gridlayout</title>
+</head>
+<body>
+<div class="raster">
+    <div class="animation_right">Strength</div>
+    <div class="animation_left">Strength</div>
+    <div class="animation_right">Strength</div>
+    <div class="animation_left">Strength</div>
+    <div class="animation_right">Strength</div>
+
+    <div class="animation_left">Strength</div>
+    <div class="animation_right">Strength</div>
+    <div class="animation_left">Strength</div>
+    <div class="animation_right">Strength</div>
+    <div class="animation_left">Strength</div>
+</div>
+</body>
+</html>
