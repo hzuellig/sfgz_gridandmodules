@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grid</title>
+    <style>
+        body > * {
+            margin: 4px;
+            padding: 5px;
+            border-radius: 7px;
+        }
+
+        body {
+            font: 120% sans-serif;
+            max-width: 960px;
+            margin: auto;
+            background: #8fcb8f;
+            display: grid;
+            grid-template-areas: "header header header" "nav article aside" "section article aside" "footer footer footer";
+            grid-template-columns: 6em 1fr 6em;
+
+        }
+
+        .article {
+            background: #FFFFCB;
+            grid-area: article;
+        }
+
+        .nav {
+            background: #74bec7;
+            grid-area: nav;
+        }
+
+        .section {
+            background: #c9ffd5;
+            grid-area: section;
+        }
+
+        .aside {
+            background: #2C858D;
+            grid-area: aside;
+        }
+
+        .header {
+            background: #004056;
+            color: #FFFFCB;
+            grid-area: header;
+        }
+
+        .footer {
+            background: #004056;
+            color: #FFFFCB;
+            grid-area: footer;
+        }
+
+        @media all and (max-width: 50em) {
+            body {
+                grid-template-areas: "header header" "nav nav" "aside article" "section article" "footer footer";
+                grid-template-columns: 1fr 4fr;
+            }
+        }
+
+        @media all and (max-width: 30em) {
+            body {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header"><h2>header</h2></div>
+<div class="article"><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+        eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+        dolor sit amet.</div>
+<div class="nav"><h2>nav</h2></div>
+<div class="section"><h2>section</h2></div>
+<div class="aside"><h2>aside</h2></div>
+<div class="footer"><h2>footer</h2></div>
+</body>
+</html>
