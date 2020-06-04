@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7eccf0a-844a-4714-bf1b-ac866d01d750" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/Nina/ND_Website_Text_Projekt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/Nina/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/Nina/styles/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/test-trigger.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/trigger-bsp-sina.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/trigger_vorlage_sina.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Uebungen/Tag6/viewport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -68,8 +61,8 @@
       <file leaf-file-name="ND_Website_Text_Projekt.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebungen/Tag6/Nina/ND_Website_Text_Projekt.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="252" column="0" lean-forward="false" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,8 +113,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-642">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -223,6 +216,28 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="Tag6">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="sfgz_gridandmodules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Uebungen">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Tag6">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Nina">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -550,7 +565,7 @@
       <workItem from="1589556077359" duration="3241000" />
       <workItem from="1589608512547" duration="9957000" />
       <workItem from="1589641563892" duration="7000" />
-      <workItem from="1591274541829" duration="9092000" />
+      <workItem from="1591274541829" duration="9318000" />
     </task>
     <task id="LOCAL-00001" summary="tests css animation">
       <created>1589013005756</created>
@@ -587,11 +602,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591289201804</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tag6">
+      <created>1591289248171</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591289248171</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52921000" />
+    <option name="totallyTimeSpent" value="53147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -628,7 +650,8 @@
     <MESSAGE value="Tag4-Kombination Grid Animation" />
     <MESSAGE value="Tag5" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Tag6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tag6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -981,14 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Uebungen/Tag6/Nina/ND_Website_Text_Projekt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="252" column="0" lean-forward="false" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Uebungen/Tag6/viewport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1015,10 +1030,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Uebungen/Tag6/Nina/ND_Website_Text_Projekt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-642">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="555">
+          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
           <folding />
         </state>
       </provider>
