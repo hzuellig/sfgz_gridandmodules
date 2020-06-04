@@ -113,8 +113,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+            <state relative-caret-position="593">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -565,7 +565,7 @@
       <workItem from="1589556077359" duration="3241000" />
       <workItem from="1589608512547" duration="9957000" />
       <workItem from="1589641563892" duration="7000" />
-      <workItem from="1591274541829" duration="9318000" />
+      <workItem from="1591274541829" duration="9369000" />
     </task>
     <task id="LOCAL-00001" summary="tests css animation">
       <created>1589013005756</created>
@@ -609,11 +609,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591289248171</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gitignore">
+      <created>1591289472673</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591289472673</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53147000" />
+    <option name="totallyTimeSpent" value="53198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -649,9 +656,9 @@
     <MESSAGE value="tests css animation" />
     <MESSAGE value="Tag4-Kombination Grid Animation" />
     <MESSAGE value="Tag5" />
-    <MESSAGE value="gitignore" />
     <MESSAGE value="Tag6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tag6" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1040,8 +1047,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+        <state relative-caret-position="593">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
