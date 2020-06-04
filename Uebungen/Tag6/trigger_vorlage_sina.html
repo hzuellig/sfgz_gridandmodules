@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Transitions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: grey;
+            text-align: center;
+        }
+
+        .abschied p {
+            font-size: 300%;
+            color: white;
+            text-decoration: none;
+            padding: 80px;
+
+        }
+
+
+        .abschied:hover p {
+            padding-top: 1;
+            padding-left: 5;
+            transition: all 5s ease;
+        }
+
+        .abschied :hover:nth-child(1) {
+            transition: all 1s ease-out;
+            padding-left:calc(100vh - 20rem);
+            color: #8A084B;
+        }
+
+        .abschied :hover:nth-child(2) {
+            transition: all 2s ease;
+            font-size: 100%;
+            opacity: 0.2;
+            letter-spacing: 1em;
+        }
+
+        .abschied :hover:nth-child(3) {
+            transition: all 1s ease-out;
+            padding-left: 5;
+            font-size: 800%;
+
+
+        }
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+<div class="abschied">
+    <p>Wohlan denn, Herz,</p>
+    <p>nimm Abschied</p>
+    <p>und gesunde!</p>
+</div>
+
+
+
+</body>
+</html>
