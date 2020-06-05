@@ -6,7 +6,7 @@
 
 
         <style>
-            .checkview {
+            .firstclass{
                 height: 100vh;
                 width:100vw;
                 background-color:black;
@@ -14,16 +14,36 @@
                 transition-delay: 0.2s;
             }
 
-            .checkview.isinview{
+            .secondclass{
+                height: 100vh;
+                width:100vw;
                 background-color:blue;
+                border:1px solid black;
+                transition: all 5s ease;
+                transition-delay: 3s;
+            }
+
+            .firstclass.isinview{
+                background-color:blue;
+            }
+            .secondclass.isinview{
+                background-color:red;
+            }
+
+            .secondclass:after{
+                content:"Hallo"
+            }
+
+            .secondclass.isinview:after{
+                content:"Hallo Hanna"
             }
 
 
             </style>
 </head>
 <body>
-    <div class='checkview'></div>
-    <div class='checkview'></div>
+    <div id="section1" class='firstclass checkview'></div>
+    <div id="section2" class='secondclass checkview'></div>
 </body>
 
 <script src="viewport.js" ></script>
