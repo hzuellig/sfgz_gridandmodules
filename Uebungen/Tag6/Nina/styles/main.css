@@ -1,0 +1,653 @@
+html {
+  font-size: 16px;
+  width: 100vw;
+}
+
+/* RASTER, GROSSE BEREICHE */
+.schwarzer_block {
+  background-color: black;
+}
+
+.bereich_eins, .bereich_drei, .bereich_sechs {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vmin;
+}
+
+.bereich_vier {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vmin;
+}
+
+.raster_bereich_eins {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "reihe_eins reihe_eins"
+    "reihe_zwei reihe_zwei"
+    "reihe_drei reihe_drei"
+    "reihe_vier reihe_vier"
+    "reihe_fuenf reihe_fuenf"
+    "reihe_sechs reihe_sechs";
+}
+
+.raster_bereich_zwei {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 10vw;
+}
+
+.raster_bereich_drei {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "reihe_eins reihe_eins"
+    "reihe_zwei reihe_zwei";
+}
+
+.raster_bereich_vier {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: auto auto; */
+  grid-template-rows: repeat(2, max-content);
+  grid-gap: 0em;
+  grid-template-areas:
+    "aussen hart und . . ."
+    ". . . innen ganz weich";
+  justify-items: center;
+}
+
+.raster_bereich_fuenf {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "werden_als werden_als werden_als werden_als"
+    "kind_eins kind_zwei kind_drei kind_vier"
+    "schon_als schon_als schon_als schon_als"
+    "mann_eins mann_zwei mann_drei mann_vier"
+    "geeicht geeicht geeicht geeicht";
+}
+
+.raster_eins_bereich_sechs, .raster_zwei_bereich_sechs,  {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "wann_ist ."
+    "ein_mann_eins ."
+    "ein_mann_zwei .";
+}
+
+/* SONGZEILEN GRUPPEN*/
+.eins_song_zeile {
+  grid-area: reihe_eins;
+}
+
+.zwei_song_zeile {
+  grid-area: reihe_zwei;
+  animation-name: songzeilen_bewegen_erster_satz;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.zwei_song_zeile div {
+  text-align: right;
+}
+
+.drei_song_zeile {
+  grid-area: reihe_drei;
+  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.vier_song_zeile {
+  grid-area: reihe_vier;
+  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.vier_song_zeile div {
+  text-align: right;
+}
+
+.fuenf_song_zeile {
+  grid-area: reihe_fuenf;
+  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.sechs_song_zeile {
+  grid-area: reihe_sechs;
+  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.sechs_song_zeile div {
+  text-align: right;
+}
+
+/* ABSATZFORMATE */
+/* Bereich 1 */
+.strophe_titel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  /* font-size: 16vw; */
+  /* font-size: calc(1rem + 15vw); */
+  font-size: 13.5rem;
+  text-transform: uppercase;
+  margin-bottom: -0.15em;
+  padding: 0;
+}
+
+.strophe_titel_klein {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  /* font-size: 16vw; */
+  /* font-size: calc(1rem + 15vw); */
+  font-size: 8rem;
+  text-transform: uppercase;
+  margin-bottom: -0.15em;
+  padding: 0;
+}
+
+.strophe_grundtext {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  /* font-size: calc(1rem + 3vw); */
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bereich 2 */
+.Maenner {
+  font-family: "Titling Gothic FB Extd Bd";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30vw;
+  text-transform: uppercase;
+  color: white;
+  margin-left: -0.1em;
+
+
+  opacity: 0%;
+}
+
+.isinview .Maenner{
+  animation-name: maenner_vergroessern;
+  animation-duration: 0.5s;
+  animation-delay: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.raster_bereich_zwei :nth-child(2), .raster_bereich_zwei :nth-child(4), .raster_bereich_zwei :nth-child(6) {
+  text-align: right;
+}
+
+.raster_bereich_zwei :nth-child(4) {
+  margin-right: -0.1em;
+}
+
+
+.auszeichnung_fett {
+  font-family: "Titling Gothic FB Extd Bd";
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  font-size: 15rem;
+  text-transform: uppercase;
+  color: white;
+  margin-top: -0.154em;
+  margin-bottom: -0.214em;
+}
+
+.werden_als .strophe_titel, .schon_als .strophe_titel, .geeicht .strophe_titel {
+  margin-top: -0.23em;
+  margin-bottom: -0.265em;
+}
+
+.schon_als .strophe_titel {
+  text-align: right;
+}
+
+/* Bereich 3 */
+.sieben_song_zeile {
+  grid-area: reihe_eins;
+  animation-name: songzeilen_bewegen_erster_satz;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.acht_song_zeile {
+  grid-area: reihe_zwei;
+  animation-name: songzeilen_bewegen_weitere_saetze;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.acht_song_zeile div {
+  text-align: right;
+}
+
+.raster_bereich_drei div, .raster_bereich_fuenf div, .bereich_sechs div {
+  color: white;
+}
+
+/* Bereich 4 */
+.vertikal {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10vw;
+  text-transform: uppercase;
+  color: white;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.aussen {
+  grid-area: aussen;
+  align-self: flex-end;
+  animation-name: aussen_runter;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.hart {
+  grid-area: hart;
+  align-self: flex-end;
+  animation-name: aussen_runter;
+  animation-duration: 0.7s;
+  animation-delay: 0.7s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.und {
+  grid-area: und;
+  align-self: flex-end;
+  animation-name: aussen_runter;
+  animation-duration: 0.7s;
+  animation-delay: 1.4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.innen {
+  grid-area: innen;
+  animation-name: innen_hoch;
+  animation-duration: 0.7s;
+  animation-delay: 2.1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.ganz {
+  grid-area: ganz;
+  animation-name: innen_hoch;
+  animation-duration: 0.7s;
+  animation-delay: 2.8s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.weich {
+  grid-area: weich;
+  animation-name: innen_hoch;
+  animation-duration: 0.7s;
+  animation-delay: 3.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+/* Bereich 5 */
+.werden_als {
+  grid-area: werden_als;
+}
+
+.k {
+  grid-area: kind_eins;
+  opacity: 0%;
+}
+
+.i {
+  grid-area: kind_zwei;
+  opacity: 0%;
+}
+
+.n_kind {
+  grid-area: kind_drei;
+  opacity: 0%;
+}
+
+.d {
+  grid-area: kind_vier;
+  opacity: 0%;
+}
+
+.k, .i, .n_kind, .d {
+  animation-name: erscheinen_scale;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.schon_als {
+  grid-area: schon_als;
+}
+
+.m {
+  grid-area: mann_eins;
+  opacity: 0%;
+}
+.a {
+  grid-area: mann_zwei;
+  opacity: 0%;
+}
+.n_mann_eins {
+  grid-area: mann_drei;
+  opacity: 0%;
+}
+.n_mann_zwei {
+  grid-area: mann_vier;
+  opacity: 0%;
+}
+
+.m, .a, .n_mann_eins, .n_mann_zwei {
+  animation-name: erscheinen_scale;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+
+/* Bereich 6 */
+
+.wann_ist {
+  grid-area: wann_ist;
+  opacity: 0%;
+  animation-name: erscheinen;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  transform-origin: center;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.raster_eins_bereich_sechs .wann_ist {
+  opacity: 0%;
+  animation-name: erscheinen;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  transform-origin: center;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.ein_mann_eins {
+  grid-area: ein_mann_eins;
+  opacity: 0%;
+  animation-name: erscheinen;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  transform-origin: center;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.ein_mann_zwei {
+  grid-area: ein_mann_zwei;
+  opacity: 0%;
+  animation-name: erscheinen;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  transform-origin: center;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;}
+
+
+
+
+/* SONSTIGES */
+.grosser_abstand {
+  height: 15vw;
+}
+
+
+
+/* ANIMATIONEN */
+/* Animation SONGZEILEN */
+@keyframes songzeilen_bewegen_erster_satz {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -25%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -51%);
+    opacity: 100%;
+  }
+}
+
+@keyframes songzeilen_bewegen_weitere_saetze {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -50%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, -103%);
+    opacity: 100%;
+  }
+}
+
+/* Animation M Ä N N E R */
+@keyframes maenner_vergroessern {
+  0% {
+    transform: scale(0%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: scale(130%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: scale(100%);
+    opacity: 100%;
+  }
+}
+
+/* Animation aussen */
+@keyframes aussen_runter {
+  0% {
+    transform: translate(0%, -100%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, -75%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 100%;
+  }
+}
+
+/* Animation innen */
+@keyframes innen_hoch {
+  0% {
+    transform: translate(0%, 100%);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translate(0%, 75%);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 100%;
+  }
+}
+
+/* Animation Kind Mann erscheinen_scale */
+@keyframes erscheinen_scale {
+  0% {
+    opacity: 0%;
+    transform: scale(0%);
+  }
+
+  50% {
+    opacity: 50%;
+    transform: scale(50%);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: scale(100%);
+  }
+}
+
+/* Wann ist ein Mann ein Mann erscheinen */
+@keyframes erscheinen {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+
+
+
+
+/* MEDIAQUERIES */
+/* BP Desktop 1024px */
+@media all and (max-width: 64em) {
+  html {
+    font-size: 12px;
+  }
+
+  /* BP 850px Mobile 640px */
+  @media all and (max-width: 53em) {
+    html {
+      font-size: 7px;
+    }
+
+    .raster_bereich_vier {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      grid-row-gap: 2em;
+      grid-template-areas:
+        "aussen hart und"
+        "innen ganz weich";
+    }
+
+    /*
+.und {
+  justify-items: center;
+} */
+  }
