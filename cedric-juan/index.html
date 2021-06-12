@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid & Modules - Cédric Juan</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+        </script>
+    </head>
+    <body>
+
+        <div class="header" w3-include-html="includes/nav.html"></div>
+        <div class="main">
+            <div class="main-container">
+                <div class="main-inner">
+                    <div class="info-card">
+                        <a href="/project/index.html">Zum Projekt --></a></a>
+                    </div>
+                    <div class="info-card">
+                        <h1>Cédric Juan</h1>
+                        <h2>Ich wohne in B&auml;ch SZ</h2>
+
+                        <p>Ich liebe Essen</p>
+
+                        <p>Das ist auch ein Paragraph mit <br> Umbruch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+
+
+
+
+        <script>
+        includeHTML();
+        </script>
+    </body>
+</html>
