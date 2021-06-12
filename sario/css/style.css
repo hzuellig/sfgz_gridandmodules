@@ -1,0 +1,29 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgb(237, 169, 110);
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.head {
+    text-align: right;
+}
+
+.wrapper { 
+    display: grid;
+    grid-template-columns: 100px 10px 100px 10px  
+100px;
+grid-template-rows: auto 10px auto;
+    } 
+
+        .a {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        }
+        .b {
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+        }
