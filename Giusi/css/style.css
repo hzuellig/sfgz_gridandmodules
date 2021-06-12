@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(0deg, rgb(44, 44, 44) 30%, rgb(0, 0, 0) 100%);
+  color: white;
+  font-family: 'Merriweather Sans', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  margin-bottom: 2em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 span {
+  font-style: italic;
+  padding-left: 0.5em;
+  transition: font-weight 200ms ease, letter-spacing 200ms ease;
+}
+
+h1 span:hover {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+p {
+  columns: 2;
+}
+
+.maincontainer {
+  padding: 10vw 10vw;
+}
+
+.audio-progress {
+  width: 100vw;
+  height: 15vw;
+  position: fixed;
+  bottom: 0;
+  /* border: 2px solid red; */
+}
+
+.audio-progress .loader {
+  background-color: blue;
+  height: 100%;
+  width: 0;
+  transition: width 1s linear;
+}
