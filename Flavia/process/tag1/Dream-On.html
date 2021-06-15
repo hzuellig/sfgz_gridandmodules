@@ -13,87 +13,211 @@
     <style>
         body {
             background: linear-gradient(180deg, #967892 0%, #463C5F 61.46%, #2A2B45 95.31%);
-            padding: 40px;
             text-align: center;
         }
 
-        h1 {
+        p {
             font-family: 'Antic Didone', serif;
             color: #fff;
             font-size: 5em;
+            padding-top: 300px;
+            padding-bottom: 300px;
         }
 
-        .neon {
+        h2 {
+            font-family: 'Antic Didone', serif;
+            color: #fff;
+            font-size: 5em;
+            padding-top: 400px;
+            padding-bottom: 400px;
+        }
+
+        span {
+            display: inline-block;
+            margin: 40px;
+        }
+
+        .flipH {
+            transform: scale(-1, 1);
+            color: #667179;
+            -moz-transform: scale(-1, 1);
+            -webkit-transform: scale(-1, 1);
+            -o-transform: scale(-1, 1);
+            -ms-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+
+        .neon1 {
             font-family: 'Berkshire Swash', cursive;
-            font-size: 15em;
+            font-size: 5em;
+            font-kerning: normal;
             color: #F19FA1;
             text-shadow:
                 0 0 1px #fff,
                 0 0 5px #E9BFBE,
                 0 0 10px #E7D7D5,
-                0 0 20px #E7DCD9,
-                0 0 40px #F19FA1,
-                0 0 80px #F19FA1;
+                0 0 30px #F19FA1;
+        }
+
+        .neon2 {
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 6em;
+            font-kerning: normal;
+            color: #F2BBA0;
+            text-shadow:
+                0 0 1px #fff,
+                0 0 5px #F7D4C2,
+                0 0 10px #FBECE4,
+                0 0 20px #FBECE4,
+                0 0 40px #F2BBA0;
+        }
+
+        .neon3 {
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 7em;
+            font-kerning: normal;
+            color: #F2C9A0;
+            text-shadow:
+                0 0 1px #fff,
+                0 0 5px #F6D9BC,
+                0 0 10px #FBF0E4,
+                0 0 20px #FBF0E4,
+                0 0 50px #F2C9A0,
+                0 0 80px #F2C9A0;
+        }
+
+        .glow {
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 10vmin;
+            color: #ffffff;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #F2BBA0, 0 0 30px #F2BBA0, 0 0 40px #F2BBA0,
+                    0 0 50px #F19FA1, 0 0 60px #F19FA1, 0 0 70px #F19FA1;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #F2BBA0, 0 0 40px #F2BBA0, 0 0 50px #F2BBA0,
+                    0 0 60px #F2BBA0, 0 0 70px #F2BBA0, 0 0 80px #F2BBA0;
+            }
         }
 
         .responsivetransparent {
-            width: 100%;
-            max-width: 2000px;
-            height: auto;
+            width: 65%;
             opacity: 30%;
             position: absolute;
-
         }
 
         .responsive {
-            width: 100%;
-            height: auto;
+            width: 40%;
+            opacity: 50%;
+            position: absolute;
         }
-
-
     </style>
+
 </head>
 
 <body>
 
-    <h1>Every time when I look in the mirror</h1>
-
-    <h1>All these lines on my face getting clearer<br>
-        The past is gone</h1>
-
-    <h1>And it went by, like dusk to dawn</h1>
-
-    <h1>Isn't that the way?</br>
-        Everybody's got their dues in life to</h1>
-
-    <h1>p</br>a</br>a</br>a</br>a</br>y</h1>
-
-    <h1>I know</br>
-        nobody knows</br>
-        Where it comes
-        and where it goes</br>
-        I know</br>
-        it's everybody's sin</br>
-        You got to lose to know </br>
-        how to win</h1>
-    <p>
-        <img src="image/cloud.png" class="responsive";><br>
-        <span class="neon"> Dream on </span> <br>
-        <img src="image/cloud.png" class="responsivetransparent";>
-        <span class="neon"> Dream on </span> <br>        
-        <span class="neon"> Dream on </span>
-
+    <p>Every time when I look in the mirror<br>
+        <span class="flipH">Every time when I look in the mirror</span>
     </p>
 
-    <h1>I know</br>
-        nobody knows</br>
-        Where it comes
-        and where it goes</br>
-        I know</br>
-        it's everybody's sin</br>
-        You got to lose to know </br>
-        how to win</h1>
+    <p>All these lines on my face getting clearer<br>
+        The past is gone</p>
 
+    <p>And it went by, like dusk to dawn</p>
+
+    <p>Isn't that the way?<br>
+        Everybody's got their dues in life to
+        <br>
+        <br>p<br>a<br>a<br>a<br>a<br>y
+    </p>
+
+    <p>I know<br>
+        nobody knows<br>
+        Where it comes <br>
+        and where it goes<br></p>
+    <p>I know<br>
+        it's everybody's sin<br>
+        You got to lose to know <br>
+        how to win</p>
+
+    <p>Half my life's in books, written </br>
+        pages. Live and learn from fools </br>
+        and from sages. You know it's true, </br>
+        oh All the things come back to you</p>
+
+    <div style="background-color: #967892;" class="myDiv">
+        <h2> Sing with me, sing for a year</br>
+            Sing for the laughter, and sing the tear</br>
+            Sing with me, if it's just for today</br>
+            Maybe tomorrow, the good Lord will take you away</h2>
+
+        <h2>Yeah, sing with me, sing for the year</br>
+            Sing for the laughter, and sing for the tear</br>
+            Sing it with me, if it's just for today</br>
+            Maybe tomorrow, the good Lord will take you away</h2>
+    </div>
+    <h1>
+        <span class="neon1"> Dream on </span> <br>
+        <span class="neon2"> Dream on </span> <br>
+        <span class="neon3"> Dream on </span> <br>
+        <img src="image/cloud_T50.png" class="responsivetransparent" ;><br>
+        <span class="glow"> Dream until the dream come true </span>
+    </h1>
+    <br>
+    <br>
+    <br>
+    <h1>
+        <span class="neon1"> Dream on </span> <br>
+        <span class="neon2"> Dream on </span> <br>
+        <span class="neon3"> Dream on </span> <br>
+        <span class="glow"> Dream until the dream come true </span>
+    </h1>
+    <br>
+    <br>
+    <br>
+    <h1>
+        <span class="neon1"> Dream on </span> <br>
+        <span class="neon2"> Dream on </span> <br>
+        <span class="neon3"> Dream on </span> <br>
+        <span class="glow"> Dream on </span>
+    </h1>
+    <br>
+    <br>
+    <br>
+    <h1>
+        <span class="neon1"> Dream on </span> <br>
+        <span class="neon2"> Dream on </span> <br>
+        <span class="neon3"> Dream on </span> <br>
+        <span class="neon2"> Dream on, aah </span>
+    </h1>
+    <br>
+    <br>
+    <br>
+    <div style="background-color: #967892;" class="myDiv">
+        <h2>Sing with me, sing for the year<br>
+            Sing for the laughter and sing for the tear<br>
+            Sing with me, if it's just for today<br>
+            Maybe tomorrow, the good Lord will take you away</h2>
+
+        <h2>Sing with me, sing for the year<br>
+            Sing for the laughter, and sing for the tear<br>
+            Sing it with me, if it's just for today<br>
+            Maybe tomorrow, the good Lord will take you away</h2>
+    </div>
+    <div style="background-color: #463C5F;" class="myDiv">
+        <p>«Dream On» by Aerosmith <br>
+            <br>
+            <a style="color: #fff;" href=https://bit.ly/2SBDbIm>Figma Layout</a>
+        </p>
+    </div>
 </body>
 
 </html>
