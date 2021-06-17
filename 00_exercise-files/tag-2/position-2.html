@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Exercise Position</title>
+    <style>
+        * {
+            font-family: 'Playfair Display', serif;
+            margin:0px;
+            padding:0px;
+        }
+        header{
+            height:100vh;
+            text-align: center;
+            display:none;
+        }
+        .page-title {
+            text-align: center;
+        }
+
+        .page-title::after {
+            content: '↓';
+            display: block;
+            font-size: 2em;
+            transform: translateY(-24px);
+
+        }
+        .image-container {
+            position: sticky;
+            top: 0;
+            left:0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #89e4ff;
+            background-image:linear-gradient(rgb(186, 231, 242), rgb(0, 75, 150));
+
+            background-size: cover;
+        }
+
+        .image-container img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: multiply;
+
+        }
+        .content {
+            position: relative;
+            font-family: 'Lato', sans-serif;;
+            margin: -50vh auto 0;
+            padding: 8vmin;
+            max-width: 55ch;
+            width: calc(100% - 8vmin);
+            background-color: #2b5ab4;
+            background-image:linear-gradient(rgb(46, 130, 255), rgb(0, 75, 150));
+            mix-blend-mode: screen;
+            font-size:2em;
+
+        }
+
+        .content p{
+            margin:1em;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<header class="header">
+    <h1 class="page-title">CSS position sticky parallax effect</h1>
+</header>
+<section class="section">
+    <figure class="image-container">
+        <img src="https://source.unsplash.com/random/1200×600?sea,fish,flow" alt=""/>
+    </figure>
+    <article class="content">
+
+        <p>I had a dream last night <br/>
+        A fish on land<br/>
+        Gasping for breath<br/>
+        Just laughed<br/>
+        And sang this song<br/>
+        Is life like this for everyone<br/>
+            Is life like this for everyone</p>
+        <p>
+        I picked him up<br/>
+        He had a human face<br/>
+        I carried him<br/>
+        To where the water was<br/>
+        A grey and still and dusty thing<br/>
+        A grey and still and dusty thing</p>
+        <p>I dropped him in<br/>
+        And he could breathe again<br/>
+        And then he grew<br/>
+        And he became a man<br/>
+        I knew that I would marry him<br/>
+            I knew…</p>
+
+    </article>
+</section>
+</body>
+</html>
