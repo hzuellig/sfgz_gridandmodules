@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+header {
+  margin-top: 3em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+
+header p {
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+audio {
+  margin-bottom: 4em;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+a h3 {
+  transition: all 100ms ease;
+  border: 1px solid blueviolet;
+  width: 20em;
+  margin: 2em auto;
+  padding: 2em;
+}
+
+a h3:hover {
+  letter-spacing: 0.1em;
+  background-color: rgba(138, 43, 128, 0.4);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+section {
+  position: absolute;
+  top: 12em;
+  width: 100%;
+  padding-bottom: 8em;
+}
+
+.lyrics i {
+  display: none;
+}
+
+.lyrics h3 {
+  position: sticky;
+  top: 10em;
+  background-color: black;
+  padding: 1em;
+}
