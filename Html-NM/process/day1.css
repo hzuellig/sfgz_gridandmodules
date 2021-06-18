@@ -1,0 +1,12 @@
+    .Test {
+        font-size: large;
+        color: blue;
+    }
+    
+    body {
+        background-color: rgba(85, 64, 191, 0.192);
+        color: rgb(11, 38, 88);
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2vw;
+    }
