@@ -1,6 +1,6 @@
 body {
     background-color: bisque;
-    
+
 }
 
 .box1 {
@@ -20,7 +20,7 @@ body {
     margin: 3em;
     border-style: double;
     border-color: chartreuse;
-    
+
 
 }
 
@@ -49,18 +49,19 @@ body {
     ;
 }
 
-li{
+li {
     display: inline;
 }
 
-button{
+button {
     color: hotpink;
     border-style: dotted;
-    
+
 }
 
-span{
+span {
     display: block;
     margin: auto 0;
     height: 20px;
 }
+

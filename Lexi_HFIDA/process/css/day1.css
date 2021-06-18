@@ -19,6 +19,7 @@ a {
 .pb {
     border-radius: 100%;
     margin: 30px;
+
 }
 
 
@@ -67,6 +68,6 @@ div.wrap{
     margin-right: auto;
     border-style: dotted;
     border-color: #260801;
-    padding: 20px
-    ;
+    padding: 20px;
 }
+
