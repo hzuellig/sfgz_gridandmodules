@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+ 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+            });
+        });
+    </script>
+ 
+    <style>
+        .section{
+            font-size: 6em;
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="fullpage">
+        <div class="section">Section 1</div>
+        <div class="section">
+            <div class="slide">Section 2 Slide 1</div>
+            <div class="slide">Section 2 Slide 2</div>
+            <div class="slide">Section 2 Slide 3</div>
+        </div>
+        <div class="section">Section 3</div>
+    </div>            
+</body>
+</html>
