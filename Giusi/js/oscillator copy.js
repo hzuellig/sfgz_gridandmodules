@@ -29,8 +29,6 @@ audio.onplay = function () {
   const WIDTH = canvas.width;
   const HEIGHT = canvas.height;
 
-  console.log(WIDTH, HEIGHT);
-
   console.log('WIDTH ', WIDTH, 'HEIGHT ', HEIGHT);
 
   const barWidth = (WIDTH / bufferLength) * 13;
@@ -58,25 +56,25 @@ audio.onplay = function () {
       barHeight = dataArray[i] * 2.5;
 
       if (dataArray[i] > 210) {
+        r = 250;
+        g = 0;
+        b = 255;
+      } else if (dataArray[i] > 200) {
+        r = 125;
+        g = 0;
+        b = 255;
+      } else if (dataArray[i] > 190) {
         r = 255;
         g = 0;
         b = 0;
-      } else if (dataArray[i] > 200) {
-        r = 255;
-        g = 80;
-        b = 0;
-      } else if (dataArray[i] > 190) {
-        r = 255;
-        g = 180;
-        b = 0;
       } else if (dataArray[i] > 180) {
-        r = 255;
+        r = 0;
         g = 255;
-        b = 0;
+        b = 255;
       } else {
         r = 255;
         g = 255;
-        b = 80;
+        b = 255;
       }
 
       ctx.fillStyle = `rgb(${r},${g},${b})`;

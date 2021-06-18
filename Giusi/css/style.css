@@ -5,52 +5,76 @@
 }
 
 body {
-  background: rgb(9, 9, 121);
-  background: linear-gradient(0deg, rgb(44, 44, 44) 30%, rgb(0, 0, 0) 100%);
-  color: white;
-  font-family: 'Merriweather Sans', sans-serif;
-  height: 100vh;
-  width: 100vw;
+  background-color: black;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-h1 {
-  text-transform: uppercase;
-  font-size: 4em;
-  margin-bottom: 2em;
-  font-weight: 500;
-  line-height: 1;
-}
-
-h1 span {
-  font-style: italic;
-  padding-left: 0.5em;
-  transition: font-weight 200ms ease, letter-spacing 200ms ease;
-}
-
-h1 span:hover {
-  font-weight: 900;
-  letter-spacing: 0.1em;
-}
-
-p {
-  columns: 2;
-}
-
-.maincontainer {
-  padding: 10vw 10vw;
-}
-
-.audio-progress {
-  width: 100vw;
-  height: 15vw;
+header {
+  margin-top: 3em;
   position: fixed;
-  bottom: 0;
-  /* border: 2px solid red; */
+  top: 0;
+  width: 100%;
+  mix-blend-mode: difference;
 }
 
-.audio-progress .loader {
-  background-color: blue;
-  height: 100%;
-  width: 0;
-  transition: width 1s linear;
+header p {
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+/* audio {
+  margin-bottom: 4em;
+} */
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+a h3 {
+  transition: all 100ms ease;
+  border: 1px solid blueviolet;
+  width: 20em;
+  margin: 2em auto;
+  padding: 2em;
+}
+
+a h3:hover {
+  letter-spacing: 0.1em;
+  background-color: rgba(138, 43, 128, 0.4);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+section {
+  position: absolute;
+  top: 12em;
+  width: 100%;
+  padding-bottom: 8em;
+}
+
+.lyrics i {
+  display: none;
+}
+
+.lyrics h3 {
+  position: sticky;
+  top: 10em;
+  background-color: black;
+  padding: 1em;
+}
+
+#player {
+  border: 2px solid red;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }

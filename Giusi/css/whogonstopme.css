@@ -11,61 +11,33 @@ body {
   text-align: center;
 }
 
-header {
-  margin-top: 3em;
+#player {
+  /* border: 2px solid red; */
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#canvas {
   width: 100%;
-  mix-blend-mode: difference;
+  height: 90%;
 }
 
-header p {
-  margin-top: 1em;
-  text-transform: uppercase;
-}
-
-audio {
-  margin-bottom: 4em;
-}
-
-a {
-  text-decoration: none;
-  color: blueviolet;
-}
-
-a h3 {
-  transition: all 100ms ease;
-  border: 1px solid blueviolet;
-  width: 20em;
-  margin: 2em auto;
-  padding: 2em;
-}
-
-a h3:hover {
-  letter-spacing: 0.1em;
-  background-color: rgba(138, 43, 128, 0.4);
-}
-
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-}
-
-section {
-  position: absolute;
-  top: 12em;
+.lyrics {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
   width: 100%;
-  padding-bottom: 8em;
-}
-
-.lyrics i {
-  display: none;
-}
-
-.lyrics h3 {
-  position: sticky;
-  top: 10em;
-  background-color: black;
-  padding: 1em;
+  font-size: 4em;
+  text-transform: uppercase;
+  pointer-events: none;
+  color: black;
+  mix-blend-mode: hard-light;
+  padding-bottom: 4em;
 }
