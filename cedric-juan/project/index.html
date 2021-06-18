@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Project | Grid & Modules - Cédric Juan</title>
         <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/jquery-3.6.0.min.js" ></script>
         <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
@@ -35,6 +36,153 @@
           }
         }
         </script>
+        <script>
+            (function($) {
+                $(document).keydown(function(event){
+                    var keyCode = (event.keyCode ? event.keyCode : event.which);
+                    // if (keyCode == 49) {
+                    //     console.log('kdhfgvkhdsf');
+                    //     // $('#test').trigger('click');
+                    //     $('#test').addClass('triggered');
+                    // }
+
+                    // IDs:
+                    // workit
+                    // makeit
+                    // doit
+                    // makeus
+
+                    // harder
+                    // better
+                    // faster
+                    // stronger
+
+                    // morethan
+                    // hour
+                    // our
+                    // never
+
+                    // ever
+                    // after
+                    // workis
+                    // over
+
+                    if (keyCode == 74) {
+                        $('body').removeClass('second-page').removeClass('third-page').addClass('first-page');
+                    } /* J */
+                    if (keyCode == 75) {
+                        $('body').removeClass('first-page').removeClass('third-page').addClass('second-page');
+                    } /* K */
+                    if (keyCode == 76) {
+                        $('body').removeClass('first-page').removeClass('second-page').addClass('third-page');
+                    } /* L */
+
+                    if (keyCode == 49) {$('#workit').trigger('click').addClass('triggered');} /* 1 */
+                    if (keyCode == 50) {$('#makeit').trigger('click').addClass('triggered');} /* 2 */
+                    if (keyCode == 51) {$('#doit').trigger('click').addClass('triggered');} /* 3 */
+                    if (keyCode == 52) {$('#makeus').trigger('click').addClass('triggered');} /* 4 */
+
+                    if (keyCode == 81) {$('#harder').trigger('click').addClass('triggered');} /* q */
+                    if (keyCode == 87) {$('#better').trigger('click').addClass('triggered');} /* w */
+                    if (keyCode == 69) {$('#faster').trigger('click').addClass('triggered');} /* e */
+                    if (keyCode == 82) {$('#stronger').trigger('click').addClass('triggered');} /* r */
+
+                    if (keyCode == 65) {$('#morethan').trigger('click').addClass('triggered');} /* a */
+                    if (keyCode == 83) {$('#hour').trigger('click').addClass('triggered');} /* s */
+                    if (keyCode == 68) {$('#our').trigger('click').addClass('triggered');} /* d */
+                    if (keyCode == 70) {$('#never').trigger('click').addClass('triggered');} /* f */
+
+                    if (keyCode == 89) {$('#ever').trigger('click').addClass('triggered');} /* y */
+                    if (keyCode == 88) {$('#after').trigger('click').addClass('triggered');} /* x */
+                    if (keyCode == 67) {$('#workis').trigger('click').addClass('triggered');} /* c */
+                    if (keyCode == 86) {$('#over').trigger('click').addClass('triggered');} /* v */
+
+
+
+                });
+
+
+
+
+
+
+
+                $(document).keyup(function(event){
+                    var keyCode = (event.keyCode ? event.keyCode : event.which);
+                    // if (keyCode == 49) {
+                    //     console.log('kdhfgvkhdsf');
+                    //     // $('#test').trigger('click');
+                    //     $('#test').removeClass('triggered');
+                    // }
+
+
+                    // IDs:
+                    // workit
+                    // makeit
+                    // doit
+                    // makeus
+
+                    // harder
+                    // better
+                    // faster
+                    // stronger
+
+                    // morethan
+                    // hour
+                    // our
+                    // never
+
+                    // ever
+                    // after
+                    // workis
+                    // over
+
+                    if (keyCode == 49) {setTimeout(function () {$('#workit').removeClass('triggered');},150);} /* 1 */
+                    if (keyCode == 50) {setTimeout(function () {$('#makeit').removeClass('triggered');},150);} /* 2 */
+                    if (keyCode == 51) {setTimeout(function () {$('#doit').removeClass('triggered');},150);} /* 3 */
+                    if (keyCode == 52) {setTimeout(function () {$('#makeus').removeClass('triggered');},150);} /* 4 */
+
+                    if (keyCode == 81) {setTimeout(function () {$('#harder').removeClass('triggered');},150);} /* q */
+                    if (keyCode == 87) {setTimeout(function () {$('#better').removeClass('triggered');},150);} /* w */
+                    if (keyCode == 69) {setTimeout(function () {$('#faster').removeClass('triggered');},150);} /* e */
+                    if (keyCode == 82) {setTimeout(function () {$('#stronger').removeClass('triggered');},150);} /* r */
+
+                    if (keyCode == 65) {setTimeout(function () {$('#morethan').removeClass('triggered');},150);} /* a */
+                    if (keyCode == 83) {setTimeout(function () {$('#hour').removeClass('triggered');},150);} /* s */
+                    if (keyCode == 68) {setTimeout(function () {$('#our').removeClass('triggered');},150);} /* d */
+                    if (keyCode == 70) {setTimeout(function () {$('#never').removeClass('triggered');},150);} /* f */
+
+                    if (keyCode == 89) {setTimeout(function () {$('#ever').removeClass('triggered');},150);} /* y */
+                    if (keyCode == 88) {setTimeout(function () {$('#after').removeClass('triggered');},150);} /* x */
+                    if (keyCode == 67) {setTimeout(function () {$('#workis').removeClass('triggered');},150);} /* c */
+                    if (keyCode == 86) {setTimeout(function () {$('#over').removeClass('triggered');},150);} /* v */
+                });
+
+
+                $('.canvas-item').each(function() {
+                    console.log('each worked');
+                    $(this).on("click", function(){
+                        console.log('click worked');
+                        var displaytext = $(this).find("span").text();
+                        $('.display .display-item > span').text(displaytext);
+                    });
+                });
+
+
+                jQuery(document).ready(function() {
+                    $('.canvas-item').each(function() {
+                        console.log('each worked');
+                        $(this).on("click", function(){
+                            console.log('click worked');
+                            var displaytext = $(this).find("span").text();
+                            $('.display .display-item > span').text(displaytext);
+                        });
+                    });
+                });
+
+
+            })( jQuery );
+        </script>
     </head>
     <body>
         <div class="body-content">
@@ -43,72 +191,123 @@
                 <div class="main-container">
                     <div class="main-inner">
 
-                        <div class="canvas">
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>work it</span>
+                        <div class="page">
+                            <div class="page-item">
+                                <div class="page-item-key">J</div>
+                                <div class="page-item-key">K</div>
+                                <div class="page-item-key">L</div>
                             </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>make it</span>
-                            </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>do it</span>
-                            </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>make us</span>
-                            </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>harder</span>
-                            </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>better</span>
-                            </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>faster</span>
-                            </div>
-                            <div class="canvas-item">
-                                <div class="canvas-item-shadow"></div>
-                                <span>stronger</span>
+                        </div>
+                        <div class="display">
+                            <div class="display-item">
+                                <div class="display-item-shadow"></div>
+                                <span>display</span>
                             </div>
                         </div>
                         <div class="canvas">
-                            <div class="canvas-item">
+                            <div id="workit" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>work it</span>
+                                <div class="canvas-item-key">1</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                            <div id="makeit" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>make it</span>
+                                <div class="canvas-item-key">2</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                            <div id="doit" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>do it</span>
+                                <div class="canvas-item-key">3</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                            <div id="makeus" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>make us</span>
+                                <div class="canvas-item-key">4</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+
+
+
+                            <div id="harder" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>harder</span>
+                                <div class="canvas-item-key">Q</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                            <div id="better" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>better</span>
+                                <div class="canvas-item-key">W</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                            <div id="faster" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>faster</span>
+                                <div class="canvas-item-key">E</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                            <div id="stronger" class="canvas-item">
+                                <div class="canvas-item-shadow"></div>
+                                <span>stronger</span>
+                                <div class="canvas-item-key">R</div>
+                                <div class="canvas-item-type"></div>
+                            </div>
+                        </div>
+                        <div class="canvas">
+                            <div id="morethan" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>more than</span>
+                                <div class="canvas-item-key">A</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+                            <div id="hour" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>hour</span>
+                                <div class="canvas-item-key">S</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+                            <div id="our" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>our</span>
+                                <div class="canvas-item-key">D</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+                            <div id="never" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>never</span>
+                                <div class="canvas-item-key">F</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+
+
+
+                            <div id="ever" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>ever</span>
+                                <div class="canvas-item-key">Y</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+                            <div id="after" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>after</span>
+                                <div class="canvas-item-key">X</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+                            <div id="workis" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>work is</span>
+                                <div class="canvas-item-key">C</div>
+                                <div class="canvas-item-type"></div>
                             </div>
-                            <div class="canvas-item">
+                            <div id="over" class="canvas-item">
                                 <div class="canvas-item-shadow"></div>
                                 <span>over</span>
+                                <div class="canvas-item-key">V</div>
+                                <div class="canvas-item-type"></div>
                             </div>
                         </div>
 
