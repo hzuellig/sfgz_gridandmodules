@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'ProductSansBold';
+  src: url("product-sans/ProductSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'ProductSansRegular';
+  src: url("product-sans/ProductSans-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+* {
+  font-family: ProductSansRegular, sans-serif; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
+
+.container {
+  width: 900px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 40px; }
+
+h1 {
+  font-family: ProductSansRegular, sans-serif;
+  color: #3c4043;
+  font-size: 3.2rem;
+  line-height: 76px;
+  font-weight: 400;
+  letter-spacing: -0.6px; }
+
+h2 {
+  margin: 0px auto 40px;
+  font-family: ProductSansRegular, sans-serif;
+  color: #1200ff;
+  font-weight: 400;
+  font-size: 1.12rem; }
+
+h3 {
+  font-family: ProductSansRegular, sans-serif;
+  /* color: rgba(32, 197, 249, .5); */
+  margin-top: 44px;
+  color: rgba(126, 133, 139, 0.5);
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: -0.2px; }
+
+ul.students {
+  margin: 0;
+  padding: 0; }
+  ul.students li {
+    list-style-type: none; }
+    ul.students li a {
+      font-family: ProductSansRegular, sans-serif;
+      color: #3c4043;
+      font-size: 3.2rem;
+      line-height: 60px;
+      font-weight: 400;
+      letter-spacing: -0.6px;
+      text-decoration: none;
+      display: block;
+      position: relative; }
+      ul.students li a:hover:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100vw;
+        left: calc(-1*(100vw - 860px )/ 2);
+        border-bottom: 1px solid #1200ff; }
+
+/*# sourceMappingURL=start.css.map */
