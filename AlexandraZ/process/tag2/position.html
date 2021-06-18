@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Exercise Position</title>
+    <style>
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        article {
+            /*ich bin static und diese Angaben haben keinen Einfluss */
+            top: 100px;
+            left: 200px;
+            max-width: 600px;
+            border: 1px
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .relative img {
+            width: 50%;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+        .absolute img {
+            width: 80%;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .sticky {
+            top: 50px;
+            left: 800px;
+            position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article>
+        <h2>static</h2>
+        <div class="relative"></div>
+            <img src="../tag1/30010828.JPG" alt="">
+        </div>
+
+        <article>
+            <h2>sticky</h2>
+            <div class="relative">
+                <img src="../tag1/EPSON018.JPG" alt="">
+            </div>
+
+            <article>
+                <h2>fixed</h2>
+                <div class="relative">
+                    <img src="../tag1/00000001 2.jpg" alt="">
+                </div>
+
+                    <article>
+                        <h2>sticky</h2>
+                        <div class="relative">
+                            <img src="../tag1/EPSON019.JPG" alt="">
+                        </div>
+
+                        <article>
+                            <h2>sticky</h2>
+                            <div class="relative">
+                                <img src="../tag1/00000001 35.jpg" alt="">
+                            </div>
+
+
+                            <p>
+
+                                <time datetime="16:00">16:00 Spaziergang</time>
+                            </p>
+                        </article>
+</body>
+
+</html>

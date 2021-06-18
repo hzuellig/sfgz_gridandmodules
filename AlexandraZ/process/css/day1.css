@@ -1,0 +1,21 @@
+.box1 {
+    width: 90%;
+    height: 50%;
+    border-width: 1px;
+    border-color: darksalmon;
+    border-style: groove;
+    background-color: darkslategrey;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 3px;
+    background-image: linear-gradient(yellow blue);
+}
+.box2 {
+    width: 600px;
+    height: 400px;
+    border-width: 1px;
+    background-color: darkviolet;
+    margin: 10em;
+    border-radius: 50%;
+    box-shadow: 10px 10px dimgrey;
+}
