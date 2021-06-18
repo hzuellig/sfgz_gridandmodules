@@ -44,5 +44,14 @@ padding: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0.25em 0.25em 0.25em rgb(192, 168, 192), -0.1em -0.1em rgb(223, 209, 223);
-
+}
+.box {
+    background-color: rgb(201, 175, 201);
+    display: flex;
+    flex-direction: row;
+}
+.box.col {
+    background-color: rgb(201, 175, 201);
+    flex-direction: column;
+    height: 80vw;
 }
