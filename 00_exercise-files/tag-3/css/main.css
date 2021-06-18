@@ -1,0 +1,43 @@
+body {
+    margin: 20px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+}
+
+a {
+    color: black;
+}
+
+main {
+    padding: 20px;
+    width: 50%;
+    min-width: 600px;
+}
+
+.halbtag {
+    padding: 20px;
+    width: 50%;
+    min-width: 600px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+span{
+    color: rgb(128, 109, 137);
+    font-weight:600;
+}
+span::before{
+    content:"@todo ";
+    display: inline-block;
+    padding-right:0.5em;
+}
