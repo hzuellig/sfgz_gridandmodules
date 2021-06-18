@@ -1,0 +1,58 @@
+
+    body {
+        background-color: rgba(238, 171, 223, 0.192);
+        color: rgb(11, 38, 88);
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+   .box1 {
+       width: 200px;
+       height: 200px;
+       margin: 5px;
+       padding: 1px;
+       background-image: linear-gradient(rgb(146, 52, 134), yellow);
+   } 
+
+   .box2 {
+        width: 400px;
+        height: 400px;
+        border-style: double;
+        border-color: red;
+        border-width: 1px;
+        border-radius: 50px; 
+        box-shadow: 10px 10px 5px lemonchiffon, 20px 20px lightskyblue;
+        padding: 5px;
+        margin: 5px;
+    }  
+
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(202, 165, 206);
+        position: fixed;
+        top: 5;
+        width: 100%;
+      }
+      
+    .menu li {
+        float: left;
+      }
+      
+    .menu li a {
+        display: inline;
+        color: white;
+        text-align: center;
+        padding: 14px 5px;
+        text-decoration: none;
+        border-style: solid; 
+      }
+      
+    .menu li a:hover {
+        background-color: rgb(114, 61, 105);
+    }
+}
