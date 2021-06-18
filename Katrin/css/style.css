@@ -9,9 +9,12 @@ p,
 }
 
 h1 {
-    color: #8DCBC6;
-    font-size: 5vw;
+    color: rgb(62,16,77);
+    font-size: 6vw;
     letter-spacing: 1vw;
+    margin: 30px;
+    padding-top: 20px;
+
 }
 
 h2 {
@@ -32,29 +35,6 @@ p {
     letter-spacing: 0.5vw;
 }
 
-.link {
-    color: white;
-    font-size: 4vw;
-    letter-spacing: 0.5vw;
-}
-
-a:link,
-a:visited {
-    background-color: #8DCBC6;
-    color: black;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 3px;
-}
-
-a:hover,
-a:active {
-    background-color: #CB162D;
-    color: white;
-}
-
 .cursor {
     cursor: url(./Images/ufo-flying.png), auto;
 }
@@ -62,4 +42,41 @@ a:active {
 body {
     background-image: linear-gradient(#3b3b3b, #000000) leftmargin="80px" topmargin="100px";
     
+}
+a:link,
+a:visited {
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 4vw;
+    text-decoration: none; } 
+
+
+a:hover,
+a:active {
+    font-family: 'Staatliches', cursive;
+    color:rgb(62,16,77);
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.box1 {
+    display:inline;
+    width: 40%;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px rgb(61, 25, 87), 15px 15px 10px rgb(226, 38, 163);
+    background: rgb(62,16,77);
+    background: linear-gradient(90deg, rgba(62,16,77,1) 0%, rgba(0,212,255,1) 100%);
+    padding: 20px;
+    margin: 30px;
+    
+}
+
+.box1:hover{
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px rgb(1, 114, 71), 15px 15px 10px rgb(201, 255, 5);
+    background: rgb(0,255,8);
+    background: linear-gradient(90deg, rgba(0,255,8,1) 0%, rgba(0,212,255,1) 100%);
+    padding: 20px;
+    margin: 30px;
 }
