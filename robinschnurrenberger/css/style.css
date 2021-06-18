@@ -1,0 +1,31 @@
+* {
+    font-family: Proxima Nova;
+}
+
+body {
+    margin: 0;
+    background-color: #DFB450;
+    overflow-x: hidden;
+}
+
+main {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.artist {
+    margin: 0;
+    font-weight: bold;
+}
+
+.song {
+    font-weight: 900;
+    font-size: 180px;
+    font-style: italic;
+    position: absolute;
+    margin: 0;
+    top: calc(50% - 110px);
+    left: calc(50% - 1530px);
+}

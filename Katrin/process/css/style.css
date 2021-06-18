@@ -1,0 +1,83 @@
+ @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        h1,
+        h2,
+        h3,
+        p,
+        .link {
+            font-family: 'Staatliches', cursive;
+        }
+
+        h1 {
+            color: #8DCBC6;
+            font-size: 5vw;
+            letter-spacing: 1vw;
+        }
+
+        h2 {
+            color: #CB162D;
+            font-size: 4vw;
+            letter-spacing: 1vw;
+        }
+
+        h3 {
+            color: #CB162D;
+            font-size: 3vw;
+            letter-spacing: 1vw;
+        }
+
+        p {
+            color: white;
+            font-size: 3vw;
+            letter-spacing: 0.5vw;
+        }
+
+        .link {
+            color: white;
+            font-size: 4vw;
+            letter-spacing: 0.5vw;
+        }
+
+        a:link,
+        a:visited {
+            background-color: #8DCBC6;
+            color: black;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 3px;
+        }
+
+        a:hover,
+        a:active {
+            background-color: #CB162D;
+            color: white;
+        }
+
+        .cursor {
+            cursor: url(./Images/ufo-flying.png), auto;
+        }
+
+        body {
+            background-image: linear-gradient(#3b3b3b, #000000) leftmargin="80px" topmargin="100px";
+            
+        }
+
+        .box1 {
+            width:200px;
+            height:200px;
+            border-color: yellow;
+            border-radius: 3px;
+            box-shadow: 10px 10px 5px blueviolet;
+            background: rgb(62,16,77);
+            background: linear-gradient(90deg, rgba(62,16,77,1) 0%, rgba(0,212,255,1) 100%);            margin: 1wm;
+            padding: 10px;
+        }
+        .box2 {
+            width:250px;
+            height:250px;
+            border-radius: 50%;
+            border-style: dotted;
+            margin: 1wm;
+            padding: 10px;
+        }
