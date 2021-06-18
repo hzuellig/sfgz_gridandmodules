@@ -27,18 +27,22 @@
 
         .box div {
             font-weight: 700;
+            font-size:2em;
             border: 1px dotted red;
             padding: 6px;
             line-height: 120%;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
+            text-align: center;
             /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
         }
 
         @media only screen and (max-width: 768px) {
             .box {
                 flex-direction: column;
+                font-size:1em;
+                border: 2px dotted red;
             }
         }
     </style>

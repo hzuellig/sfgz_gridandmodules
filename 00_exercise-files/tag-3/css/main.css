@@ -5,7 +5,10 @@ body {
     font-size: 16px;
 
 }
-
+container{
+    display:flex;
+    flex-wrap: wrap;
+}
 a {
     color: black;
 }
@@ -18,8 +21,10 @@ main {
 
 .halbtag {
     padding: 20px;
-    width: 50%;
     min-width: 600px;
+    flex-basis:300px;
+    flex-grow:1;
+    flex-shrink:0;
 }
 
 h1 {
@@ -40,4 +45,14 @@ span::before{
     content:"@todo ";
     display: inline-block;
     padding-right:0.5em;
+}
+
+.slot{
+    display:flex;
+}
+
+time{
+    flex-basis: 200px;
+    flex-grow:0;
+    flex-shrink: 1;
 }
