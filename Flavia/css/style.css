@@ -1,22 +1,20 @@
 body {
     background-color: thistle;
+    font-family: "Red Hat";
 }
-
 @font-face {
     font-family: "Red Hat";
-    src: url(../css/RedHatDisplay-MediumItalic.ttf);
+    src: url(../process/css/RedHatDisplay-MediumItalic.ttf);
 }
 h1 {
+    font-weight:500;
     color: rgb(196, 152, 43);
-    font-family: "Red Hat";
-    text-align: center;
-    padding-left: 50px;
-    font-size: 7vw;
+    padding-left: 10px;
+    font-size: 4em;
     letter-spacing: 3px;
 }
 
 p {
-    font-family: "Red Hat";
     color: rgb(196, 152, 43);
     padding-left: 50px;
     font-size: 2em;
@@ -24,14 +22,27 @@ p {
 
 }
 
-img {
-    padding-left: 50px
-}
 
 .orangeitalic {
     color: rgb(206, 110, 20);
-    font-family: "Red Hat";
     font-style: italic;
     font-size: 0.8em;
+
+}
+
+li {
+display:block;
+margin: 50px;
+padding: 20px;
+}
+
+.box3 {
+    width: 300px;
+    height: 300px;
+    background-color: thistle;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0.25em 0.25em 0.25em rgb(192, 168, 192), -0.1em -0.1em rgb(223, 209, 223);
 
 }
