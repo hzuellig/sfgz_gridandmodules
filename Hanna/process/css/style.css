@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(32, 156, 194);
+    color: rgb(7, 98, 182);
+    font-family: 'Open Sans Light', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3vw;
+}
