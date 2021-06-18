@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex-basis</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /*align-items: center;*/
+            /* Moeglichkeiten: https://developer.mozilla.org/en-US/docs/Web/CSS/align-items */
+            width: 100vw;
+            background-color: rgba(0, 0, 255, 0.3)
+        }
+        
+        .box.row {
+            flex-direction: row;
+            height: 30vw;
+        }
+        
+        .box.col {
+            flex-direction: column;
+            height: 40vw;
+        }
+        
+        .box div {
+            font-weight: 700;
+            border: 1px dotted red;
+            padding: 6px;
+            width: 50px;
+            height: 50px;
+            flex-basis: 20px;
+            line-height: 120%;
+            /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
+            background-color: rgba(255, 0, 0, 0.3)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="exp">
+        flex-direction:row; //default Hauptachse row, Querachse column // align-content: center;
+        <div class="box row">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <br/><br/> flex-direction:column; // Hauptachse column, Querachse row // align-content: center;
+        <div class="box col">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
