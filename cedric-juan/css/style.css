@@ -636,6 +636,17 @@ body.third-page .canvas > .canvas-item .canvas-item-type {
     background: rgba(216, 111, 219, 0.75);
 }
 
+/*body.third-page .canvas > .canvas-item:nth-child(n+1) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+2) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+3) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+4) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+5) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+6) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+7) .canvas-item-type,
+body.third-page .canvas > .canvas-item:nth-child(n+8) .canvas-item-type {
+    background: rgba(9, 9, 11, 0.15);
+}*/
+
 
 .canvas > .canvas-item:hover .canvas-item-type {
     transform: scale(1.00);
