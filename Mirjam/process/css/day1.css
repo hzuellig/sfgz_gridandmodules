@@ -1,0 +1,32 @@
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    margin-bottom: 60px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.rahmen{
+    padding-left: 40px;
+}
+
+img{
+    width: 100%;
+    margin-top: 40px;
+}
+.btn{
+    color: white;
+    background-color: brown;
+    padding: 28px 100px 18px 100px;
+    border-radius: 4px;
+    margin-top: 200px;
+}
+
+a{
+    text-decoration: none ;
+}

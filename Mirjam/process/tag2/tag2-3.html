@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Exercise Position</title>
+    <style>
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+    
+        article {
+            /*ich bin static und diese Angaben haben keinen Einfluss */
+            top: 100px;
+            left: 100px;
+            max-width: 600px;
+            border: 1px solid blue;
+        }
+        
+        .relative {
+            top: 200px;
+            position: relative;
+            background-color: lightskyblue;
+        }
+        
+        .absolute {
+            position: absolute;
+            background-color: rgba(200, 0, 100, 0.5);
+        }
+        
+        .fixed {
+            left: 20px;
+            top: 20px;
+            position: fixed;
+            background-color: rgba(0, 200, 77, 0.5);
+        }
+        
+        .sticky {
+            top: 300px;
+            left: 500px;
+            position: sticky;
+            background-color: rgba(70, 0, 200, 0.5);
+        }
+
+ .section{
+     min-height: 100vh;
+     background-image: url(img/arty-n_GGaQHqT4Q-unsplash.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding: 0px;
+    }
+
+.content{    
+    font-size: 30px;
+    padding: 20px;
+    line-height: 150%;
+}
+
+.sea-fixed{
+    top: 20px;
+    right: 20px;
+    position: fixed;
+}
+.rad-relative{
+    top: 200px;
+    position: relative;
+}
+    </style>
+</head>
+
+<body>
+
+
+    
+  
+    <div class="section">
+        <div>
+            <div class="content">
+            <p>Step out the door, I feel the sun on my skin<br/>
+                Wanted to run but I start to feel like I fit in<br/>
+                You held my hand when I turned around, around<br/>
+                Split in two didn't make a sound, a sound, ooh<br/>
+            </p>
+            </div>
+            <div class="sea-fixed">
+                <img src="img/callum-skelton-3KLMq7y46nA-unsplash.jpg" alt="">
+            </div>
+           
+            <div class="rad-relative">
+                <img src="img/hannah-morgan-dnkM5wPjVdg-unsplash.jpg" alt="">
+            </div>
+
+            <div>
+                <img src="img/arty-n_GGaQHqT4Q-unsplash.jpg" alt="">
+            </div>
+        
+        </div>
+
+    </div>
+
+</body>
+
+</html>
