@@ -1,0 +1,49 @@
+body {
+    background-color: thistle;
+    font-family: "Red Hat";
+    font-size: 2em;
+    text-align: center;
+    color: rgb(196, 105, 95);
+
+}
+
+@font-face {
+        font-family: "Red Hat";
+        src: url(../css/RedHatDisplay-MediumItalic.ttf);
+    }
+
+
+.box1 {
+    width: 400px;
+    height: 200px;
+    border-style: dotted;
+    border-color: tomato;
+    background-color: floralwhite;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(109, 53, 141), 10px 30px 50px rgb(141, 53, 141);
+
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(180, 151, 180);
+    margin: 4vmax;
+    padding: 10vmax;
+    border-radius: 50%;
+    box-shadow: 3em 3em blue, -3em -3em lightblue;
+
+}
+
+.box3 {
+    width: 300px;
+    height: 300px;
+    background-color: thistle;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 0.5em rgb(192, 168, 192), -0.25em -0.25em rgb(223, 209, 223);
+
+}
