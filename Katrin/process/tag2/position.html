@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Exercise Position</title>
+    <style>
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        article {
+            /*ich bin static und diese Angaben haben keinen Einfluss */
+            top: 100px;
+            left: 200px;
+            max-width: 600px;
+            border: 1px solid blue;
+        }
+        
+        .relative {
+            position: relative;
+            background-color: lightskyblue;
+        }
+        
+        .absolute {
+            position: absolute;
+            background-color: rgba(200, 0, 100, 0.5);
+        }
+        
+        .fixed {
+            position: fixed;
+            background-color: rgba(0, 200, 77, 0.5);
+        }
+        
+        .sticky {
+            top: 50px;
+            left: 400px;
+            position: sticky;
+            background-color: rgba(70, 0, 200, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <article>
+        <h2>static</h2>
+        <p>
+            Ich bin static und diese Angaben haben keinen Einfluss. <br/> top: 10px; left: 200px;
+        </p>
+        <p>
+
+            <time datetime="12:00">12:00 Mittagessen</time>
+
+        </p>
+        <p>
+
+            <time datetime="16:00">16:00 Spaziergang</time>
+        </p>
+    </article>
+    <article class="sticky">
+        <h2>sticky</h2>
+        <p>
+            Eine Mischung zwischen fixed und relative: Das Element wird vom normalen Fluss aus verschoben und hat keinen Einfluss auf andere Elemente, solange es sich innerhalb des Viewports befindet. Sobald es sich ausserhalb befindet, wird das Element aus dem normalen
+            Fluss gelöst und bleibt so beim Scrollen an seiner fest definierten Position.
+        </p>
+    </article>
+    <article class="relative">
+        <h2>relative</h2>
+        <p>
+            Ich bin relative und diese Angaben haben einen Einfluss auf mich und meine Kinder. <br/>top: 10px; left: 200px; Ich werde vom normalen Fluss aus verschoben und hat keinen Einfluss auf andere Elemente, da an der ursprünglichen Position Platz
+            gelassen wird.
+        </p>
+    </article>
+    <article class="absolute">
+        <h2>absolute</h2>
+        <p>
+            Ich bin absolute und diese Angaben haben einen Einfluss auf mich und meine Kinder. <br/> top: 10px; left: 200px;<br/> Ich bin ausserhalb des Flows positioniert. <br/> Meine Angaben beziehen sich auf das nächsthöhere Element, das eine relative
+            oder absolute Positionierung haben.<br/> Das Element wird aus dem normalen Fluss gelöst und unabhängig verschoben. Dabei können andere Elemente verdeckt werden. Diese verhalten sich so, als ob das Element nicht vorhanden wäre und lassen keinen
+            Platz für das Element.
+        </p>
+    </article>
+
+    <article class="fixed">
+        <h2>fixed</h2>
+        <p>
+            Die Verschiebung orientiert sich am Viewport. Das Element wird aus dem normalen Fluss gelöst und bleibt auch beim Scrollen an seiner fest definierten Position. Beim Drucken wird das Element auf jeder Seite an der positionierten Stelle angezeigt.
+        </p>
+    </article>
+    <article>
+        <h2>static</h2>
+        <p>
+            Ich bin static und diese Angaben haben keinen Einfluss. <br/> top: 10px; left: 200px;
+        </p>
+        <p>
+
+            <time datetime="12:00">12:00 Mittagessen</time>
+
+        </p>
+        <p>
+
+            <time datetime="16:00">16:00 Spaziergang</time>
+        </p>
+    </article>
+    <article>
+        <h2>static</h2>
+        <p>
+            Ich bin static und diese Angaben haben keinen Einfluss. <br/> top: 10px; left: 200px;
+        </p>
+        <p>
+
+            <time datetime="12:00">12:00 Mittagessen</time>
+
+        </p>
+        <p>
+
+            <time datetime="16:00">16:00 Spaziergang</time>
+        </p>
+    </article>
+    <article>
+        <h2>static</h2>
+        <p>
+            Ich bin static und diese Angaben haben keinen Einfluss. <br/> top: 10px; left: 200px;
+        </p>
+        <p>
+
+            <time datetime="12:00">12:00 Mittagessen</time>
+
+        </p>
+        <p>
+
+            <time datetime="16:00">16:00 Spaziergang</time>
+        </p>
+    </article>
+</body>
+
+</html>
