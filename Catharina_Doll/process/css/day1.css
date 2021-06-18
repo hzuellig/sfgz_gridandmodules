@@ -1,0 +1,46 @@
+    body {
+        background-color: teal;
+        color: white;
+        font-family: 'Gill Sans MT', sans-serif;
+        font-style: oblique;
+        font-variant-ligatures: no-contextual;
+        font-size: 20vw;
+        h line-height: 20vw;
+    }
+    
+    .Stern {
+        color: orange;
+        font-family: 'Times New Roman', Times, serif font-weight: 100;
+        font-weight: 550;
+        font-size: 25vw;
+        line-height: 20vw;
+    }
+    
+    .Grundtext {
+        color: papayawhip;
+        font-family: Times, serif;
+        font-size: xx-large;
+        line-height: -50vh;
+    }
+    
+    .box1 {
+        background-color: darksalmon;
+        border-width: 5px;
+        border-style: dotted;
+        padding: .5em;
+        margin: .25em;
+        box-shadow: white;
+        width: 600px;
+        box-shadow: 10px 10px 5px burlywood;
+    }
+    
+    .box2 {
+        background-image: linear-gradient(white, aqua);
+        border-width: 5px;
+        border-style: groove;
+        padding: .25em;
+        margin: .25em;
+        box-shadow: white;
+        width: 600px;
+        box-shadow: 10px 10px 5px whitesmoke;
+    }

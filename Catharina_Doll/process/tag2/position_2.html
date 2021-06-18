@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Exercise Position</title>
+    <style>
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        article {
+            /*ich bin static und diese Angaben haben keinen Einfluss */
+            top: 100px;
+            left: 400px;
+            max-width: 600px;
+            border: 1px solid blue;
+        }
+        
+        .relative {
+            position: relative;
+            background-color: lightskyblue;
+        }
+        
+        .absolute {
+            position: absolute;
+            background-color: rgba(200, 0, 100, 0.5);
+        }
+        
+        .fixed {
+            position: fixed;
+            background-color: rgba(0, 200, 77, 0.5);
+        }
+        
+        .sticky {
+            top: 50px;
+            left: 400px;
+            position: sticky;
+            background-color: rgba(70, 0, 200, 0.5);
+        }
+        
+        body {
+            background-image: url(../../Image/wand.jpg);
+            border-image-slice: fill;
+        }
+        
+        span {
+            font-size: 25px;
+            color: black;
+            line-height: 120%;
+            font-weight: bolder;
+        }
+        
+        .Titel {
+            font-family: Impact;
+            color: maroon;
+            font-size: 150px;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+        }
+        
+        .box.col {
+            flex-direction: column;
+        }
+        
+        .box div {
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+            color: cornsilk;
+            font-weight: 700;
+            border: 1px dotted red;
+            padding: 6px;
+            width: 50px;
+            line-height: 120%;
+            /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
+        }
+    </style>
+</head>
+
+<body>
+    <!--img src="https://source.unsplash.com/1600x500/?war" style="width: 100vw;"-->
+    <div class="exp">
+
+        <div class="box mainrow">
+            <div>BLABLABLA</div>
+            <div>TRALALALA</div>
+            <div>BÄTZBÄTZ</div>
+            <div>HILFE</div>
+            <div>BEISPIEL</div>
+
+        </div>
+
+        <h1 class="Titel"> GIMME <br/> SHELTER </h1> <br/>
+
+        <span>
+    Ooh, a storm is threatening<br/>
+    My very life today<br/>
+    If I don't get some shelter<br/>
+    Ooh yeah I'm gonna fade away<br/>
+    War, children<br/>
+    It's just a shot away<br/>
+    It's just a shot away<br/>
+    War, children<br/>
+    It's just a shot away<br/>
+    It's just a shot away<br/>
+    Ooh, see the fire is sweepin'<br/>
+    Our streets today<br/>
+    Burns like a red coal carpet<br/>
+    Mad bull lost its way</span>
+
+
+
+
+        </h1>
+
+
+</body>
+
+<!--<body style="background-image:image(wand.jpg;);">
+    <img src="https://source.unsplash.com/1600x300/?revolution" style="width: 100vw;">
+
+
+
+
+    <article>-->
