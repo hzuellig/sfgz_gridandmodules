@@ -1,0 +1,28 @@
+.box1{
+    width: 200px;
+    height: 200px;
+    border-width: 5px;
+    border-color: cadetblue;
+    border-style: dashed;
+    background-color: rgb(223, 78, 25);
+    padding: 30px;
+    margin: 60px;
+    border-radius: 50%;
+    box-shadow: rgb(88, 14, 5) 10px 10px 10px 10px;
+    
+
+}
+
+.box2 {
+    position: absolute ;
+    top: 800px;
+    left: 300px;
+    width: 400px;
+    height: 600px;
+   background-color: darkgrey;
+    border: 4px red solid;
+    
+  
+
+
+}

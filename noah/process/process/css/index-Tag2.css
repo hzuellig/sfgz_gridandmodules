@@ -1,0 +1,7 @@
+body {
+    background-color: rgb(226, 215, 215);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(49, 33, 8);
+    display: inline-block;
+    flex-direction: column;
+}
