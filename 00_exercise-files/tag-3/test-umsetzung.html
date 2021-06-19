@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+
+    <style>
+        section {
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .row {
+            border: 1px solid blue;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 8rem;
+            display: flex;
+            line-height: 80%;
+        }
+        
+        .left {
+            flex-basis: 66.66vw;
+            border: 1px solid rgb(72, 255, 0);
+            text-align: right;
+        }
+        
+        .right {
+            flex-basis: 33.33vw;
+            border: 1px solid rgb(72, 255, 0);
+        }
+        
+        .drehen {
+            transform: rotate(90deg);
+            border: 1px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="row">
+            <div class="left">GIVE</div>
+            <div class="right"></div>
+        </div>
+        <div class="row">
+            <div class="left">ME</div>
+            <div class="right ">
+                <div class="drehen">A</div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="left">SI</div>
+            <div class="right">GN</div>
+
+        </div>
+    </section>
+</body>
+
+</html>
