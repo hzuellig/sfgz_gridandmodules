@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        
+        .relative {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            font-size: 8rem;
+        }
+        
+        .absolute {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 2rem;
+            border: 1px solid red;
+            width: 100vw;
+            height: 55vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .right {
+            text-align: right;
+        }
+        
+        .firstline {
+            height: 40vh;
+        }
+        
+        .alignend {
+            align-self: flex-end;
+        }
+        
+        .greenbg {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="relative">
+            <div>
+                A Sound
+            </div>
+            <div class="right">
+                <span class="greenbg">The grass is always</span> greener
+            </div>
+        </div>
+
+        <div class="absolute">
+            <div class="firstline">
+                Step out the door, I ....
+            </div>
+            <div class="right alignend">
+                During the week, ....
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
