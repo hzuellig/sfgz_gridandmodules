@@ -310,7 +310,7 @@ h2 {
     /* border: 1px solid rgba(9, 9, 11, 0.1); */
     text-align: center;
 
-    cursor: pointer;
+
 
 
   -webkit-touch-callout: none; /* iOS Safari */
@@ -363,6 +363,9 @@ h2 {
     border: 2px solid rgba(111, 219, 133, 0.55);
     border: 2px solid rgba(216, 111, 219, 0.55); */
 
+
+    cursor: pointer;
+
     line-height: 20px;
     border-radius: 5px;
     font-weight: 500;
@@ -407,8 +410,6 @@ body.third-page .page > .page-item .page-item-key:nth-child(3) {
     border: 1px solid rgba(9, 9, 11, 0.1);
     text-align: center;
 
-    cursor: pointer;
-
 
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -441,6 +442,12 @@ body.third-page .page > .page-item .page-item-key:nth-child(3) {
     border: 1px solid rgba(9, 9, 11, 0.1);
     vertical-align: middle;
     display: table;
+
+
+    /* EXPERIMENTAL FLEX*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 body.first-page .display > .display-item {
     background: linear-gradient(-35deg, rgba(111, 219, 204, 0.15), rgba(0,0,0,0.35));
@@ -468,17 +475,24 @@ body.third-page .display > .display-item {
     transition: box-shadow 0.2s ease-out;
 }
 
-.display > .display-item span {
+.display > .display-item .display-text {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 48px;
     justify-content: ;
     display: table-cell;
     vertical-align: middle;
     text-shadow: 1px 1px 4px rgba(9, 9, 11, 0.75), -1px -1px 2px rgba(236, 236, 249, 0.55);
+
+    display: inline-block;
 }
 
 
+.display > .display-item .display-text.display-workit {
+    
+}
 
+
+.display > .display-item.workit-active .display-text {}
 
 
 
