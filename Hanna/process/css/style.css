@@ -1,10 +1,15 @@
 body {
-    background-color: rgb(32, 156, 194);
-    color: rgb(7, 98, 182);
-    font-family: 'Open Sans Light', sans-serif;
-    font-weight: 300;
+    display:flex;
+    flex-wrap: wrap;
 }
 
-h1 {
-    font-size: 3vw;
+.spalte {
+    flex-basis: 400px;
+    flex-shrink:0;
+
+
+}
+
+ul.nav{
+    flex-direction:column;
 }

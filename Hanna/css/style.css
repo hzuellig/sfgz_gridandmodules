@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'ProductSansBold';
+    src: url("../../css/product-sans/ProductSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal; }
+@font-face {
+    font-family: 'ProductSansRegular';
+    src: url("../../css/product-sans/ProductSans-Regular.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal; }
+* {
+    font-family: ProductSansRegular, sans-serif; }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+}
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+}
+.nav li{
+    flex-basis: auto;
+    flex-grow:1;
+    list-style-type: none;
+
+    font-size:1.5rem;
+}
+
+.nav li a{
+    color:black;
+}
+
+h1{
+    font-weight:500;
+    font-size:3rem;
+}
