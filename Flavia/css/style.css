@@ -1,57 +1,61 @@
 body {
-    background-color: thistle;
-    font-family: "Red Hat";
+    background-color: #2a2b45;
+    font-family     : "Red Hat";
+    margin          : 0;
+    padding         : 0;
 }
+
 @font-face {
     font-family: "Red Hat";
-    src: url(../process/css/RedHatDisplay-MediumItalic.ttf);
+    src        : url(../process/css/RedHatDisplay-MediumItalic.ttf);
 }
+
 h1 {
-    font-weight:500;
-    color: rgb(196, 152, 43);
-    padding-left: 10px;
-    font-size: 4em;
+    font-weight   : 500;
+    color         : #F2C9A0;
+    padding-left  : 30px;
+    font-size     : 4em;
     letter-spacing: 3px;
 }
 
 p {
-    color: rgb(196, 152, 43);
-    padding-left: 50px;
-    font-size: 2em;
-    line-height: 130%;
-
+    color       : #F2C9A0;
+    padding-left: 30px;
+    font-size   : 2em;
+    line-height : 130%;
 }
 
 
-.orangeitalic {
-    color: rgb(206, 110, 20);
-    font-style: italic;
-    font-size: 0.8em;
-
+ul {
+    list-style-type : none;
+    margin          : 0;
+    padding         : 0;
+    overflow        : hidden;
+    background-color: #01001e;
 }
 
 li {
-display:block;
-margin: 50px;
-padding: 20px;
+    float: left;
 }
 
-.box3 {
-    width: 300px;
-    height: 300px;
-    background-color: thistle;
-    margin: 50px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0.25em 0.25em 0.25em rgb(192, 168, 192), -0.1em -0.1em rgb(223, 209, 223);
+li a {
+    display        : block;
+    color          : white;
+    text-align     : center;
+    padding        : 20px 25px;
+    text-decoration: none;
 }
-.box {
-    background-color: rgb(201, 175, 201);
-    display: flex;
-    flex-direction: row;
+
+li a:hover {
+    background-color: #F19FA1;
 }
-.box.col {
-    background-color: rgb(201, 175, 201);
-    flex-direction: column;
-    height: 80vw;
+
+a:link {
+    color: #fff;
+}
+a:visited {
+    color: #fff;
+}
+a:hover {
+    color: #01001e;
 }
