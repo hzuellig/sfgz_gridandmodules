@@ -120,6 +120,7 @@ ul li:hover{
     position: relative;
     font-size: 60px;
     font-weight: 600;
+    color: #A1CACF !important;
   }
 
   /* Position the close button (top right corner) */
