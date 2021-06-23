@@ -1,0 +1,41 @@
+h1{
+    font-family: Acumin Pro, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8em;
+    line-height: 80%;
+    color: #2A2A2A;
+}
+
+h1.right-align{
+   text-align: right;
+}
+
+h1.rotate{
+    transform: rotate(-180deg);
+}
+
+p{
+font-family: Acumin Pro, Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 1em;
+line-height: 140%;
+color:#2A2A2A;
+}
+
+p.uppercase{
+    font-family: Acumin Pro ExtraCondensed, Arial, Helvetica, sans-serif;;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8em;
+    line-height: 0%;
+    text-transform: uppercase;
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 175%),
+linear-gradient(0deg, #8DA091, #8DA091);
+
+}
+
+
+a{color: green;
+}
