@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
+
+body {
+    background: #2A2B45;
+    margin    : 0;
+    padding   : 0;
+}
+
+section {
+    height: 99vh;
+    width : 99vw;
+}
+
+.row {
+    display: flex;
+}
+
+.links {
+    flex-basis  : 55%;
+    margin-right: 10px;
+    margin-left : 10px;
+    text-align  : right;
+}
+
+.rechts {
+    flex-basis  : 45%;
+    margin-right: 10px;
+    margin-left : 10px;
+    text-align  : left;
+}
+
+.spotify {
+    display      : flex;
+    width        : 80px;
+    height       : 80px;
+    position     : absolute;
+    top          : 4.5vh;
+    left         : 77vw;
+    border-radius: 50px;
+}
+
+.aerosmith {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 8vh;
+    color           : #967892;
+    position        : relative;
+    text-align      : center;
+    top             : 5vh;
+    left            : 90vw;
+}
+
+.dreamonrechts {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 4vh;
+    color           : #2A2B45;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        1px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        1px 1px 0 #967892;
+}
+
+.fixed {
+    top     : 5vh;
+    left    : 85vw;
+    position: fixed;
+
+}
+
+.verse {
+    font-family    : 'Antic Didone', serif;
+    color          : #fff;
+    font-size      : 2em;
+    justify-content: center;
+    align-items    : center;
+}
+
+.mirror {
+    transform: scale(1, -1);
+    color    : #f3d6efb9;
+}
+
+.mirrornormal {
+    font-size  : 5em;
+    line-height: 0.67em;
+}
+
+.gone {
+    font-size              : 2.5em;
+    background             : linear-gradient(to right, #f3d6efb9 0%, #96789213 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dawn {
+    font-size              : 5em;
+    line-height            : 0.9em;
+    background             : linear-gradient(to bottom, #f3d6ef9a 0%, #96789225 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sing {
+    writing-mode    : vertical-lr;
+    text-orientation: upright;
+    text-align      : center;
+    font-family     : 'Antic Didone', serif;
+    color           : #fff;
+    font-size       : 1.25em;
+    line-height     : 23vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+}
+
+.dreamonoutline {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #2A2B45;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        1px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        1px 1px 0 #967892;
+}
+
+.dreamuntil {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #967892;
+}
