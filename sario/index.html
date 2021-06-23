@@ -1,32 +1,71 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sar</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/jkg6vgm.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <title>Songpage Kunzite, Minerals</title>
 </head>
 
+<script>
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+</script>
 <body>
-    <header class="head">
-        <a href="/about.html">Über mich</a>
-    </header>
 
-    <h1>Ciao!</h1>
-    <a href="https://www.figma.com/file/GUadHCxNqyKvuHU4C9Tom3/Grid-and-Modules?node-id=0%3A1">Figma</a>
+<!-- Menu -->
+<div id="myNav" class="overlay">
 
-    <div class="wrapper">
-
-    <img class="box a" src="https://source.unsplash.com/800x800/?alps">
-    <img class="box b" src="https://source.unsplash.com/800x800/?nature">
+    <!-- Button close -->
+    <div class="boxbtns">
+        <a href="" class="homebtn">Minerals</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
 
+    <!-- Content -->
+    <div class="box-overlay-content">
+        <div class="overlay-content">
+            <p>Tag 1</p>
+        <a href="#">Übung 1</a>
+        <a href="#">Übung 2</a>
+        <a href="#">Übung 3</a>
+        </div>
+        <div class="overlay-content">
+            <p>Tag 2</p>
+        <a href="#">Übung 1</a>
+        <a href="#">Übung 2</a>
+        </div>
+        <div class="overlay-content">
+            <p>Tag 3</p>
+        <a href="#">Übung 1</a>
+        <a href="#">Übung 2</a>
+        <a href="#">Übung 3</a>
+        </div>
+    </div>
+    <div class="box-overlay-content">
+        <div class="overlay-content">
+            <p>About</p>
+        </div>
+    </div>
+  
+  </div>
+  
+  <!-- Burger -->
+  <span class="burger" onclick="openNav()">i</span>
+
+  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100vw; height: 100vh;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FGUadHCxNqyKvuHU4C9Tom3%2FGrid-and-Modules%3Fpage-id%3D0%253A1%26node-id%3D1%253A2%26viewport%3D746%252C380%252C0.6671776175498962%26scaling%3Dmin-zoom" allowfullscreen></iframe>
 
 </body>
-
 </html>
