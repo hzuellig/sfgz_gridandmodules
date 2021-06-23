@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    @font-face {
+        font-family: "Sporting Grotesque Regular";
+        src: url("Sporting_Grotesque-Regular_web.ttf")}
+        color: darkgray;
+    
+    
+    
+        
+    
+    }
