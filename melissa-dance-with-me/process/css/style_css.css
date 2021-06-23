@@ -1,0 +1,72 @@
+h1 {
+            color: rgb(24, 0, 24)
+            line-height: 100%;
+        }
+
+h2 {
+            color: rgb(24, 0, 24);
+            font-weight: 200;
+            font-size: 1em;
+            line-height: 100%;
+            letter-spacing: 10px;
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(24, 0, 24);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2em;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+
+    
+        ul {
+            list-style-type: none;
+            background-color: rgb(24, 0, 24);
+            font-size: 0.7em;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            margin-top: 10px;
+            padding: 0px;
+          }
+          
+          
+          
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+          }
+          
+          li a:hover {
+            background-color: rgb(255, 255, 255);
+            color: gray;
+          }
+
+
+          .container {
+            background-color: rgb(255, 255, 255);
+            width: 100px;
+            height: 200px;
+            display: flex;
+          }
+
+          .item {
+            background-color: silver;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+          }
+    
