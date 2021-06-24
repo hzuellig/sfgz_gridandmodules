@@ -9,49 +9,66 @@
     <title>Plakat</title>
 </head>
 <style>
-    section {
-        margin: 20px;
-        padding: 20px;
-    }
+
     .box {
             display: flex;
+        }
 
-    }
-    .fixed {
-        position: fixed;
-    }
-
-    .relative {
-        position: relative;
-        top: 200px;
-        left: 1000px;
-    }
-
-    .absolute {
-            position: absolute;
-            top: 20px;
-            left: 900px;
+       .box div{
+            /*border:1px dotted red;*/
+            flex-basis:100px;
+            justify-content: center;
 
         }
+        .box div.grow{
+            flex-grow:1;
+            /*border:3px dotted rgb(0, 255, 157);*/
+            margin-left: 40px;
+
+
+        }
+        .box div.grow2{
+            flex-grow:0.5;
+            /*border:3px dotted rgb(238, 255, 0);*/
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .box div img{
+            width:100%;
+            display: block;
+            margin-bottom: 10px;
+            justify-content: center;
+
+        }
+        /*.exp{
+            border:3px dotted blue;
+            width:90vw;
+            margin: 40px;
+        }*/
+
 </style>
 
 
 <body>
     <ul class="nav">
-        <li>
+       <li>
             <a href="/process/index.html">Back</a>
         </li>
     </ul>
-    <section>
-            <img src="Plakat/Plakat_original.jpg" alt="Original" height="700px">
 
-            <img src="Plakat/Plakat_querjpg2.jpg" alt="Quer1" width="300px">
-            <img src="Plakat/Plakat_querjpg3.jpg" alt="Quer2" width="300px">
-            <img src="Plakat/Plakat_querjpg4.jpg" alt="Quer3" width="300px">
+    <div class="exp">
 
+        <div class="box mainrow">
+            <div class="grow"><img src="Plakat/Plakat_original.jpg" alt="original"/></div>
+            <div class="grow2"><img src="Plakat/Plakat_querjpg2.jpg" alt="quer1"/>
+                <img src="Plakat/Plakat_querjpg3.jpg" alt="quer2"/>
+                <img src="Plakat/Plakat_querjpg4.jpg" alt="quer3"/></div>
 
-
-    </section>
+        </div>
+        
+           
+        </div>
 </body>
 
 </html>
