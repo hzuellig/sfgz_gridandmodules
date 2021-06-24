@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Roboto', sans-serif;
+            background-color: black;
+            color: #C01DB0;
+        }
+
+
+        .flexbox-container {
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-direction: column;
+          
+        }
+
+        .flexbox-item {
+            border: solid rgb(248, 243, 243);
+            border-width: 1px;
+            align-items: flex-end;
+            
+        }
+
+        .flexbox-item-1 {
+            font-size: 377px;
+        }
+
+        .flexbox-item-2 {
+            font-size: 233px;
+            display: flex;
+
+        }
+
+
+
+
+        .s {
+            font-size: 610px;
+            color: black;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #ffffff;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        .i {
+            font-size: 377px;
+            color: black;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #ffffff;
+            display: flex;
+        }
+
+
+        .giv {
+            color: black;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #C01DB0;
+
+
+        }
+    </style>
+</head>
+
+<body class="flexbox-container">
+
+
+    <div class="flexbox-container"></div>
+
+    <div class="flexbox-item flexbox-item-1">
+        <div>
+            <div class="giv">GIVE</div>
+        </div>
+    </div>
+
+    <div class="flexbox-item flexbox-item-2">
+        <div class="flexbox-item s">
+            S
+            <div class=" flexbox-item i">
+                I
+            </div>
+        </div>
+        <div>
+            ME
+        </div>
+    </div>
+
+    
+
+
+</body>
+
+</html>
