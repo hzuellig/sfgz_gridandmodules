@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+:root{
+--font-color: beige
+}
+
+body {
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color: black;
+
+  font-family: 'Raleway', sans-serif;  color: var(--font-color);
+  text-transform: uppercase;
+}
+
+#player {
+  /* border: 2px solid red; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+#canvas {
+  width: 100%;
+  height: 90%;
+}
+
+/* CONTROLLER */
+
+nav{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#play{
+  top: 0;
+  left: 0;
+}
+#pause{
+  bottom: 0;
+  left: 0;
+}
+#restart{
+  top: 0;
+  right: 0;
+}
+#stop{
+  bottom: 0;
+  right: 0;
+}
+
+.controler{
+border: 3px solid var(--font-color);
+height: 5em;
+width: 5em;
+background-color: black;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+
+/* MAIN-CONTAINER, horizontal scrollable */
+
+.main-container{
+  /* border: 1px solid red; */
+  height: calc(100vh - 10em);
+  position: absolute;
+  top: 5em;
+  width: max-content;
+  font-weight: 900;
+  display: flex;
+  animation: playlyrics 10s linear;
+}
+
+@keyframes playlyrics {
+  0%{
+    left:0    }
+
+    100%{
+      left:-300vw;
+    }
+}
+
+.main-container > div{
+  height:100%;
+  /* border: 1px solid blue; */
+  margin-right: 4vh;
+}
+
+/* FONT SIZES */
+
+.font-1{
+  font-size: 5em;
+}
+
+.font-2{
+  font-weight: 400;
+  font-size: 11em;
+}
+
+.font-3{
+  font-size: 33em;  
+  display: flex;
+  align-items: flex-end;
+}
+.font-4{
+  font-size: 5em;
+}
+
+/* FONT ANIMATIONS */
+
+.anim-font-weight{
+  transition: color 200ms ease;
+}
+
+.anim-font-weight:hover{
+  color: rgb(119, 11, 11);
+  animation: fontweight 400ms linear infinite alternate;
+}
+
+
+@keyframes fontweight {
+  0%{
+    font-weight: 300;
+  }
+}
+
+/* GRID ELEMENTS */
+
+.rows-1{
+display: grid;
+grid-template-rows: repeat(1, 1fr);
+font-size: 28.5vh;
+vertical-align: middle;
+}
+.rows-2{
+display: grid;
+grid-template-rows: repeat(3, 1fr);
+font-size: 28.5vh;
+}
+
+.rows-3{
+display: grid;
+grid-template-rows: repeat(3, 1fr);
+font-size: 28.5vh;
+}
+.rows-4{
+display: grid;
+grid-template-rows: repeat(4, 1fr);
+}
+
+/* SQUARE STYLES */
+
+.square-3{
+  width: 100%;
+  height: 100%;
+  background-color: var(--font-color);
+  margin-left: 2vh;
+  padding: 1vh;
+  grid-row: 2/5;
+}
+.square-4{
+  width: 80vh;
+  height: 98%;
+  background-color: var(--font-color);
+  margin-left: 2vh;
+  padding: 1vh;
+}

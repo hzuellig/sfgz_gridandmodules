@@ -5,76 +5,70 @@
 }
 
 body {
-  background-color: black;
-  color: whitesmoke;
+  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-header {
-  margin-top: 3em;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  mix-blend-mode: difference;
-}
-
-header p {
-  margin-top: 1em;
+  padding: 2em;
   text-transform: uppercase;
-}
 
-/* audio {
-  margin-bottom: 4em;
-} */
+}
 
 a {
-  text-decoration: none;
-  color: blueviolet;
+  /* text-decoration: none; */
+  color: inherit;
 }
 
-a h3 {
-  transition: all 100ms ease;
-  border: 1px solid blueviolet;
-  width: 20em;
-  margin: 2em auto;
-  padding: 2em;
+ul{
+list-style: none;
 }
 
-a h3:hover {
-  letter-spacing: 0.1em;
-  background-color: rgba(138, 43, 128, 0.4);
+li{
+  padding-bottom: .5em;
 }
 
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
-section {
-  position: absolute;
-  top: 12em;
-  width: 100%;
-  padding-bottom: 8em;
+header{
+  display: flex;
+  margin-bottom: 3em;
 }
 
-.lyrics i {
-  display: none;
+header>div:first-child{
+  flex:1;
+}
+header>div:last-child{
+  flex:2;
+}
+header strong{
+font-size: 2em;
+margin-bottom: .5em;
+display: block;
 }
 
-.lyrics h3 {
-  position: sticky;
-  top: 10em;
-  background-color: black;
-  padding: 1em;
+#about{
+  padding-right: 2em;
 }
 
-#player {
-  border: 2px solid red;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+ h1{
+  margin-bottom: 1em;
 }
+
+
+.progress-container>div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border: 2px solid #000;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: .5em;
+}
+
+.progress-container h3{
+  font-weight: normal;
+  font-size: inherit;
+}
+
+
