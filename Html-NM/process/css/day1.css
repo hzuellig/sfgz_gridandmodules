@@ -30,6 +30,7 @@
 
     .menu ul {
         list-style-type: none;
+        display: flex;
         margin: 0;
         padding: 0;
         overflow: hidden;
@@ -44,7 +45,7 @@
       }
       
     .menu li a {
-        display: inline;
+        display: flex;
         color: white;
         text-align: center;
         padding: 14px 5px;

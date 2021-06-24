@@ -1,33 +1,291 @@
-body {
-    background-image: url(Notenlinie.png);
+body 
+{
+    background-color: rgb(231, 211, 203);
     background-size: cover;
-    overflow-x: scroll;
-    overflow-y: hidden;
     height: 100vh;
     width: 100vw;
 }
 
-.lyrics {
+
+.taste1 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
     display: flex;
 }
 
-.menu {
-    background-color: blue;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.box1 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box2 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box3 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box4 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
 }
 
-.normal {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.taste2 
+{
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box5 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box6 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box7 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.taste3 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box8 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box9 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box10 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.taste4 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box11 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box12 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box13 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.taste5 
+{
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box14 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box15 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box16 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.taste6 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box17 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box18 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box19 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.normal89 
+{
+
+}
+
+.normal55 
+{
+
+}
+
+.normal34 
+{
+
+}
+
+.titel 
+{
+    text-align: center;
+    font: ;
+}
+
+.style
+{
+    position: absolute;
+
+    font-family: Ribeye Marrow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 197px;
+    color: #FF00F5;
+}
+
+.heart 
+{
+    position: absolute;
+
+    font-family: Playball;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 180px;
+    color: #FF0404;
+}
+
+.goin 
+{
+    position: absolute;
+
+    font-family: Shojumaru;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 89px;
+    line-height: 118px;
+    color: #19D22B;
+}
+
+.see 
+{
+    position: absolute;
+
+    font-family: Yatra One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 213px;
+    color: #08FBFB;
+}
+
+.river 
+{
+    position: absolute;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 89px;
+    line-height: 108px;
+    color: #0038FF;
 }
 
 .rainbow
 {
-    margin-top: 0px;
-    margin-bottom: 10px;
     font-family: sans-serif;
     font-size: 52px;
-    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, #FF0404, #19D22B, #08FBFB, #0038FF); 
+ 
+    position: absolute;
+
+    font-family: Petit Formal Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 180px;
 }
+
+
