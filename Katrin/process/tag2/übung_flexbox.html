@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Übung Flexbox</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            margin:0px;
+            padding:0px;
+        }
+
+        .box {
+            display: flex;
+
+        }
+
+        .box div{
+            font-weight:700;
+            border:1px dotted red;
+            padding:6px;
+            flex-basis:100px;
+            line-height:120%; /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
+        }
+        .box div.fat{
+            flex-grow:1;
+        }
+        .box div img{
+            width:100%;
+            display:block;
+        }
+        .exp{
+            margin:10px;
+            border:1px dotted blue;
+            width:90vw;
+        }
+
+    </style>
+</head>
+<body>
+<div class="exp">
+
+<div class="box mainrow">
+    <div>sad emoji<img src="img/sad-emoji.png" alt="sad "/></div>
+    <div class="fat">fat emoji<img src="img/cool-emoji.jpg" alt="cool "/></div>
+    <div>sad emoji<img src="img/sad-emoji.png" alt="sad "/></div>
+    <div>sad emoji<img src="img/sad-emoji.png" alt="sad "/></div>
+    <div>sad emoji<img src="img/sad-emoji.png" alt="sad "/></div>
+    <div>sad emoji<img src="img/sad-emoji.png" alt="sad "/></div>
+</div>
+
+   
+</div>
+
+</body>
+</html>

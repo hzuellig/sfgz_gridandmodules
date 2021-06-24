@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    font-family: staatliches;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size:1.5rem;
+    padding-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: open sans;
+    font-size:1.5rem;
+    padding-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
+/*_NAVIGATION________________________________________________________________*/
+
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    background-color: rgb(0, 0, 0);
+    text-align:left;
+    padding: 10px 10px 10px 40px;
+}
+.nav li{
+    flex-basis: auto;
+    flex-grow:1;
+    list-style-type: none;
+    font-size:2rem;
+}
+
+.nav li a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav li a:hover{
+    text-decoration-line: overline;
+}
+
+/*_LINKS IN INDEX PROCESS_____________________________________________________*/
+
+.links{
+    padding-left: 40px;
+
+}
+.links li{
+    list-style-type:none;
+}
+
+.links li a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    font-size:1.2rem;
+    font-family: open sans;
+
+}
+
+.links li a:hover{
+color: rgb(122, 122, 122)}
+
+/*___________________________________________________________________________*/

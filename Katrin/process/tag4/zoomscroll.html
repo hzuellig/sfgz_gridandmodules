@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section{
+            width:100vw;
+            height:100vh;
+            overflow-y:scroll;
+            border-bottom: 2px dashed black;
+        }
+        .row{
+            font-size:1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            transition: all 0.1s ease-in-out;
+
+        }
+
+        .sticky{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<section>
+    Section 1
+</section>
+<section class="sticky" id="section-2">
+    Section 2
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+    <div class="row">Wort Wort Wort</div>
+</section>
+<script>
+    const maxfontsize= 8;
+    const minfontsize = 1;
+    console.log(window.innerHeight);
+    // javascript event handlers https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+    // hier wird die scroll Funktion abgehört, immer wenn der User scrollt wird die gesamte Funktion ausgeführt
+    window.onscroll = function() {
+        //alle Elemente mit dem Tag article werden in die Variable articles geschrieben, diese ist ein Array mit allenfalls mehreren Einträgen
+        let zeilen = document.getElementsByClassName("row");
+
+        let sectionRect = document.getElementById("section-2").getBoundingClientRect();
+
+            //hier wird durch alle Einträge im Array durchgeloopt
+            //
+            for (let i = 0; i < zeilen.length; i++) {
+                // bei jedem einzelnen wird abgetragt, wo er sich im Moment in Bezug auf den Viewport befindet
+                let c = zeilen[i].getBoundingClientRect();
+                if(c.top < window.innerHeight && c.top > 0){
+                    //console.log(domRect.top);
+                    /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect*/
+                    let distMiddle =  c.top - window.innerHeight / 2 ;
+                    let size = map(distMiddle, 0, window.innerHeight / 2, minfontsize, maxfontsize);
+                    console.log(distMiddle);
+                    zeilen[i].style.fontSize = size +"rem";
+                }
+
+
+
+
+            }
+
+
+
+            // die console.log könnt ihr im live modus auskommentieren! Sind bloss zum Testen da.
+
+
+    };
+
+    function map(val, in_min, in_max, out_min, out_max) {
+        return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+</script>
+</body>
+</html>
