@@ -6,10 +6,10 @@
 
 body {
   background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  color: var(--font-color);
   padding: 2em;
   text-transform: uppercase;
-
 }
 
 a {
@@ -18,94 +18,128 @@ a {
   position: relative;
 }
 
-a:after{
+a:after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: .1em;
+  height: 0.1em;
   background-color: white;
   transition: height 200ms ease;
   mix-blend-mode: difference;
 }
 
-a:hover:after{
+a:hover:after {
   height: 100%;
 }
 
-ul{
-list-style: none;
+ul {
+  list-style: none;
 }
 
-li{
-  padding-bottom: .5em;
+li {
+  padding-bottom: 0.5em;
 }
 
-.main-container{
+.main-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
 
-header{
+header {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 0em;
-  
 }
 
-header h1{
+header h1 {
   font-size: 4em;
   line-height: 1;
 }
 
-header strong{
-font-size: 2em;
-margin-bottom: .5em;
-display: block;
+header strong {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  display: block;
+  line-height: 1;
 }
 
-#about{
+header strong span {
+  position: relative;
+  padding-right: 0.83em;
+}
+header strong span::before {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 0.74em;
+  height: 0.74em;
+  top: 0.21em;
+  left: 0.07em;
+}
+
+#about {
   padding-right: 2em;
 }
+#about h3 {
+  padding-top: 1em;
+}
 
- h1{
+#about li {
+  position: relative;
+  text-indent: 1em;
+  padding-bottom: 0.3em;
+}
+
+#about li::before {
+  content: '';
+  width: 0.74em;
+  height: 0.74em;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0.21em;
+}
+
+h1 {
   margin-bottom: 1em;
 }
 
-
-.progress-container>div{
+.progress-container > div {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   border: 2px solid #000;
   margin-bottom: 1em;
   font-size: 1.5em;
   font-weight: normal;
-  padding: .5em;
+  padding: 0.5em;
 }
 
-.progress-container h3{
+.progress-container h3 {
   font-weight: normal;
   font-size: inherit;
 }
 
-@media screen and (max-width:640px) {
-  header, .main-container, .progress-container>div {
+@media screen and (max-width: 720px) {
+  header,
+  .main-container,
+  .progress-container > div {
     grid-template-columns: 1fr;
   }
-   .progress-container {
+  .progress-container {
     margin-top: 4em;
   }
-   .progress-container .links-list{
-display: grid; 
-grid-template-columns: 1fr 1fr; }
-   .progress-container>div>div {
+  .progress-container .links-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .progress-container > div > div {
     margin-bottom: 1em;
   }
-   .progress-container>div>div:first-child {
-border-bottom: .1em solid black;
-padding-bottom: .5em;
-font-weight: bold;
+  .progress-container > div > div:first-child {
+    border-bottom: 0.1em solid black;
+    padding-bottom: 0.5em;
+    font-weight: bold;
   }
 }
-
