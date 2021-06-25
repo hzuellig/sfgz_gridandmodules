@@ -2,82 +2,94 @@
     font-family: Proxima Nova;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 body {
     margin: 0;
+    padding: 50px;
     overflow-x: hidden;
+    overflow-y: hidden;
+    background: #DFB450;
+}
+
+main {
+    height: calc(100vh - 100px);
+    width: calc(100vw - 100px);
+    background: rgba(223, 180, 80, 0.9);
+}
+
+.home, .hunter, .about, .artist {
+    position: fixed;
+    font-weight: 900;
+    letter-spacing: 2px;
+    border-bottom: 2px solid white;
+    transition: 0.5s;
+}
+
+.home {
+    top: 0;
+    margin: 14px 0 14px 0;
+    left: calc(50% - 25.92px);
+    color: #902920;
+    border-bottom: 2px solid #902920;
+}
+
+.hunter {
+    bottom: 0;
+    margin: 14px 0 14px 0;
+    left: calc(50% - 31.68px);
+}
+
+.about {
+    left: 0;
+    top: calc(50% - 27.5px);
+    transform: rotate(-90deg);
 }
 
 .artist {
-    margin: 0;
+    right: 0;
+    top: calc(50% - 26.36px);
+    transform: rotate(90deg);
+}
+
+.portrait {
+    width: 38vmax;
+    left: 50%;
+    transform: translateX(-60%);
     position: absolute;
-    top: 50px;
-    left: 100px;
-    font-weight: 900;
+    bottom: 50px;
 }
 
-/* --- Fullpage Slider--- */
-.fp-viewing-firstSection {
-    overflow: hidden;
-    height: 100%;
-}
-.fullpage-wrapper {
-    height: 100%;
-    position: relative;
-    touch-action: none;
-    transform: translate3d(0px, 0px, 0px);
-}
-.vertical-scrolling fp-section active fp-table {
-    height: 100vh;
-}
-#section-01 {
-    background-color: #DFB450!important;
+.hunter:hover, .home:hover, .artist:hover, .about:hover {
+    color: #902920;
+    border-bottom: 2px solid #902920;
+    transition: 0.5s;
 }
 
-#section-02 {
-    background-color: #a5392d!important;
-}
-
-#section-03 {
-    background-color: #1A1A1A!important;
-}
-.fp-tableCell {
-    height: 100vh;
-}
-
-.scroll {
-    margin: 0;
-    position: absolute;
-    right: 20%;
-    bottom: 230px;
-    font-weight: 900;
-}
-
-.pw {
-    width: 40%;
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 25%);
-    z-index: 10;
-}
-
-/* --- Hunter Loop Font --- */
-
-#section-01 {
+.marquee {
   position: relative;
   width: 100vw;
   max-width: 100%;
-  height: 200px;
+  height: 175px;
+    top: calc(50% - 87.5px);
   overflow-x: hidden;
 }
 
-.fp-tableCell {
+.content {
+    font-size: 144px;
+    font-weight: 900;
+    font-style: italic;
+}
+.track {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 15s linear infinite;
+  animation: marquee 32s linear infinite;
 }
 
-@keyframes section-01 {
+@keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
