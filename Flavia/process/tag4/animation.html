@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:'Montserrat', sans-serif;
+            font-size: 5em;
+            text-align: center;
+            line-height: 20;
+        }
+
+        .box {
+            width: 100vw;
+            height: 200vh;
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            animation-name: meineAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition: all 1s cubic-bezier(0, .86, 1, -0.02);
+        }
+
+        @keyframes meineAnimation {
+            0% {
+                border-radius: 50%;
+                transform: scale(0.8);
+                background-color: rgb(201, 225, 235);
+            }
+
+            50% {
+                border-radius: 50%;
+                transform: scale(0.3);
+                background-color: rgb(150, 211, 235);
+
+
+            }
+
+            100% {
+                border-radius: 50%;
+                transform: scale(0.8);
+                background-color: rgb(201, 225, 235);
+
+            }
+        }
+
+        .box2 {
+            width: 100vw;
+            height: 200vh;
+            position: absolute;
+            background-color: rgb(255, 185, 80);
+            animation-name: meineZweiteAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            transition: all 1s ease-in;
+
+        }
+
+        @keyframes meineZweiteAnimation {
+            0% {
+                border-radius: 50%;
+                transform: scale(0.2);
+                background-color: rgb(255, 185, 80);
+            }
+
+            50% {
+                border-radius: 50%;
+                transform: scale(0.1);
+                background-color: coral;
+
+            }
+
+            100% {
+                border-radius: 50%;
+                transform: scale(0.2);
+                background-color: rgb(255, 185, 80);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <div class="box2">CALM
+    </div>
+</body>
+
+</html>

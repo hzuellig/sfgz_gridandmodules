@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            font-size: 1vw;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            line-height: 5;
+        }
+
+        .trigger {
+            border: 5px dotted blueviolet;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid blueviolet;
+            background-color: rgb(122, 141, 202);
+            transition: all 1s ease-in-out;
+        }
+
+        .trigger:hover .first {
+            transform: scale(0.5);
+            transition-delay: 1s;
+        }
+
+        .trigger:hover .second {
+            transform: scale(0.1);
+            transition-delay: 2s;
+        }
+
+        .trigger:hover .third {
+            transform: scale(0.5);
+            transition-delay: 3s;
+
+        }
+
+        .trigger:hover .forth {
+            transform: scale(0.1);
+            transition-delay: 4s;
+
+        }
+
+        .trigger:hover .fifth {
+            transform: scale(0.5);
+            transition-delay: 5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="trigger">
+        <div class="box first">HEY</div>
+        <div class="box second">HOVER</div>
+        <div class="box third">HOVER</div>
+        <div class="box forth">HOVER</div>
+        <div class="box fifth">HOVER</div>
+    </div>
+
+
+</body>
+
+</html>
