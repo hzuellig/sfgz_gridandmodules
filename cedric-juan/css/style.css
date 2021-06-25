@@ -249,7 +249,8 @@ h2 {
 .main > .main-container {
     /* padding: 120px 20px 20px 20px; */
     height: 100%;
-    background: #16161d;
+    /* background: #16161d; */ /* Very Dark*/
+    background: #2D2D34; /* Lighter*/
 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -261,7 +262,8 @@ h2 {
     position: relative;
     height: 100%;
     padding: 20px 20px 20px 20px;
-    background: linear-gradient(-45deg, rgba(255,255,255,0.05), rgba(0,0,0,0.15));
+    /* background: linear-gradient(-45deg, rgba(255,255,255,0.05), rgba(0,0,0,0.15)); */ /* Very Dark*/
+    background: linear-gradient(-45deg, rgba(255,255,255,0.05), rgba(0,0,0,0.10)); /* Lighter*/
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -296,13 +298,14 @@ h2 {
 }
 
 
-.page {display: flex;flex-flow: wrap;height: 5%;}
+.page {display: flex;flex-flow: wrap;height: 5%;flex-direction: column;justify-content: center;}
 .page > .page-item {
     display: block;
     position: relative;
     width: 100%;
     /* max-width:600px; */
-    max-width: calc(100% - 40px);
+    /* max-width: calc(100% - 40px); */
+    max-width: calc(33% - 40px);
     margin: 0px 20px;
     padding: 0 20px;
     border-radius: 20px;
@@ -344,6 +347,73 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+
+.page .page-item-button {
+    display: flex;
+    flex-direction: row;
+
+    align-content: center;
+    align-items: center;
+    margin-left: 5px;
+
+    padding: 0px;
+}
+.page .page-item-button:first-child {margin-left: 0;}
+
+.page .page-item-button .page-item-button-text {
+    display: block;
+    height: 25px;
+    line-height: 24px;
+}
+.page .page-item-button .page-item-button-key {
+    background: rgba(9, 9, 11, 0.05);
+
+    /* background: rgba(111, 219, 204, 0.05);
+    background: rgba(111, 219, 133, 0.05);
+    background: rgba(216, 111, 219, 0.05); */
+
+    /* position: absolute; */
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid rgba(9, 9, 11, 0.15);
+
+    /* border: 2px solid rgba(111, 219, 204, 0.55);
+    border: 2px solid rgba(111, 219, 133, 0.55);
+    border: 2px solid rgba(216, 111, 219, 0.55); */
+
+
+    cursor: pointer;
+
+    line-height: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    top: 0;
+    bottom: 0;
+    /* margin: 0 10px; */
+    margin: 0 3px 0 10px;
+    left: auto;
+    right: 25px;
+    text-shadow: 1px 1px 4px rgba(9, 9, 11, 0.75), -1px -1px 2px rgba(236, 236, 249, 0.55);
+    box-shadow: 6px 6px 14px -1px rgba(0, 0, 0, 0.35), -5px -3px 12px -1px rgba(236, 236, 249, 0.15);
+}
+
+.page #button-play.buttontriggered .page-item-button-key {
+    background: rgba(111, 219, 204, 0.05);
+    border: 2px solid rgba(111, 219, 204, 0.55);
+}
+.page #button-pause.buttontriggered .page-item-button-key {
+    background: rgba(111, 219, 133, 0.05);
+    border: 2px solid rgba(111, 219, 133, 0.55);
+}
+.page #button-reset.buttontriggered .page-item-button-key {
+    background: rgba(216, 111, 219, 0.05);
+    border: 2px solid rgba(216, 111, 219, 0.55);
+}
+
 .page > .page-item .page-item-key {
     background: rgba(9, 9, 11, 0.05);
 
@@ -488,7 +558,7 @@ body.third-page .display > .display-item {
 
 
 .display > .display-item .display-text.display-workit {
-    
+
 }
 
 
