@@ -67,6 +67,23 @@
                     // workis
                     // over
 
+                    if (keyCode == 73) {
+                        $('#button-play').trigger('click').addClass('buttontriggered');
+                        $('#button-pause').removeClass('buttontriggered');
+                        $('#button-reset').removeClass('buttontriggered');
+                    } /* I */
+                    if (keyCode == 79) {
+                        $('#button-play').removeClass('buttontriggered');
+                        $('#button-pause').trigger('click').addClass('buttontriggered');
+                        $('#button-reset').removeClass('buttontriggered');
+                    } /* O */
+                    if (keyCode == 80) {
+                        $('#button-play').removeClass('buttontriggered');
+                        $('#button-pause').removeClass('buttontriggered');
+                        $('#button-reset').trigger('click').addClass('buttontriggered');
+                    } /* P */
+
+
                     if (keyCode == 74) {
                         $('body').removeClass('second-page').removeClass('third-page').addClass('first-page');
                     } /* J */
@@ -180,23 +197,488 @@
                     });
                 });
 
+                // $(document).ready(function() {
+                //     var audioElement = document.createElement('audio');
+                //     audioElement.setAttribute('src', '../audio/1_workit.mp3');
+                //
+                //     audioElement.addEventListener('ended', function() {
+                //         //audioElement.currentTime = 0;
+                //         this.pause();
+                //     }, false);
+                //
+                //     audioElement.addEventListener("canplay",function(){
+                //     //     $("#length").text("Duration:" + audioElement.duration + " seconds");
+                //     //    $("#source").text("Source:" + audioElement.src);
+                //         $("#status").text("Status: Ready to play").css("color","green");
+                //     });
+                //
+                //     // audioElement.addEventListener("timeupdate",function(){
+                //     //     $("#currentTime").text("Current second:" + audioElement.currentTime);
+                //     // });
+                //
+                //     $('#workit').click(function() {
+                //         audioElement.currentTime = 0;
+                //         audioElement.play();
+                //         $("#status").text("Status: Playing");
+                //     });
+                //
+                //     // $('#pause').click(function() {
+                //     //     audioElement.pause();
+                //     //     $("#status").text("Status: Paused");
+                //     // });
+                //     //
+                //     // $('#restart').click(function() {
+                //     //     audioElement.currentTime = 0;
+                //     // });
+                // });
+
+                $(document).ready(function() {
+                    var audioElement0 = document.createElement('audio');
+                    var audioElement1 = document.createElement('audio');
+                    var audioElement2 = document.createElement('audio');
+                    var audioElement3 = document.createElement('audio');
+                    var audioElement4 = document.createElement('audio');
+                    var audioElement5 = document.createElement('audio');
+                    var audioElement6 = document.createElement('audio');
+                    var audioElement7 = document.createElement('audio');
+                    var audioElement8 = document.createElement('audio');
+                    var audioElement9 = document.createElement('audio');
+                    var audioElement10 = document.createElement('audio');
+                    var audioElement11 = document.createElement('audio');
+                    var audioElement12 = document.createElement('audio');
+                    var audioElement13 = document.createElement('audio');
+                    var audioElement14 = document.createElement('audio');
+                    var audioElement15 = document.createElement('audio');
+                    var audioElement16 = document.createElement('audio');
+                    var audioElement17 = document.createElement('audio');
+                    var audioElement18 = document.createElement('audio');
+                    var audioElement19 = document.createElement('audio');
+                    var audioElement20 = document.createElement('audio');
+                    var audioElement21 = document.createElement('audio');
+                    var audioElement22 = document.createElement('audio');
+                    var audioElement23 = document.createElement('audio');
+                    var audioElement24 = document.createElement('audio');
+                    var audioElement25 = document.createElement('audio');
+                    var audioElement26 = document.createElement('audio');
+                    var audioElement27 = document.createElement('audio');
+                    var audioElement28 = document.createElement('audio');
+                    var audioElement29 = document.createElement('audio');
+                    var audioElement30 = document.createElement('audio');
+                    var audioElement31 = document.createElement('audio');
+                    var audioElement32 = document.createElement('audio');
+                    var audioElement33 = document.createElement('audio');
+                    var audioElement34 = document.createElement('audio');
+                    var audioElement35 = document.createElement('audio');
+                    var audioElement36 = document.createElement('audio');
+                    var audioElement37 = document.createElement('audio');
+                    var audioElement38 = document.createElement('audio');
+                    var audioElement39 = document.createElement('audio');
+                    var audioElement40 = document.createElement('audio');
+
+
+                    audioElement0.setAttribute('src', '../audio/instrumental.mp3');
+                    audioElement1.setAttribute('src', '../audio/1_workit.mp3');
+                    audioElement2.setAttribute('src', '../audio/1_makeit.mp3');
+                    audioElement3.setAttribute('src', '../audio/1_doit.mp3');
+                    audioElement4.setAttribute('src', '../audio/1_makesus.mp3');
+                    audioElement5.setAttribute('src', '../audio/1_harder.mp3');
+                    audioElement6.setAttribute('src', '../audio/1_better.mp3');
+                    audioElement7.setAttribute('src', '../audio/1_faster.mp3');
+                    audioElement8.setAttribute('src', '../audio/1_stronger.mp3');
+                    audioElement9.setAttribute('src', '../audio/1_morethan.mp3');
+                    audioElement10.setAttribute('src', '../audio/1_hour.mp3');
+                    audioElement11.setAttribute('src', '../audio/1_our.mp3');
+                    audioElement12.setAttribute('src', '../audio/1_never.mp3');
+                    audioElement13.setAttribute('src', '../audio/1_ever.mp3');
+                    audioElement14.setAttribute('src', '../audio/1_after.mp3');
+                    audioElement15.setAttribute('src', '../audio/1_workis.mp3');
+                    audioElement16.setAttribute('src', '../audio/1_over.mp3');
+                    audioElement17.setAttribute('src', '../audio/2_workit.mp3');
+                    audioElement18.setAttribute('src', '../audio/2_makeit.mp3');
+                    audioElement19.setAttribute('src', '../audio/2_doit.mp3');
+                    audioElement20.setAttribute('src', '../audio/2_makesus.mp3');
+                    audioElement21.setAttribute('src', '../audio/2_harder.mp3');
+                    audioElement22.setAttribute('src', '../audio/2_better.mp3');
+                    audioElement23.setAttribute('src', '../audio/2_faster.mp3');
+                    audioElement24.setAttribute('src', '../audio/2_stronger.mp3');
+                    audioElement25.setAttribute('src', '../audio/2_morethan.mp3');
+                    audioElement26.setAttribute('src', '../audio/2_hour.mp3');
+                    audioElement27.setAttribute('src', '../audio/2_our.mp3');
+                    audioElement28.setAttribute('src', '../audio/2_never.mp3');
+                    audioElement29.setAttribute('src', '../audio/2_ever.mp3');
+                    audioElement30.setAttribute('src', '../audio/2_after.mp3');
+                    audioElement31.setAttribute('src', '../audio/2_workis.mp3');
+                    audioElement32.setAttribute('src', '../audio/2_over.mp3');
+                    audioElement33.setAttribute('src', '../audio/3_morethan.mp3');
+                    audioElement34.setAttribute('src', '../audio/3_hour.mp3');
+                    audioElement35.setAttribute('src', '../audio/3_our.mp3');
+                    audioElement36.setAttribute('src', '../audio/3_never.mp3');
+                    audioElement37.setAttribute('src', '../audio/3_ever.mp3');
+                    audioElement38.setAttribute('src', '../audio/3_after.mp3');
+                    audioElement39.setAttribute('src', '../audio/3_workis.mp3');
+                    audioElement40.setAttribute('src', '../audio/3_over.mp3');
+
+
+                    // $(document).('audio').each(function() {
+                    //
+                    //
+                    // });
+
+                    audioElement0.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement1.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement2.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement3.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement4.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement5.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement6.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement7.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement8.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement9.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement10.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement11.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement12.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement13.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement14.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement15.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement16.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement17.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement18.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement19.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement20.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement21.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement22.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement23.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement24.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement25.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement26.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement27.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement28.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement29.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement30.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement31.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement32.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement33.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement34.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement35.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement36.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement37.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement38.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement39.addEventListener('ended', function() { this.pause(); }, false);
+                    audioElement40.addEventListener('ended', function() { this.pause(); }, false);
+
+                    audioElement0.addEventListener("canplay",function(){ $("#status0").text("Status: Ready to play Instrumental").css("color","green"); });
+                    audioElement40.addEventListener("canplay",function(){ $("#status40").text("Status: Ready to play Last File").css("color","green"); });
+
+                    $('#button-play').click(function() {
+                        // audioElement.currentTime = 0;
+                        audioElement0.play();
+                        // $("#status").text("Status: Playing");
+                    });
+
+                    $('#button-pause').click(function() {
+                        audioElement0.pause();
+                        // $("#status").text("Status: Paused");
+                    });
+
+                    $('#button-reset').click(function() {
+                        audioElement0.currentTime = 0;
+                    });
+
+                    $(document).find('#workit').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+                        var currentData = 0;
+                        var audioVarElement = '';
+                        var $this = $(this);
+                        console.log($this);
+
+                        if(currentPageState == 'first-page') {
+                            audioElement1.currentTime = 0;
+                            audioElement1.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement17.currentTime = 0;
+                            audioElement17.play();
+                        }
+
+                        $("#status").text("Status: Playing");
+                    });
+
+                    $('#makeit').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement2.currentTime = 0;
+                            audioElement2.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement18.currentTime = 0;
+                            audioElement18.play();
+                        }
+                    });
+
+                    $('#doit').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement3.currentTime = 0;
+                            audioElement3.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement19.currentTime = 0;
+                            audioElement19.play();
+                        }
+                    });
+
+                    $('#makesus').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement4.currentTime = 0;
+                            audioElement4.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement20.currentTime = 0;
+                            audioElement20.play();
+                        }
+                    });
+
+                    $('#harder').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement5.currentTime = 0;
+                            audioElement5.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement21.currentTime = 0;
+                            audioElement21.play();
+                        }
+                    });
+
+                    $('#better').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement6.currentTime = 0;
+                            audioElement6.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement22.currentTime = 0;
+                            audioElement22.play();
+                        }
+                    });
+
+                    $('#faster').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement7.currentTime = 0;
+                            audioElement7.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement23.currentTime = 0;
+                            audioElement23.play();
+                        }
+                    });
+
+                    $('#stronger').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement8.currentTime = 0;
+                            audioElement8.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement24.currentTime = 0;
+                            audioElement24.play();
+                        }
+                    });
+
+                    $('#morethan').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement9.currentTime = 0;
+                            audioElement9.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement25.currentTime = 0;
+                            audioElement25.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement33.currentTime = 0;
+                            audioElement33.play();
+                        }
+                    });
+
+                    $('#hour').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement10.currentTime = 0;
+                            audioElement10.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement26.currentTime = 0;
+                            audioElement26.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement34.currentTime = 0;
+                            audioElement34.play();
+                        }
+                    });
+
+                    $('#our').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement11.currentTime = 0;
+                            audioElement11.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement27.currentTime = 0;
+                            audioElement27.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement35.currentTime = 0;
+                            audioElement35.play();
+                        }
+                    });
+
+                    $('#never').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement12.currentTime = 0;
+                            audioElement12.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement28.currentTime = 0;
+                            audioElement28.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement36.currentTime = 0;
+                            audioElement36.play();
+                        }
+                    });
+
+                    $('#ever').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement13.currentTime = 0;
+                            audioElement13.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement29.currentTime = 0;
+                            audioElement29.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement37.currentTime = 0;
+                            audioElement37.play();
+                        }
+                    });
+
+                    $('#after').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement14.currentTime = 0;
+                            audioElement14.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement30.currentTime = 0;
+                            audioElement30.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement38.currentTime = 0;
+                            audioElement38.play();
+                        }
+                    });
+
+                    $('#workis').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement15.currentTime = 0;
+                            audioElement15.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement31.currentTime = 0;
+                            audioElement31.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement39.currentTime = 0;
+                            audioElement39.play();
+                        }
+                    });
+
+                    $('#over').click(function() {
+                        var currentPageState = $(document).find('body').attr('class');
+
+                        if(currentPageState == 'first-page') {
+                            audioElement16.currentTime = 0;
+                            audioElement16.play();
+                        }
+                        if(currentPageState == 'second-page') {
+                            audioElement32.currentTime = 0;
+                            audioElement32.play();
+                        }
+                        if(currentPageState == 'third-page') {
+                            audioElement40.currentTime = 0;
+                            audioElement40.play();
+                        }
+                    });
+
+
+
+                });
 
             })( jQuery );
         </script>
     </head>
-    <body>
+    <body class="">
         <div class="body-content">
             <div class="header" w3-include-html="../includes/nav.html"></div>
             <div class="main">
                 <div class="main-container">
                     <div class="main-inner">
-
+                        <div style="display:none;">
+                            <h2>Sound Information</h2>
+<!-- <div id="length">Duration:</div> -->
+<!-- <div id="source">Source:</div> -->
+<div id="status0" style="color:red;">Status: Loading</div>
+<div id="status40" style="color:red;">Status: Loading</div>
+<hr>
+<!-- <h2>Control Buttons</h2> -->
+<button id="play">Play</button>
+<!-- <button id="pause">Pause</button> -->
+<!-- <button id="restart">Restart</button> -->
+<!-- <hr> -->
+<!-- <h2>Playing Information</h2> -->
+<!-- <div id="currentTime">0</div> -->
+                        </div>
                         <div class="page">
+                            <div class="page-item">
+                                <div id="button-play" class="page-item-button">
+                                    <div class="page-item-button-text">Play</div>
+                                    <div class="page-item-button-key">I</div>
+                                </div>
+                                <div id="button-pause" class="page-item-button">
+                                    <div class="page-item-button-text">Pause</div>
+                                    <div class="page-item-button-key">O</div>
+                                </div>
+                                <div id="button-reset" class="page-item-button">
+                                    <div class="page-item-button-text">Reset</div>
+                                    <div class="page-item-button-key">P</div>
+                                </div>
+                            </div>
                             <div class="page-item">
                                 <div class="page-item-key">J</div>
                                 <div class="page-item-key">K</div>
                                 <div class="page-item-key">L</div>
                             </div>
+                            <div class="page-item">Waveform</div>
                         </div>
                         <div class="display">
                             <div class="display-item">
@@ -226,25 +708,25 @@
                             </div>
                         </div>
                         <div class="canvas">
-                            <div id="workit" class="canvas-item">
+                            <div id="workit" class="canvas-item" data-key-1="1" data-key-2="17" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>work it</span>
                                 <div class="canvas-item-key">1</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="makeit" class="canvas-item">
+                            <div id="makeit" class="canvas-item" data-key-1="key2" data-key-2="key18" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>make it</span>
                                 <div class="canvas-item-key">2</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="doit" class="canvas-item">
+                            <div id="doit" class="canvas-item" data-key-1="key3" data-key-2="key19" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>do it</span>
                                 <div class="canvas-item-key">3</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="makesus" class="canvas-item">
+                            <div id="makesus" class="canvas-item" data-key-1="key4" data-key-2="key20" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>makes us</span>
                                 <div class="canvas-item-key">4</div>
@@ -253,25 +735,25 @@
 
 
 
-                            <div id="harder" class="canvas-item">
+                            <div id="harder" class="canvas-item" data-key-1="key5" data-key-2="key21" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>harder</span>
                                 <div class="canvas-item-key">Q</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="better" class="canvas-item">
+                            <div id="better" class="canvas-item" data-key-1="key6" data-key-2="key22" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>better</span>
                                 <div class="canvas-item-key">W</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="faster" class="canvas-item">
+                            <div id="faster" class="canvas-item" data-key-1="key7" data-key-2="key23" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>faster</span>
                                 <div class="canvas-item-key">E</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="stronger" class="canvas-item">
+                            <div id="stronger" class="canvas-item" data-key-1="key8" data-key-2="key24" data-key-3="">
                                 <div class="canvas-item-shadow"></div>
                                 <span>stronger</span>
                                 <div class="canvas-item-key">R</div>
@@ -279,25 +761,25 @@
                             </div>
                         </div>
                         <div class="canvas">
-                            <div id="morethan" class="canvas-item">
+                            <div id="morethan" class="canvas-item" data-key-1="key9" data-key-2="key25" data-key-3="33">
                                 <div class="canvas-item-shadow"></div>
                                 <span>more than</span>
                                 <div class="canvas-item-key">A</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="hour" class="canvas-item">
+                            <div id="hour" class="canvas-item" data-key-1="key10" data-key-2="key26" data-key-3="34">
                                 <div class="canvas-item-shadow"></div>
                                 <span>hour</span>
                                 <div class="canvas-item-key">S</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="our" class="canvas-item">
+                            <div id="our" class="canvas-item" data-key-1="key11" data-key-2="key27" data-key-3="35">
                                 <div class="canvas-item-shadow"></div>
                                 <span>our</span>
                                 <div class="canvas-item-key">D</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="never" class="canvas-item">
+                            <div id="never" class="canvas-item" data-key-1="key12" data-key-2="key28" data-key-3="36">
                                 <div class="canvas-item-shadow"></div>
                                 <span>never</span>
                                 <div class="canvas-item-key">F</div>
@@ -306,25 +788,25 @@
 
 
 
-                            <div id="ever" class="canvas-item">
+                            <div id="ever" class="canvas-item" data-key-1="key13" data-key-2="key29" data-key-3="37">
                                 <div class="canvas-item-shadow"></div>
                                 <span>ever</span>
                                 <div class="canvas-item-key">Y</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="after" class="canvas-item">
+                            <div id="after" class="canvas-item" data-key-1="key14" data-key-2="key30" data-key-3="38">
                                 <div class="canvas-item-shadow"></div>
                                 <span>after</span>
                                 <div class="canvas-item-key">X</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="workis" class="canvas-item">
+                            <div id="workis" class="canvas-item" data-key-1="key15" data-key-2="key31" data-key-3="39">
                                 <div class="canvas-item-shadow"></div>
                                 <span>work is</span>
                                 <div class="canvas-item-key">C</div>
                                 <div class="canvas-item-type"></div>
                             </div>
-                            <div id="over" class="canvas-item">
+                            <div id="over" class="canvas-item" data-key-1="key16" data-key-2="key32" data-key-3="40">
                                 <div class="canvas-item-shadow"></div>
                                 <span>over</span>
                                 <div class="canvas-item-key">V</div>
