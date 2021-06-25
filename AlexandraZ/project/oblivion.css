@@ -1,12 +1,39 @@
+@font-face {
+    font-family: "Sporting Grotesque Regular";
+    src: url("../process/css/Sporting_Grotesque-Regular_web.ttf")
+}
+
 body {
     background-color: black;
-    @font-face {
-        font-family: "Sporting Grotesque Regular";
-        src: url("Sporting_Grotesque-Regular_web.ttf")}
-        color: darkgray;
-    
-    
-    
-        
-    
-    }
+    font-family: "Sporting Grotesque Regular";
+    color: #C4C4C4;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #C4C4C4;
+}
+
+a:visited {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+li {
+    margin: 0px;
+}
+
+.right {
+    padding: 20px;
+}

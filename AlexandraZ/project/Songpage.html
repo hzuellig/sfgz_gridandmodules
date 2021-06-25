@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="oblivion.css">
+    <style>
+        section {
+            height: 100vh;
+            display: flex;
+        }
+        
+        .left {
+            background-color: black;
+            flex-basis: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #C4C4C4;
+            overflow: hidden;
+        }
+        
+        .right {
+            background-color: #74CAA4;
+            flex-basis: 40%;
+            color: black;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .menu a:hover {
+            color: #ffffff;
+        }
+        
+        .top {
+            font-size: 100px;
+        }
+        
+        .bottom {
+            font-size: 100px;
+        }
+        
+        .move {
+            animation-name: lefttoright;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition: all 1s ease-in;
+        }
+        
+        @keyframes lefttoright {
+            0% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(30%);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        h1 {
+            font-size: 40px;
+        }
+        
+        h2 {
+            font-size: 15px;
+        }
+        
+        h3 {
+            font-size: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="left">
+            <div class="top move">
+                Oblivion
+            </div>
+            <div class="bottom move">
+                Grimes
+            </div>
+
+        </div>
+        <div class="right">
+            <ul class="menu">
+                <li>
+                    <a href="../project/">song page</a>
+                </li>
+                <li>
+                    <a href="../process/">process</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+            </ul>
+            <h1>
+                This interactive Website rethinks the usual Web Standards <br> &nbsp;
+            </h1>
+            <h3>
+                HFIAD 2021
+            </h3>
+            <h2>
+                During the class of Grid Moduls we explored current webtrends and technologies. My project was build up on my chosen Song of Grimes «Oblivion». This Website shows a typographic interaction with the sound. Have fun exploring my site!
+
+            </h2>
+            <h3>
+                Educator: Hanna Züllig <br> + Design by Alexandra Ziegler
+            </h3>
+
+
+        </div>
+    </section>
+</body>
+
+</html>
