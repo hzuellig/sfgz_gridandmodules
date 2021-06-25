@@ -7,18 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .center {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-content: center;
-            border: 1px solid blue;
-            height: 100vh; /*ist 100% */
+            align-items: center;
+            background-color: darkgrey;
+            border: 30px solid rgb(59, 59, 59);
+            height: 92vh;
+            /*ist 100% */
         }
 
+        .centerquer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+
         .box {
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             background-color: darkgoldenrod;
             animation-name: meineAnimation;
             animation-duration: 3s;
@@ -26,8 +41,8 @@
         }
 
         .box2 {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             background-color: rgb(245, 208, 114);
             animation-name: meineAnimation;
             animation-duration: 2s;
@@ -35,13 +50,22 @@
         }
 
         .box3 {
-            width: 100px;
-            height: 100px;
+            width: 40px;
+            height: 40px;
             background-color: rgb(241, 226, 185);
             animation-name: meineAnimation;
             animation-duration: 3s;
             animation-iteration-count: infinite;
         }
+        .box4 {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(70, 51, 0);
+            animation-name: meineAnimation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+        }
+
 
 
         @keyframes meineAnimation {
@@ -50,24 +74,24 @@
             }
 
             25% {
-                border-radius: 250%;
+                border-radius: 25%;
                 background-color: rgb(196, 164, 83);
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
 
             50% {
                 border-radius: 50%;
                 background-color: rgb(128, 104, 43);
-                width: 100px;
-                height: 100px;
+                width: 40px;
+                height: 40px;
             }
 
             75% {
                 border-radius: 25%;
-                background-color: rgb(75, 56, 10);
-                width: 100px;
-                height: 100px;
+                background-color: rgb(155, 144, 118);
+                width: 60px;
+                height: 60px;
             }
 
             100% {
@@ -79,12 +103,30 @@
 
 <body>
     <div class="center">
-
         <div class="box"></div>
-        <!--<div class="box2"></div>
-        <div class="box3"></div>-->
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box2"></div>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box2"></div>
+        <div class="box"></div>
 
+        <div class="centerquer">
+            <div class="box"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box2"></div>
+            <div class="box4"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box2"></div>
+            <div class="box"></div>
+
+        </div>
     </div>
+
 </body>
 
 </html>
