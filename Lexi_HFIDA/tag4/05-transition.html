@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Work Sans';
+        }
+        
+        .box {
+            border: 1px solid red;
+            background-color: rgba(182, 159, 224, 0.5);
+        }
+        
+        .box div {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(109, 201, 230, 0.5);
+            border: 1px solid black;
+            font-size: 64px;
+            /*transition-duration: 1s;
+            transition-property: all;
+            transition-timing-function: ease-in;
+            transition: all 0.5s ease-out;*/
+        }
+        
+        .box:hover div {
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+            transform: translate(100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>
+
+            Ich bin aus der Originalposition verschoben
+
+        </div>
+
+    </div>
+    <div class="box">
+        <div>
+
+            Ich bin in Normalposition
+
+        </div>
+
+    </div>
+</body>
+
+</html>

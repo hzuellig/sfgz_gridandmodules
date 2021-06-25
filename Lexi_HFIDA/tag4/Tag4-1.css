@@ -1,0 +1,47 @@
+.box {
+    color: lightslategrey;
+}
+
+.box1 {
+    width: 4em;
+    color: lightslategrey;
+    transform: scale(5, 1);
+    transform-origin: top left;
+}
+
+.box2 {
+
+    width: 4em;
+    color: lightslategrey;
+}
+
+.box3 {
+
+    width: 4em;
+    color: lightslategrey;
+}
+
+.box4 {
+    width: 4em;
+    color: lightslategrey;
+    transform: scale(0.5, 1);
+    transform-origin: top left;
+}
+
+.box5 {
+
+    width: 4em;
+    color: lightslategrey;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.flex{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}

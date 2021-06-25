@@ -1,0 +1,60 @@
+.static {
+    position: static;
+    height: 400px;
+    padding: 50px;
+}
+
+.absolut {
+    position: absolute;
+    height: 400px;
+    left: 10px;
+    padding: 50px;
+
+}
+
+.fixed {
+    position: fixed;
+    height: 400px;
+}
+
+.relativ {
+    position: relative;
+    height: 400px;
+    top: 10px;
+    padding: 50px;
+}
+
+
+
+.sticky{
+    position: sticky;
+    left: 20px;
+    top: 20px;
+    height: 140px;
+    text-shadow: 2px 4px 5px grey;
+    z-index: 100;
+}
+
+.sticky3{
+    position: sticky;
+    left: 1200px;
+    bottom: 10px;
+    height: 140px;
+}
+
+
+body{
+    font-family: 'Montserrat', Courier, monospace;
+    min-height: 100vh;
+    background-image: url(../tag2/image/shine.jpg);
+    margin: 0px;
+    padding: 0px;
+    color: lightyellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    margin-left:35px;
+    font-weight: 500;
+}
