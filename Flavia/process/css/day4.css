@@ -122,19 +122,27 @@ section {
 }
 
 .box {
-    animation-name           : SingAnimation;
+    animation-name           : ChorAnimation;
     animation-duration       : 2s;
     animation-iteration-count: infinite;
     animation-direction      : alternate;
     transition               : all 1s ease-in;
 }
 
-.box2 {
-    animation-name           : SingAnimation2;
-    animation-duration       : 1s;
+.biggerbox {
+    animation-name           : ChorBiggerAnimation;
+    animation-duration       : 2s;
     animation-iteration-count: infinite;
     animation-direction      : alternate;
     transition               : all 2s ease-in;
+}
+
+.biggestbox {
+    animation-name           : ChorBiggestAnimation;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transition               : all 1s ease-in;
 }
 
 .dreamonoutline {
@@ -152,6 +160,63 @@ section {
         1px -1px 0 #967892,
         -1px 1px 0 #967892,
         1px 1px 0 #967892;
+    animation-name           : move;
+    animation-duration       : 3s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transform                : translateY(0);
+}
+
+.dreamonoutline:hover {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #967892;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        1px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        1px 1px 0 #967892;
+    animation-name           : move;
+    animation-duration       : 3s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transform                : translateY(0);
+}
+
+.second {
+    animation-delay: 0.5s;
+    opacity        : 0.9;
+}
+
+.third {
+    animation-delay: 1s;
+    opacity        : 0.8;
+}
+
+.forth {
+    animation-delay: 1.5s;
+    opacity        : 0.7;
+}
+
+.fifth {
+    animation-delay: 2s;
+    opacity        : 0.6;
+}
+
+.sixth {
+    animation-delay: 2s;
+    opacity        : 0.5;
+}
+
+.seventh {
+    animation-delay: 2s;
+    opacity        : 0.4;
 }
 
 .dreamuntil {
@@ -165,8 +230,24 @@ section {
     align-items     : center;
     color           : #967892;
 }
-
-@keyframes SingAnimation {
+.dreamuntil:hover {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #967892;
+}
+.glow {
+    color: #ffffff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes ChorAnimation {
     0% {
         color    : #fff;
         opacity  : 0.9;
@@ -177,22 +258,60 @@ section {
     100% {
         color    : #967892;
         opacity  : 1;
-        transform: translateY(10px);
+        transform: translateY(9px);
     }
 }
 
-@keyframes SingAnimation2 {
+@keyframes ChorBiggerAnimation {
     0% {
-        color    : #fff;
-        opacity  : 0.9;
-        transform: translateY(0);
-        font-size: 1em;
+        color        : #fff;
+        opacity      : 0.9;
+        margin-bottom: 0px;
     }
 
     100% {
-        color    : #967892;
-        opacity  : 1;
-        transform: translateY(10px);
-        font-size: 0.75em;
+        color        : #967892;
+        opacity      : 1;
+        margin-bottom: 50px;
+
+    }
+}
+
+@keyframes ChorBiggestAnimation {
+    0% {
+        color        : #fff;
+        opacity      : 0.9;
+        margin-bottom: 10px;
+    }
+
+    100% {
+        color        : #967892;
+        opacity      : 1;
+        margin-bottom: 70px;
+
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(90px);
+    }
+
+}
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #F2BBA0, 0 0 30px #F2BBA0, 0 0 40px #F2BBA0,
+            0 0 50px #F19FA1, 0 0 60px #F19FA1, 0 0 70px #F19FA1;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #F2BBA0, 0 0 40px #F2BBA0, 0 0 50px #F2BBA0,
+            0 0 60px #F2BBA0, 0 0 70px #F2BBA0, 0 0 80px #F2BBA0;
     }
 }

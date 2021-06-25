@@ -1,34 +1,61 @@
 body {
-    background-color: thistle;
-    font-family: "Red Hat";
+    background-color: #2a2b45;
+    font-family     : "Red Hat";
+    margin          : 0;
+    padding         : 0;
 }
+
 @font-face {
     font-family: "Red Hat";
-    src: url(../process/css/RedHatDisplay-MediumItalic.ttf);
+    src        : url(../process/css/RedHatDisplay-MediumItalic.ttf);
 }
+
 h1 {
-    font-weight:700;
-    color: rgb(196, 152, 43);
-    padding-left: 50px;
-    font-size: 1em;
+    font-weight   : 500;
+    color         : #F2C9A0;
+    padding-left  : 30px;
+    font-size     : 4em;
     letter-spacing: 3px;
 }
 
 p {
-    color: rgb(196, 152, 43);
-    padding-left: 50px;
-    font-size: 2em;
-    line-height: 130%;
-
+    color       : #F2C9A0;
+    padding-left: 30px;
+    font-size   : 2em;
+    line-height : 130%;
 }
 
-img {
-    padding-left: 50px
+
+ul {
+    list-style-type : none;
+    margin          : 0;
+    padding         : 0;
+    overflow        : hidden;
+    background-color: #01001e;
 }
 
-.orangeitalic {
-    color: rgb(206, 110, 20);
-    font-style: italic;
-    font-size: 0.8em;
+li {
+    float: left;
+}
 
+li a {
+    display        : block;
+    color          : white;
+    text-align     : center;
+    padding        : 20px 25px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #F19FA1;
+}
+
+a:link {
+    color: #fff;
+}
+a:visited {
+    color: #fff;
+}
+a:hover {
+    color: #01001e;
 }
