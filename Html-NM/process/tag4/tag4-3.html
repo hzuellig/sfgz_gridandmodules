@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Test</title>
+
+    <style>
+        body {
+            background-color: #F1C5C1;
+        }
+        .topnav {
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(228, 182, 182);
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: rgb(223, 150, 150);
+        }
+
+        .topnav a.active {
+            background-color: #ad4949;
+            color: white;
+        }
+
+        .topnav-centered a {
+            float: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .topnav-right {
+            float: right;
+        }
+        .row {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex: wrap;
+            font-size: 20px;
+            padding: 2%;
+        }
+
+        .row:hover {
+            background-color: grey;
+        }
+
+        .row:hover .crossing {
+            transform: rotate(50deg);
+            transform-origin: top left;
+            letter-spacing: -3px;
+        }
+
+        .crossing {
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+        }
+        
+        .row:hover .letterspacing {
+            letter-spacing: 20px;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .heart {
+            margin: 0 auto;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            line-height: 10px;
+            animation: beat 1.5s ease 0s infinite;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .heart span {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+            border-radius: inherit;
+        }
+
+        .heart:before {
+            z-index: -2;
+            animation: beat-before 1.5s ease-out 200ms infinite;
+        }
+
+        .heart:after {
+            z-index: -1;
+            animation: beat-after 1.5s ease-out 400ms infinite;
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(2.1);
+            }
+        }
+
+        @keyframes beat-before {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.8);
+            }
+        }
+
+        @keyframes beat-after {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.6);
+            }
+        }
+ 
+.row:hover .rainbow {
+    font-size: 42px;
+    font-family: 'Dancing Script', cursive;
+    background-image: -webkit-linear-gradient(left, #E38AA7, #F0EBDD, #F2C5C4, #AEDCE3);
+    -webkit-animation: animatedBackground_a 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000;
+    background-clip: text;
+}
+.rainbow {
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes animatedBackground_a {
+    0% { background-position: 0 0 }
+    100% { background-position: -500px 0 }
+}
+
+.wave {
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Dancing Script', cursive;
+  text-transform: uppercase;
+  background: linear-gradient(30deg, #AEDCE3, #fff, grey);
+  letter-spacing: 2px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 2s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+span{
+	margin: 0 15px;
+	line-height: .7;
+	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
+	animation: span 3s ease-in infinite alternate;
+}
+.main{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.row:hover .letter{
+	display: inline-flex;
+	height: 30px;
+	width: 27px;
+	/* border: 2.5px solid #FF1EAD; */
+	border: 2.35px solid #AEDCE3;
+	border-radius: 14px;
+	box-shadow:
+		0 0 2px rgba(0, 0, 0, .75),
+		inset 0 0 2px rgba(0, 0, 0, .45);
+
+	animation: letter 3s ease-in-out infinite alternate;
+}
+@keyframes span {
+	0%,30%{ margin: 0 15px; }
+	70%,100%{ margin: 0 5px; }
+}
+@keyframes letter {
+	0%,30%{ width: 27px; }
+	70%,100%{ width: 30vw; }
+}
+
+.padding{
+    padding:0.8rem;
+}
+    </style>
+</head>
+
+<body>
+            <!-- Top navigation -->
+            <div class="topnav">
+
+                <!-- mittlerer Link -->
+                <div class="topnav-centered">
+                    <a href="process/tag2/tag2-1.html" class="active">Moon River</a>
+                </div>
+    
+                <!-- linkgsbündiges Menü -->
+                <a href="process/tag2/tag2-2.html">About me</a>
+                <a href="process/tag2/tag2-3.html">Process</a>
+    
+                <!-- rechtsbündiges Menü -->
+                <div class="topnav-right">
+                    <a href="process/tag2/tag2-4.html">Lyrics</a>
+                    <!--noch nicht erstellt-->
+                    <a href="process/tag2/tag3-1.html">Moodboard</a>
+                    <!--noch nicht erstellt-->
+                </div>
+    
+            </div>
+<div style="text-align: center;">
+    <h style="font-family: 'Dancing Script', cursive; font-size: 55px;">Moon River</h>
+    <p style="font-family: 'Dancing Script', cursive; font-size: 34px;">from “Breakfast at Tiffany’s”</p>
+</div>
+
+    <div class="row" style="border-color: black; border: solid 2px;">
+        <div style="transform: rotate(-90deg);">Moooooon</div>
+        <div class="padding">river,</div>
+        <div class="padding">wider than a mile</div>
+        <div class="crossing padding">I'm crossing you</div>
+        <div class="padding" style="font-size: 300%; color:#E38AA7; font-family: 'Dancing Script', cursive;">in style</div>
+        <div class="padding">some dayyyyy</div>
+    </div>
+    <div class="row" style="background-color: black; color: white;">
+        <div>Oh, dreeeeam</div>
+        <div>maker,</div>
+        <div class="heart" style=" color: #F2C5C4; font-family: 'Dancing Script', cursive;">you heart</div>
+        <div>I'm crossing you</div>
+        <div>breaker</div>
+    </div>
+    <div class="row" style="border-color: black; border: solid 2px;">
+        <div>Wherever you're</div>
+        <div class="main" style="font-size: 300%; color:#AEDCE3; font-family: 'Dancing Script', cursive;">
+            <span>G</span>
+            <span>O</span>
+            <span class="letter"></span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+            <span>'</span>
+        </div>
+        <div>I'm goin' your way</div>
+    </div>
+    <div class="row" style="border-color: black; border: solid 2px;">
+        <div style="transform: rotate(-90deg);">Twooooo</div>
+        <div>drifters,</div>
+        <div>off to see the world</div>
+        <div>There's such a lot of wooorld</div>
+        <div class="letterspacing" style="font-size: 300%; color: #E48AA6; font-family: 'Dancing Script', cursive;">to see</div>
+    </div>
+    <div class="row" style="background-color: black; color: white;">
+        <div>We're after the same</div>
+        <div class="rainbow" style="font-size: 300%;">rainbow's end</div>
+        <div>Waitin' 'round the bend</div>
+        <div>My huckleberry friend</div>
+        <div>breaker</div>
+    </div>
+    <div class="row" style="border-color: black; border: solid 2px;">
+        <div style="transform: rotate(-90deg);">Mooooon</div>
+        <div class="wave" style="font-size: 300%; color: #AEDDE3; font-family: 'Dancing Script', cursive;">river</div>
+        <div>and meeeee</div>
+    </div>
+    <div style="text-align: center; font-family: 'Dancing Script', cursive;">
+        <p>Design by Natascha Alenka Meili</p>
+    </div>
+
+</body>
