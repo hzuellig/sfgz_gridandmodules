@@ -1,0 +1,76 @@
+.transforms{
+    position:relative;
+}
+.zeile{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:4vw;
+    font-family: 'Montserrat', sans-serif;
+    width:100%;
+}
+.first{
+    position:relative;
+
+}
+
+
+
+body {
+    margin: 20px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+}
+container{
+    display:flex;
+    flex-wrap: wrap;
+}
+a {
+    color: black;
+}
+
+main {
+    padding: 20px;
+    width: 50%;
+    min-width: 600px;
+}
+
+.halbtag {
+    padding: 20px;
+    min-width: 600px;
+    flex-basis:300px;
+    flex-grow:1;
+    flex-shrink:0;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+span{
+    color: rgb(128, 109, 137);
+    font-weight:600;
+}
+span::before{
+    content:"@todo ";
+    display: inline-block;
+    padding-right:0.5em;
+}
+
+.slot{
+    display:flex;
+}
+
+time{
+    flex-basis: 200px;
+    flex-grow:0;
+    flex-shrink: 1;
+}
