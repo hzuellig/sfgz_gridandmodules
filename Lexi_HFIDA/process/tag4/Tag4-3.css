@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    height: 100vh;
+    background-color: rgb(203, 235, 255);
+    
+}
+
+.trigger {
+    margin: 2em;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.vier{
+    color: rgb(203, 235, 255);
+    z-index: 4;
+}
+
+.box {
+    position: absolute;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    text-align: center;
+    width: 90vw;
+    z-index: 5;
+}
+
+
+
+.trigger:hover .eins {
+    transform: translateY(2rem);
+    font-size: 3rem;
+    color: rgb(201, 201, 201);
+
+}
+
+.trigger:hover .zwei {
+    transform: translateY(4.7rem);
+    color: rgb(161, 161, 161);
+    font-size: 4rem;
+}
+
+.trigger:hover .drei {
+    transform: translateY(9rem);
+    color: rgb(90, 90, 90);
+    font-size: 4.6rem;
+}
+.trigger:hover .vier {
+    transform: translateY(15rem);
+    color: rgb(216, 0, 0);
+    font-size: 4.7rem;
+    -webkit-text-stroke: 1px rgb(194, 155, 119); /* width and color */
+    
+}
+
+.fuenf{
+    z-index: 6;
+}
+
+@media screen and (max-width: 1000px) {
+    .body{
+        background-color: lime;
+    }
+/*    .eins {
+    font-size: 1rem;
+}
+
+.zwei {
+    font-size: 1.5rem;   
+}*/
+}
