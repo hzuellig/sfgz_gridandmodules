@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+
+    <title>Example -- Absolute Position and Transform</title>
+
+    <style>
+
+        .zeile{
+            position:absolute;
+            top:10px;
+            left:10px;
+
+            font-size:5rem;
+            font-family: "Sporting Grotesque Regular";
+            transition: all 1s ease-in;
+        }
+        .transforms:hover .second{
+            transform:translateY(60px);
+
+        }
+        .transforms:hover .third{
+            transform:translateY(100px);
+        }
+        .transforms:hover .forth{
+            transform:translateY(140px) rotate(-45deg);
+            color: coral;
+            
+        }
+        .transforms:hover .fifth{
+            transform:translateY(180px)rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="transforms">
+    <div class="zeile first">SEE YOU ON A DARK NIGHT </div>
+    <div class="zeile second">SEE YOU ON A DARK NIGHT </div>
+    <div class="zeile third">SEE YOU ON A DARK NIGHT </div>
+    <div class="zeile forth">SEE YOU ON A DARK NIGHT </div>
+    <div class="zeile fifth">SEE YOU ON A DARK NIGHT </div>
+</div>
+
+
+</body>
+</html>

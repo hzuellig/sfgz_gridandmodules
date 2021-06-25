@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rebeccapurple;
+            height: 100vh;
+            
+        }
+        .box {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(224, 165, 195);
+            animation-name: meineAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .box2 {
+            width: 80px;
+            height: 30px;
+            background-color: rgb(165, 224, 206);
+            animation-name: meineAnimation2;
+            animation-duration: 5s;
+            animation-iteration-count: initial;
+        }
+
+        @keyframes meineAnimation {
+            0% {
+                border-radius: 0%;
+                transform: scale(5.0);
+            }
+
+            50% {
+                border-radius: 80%;
+                transform: scale(0.3);
+            }
+
+            100% {
+                border-radius: 0%;
+                transform: scale(5.0);
+            }
+        }
+        @keyframes meineAnimation2 {
+            0% {
+                border-radius: 10%;
+                transform: scale(8.0);
+            }
+
+            50% {
+                border-radius: 50%;
+                transform: scale(0.5);
+            }
+
+            100% {
+                border-radius: 10%;
+                transform: scale(8.0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="box">
+
+        </div>
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+
+</html>
