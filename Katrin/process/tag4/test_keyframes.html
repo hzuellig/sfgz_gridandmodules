@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            border: 1px solid blue;
+            height: 100vh; /*ist 100% */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: darkgoldenrod;
+            animation-name: meineAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(245, 208, 114);
+            animation-name: meineAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(241, 226, 185);
+            animation-name: meineAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes meineAnimation {
+            0% {
+                border-radius: 0%;
+            }
+
+            25% {
+                border-radius: 250%;
+                background-color: rgb(196, 164, 83);
+                width: 100px;
+                height: 100px;
+            }
+
+            50% {
+                border-radius: 50%;
+                background-color: rgb(128, 104, 43);
+                width: 100px;
+                height: 100px;
+            }
+
+            75% {
+                border-radius: 25%;
+                background-color: rgb(75, 56, 10);
+                width: 100px;
+                height: 100px;
+            }
+
+            100% {
+                border-radius: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+
+        <div class="box"></div>
+        <!--<div class="box2"></div>
+        <div class="box3"></div>-->
+
+    </div>
+</body>
+
+</html>
