@@ -1,140 +1,214 @@
 body {
-    font-family: soleil, sans-serif;
-    background-color: rgb(255, 255, 255);
-    color: white;
-    font-size: 2rem;
-    font-weight: 300;
+  font-family: soleil, sans-serif;
+  background: linear-gradient(180deg, rgba(161,202,207,1) 0%, rgba(232,221,167,1) 35%, rgba(133,71,90,1) 100%);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
 }
 
+/*-- TYPO --*/
+
 h1 {
-    font-size: 7rem;
-    font-weight: 600;
-    margin: 4rem 1rem 1rem;
-    line-height: 1.3;
-    }
+  font-size: 19vw;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
 
 h2 {
-    font-size: 4rem;
-    font-weight: 400;
-    margin: 1rem 1rem 1rem;
+  font-size: 9vw;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 3vw;
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.3;
 }
 
 p {
-    padding: 8px;
+  padding: 8px;
 }
 
-.tx-center{
-    text-align: center;
+/*-- Align/Transform --*/
+.flexxi {
+  display: flex;
+}
+
+.tx-center {
+  text-align: center;
 }
 
 .center {
-    margin: auto;
-    width: 80%;
-  }
+  margin: auto;
+  width: 80%;
+}
+
+.side-margin {
+  margin: 0px 40px 40px 40px;
+}
+
+/*-- Containers --*/
+
+.intro {
+  display: flex;
+}
+
+.cont1 {
+  margin-top: 20vh;
+  width: 50vw;
+}
+
+.cont2 {
+  margin-top: 20vh;
+  width: 50vw;
+  margin-left: 40vw;
+}
+
+.rot90{
+  transform: rotate(-270deg);
+  transform-origin: top left;
+}
+
+.cont3{
+  margin: 60vh 0 60vh 0;
+  justify-content: center;
+}
+
+.division {
+  justify-content: center;
+}
+
+/*-- Menu --*/
 
 ul {
-    list-style: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    padding-left: 0px;
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
 }
 
 li {
-    font-size: 2rem;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 0.276);
-    margin: 10px;
-    min-width: 150px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.349);
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.276);
+  margin: 10px;
+  min-width: 150px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.349);
 }
 
 ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-ul li:hover{
-    background-color: rgba(255, 255, 255, 0.418);
+ul li:hover {
+  background-color: rgba(255, 255, 255, 0.418);
 }
 
 .burger {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 60px;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.burger:hover {
+  transform: scale(1.05) rotate(62deg);
+  transform-origin: center;
+  cursor: pointer;
 }
 
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  
-  .boxbtns {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 45px 0px 45px;
-  }
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transform-origin: right;
+}
 
-   .box-overlay-content {
-        display: flex;
-        padding: 0px 45px 20px 45px;
-   }
+.boxbtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 45px 0px 45px;
+}
 
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: left;
-    margin-top: 10px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  }
-  
-  /* The navigation links inside the overlay */
+.box-overlay-content {
+  display: flex;
+  padding: 0px 45px 20px 45px;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  margin-top: 10px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.homebtn {
+  position: relative;
+  font-size: 60px;
+  font-weight: 600;
+  color: #85475a !important;
+}
+
+.homebtn:hover {
+  color: #b3627a !important;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: relative;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
   .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; 
-    transition: 0.3s; 
+    font-size: 20px;
   }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-
-  .homebtn {
-    position: relative;
-    font-size: 60px;
-    font-weight: 600;
-    color: #A1CACF !important;
-  }
-
-  /* Position the close button (top right corner) */
   .overlay .closebtn {
-    position: relative;
-    font-size: 60px;
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
+}
