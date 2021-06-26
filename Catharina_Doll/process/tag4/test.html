@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: darkred 10px 5px 3px;
+            background-color: darkseagreen;
+            transition: all 1s ease-in-out;
+        }
+        
+        .verschieben:hover {
+            background-color: darkslateblue;
+        }
+        
+        .trigger {
+            border: darkslateblue solid 1px;
+        }
+        
+        .trigger:hover .second {
+            transform: scale(0.9);
+            transition-delay: 0.5s;
+        }
+        
+        .trigger:hover .third {
+            transform: scale(0.8);
+            transition-delay: 1s;
+        }
+        
+        .trigger:hover .forth {
+            transform: scale(0.7);
+            transition-delay: 1.5s;
+        }
+        
+        .trigger:hover .fith {
+            transform: scale(0.6);
+            transition-delay: 2s;
+        }
+        
+        .trigger:hover .sixth {
+            transform: scale(0.5);
+            transition-delay: initial;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="trigger">
+        <div class="box"></div>
+        <div class="box second"></div>
+        <div class="box third"></div>
+        <div class="box forth"> </div>
+        <div class="box fith"> </div>
+        <div class="box sixth"> </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -44,3 +44,10 @@
         width: 600px;
         box-shadow: 10px 10px 5px whitesmoke;
     }
+    
+    .Mittel {
+        font-family: Helvetica, bold, condensed;
+        font-size: 89px;
+        width: auto;
+        height: 100px;
+    }

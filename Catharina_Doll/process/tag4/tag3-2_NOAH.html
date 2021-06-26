@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            display: flex;
+            height: 400px;
+            width: 100%;
+            border: solid red;
+            border-style: dotted;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            
+           
+            
+        }
+
+        .items {
+            height: 100px;
+            width: 200px;
+            margin: 10px;
+            background-color: rosybrown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+
+        .item1 {
+            background-color: blue;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .items :nth-child(4) {
+            order: 1;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">Noah </div>
+        <div class="items item2">Julian</div>
+        <div class="items item3">Mary</div>
+        <div class="items item4">Peter</div>
+        <div class="items item5">Moha</div>
+        <div class="items item6">Livia</div>
+        
+    </div>
+    
+</body>
+</html>

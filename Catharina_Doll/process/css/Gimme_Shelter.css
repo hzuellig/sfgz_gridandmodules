@@ -1,0 +1,45 @@
+h1 .fixed {
+    position: fixed;
+    background-color: dimgray);
+}
+
+.box {
+    background-color: dimgray;
+    border-width: 10px;
+    padding: 0.1em;
+    margin: 0 auto;
+    width: 1px;
+    height: 700px;
+    position: fixed;
+    left: 50%;
+}
+
+.Klein {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 89px;
+    width: auto;
+    height: 100px;
+    color: dimgray;
+}
+
+.Mittel {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 144px;
+    width: auto;
+    height: 100px;
+    color: dimgray
+}
+
+.Gross {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 233px;
+    width: auto;
+    height: 100px;
+    color: dimgray
+}

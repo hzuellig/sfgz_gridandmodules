@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            /* display: flex; */
+            height: 100%;
+            width: 100%;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+        }
+        
+        .items {
+            height: 100px;
+            width: 200px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .item1 {
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        .item1 {
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        .items :nth-child(4) {
+            order: 1;
+        }
+        
+        body {
+            background-color: rgb(48, 47, 47);
+        }
+        
+        h1 .fixed {
+            position: fixed;
+            background-color: dimgray;
+        }
+        
+        .box {
+            height: auto;
+            width: auto;
+            flex-direction: row;
+        }
+        
+        .linie {
+            background-color: darkred;
+            border-width: 10px;
+            padding: 0.1em;
+            margin: 0 auto;
+            width: 1px;
+            height: 700px;
+            position: fixed;
+            left: 50%;
+            box-shadow: 0 1px 0 hsl(0, 0%, 60%), 0 1px 0 hsl(0, 0%, 58%), 0 3px 0 hsl(0, 0%, 56%), 0 4px 0 hsl(0, 0%, 54%), 0 5px 0 hsl(0, 0%, 52%), 0 6px 1px hsl(0, 0%, 50%), 0 0 5px hsl(0, 0%, 60%), 0 1px 3px hsl(0, 0%, 58%), 0 3px 5px hsl(0, 0%, 56%), 0 5px 10px hsl(0, 0%, 54%), 0 10px 10px hsl(0, 0%, 52%), 0 15px 15px hsl(0, 0%, 50%);
+        }
+        
+        .Klein {
+            font-family: Helvetica;
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 89px;
+            width: auto;
+            height: 0px;
+            color: dimgray;
+            padding: 5px;
+            height: auto;
+        }
+        
+        .Mittel {
+            font-family: Helvetica;
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 144px;
+            width: auto;
+            height: 100px;
+            color: dimgray;
+            margin: 50px;
+            height: auto;
+        }
+        
+        .text3d {
+            color: hsl(0, 0%, 0%);
+            text-shadow: 0 1px 0 hsl(0, 0%, 60%), 0 1px 0 hsl(0, 0%, 58%), 0 3px 0 hsl(0, 0%, 56%), 0 4px 0 hsl(0, 0%, 54%), 0 5px 0 hsl(0, 0%, 52%), 0 6px 1px hsl(0, 0%, 50%), 0 0 5px hsl(0, 0%, 60%), 0 1px 3px hsl(0, 0%, 58%), 0 3px 5px hsl(0, 0%, 56%), 0 5px 10px hsl(0, 0%, 54%), 0 10px 10px hsl(0, 0%, 52%), 0 15px 15px hsl(0, 0%, 50%);
+        }
+        
+        .Gross {
+            font-family: Helvetica;
+            font-weight: bolder;
+            font-size: 233px;
+            width: auto;
+            color: white;
+            height: auto;
+            animation-name: meineAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes meineAnimation {
+            0% {
+                border-radius: 50%;
+                transform: scale(1);
+                transform: translate(10px, 0px);
+            }
+            50% {
+                border-radius: 100%;
+                transform: scale(0.25);
+            }
+            100% {
+                border-radius: 50%;
+                transform: scale(1);
+                transform: translate(10px, 0px);
+            }
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+    <div class="linie"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="items item1 Klein">Ooh, a </div>
+        <div class="items item2 Gross text3d">STORM</div>
+        <div class="items item3 Klein">is threatening</div>
+        <div class="items item4 Klein">My very life today</div>
+        <div class="items item5 Klein">If i don't get some</div>
+        <div class="items item6 Gross text3d">SHELTER </div>
+        <div class="items item7 Klein"> Ooh yeah I'm gonna</div>
+        <div class="items item8 Gross text3d" ; style="color: darkred;"> fade away</div>
+
+    </div>
+
+    <style>
+
+    </style>
+
+</body>
+
+</html>
