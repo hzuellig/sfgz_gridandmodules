@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            /* display: flex; */
+            height: 100%;
+            width: 100%;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+        }
+        
+        .kreis {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: darkred 10px 5px 3px;
+            transition: all 1s ease-in-out;
+        }
+        
+        .items {
+            height: 100px;
+            width: 200px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .item1 {
+            justify-content: left;
+            align-items: center;
+            height: 200px;
+        }
+        
+        .item2 {
+            justify-content: right;
+            align-items: right;
+            height: 200px;
+        }
+        
+        .item3 {
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        .items :nth-child(4) {
+            order: 1;
+        }
+        
+        body {
+            /*margin-left: -100px;*/
+            background-image: url(Image/wand_sw.jpg);
+        }
+        
+        h1 .fixed {
+            position: fixed;
+            background-color: dimgray;
+        }
+        
+        .box {
+            height: auto;
+            width: auto;
+            flex-direction: row;
+        }
+        
+        .linie2 {
+            background-color: darkred;
+            border-width: 10px;
+            padding: 0.1em;
+            margin: 0 auto;
+            width: 1px;
+            height: 700px;
+            position: fixed;
+            left: 50%;
+            box-shadow: 0 1px 0 hsl(0, 0%, 60%), 0 1px 0 hsl(0, 0%, 58%), 0 3px 0 hsl(0, 0%, 56%), 0 4px 0 hsl(0, 0%, 54%), 0 5px 0 hsl(0, 0%, 52%), 0 6px 1px hsl(0, 0%, 50%), 0 0 5px hsl(0, 0%, 60%), 0 1px 3px hsl(0, 0%, 58%), 0 3px 5px hsl(0, 0%, 56%), 0 5px 10px hsl(0, 0%, 54%), 0 10px 10px hsl(0, 0%, 52%), 0 15px 15px hsl(0, 0%, 50%);
+        }
+        
+        .linie1 {
+            background-color: white;
+            width: 5px;
+            height: 100vh;
+            position: fixed;
+            left: 3%;
+            box-shadow: 0 1px 0 hsl(0, 0%, 60%), 0 1px 0 hsl(0, 0%, 58%), 0 3px 0 hsl(0, 0%, 56%), 0 4px 0 hsl(0, 0%, 54%), 0 5px 0 hsl(0, 0%, 52%), 0 6px 1px hsl(0, 0%, 50%), 0 0 5px hsl(0, 0%, 60%), 0 1px 3px hsl(0, 0%, 58%), 0 3px 5px hsl(0, 0%, 56%), 0 5px 10px hsl(0, 0%, 54%), 0 10px 10px hsl(0, 0%, 52%), 0 15px 15px hsl(0, 0%, 50%);
+        }
+        
+        .linie3 {
+            background-color: white;
+            width: 5px;
+            height: 100vh;
+            position: fixed;
+            right: 3%;
+            box-shadow: 0 1px 0 hsl(0, 0%, 60%), 0 1px 0 hsl(0, 0%, 58%), 0 3px 0 hsl(0, 0%, 56%), 0 4px 0 hsl(0, 0%, 54%), 0 5px 0 hsl(0, 0%, 52%), 0 6px 1px hsl(0, 0%, 50%), 0 0 5px hsl(0, 0%, 60%), 0 1px 3px hsl(0, 0%, 58%), 0 3px 5px hsl(0, 0%, 56%), 0 5px 10px hsl(0, 0%, 54%), 0 10px 10px hsl(0, 0%, 52%), 0 15px 15px hsl(0, 0%, 50%);
+        }
+        
+        .Klein {
+            font-family: Helvetica;
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 80px;
+            height: 0px;
+            color: dimgray;
+            padding: 5px;
+            height: auto;
+            margin-top: 10px;
+            height: auto;
+            width: auto;
+        }
+        
+        .boxklein {
+
+            height: auto;
+            width: auto;
+            padding:0;
+            padding-left:10vw;
+            background-image: url(Image/white.gif);
+            background-repeat: repeat-y;
+        }
+        
+        .Mittel {
+            font-family: Helvetica;
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 144px;
+            width: 700px;
+            height: 100px;
+            color: dimgray;
+            margin: 50px;
+            height: auto;
+        }
+        
+        .text3d {
+            color: hsl(0, 0%, 0%);
+            text-shadow: 0 1px 0 hsl(0, 0%, 60%), 0 1px 0 hsl(0, 0%, 58%), 0 3px 0 hsl(0, 0%, 56%), 0 4px 0 hsl(0, 0%, 54%), 0 5px 0 hsl(0, 0%, 52%), 0 6px 1px hsl(0, 0%, 50%), 0 0 5px hsl(0, 0%, 60%), 0 1px 3px hsl(0, 0%, 58%), 0 3px 5px hsl(0, 0%, 56%), 0 5px 10px hsl(0, 0%, 54%), 0 10px 10px hsl(0, 0%, 52%), 0 15px 15px hsl(0, 0%, 50%);
+        }
+        
+        .Gross {
+            font-family: Helvetica;
+            font-weight: bolder;
+            font-style: oblique;
+            font-size: 200px;
+            width: auto;
+            color: dimgray;
+            height: auto;
+            /* animation-name: meineAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;>*/
+        }
+
+        .Gross.boxklein{
+            background-image: none;
+        }
+
+        .Gross.boxklein span{
+            padding-right:2rem;
+        }
+        
+        .Balken {
+            font-family: Helvetica;
+            background-color: black;
+            font-weight: bolder;
+            font-size: 230px;
+            width: auto;
+            height: 100px;
+            color: white;
+            margin: 50px;
+            height: auto;
+        }
+        
+        .change:hover {
+            background-color: darkred;
+        }
+        
+        @keyframes meineAnimation {
+            0% {
+                border-radius: 50%;
+                transform: scale(1);
+                transform: translate(10px, 0px);
+            }
+            50% {
+                border-radius: 100%;
+                transform: scale(0.5);
+            }
+            100% {
+                border-radius: 50%;
+                transform: scale(1);
+                transform: translate(10px, 0px);
+            }
+        }
+        
+        .skew {
+            transform: rotate(-10deg);
+            transform-origin: top right;
+            width:120vw;
+            margin-left:-10vw;
+        }
+        span{
+            background-color: white;
+            padding-right:1rem;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+    <div class="linie1"></div>
+    <div class="linie2"></div>
+    <div class="linie3"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="skew">
+            <div class="items item2 Klein boxklein "><span>OOH, A </span></div>
+            <div class="items item3 Gross boxklein "><span>STORM</span></div>
+            <div class="items item2 Klein boxklein "><span>IS THREATENING</span></div>
+        </div>
+
+        <div class="items item3 Klein">My very life today</div>
+        <div class="items Klein">If i don't get some</div>
+        <div class="items Gross text3d">SHELTER </div>
+        <div class="items Klein"> Ooh yeah I'm gonna</div>
+        <div class="items Gross text3d" ; style="color: darkred; padding-left;"> fade away</div>
+        <div class="items Balken text3d change"> W A R</div>
+        <div class="items Balken text3d change"> C H I L D R E N</div>
+
+    </div>
+
+    <style>
+
+    </style>
+
+</body>
+
+</html>
