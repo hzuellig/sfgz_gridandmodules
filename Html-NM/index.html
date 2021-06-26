@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon River</title>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <title>Test</title>
 
-<body>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e0a96d;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .div{
+            font-family: ;
         }
 
         .topnav {
             position: relative;
             overflow: hidden;
-            background-color: rgb(228, 182, 182);
+            background-color: #e0a96d;
         }
 
         .topnav a {
@@ -32,11 +37,11 @@
 
         .topnav a:hover {
             background-color: #ddd;
-            color: rgb(223, 150, 150);
+            color: #ddc3a5;
         }
 
         .topnav a.active {
-            background-color: #ad4949;
+            background-color: #201e20;
             color: white;
         }
 
@@ -51,37 +56,250 @@
         .topnav-right {
             float: right;
         }
+
+        #backtotop {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 20%;
+        left: 90%;
+        max-width: 30px;
+        width: 100%;
+        background-color: #ddc3a5;
+        padding: .5px;
+
+    }
+/*On Hover Color Change*/
+    #backtotop:hover {
+        background-color: #201e20;
+    }
+
+        .row {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            flex: wrap;
+            font-size: 20px;
+            padding: 2%;
+        }
+
+        .row:hover {
+            -moz-box-shadow: inset 0 0 10px #000000;
+            -webkit-box-shadow: inset 0 0 10px #000000;
+            box-shadow: inset 0 0 10px #000000;
+        }
+
+        .row-white:hover {
+            -moz-box-shadow: inset 0 0 5px #ffffff;
+            -webkit-box-shadow: inset 0 0 15px #ffffff;
+            box-shadow: inset 0 0 20px #ffffff;
+        }
+
+        .row:hover .letterspacing {
+            letter-spacing: 20px;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .heart {
+            margin: 0 auto;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            line-height: 10px;
+            animation: beat 1.5s ease 0s infinite;
+            font-family: 'Mate SC', cursive;
+        }
+
+        .heart span {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+            border-radius: inherit;
+        }
+
+        .heart:before {
+            z-index: -2;
+            animation: beat-before 1.5s ease-out 200ms infinite;
+        }
+
+        .heart:after {
+            z-index: -1;
+            animation: beat-after 1.5s ease-out 400ms infinite;
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(2.1);
+            }
+        }
+
+        @keyframes beat-before {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.8);
+            }
+        }
+
+        @keyframes beat-after {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.6);
+            }
+        }
+ 
+        .section-white {
+            padding-top: 15px;
+            background-color: rgb(255, 255, 255);
+            padding-bottom: 15px;
+            width: 80%;
+            height: 170px;
+        }
+
+        .section-black {
+            padding-top: 15px;
+            background-color: rgb(255, 255, 255);
+            padding-bottom: 15px;
+            width: 60%;
+            height: 90px;
+            position:relative; 
+            z-index: 1;
+        }
+
+        @media screen and (max-width:768px){
+            .section-white {
+            padding-top: 15px;
+            background-color: rgb(255, 255, 255);
+            padding-bottom: 15px;
+            width: 80%;
+            height: 130px;
+        }
+
+        .section-black {
+            padding-top: 15px;
+            background-color: rgb(255, 255, 255);
+            padding-bottom: 15px;
+            width: 60%;
+            height: 50px;
+            position:relative; 
+            z-index: 1;
+        }
+}
+
     </style>
-    </head>
+</head>
 
-    <body>
+<body>
+            <!-- Top navigation -->
+            <div class="topnav">
 
-        <!-- Top navigation -->
-        <div class="topnav">
-
-            <!-- mittlerer Link -->
-            <div class="topnav-centered">
-                <a href="process/tag2/tag2-1.html" class="active">Moon River</a>
+                <!-- mittlerer Link -->
+                <div class="topnav-centered">
+                    <a href="#backtotop" class="active">Moon River</a>
+                </div>
+    
+                <!-- linkgsbündiges Menü -->
+                <a href="#design">Design</a>
+                <a href="#process">Process</a>
+    
+                <!-- rechtsbündiges Menü -->
+                <div class="topnav-right">
+                    <a href="#song">Song</a>
+                </div>
             </div>
 
-            <!-- linkgsbündiges Menü -->
-            <a href="process/tag2/tag2-2.html">About me</a>
-            <a href="process/tag2/tag2-3.html">Process</a>
 
-            <!-- rechtsbündiges Menü -->
-            <div class="topnav-right">
-                <a href="process/tag2/tag2-4.html">Lyrics</a>
-                <!--noch nicht erstellt-->
-                <a href="process/tag2/tag2-5.html">Moodboard</a>
-                <!--noch nicht erstellt-->
-            </div>
+              <button id="backtotop"><a href="#top" style="color: white; font-size: 40px;" >↑</a></button>
 
+
+    <div style="text-align: center;">
+        <h style="font-family: 'Mate SC', serif; font-size: 55px;">Moon River</h>
+        <p style="font-family: 'Mate SC', serif; font-size: 34px;">from “Breakfast at Tiffany’s”</p>
+    </div>
+<div>
+    <div style="font-family: 'Mate SC', serif; font-size: 21px;">♪=88</div>
+</div>
+    <div class="row section-white" style="border-color: black; border: solid 2px;">
+        <div>Moooooon river,</div>
+        <div>wider than a mile</div>
+        <div>I'm crossing you in style</div>
+        <div>some dayyyyy</div>
+    </div>
+    <div class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -70px)">
+        <div>Oh, dreeeeam</div>
+        <div>maker,</div>
+        <div class="heart">you heart</div>
+        <div>I'm crossing you</div>
+        <div>breaker</div>
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -120px); padding-top: 70px;">
+        <div>Wherever you're goin'</div>
+        <div>I'm goin' your way</div>
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -120px)">
+        <div>Twooooo drifters,</div>
+        <div>off to see the world</div>
+        <div>There's such a lot of wooorld</div>
+        <div class="letterspacing" style="font-size: 200%; color: #ddc3a5; font-family: 'Mate SC', serif;">to see</div>
+    </div>
+    <div class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -180px)">
+        <div>We're after the same rainbow's end</div>
+        <div>Waitin' 'round the bend</div>
+        <div>My huckleberry friend</div>
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -240px); padding-top:70px">
+        <div>Mooooon river</div>
+        <div>and meeeee</div>
+    </div>
+    <div class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -300px)">
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -360px)">
+    </div>
+    <div id="song" class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -420px)">
+       Song
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -480px); padding-top: 70px;">
+        <audio controls autoplay>
+            <source src="../css/moonriver.mp3" type="audio/mpeg">
+          </audio>
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -480px)">
+    </div>
+    <div id="design" class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -540px)">
+    Design 
+    </div>
+    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -600px); padding-top: 70px;">
+    <a href="https://www.figma.com/file/3c7c0TZmMrRu6Cmk87qQWj/grids-and-modules?node-id=0%3A1" target="_blank">Figma Design</a>
+    </div>
+    <div id="process" class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -660px)">
+        Process 
         </div>
-
-        <div style="padding-left:16px">
-            <h2 style="text-align: center;">Moon River</h2>
-
+        <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -720px); padding-top: 70px;">
         </div>
-    </body>
+    <div style="font-family: 'Mate SC', serif; font-size: 14px; text-align: center;">
+        <p>Design by Natascha Alenka Meili</p>
+    </div>
+</body>
 
 </html>
