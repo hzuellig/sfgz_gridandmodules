@@ -2,60 +2,75 @@
 Keyword colors can be found at http://colours.neilorangepeel.com/
 */
 
+
 /* border-box fix */
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
-h1, h2 {
-  text-transform: uppercase;
+
+h1,
+h2 {
+    text-transform: uppercase;
 }
+
 
 /* Add padding to all of the .container child elements */
-.container > * {
-  padding: 20px;
-}
-.container {
-  color: white;
-  font-family: helvetica, arial, sans-serif;
-  display: flex;
-  flex-wrap: wrap;
 
+.container>* {
+    padding: 20px;
+}
+
+.container {
+    color: white;
+    font-family: helvetica, arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header {
-  background: #110b0d;
-  flex: 1 0 100%;
-  order: 1;
+    background: #110b0d;
+    flex: 1 0 100%;
+    order: 1;
+}
 
-}
 main {
-  border:1px dotted black;
-  order: 3;
-  flex: 1 1 500px;
-  color:black;
+    border: 1px dotted black;
+    order: 3;
+    flex: 1 1 500px;
+    color: black;
 }
+
 nav {
-  background: #cbccc8;
-  order: 2;
-  flex: 1 0 200px;
+    background: #cbccc8;
+    order: 2;
+    flex: 1 0 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 200px;
 }
+
 aside {
-  background: #918781;
-  order: 4;
-  flex: 1 0 200px;
+    background: #918781;
+    order: 4;
+    flex: 1 0 200px;
 }
+
 footer {
-  background: #110b0d;
-  flex: 1 0 100%;
-  order: 5;
+    background: #110b0d;
+    flex: 1 0 100%;
+    order: 5;
 }
