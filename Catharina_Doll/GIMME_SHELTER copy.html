@@ -58,7 +58,7 @@
         }
         
         body {
-            margin-left: -100px;
+            /*margin-left: -100px;*/
             background-image: url(../../Image/wand_sw.jpg);
         }
         
@@ -118,9 +118,10 @@
         }
         
         .boxklein {
-            background-color: white;
+
             height: auto;
             width: auto;
+            padding-left:10vw;
         }
         
         .Mittel {
@@ -187,8 +188,13 @@
         }
         
         .skew {
-            transform: skew(20deg, -4deg);
+            transform: rotate(-10deg);
             transform-origin: top right;
+            width:120vw;
+            margin-left:-10vw;
+        }
+        span{
+            background-color: white;
         }
     </style>
 
@@ -207,9 +213,12 @@
     <br>
     <br>
     <div class="container">
-        <div class="items item2 Klein boxklein skew">OOH, A </div>
-        <div class="items item3 Gross boxklein skew">STORM</div>
-        <div class="items item2 Klein boxklein skew">IS THREATENING</div>
+        <div class="skew">
+            <div class="items item2 Klein boxklein "><span>OOH, A </span></div>
+            <div class="items item3 Gross boxklein "><span>STORM</span></div>
+            <div class="items item2 Klein boxklein "><span>IS THREATENING</span></div>
+        </div>
+
         <div class="items item3 Klein">My very life today</div>
         <div class="items Klein">If i don't get some</div>
         <div class="items Gross text3d">SHELTER </div>
