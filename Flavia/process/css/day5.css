@@ -4,11 +4,11 @@
 
 body {
     /*background: #2A2B45;*/
-    background: linear-gradient(180deg, #463C5F 0%, #2A2B45 61.46%, #2A2B45 95.31%);
+    background     : linear-gradient(180deg, #463C5F 0%, #2A2B45 61.46%, #2A2B45 95.31%);
     background-size: cover;
-    margin    : 0;
-    padding   : 0;
-    overflow-x: hidden;
+    margin         : 0;
+    padding        : 0;
+    overflow-x     : hidden;
 }
 
 
@@ -45,16 +45,32 @@ section {
     border-radius: 50px;
 }
 
+.box_scroll {
+    width          : 100vw;
+    height         : 100vh;
+    position       : absolute;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+}
+
 .scrolldown {
-    position        : absolute;
-    top             : 5vh;
-    font-family     : 'Antic Didone', serif;
-    color           : #967892;
-    font-size       : 1.25em;
-    line-height     : 23vh;
-    width           : 100%;
-    display         : flex;
-    align-items     : center;
+    font-family: 'Antic Didone', serif;
+    color      : #967892;
+    font-size  : 1.25em;
+    text-align : center;
+
+    animation-name           : scrolldown;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transition               : all 1s ease-in;
+
+}
+
+img {
+    width      : 10px;
+    align-items: center;
 
 }
 
@@ -132,13 +148,79 @@ section {
 .sun {
     width : 1px;
     height: 1px;
-    left  : 65vw;
+    left  : 67vw;
 
     position                 : absolute;
     animation-name           : sunanimation;
     animation-duration       : 10s;
     animation-iteration-count: infinite;
     transition               : all 1s ease-in-out;
+}
+
+.circle1 {
+    width        : 450px;
+    height       : 450px;
+    left         : 10vw;
+    border-radius: 50%;
+    border       : 1px solid #c4a6bf;
+    position     : absolute;
+    margin-top   : 30px;
+}
+
+.circle2 {
+    width        : 610px;
+    height       : 610px;
+    left         : 70vw;
+    border-radius: 50%;
+    border       : 1px solid #c4a6bf;
+    position     : absolute;
+    margin-top   : 200px;
+}
+
+.moon1 {
+    width           : 700px;
+    height          : 700px;
+    left            : 20vw;
+    border-radius   : 50%;
+    background-color: #c4a6bfcc;
+    filter          : blur(10px);
+    position        : absolute;
+    margin-top      : 50px;
+}
+
+
+
+.moon2 {
+    width           : 500px;
+    height          : 500px;
+    left            : 50vw;
+    border-radius   : 50%;
+    background-color: #c4a6bf56;
+    filter          : blur(5px);
+    position        : absolute;
+
+}
+
+.moon3 {
+    width           : 500px;
+    height          : 500px;
+    left            : 5vw;
+    border-radius   : 50%;
+    background-color: #c4a6bf8f;
+    filter          : blur(10px);
+    position        : absolute;
+    margin-top      : 150px;
+
+}
+
+.moon4 {
+    width           : 800px;
+    height          : 800px;
+    left            : 80vw;
+    border-radius   : 50%;
+    background-color: #c4a6bf81;
+    filter          : blur(10px);
+    position        : absolute;
 }
 
 .sing {
@@ -269,6 +351,21 @@ section {
     transform                : translateY(0);
 }
 
+@keyframes scrolldown {
+    0% {
+        color    : #fff;
+        opacity  : 0.9;
+        transform: translateY(0);
+
+    }
+
+    100% {
+        color    : #967892;
+        opacity  : 1;
+        transform: translateY(2px);
+    }
+}
+
 @keyframes ChorAnimation {
     0% {
         color    : #fff;
@@ -280,20 +377,20 @@ section {
     100% {
         color    : #967892;
         opacity  : 1;
-        transform: translateY(9px);
+        transform: translateY(10px);
     }
 }
 
 @keyframes ChorBiggerAnimation {
     0% {
         color        : #fff;
-        opacity      : 0.9;
-        margin-bottom: 0px;
+        opacity      : 0.5;
+        margin-bottom: 20px;
     }
 
     100% {
         color        : #967892;
-        opacity      : 1;
+        opacity      : 0.9;
         margin-bottom: 50px;
 
     }
@@ -329,40 +426,94 @@ section {
     0% {
         border-radius   : 50%;
         transform       : scale(1);
-        background-color: #2a2b454b;
+        background-color: #ac8ca700;
 
     }
 
     50% {
         border-radius   : 50%;
         transform       : scale(2000);
-        background-color: #ac8ca74b;
+        background-color: #ac8ca72a;
 
     }
 
     100% {
         border-radius   : 50%;
         transform       : scale(1);
-        background-color: #2a2b454b;
+        background-color: #ac8ca700;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        background: linear-gradient(180deg, #2A2B45 0%, #2A2B45 61.46%, #463C5F 95.31%);
+        font-size : 80%;
+    }
+
+    .mobile_hidden {
+        display: none;
+    }
+
+    .dreamonoutline {
+        font-size   : 10vh;
+        line-height : 10vh;
+        margin-left : 20px;
+        margin-right: 40px;
+    }
+
+    .dreamonoutline:hover {
+        font-size   : 10vh;
+        line-height : 10vh;
+        margin-left : 20px;
+        margin-right: 40px;
+    }
+
+    .dreamuntil {
+        font-size     : 10vh;
+        line-height   : 10vh;
+        text-transform: capitalize;
+        margin-left   : 20px;
+        margin-right  : 40px;
+    }
+
+    .sing {
+        font-size  : 1.25em;
+        line-height: 10vh;
+    }
+
+    @keyframes sunanimation {
+        0% {
+            border-radius   : 50%;
+            transform       : scale(1);
+            background-color: #ffeb9d00;
+        }
+
+        50% {
+            border-radius   : 50%;
+            transform       : scale(1000);
+            background-color: #e7a1fd3a;
+        }
+
+        100% {
+            border-radius   : 50%;
+            transform       : scale(1);
+            background-color: #ffeb9d00;
+        }
+
     }
 }
 
 body::-webkit-scrollbar {
     width : 1px;
-    /* width of the entire scrollbar */
     height: 1px;
 }
 
 body::-webkit-scrollbar-track {
     background: #2A2B45;
-    /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #2a2b45;
-    /* color of the scroll thumb */
     border-radius   : 2px;
-    /* roundness of the scroll thumb */
     border          : 1px solid #2A2B45;
-    /* creates padding around scroll thumb */
 }
