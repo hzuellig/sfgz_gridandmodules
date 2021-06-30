@@ -1,0 +1,296 @@
+body 
+{
+    background-color: #F2C5C4);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.taste1 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+
+.box1 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box2 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box3 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box4 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.taste2 
+{
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box5 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box6 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box7 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.taste3 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box8 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box9 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box10 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.taste4 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box11 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box12 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box13 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.taste5 
+{
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box14 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box15 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box16 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.taste6 
+{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+}
+.box17 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box18 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+.box19 
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.normal89 
+{
+
+}
+
+.normal55 
+{
+
+}
+
+.normal34 
+{
+
+}
+
+.titel 
+{
+    text-align: center;
+    font: ;
+}
+
+.style
+{
+    position: absolute;
+
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 231px;
+
+    color: #E38AA7;
+}
+
+.heart 
+{
+    position: absolute;
+
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 231px;
+
+    color: #F2C5C4;
+}
+
+.goin 
+{
+    position: absolute;
+
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 231px;
+
+    color: #AEDCE3;
+}
+
+.see 
+{
+    position: absolute;
+
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 231px;
+    
+    color: #E48AA6;
+}
+
+.river 
+{
+    position: absolute;
+    
+    font-family: Shadows Into Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 231px;
+    
+    color: #AEDDE3;
+}
+
+.rainbow
+{
+    font-family: fantasy;
+    font-size: 52px;
+    background: linear-gradient(to right, #E38AA7, #AEDCE3, #F0EBDD, #F2C5C4); 
+ 
+    position: absolute;
+
+    font-family: Petit Formal Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 180px;
+}
+
+
