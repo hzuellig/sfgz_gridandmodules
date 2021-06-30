@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
     <title>Test</title>
 
@@ -16,7 +16,7 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
-        .div{
+        .div {
             font-family: ;
         }
 
@@ -58,21 +58,22 @@
         }
 
         #backtotop {
-        position: fixed;
-        bottom: 10px;
-        float: right;
-        right: 20%;
-        left: 90%;
-        max-width: 30px;
-        width: 100%;
-        background-color: #ddc3a5;
-        padding: .5px;
+            position: fixed;
+            bottom: 10px;
+            float: right;
+            right: 20%;
+            left: 90%;
+            max-width: 30px;
+            width: 100%;
+            background-color: #ddc3a5;
+            padding: .5px;
 
-    }
-/*On Hover Color Change*/
-    #backtotop:hover {
-        background-color: #201e20;
-    }
+        }
+
+        /*On Hover Color Change*/
+        #backtotop:hover {
+            background-color: #201e20;
+        }
 
         .row {
             background-color: rgb(255, 255, 255);
@@ -99,6 +100,48 @@
             letter-spacing: 20px;
             transition-duration: 2s;
             transition-timing-function: ease-in-out;
+        }
+
+        .dropbtn {
+            background-color: #e0a96d;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #ddc3a5;
         }
 
         .heart {
@@ -168,13 +211,14 @@
                 transform: scale(1.6);
             }
         }
- 
+
         .section-white {
             padding-top: 15px;
             background-color: rgb(255, 255, 255);
             padding-bottom: 15px;
             width: 80%;
             height: 170px;
+            cursor: pointer;
         }
 
         .section-black {
@@ -183,77 +227,76 @@
             padding-bottom: 15px;
             width: 60%;
             height: 90px;
-            position:relative; 
+            position: relative;
             z-index: 1;
+            cursor: pointer;
         }
 
-        @media screen and (max-width:768px){
-            .section-white {
-            padding-top: 15px;
-            background-color: rgb(255, 255, 255);
-            padding-bottom: 15px;
-            width: 80%;
-            height: 130px;
+        @media screen and (max-width:768px) {
+            .topnav-right {
+                display: none;
+            }
+            .topnav-centered {
+                display: none;
+            }
         }
-
-        .section-black {
-            padding-top: 15px;
-            background-color: rgb(255, 255, 255);
-            padding-bottom: 15px;
-            width: 60%;
-            height: 50px;
-            position:relative; 
-            z-index: 1;
-        }
-}
-
     </style>
 </head>
 
 <body>
-            <!-- Top navigation -->
-            <div class="topnav">
+    <!-- Top navigation -->
+    <div class="topnav">
 
-                <!-- mittlerer Link -->
-                <div class="topnav-centered">
-                    <a href="#backtotop" class="active">Moon River</a>
-                </div>
-    
-                <!-- linkgsbündiges Menü -->
-                <a href="#design">Design</a>
-                <a href="#process">Process</a>
-    
-                <!-- rechtsbündiges Menü -->
-                <div class="topnav-right">
-                    <a href="#song">Song</a>
-                </div>
+        <!-- mittlerer Link -->
+        <div class="topnav-centered">
+            <a href="#backtotop" class="active">Moon River</a>
+        </div>
+
+        <!-- linkgsbündiges Menü -->
+        <a href="#design">Design</a>
+        <div class="dropdown">
+            <a href="#process" class="dropbtn">Process</a>
+            <div class="dropdown-content">
+                <a href="#Tag1">Tag 1</a>
+                <a href="#Tag2">Tag 2</a>
+                <a href="#Tag3">Tag 3</a>
+                <a href="#Tag4">Tag 4</a>
             </div>
+        </div>
+
+        <!-- rechtsbündiges Menü -->
+        <div class="topnav-right">
+            <a href="#song">Song</a>
+        </div>
+    </div>
 
 
-              <button id="backtotop"><a href="#top" style="color: white; font-size: 40px;" >↑</a></button>
+    <button id="backtotop"><a href="#top" style="color: white; font-size: 40px;">↑</a></button>
 
 
     <div style="text-align: center;">
         <h style="font-family: 'Mate SC', serif; font-size: 55px;">Moon River</h>
         <p style="font-family: 'Mate SC', serif; font-size: 34px;">from “Breakfast at Tiffany’s”</p>
     </div>
-<div>
-    <div style="font-family: 'Mate SC', serif; font-size: 21px;">♪=88</div>
-</div>
+    <div>
+        <div style="font-family: 'Mate SC', serif; font-size: 21px;">♪=88</div>
+    </div>
     <div class="row section-white" style="border-color: black; border: solid 2px;">
         <div>Moooooon river,</div>
         <div>wider than a mile</div>
         <div>I'm crossing you in style</div>
         <div>some dayyyyy</div>
     </div>
-    <div class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -70px)">
+    <div class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -70px)">
         <div>Oh, dreeeeam</div>
         <div>maker,</div>
         <div class="heart">you heart</div>
         <div>I'm crossing you</div>
         <div>breaker</div>
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -120px); padding-top: 70px;">
+    <div class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -120px); padding-top: 70px;">
         <div>Wherever you're goin'</div>
         <div>I'm goin' your way</div>
     </div>
@@ -263,41 +306,85 @@
         <div>There's such a lot of wooorld</div>
         <div class="letterspacing" style="font-size: 200%; color: #ddc3a5; font-family: 'Mate SC', serif;">to see</div>
     </div>
-    <div class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -180px)">
+    <div class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -180px)">
         <div>We're after the same rainbow's end</div>
         <div>Waitin' 'round the bend</div>
         <div>My huckleberry friend</div>
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -240px); padding-top:70px">
+    <div class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -240px); padding-top:70px">
         <div>Mooooon river</div>
         <div>and meeeee</div>
     </div>
-    <div class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -300px)">
+    <div class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -300px)">
     </div>
     <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -360px)">
     </div>
-    <div id="song" class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -420px)">
-       Song
+    <div id="song" class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -420px)">
+        Song
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -480px); padding-top: 70px;">
+    <div class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -480px); padding-top: 70px;">
         <audio controls autoplay>
-            <source src="../css/moonriver.mp3" type="audio/mpeg">
-          </audio>
+            <source src="../process/css/moonriver.mp3" type="audio/mpeg">
+        </audio>
     </div>
     <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -480px)">
     </div>
-    <div id="design" class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -540px)">
-    Design 
+    <div id="design" class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -540px)">
+        Design
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -600px); padding-top: 70px;">
-    <a href="https://www.figma.com/file/3c7c0TZmMrRu6Cmk87qQWj/grids-and-modules?node-id=0%3A1" target="_blank">Figma Design</a>
+    <div class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -600px); padding-top: 70px;">
+        <a href="https://www.figma.com/file/3c7c0TZmMrRu6Cmk87qQWj/grids-and-modules?node-id=0%3A1"
+            target="_blank">Figma Design</a>
     </div>
-    <div id="process" class="row row-white section-black" style="background-color: black; color: white; transform: translate(0px, -660px)">
-        Process 
-        </div>
-        <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -720px); padding-top: 70px;">
-        </div>
-    <div style="font-family: 'Mate SC', serif; font-size: 14px; text-align: center;">
+    <div id="process" class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -660px)">
+        Process
+    </div>
+    <div id="Tag1" class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -720px); padding-top: 70px;">
+        <a href="/process/tag1/tag1-1.html" target="_blank">Tag1-1<br></a>
+        <a href="/process/tag1/tag1-2.html" target="_blank">Tag1-2<br></a>
+        <a href="/process/tag1/tag1-3.html" target="_blank">Tag1-3<br></a>
+        <a href="/process/tag1/tag1-4.html" target="_blank">Tag1-4<br></a>
+        <a href="/process/tag1/tag1-5.html" target="_blank">Tag1-5</a>
+    </div>
+    <div id="Tag2" class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -720px); padding-top: 10px;">
+        <a href="/process/tag2/tag2-2.html" target="_blank">Tag2-2<br></a>
+        <a href="/process/tag2/tag2-3.html" target="_blank">Tag2-3</a>
+    </div>
+    <div class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -780px)">
+    </div>
+    <div id="Tag3" class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -840px); padding-top: 70px;">
+        <a href="/process/tag3/tag3-1.html" target="_blank">Tag3-1</a>
+    </div>
+    <div class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -890px)">
+    </div>
+    <div id="Tag4" class="row section-white"
+        style="border-color: black; border: solid 2px; transform: translate(0px, -960px); padding-top: 70px;">
+        <a href="/process/tag4/tag4-1.html" target="_blank">Tag4-1<br></a>
+        <a href="/process/tag4/tag4-2.html" target="_blank">Tag4-2<br></a>
+        <a href="/process/tag4/tag4-3.html" target="_blank">Tag4-3</a>
+    </div>
+    <div class="row row-white section-black"
+        style="background-color: black; color: white; transform: translate(0px, -1020px)">
+    </div>
+    <div id="Tag4" class="row section-white"
+    style="border-color: black; border: solid 2px; transform: translate(0px, -1080px); padding-top: 70px;">
+    <a href="/process/tag5/tag5-1.html" target="_blank">Tag5-1<br></a>
+    <a href="/process/tag5/tag5-2.html" target="_blank">Tag5-2</a>
+</div>
+    <div style="font-family: 'Mate SC', serif; font-size: 14px; text-align: center; transform: translate(0px, -1080px); padding-top: 70px;"">
         <p>Design by Natascha Alenka Meili</p>
     </div>
 </body>
