@@ -118,13 +118,28 @@
         }
         
         .boxklein {
-
             height: auto;
             width: auto;
-            padding:0;
-            padding-left:10vw;
+            padding: 0;
+            padding-left: 10vw;
+            background-image: url(Image/white.gif);
+            background-repeat: repeat;
+        }
+        
+        .boxkleinkurz {
+            height: auto;
+            width: auto;
+            padding: 0;
+            padding-left: 10vw;
             background-image: url(Image/white.gif);
             background-repeat: repeat-y;
+        }
+        
+        .boxkleinohne {
+            height: auto;
+            width: auto;
+            padding: 0;
+            padding-left: 15vw;
         }
         
         .Mittel {
@@ -156,13 +171,14 @@
             animation-duration: 2s;
             animation-iteration-count: infinite;>*/
         }
-
-        .Gross.boxklein{
+        
+        .Gross.boxklein {
             background-image: none;
         }
-
-        .Gross.boxklein span{
-            padding-right:2rem;
+        
+        .Gross.boxklein span {
+            padding-right: 4rem;
+            padding-left: 3rem;
         }
         
         .Balken {
@@ -179,6 +195,30 @@
         
         .change:hover {
             background-color: darkred;
+        }
+        
+        @keyframes animationblink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .blink {
+            animation-name: animationblink;
+            animation-duration: .65s;
+            animation-iteration-count: infinite;
+        }
+        
+        .blink2 {
+            animation-name: animationblink;
+            animation-duration: .75s;
+            animation-iteration-count: infinite;
         }
         
         @keyframes meineAnimation {
@@ -201,15 +241,14 @@
         .skew {
             transform: rotate(-10deg);
             transform-origin: top right;
-            width:120vw;
-            margin-left:-10vw;
+            width: 120vw;
+            margin-left: -10vw;
         }
-        span{
+        
+        span {
             background-color: white;
-            padding-right:1rem;
+            padding-right: 1rem;
         }
-
-
     </style>
 
 
@@ -229,23 +268,28 @@
     <div class="container">
         <div class="skew">
             <div class="items item2 Klein boxklein "><span>OOH, A </span></div>
-            <div class="items item3 Gross boxklein "><span>STORM</span></div>
-            <div class="items item2 Klein boxklein "><span>IS THREATENING</span></div>
+            <div class="items item1 Gross boxklein "><span>STORM</span></div>
+            <div class="items item2 Klein boxklein "><span>IS THREATENING</span></div><br><br><br>
+            <div class="items item3 Klein boxkleinohne" style="color: darkred;"><span>MY VERY LIFE TODAY</span> </div><br><br><br>
+            <div class="items item3 Klein boxklein"><span>IF I DON'T GET SOME</span></div>
+            <div class="items item3 Gross boxklein "><span>SHELTER</span></div><br><br><br>
+            <div class="items item2 Klein boxklein "><span>OOH YEAH I'M GONNA </span></div>
+            <div class="items item3 Gross boxklein " style="color: darkred;"><span>FADE AWAY</span></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
         </div>
+        <div class="items Balken text3d change "> W A R</div>
+        <div class="items Balken text3d change "> C H I L D R E N</div>
 
-        <div class="items item3 Klein">My very life today</div>
-        <div class="items Klein">If i don't get some</div>
-        <div class="items Gross text3d">SHELTER </div>
-        <div class="items Klein"> Ooh yeah I'm gonna</div>
-        <div class="items Gross text3d" ; style="color: darkred; padding-left;"> fade away</div>
-        <div class="items Balken text3d change"> W A R</div>
-        <div class="items Balken text3d change"> C H I L D R E N</div>
+        <div class="container">
+            <div class="skew">
+                <div class="items item2 Klein boxklein " style="color: black;"><span>IT'S JUST A </span></div>
+                <div class="items item3 Gross boxklein blink" style="color: darkred;"><span>SHOT AWAY</span></div>
+                <div class="items item3 Klein boxkleinohne" style="color: black;"><span>IT'S JUST A SHOT AWAY</span> </div>
+            </div>
 
-    </div>
+            <style>
 
-    <style>
-
-    </style>
+            </style>
 
 </body>
 
