@@ -10,28 +10,54 @@ body{
     background-color: black;
 
 }
-.mond-klein {
+.mond-klein_left {
+    color: black;
+    font-size: 2rem;
+    padding-left: 0px;
+    margin: 0;
+    text-align: right;
+}
+.mond-klein_left_abstand {
+    color: rgba(0, 0, 0, 0);
+    font-size: 2rem;
+    padding-left: 30px;
+    margin: 0;
+    text-align: right;
+}
+
+.mond-klein_right {
     color: black;
     font-size:2rem;
-    padding-left: 0;
+    padding-right: 50px;
     margin: 0;
 }
-.mond-gross {
+
+.mond-gross_left {
     color: black;
-    font-size:10rem;
-    padding-left: 0;
+    font-size: 15rem;
+    padding: 0px;
     margin: 0;
+    line-height: 73%;
+    text-align: right;
+}
+
+.mond-gross_right {
+    color: black;
+    font-size: 15rem;
+    padding: 0;
+    margin: 0;
+    line-height: 73%;
 }
 
 
-p{
+/*p{
     color: rgb(255, 255, 255);
     font-family: open sans;
     font-size:1.5rem;
     padding-left: 40px;
     margin-top: 40px;
-    margin-bottom: 10px;
-}
+    margin-bottom: 10px;$$$
+}*/
 
 
 /*_NAVIGATION________________________________________________________________*/

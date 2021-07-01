@@ -16,12 +16,24 @@ body{
     padding-left: 0;
     margin: 0;
 }
-.mond-gross {
+.mond-gross_left {
     color: black;
     font-size:10rem;
     padding-left: 0;
     margin: 0;
+    line-height: 75%;
+    text-align: right;
 }
+
+.mond-gross_right {
+    color: black;
+    font-size:10rem;
+    padding-left: 0;
+    margin: 0;
+    line-height: 75%;
+    text-align: left;
+}
+
 
 
 p{

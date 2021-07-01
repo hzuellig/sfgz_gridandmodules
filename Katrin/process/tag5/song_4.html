@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_song_3.css">
-    <title>Song_3</title>
+    <link rel="stylesheet" href="css/style_song_4.css">
+    <title>Song_4</title>
     <style>
         .normal {
             color: white;
@@ -38,21 +38,62 @@
             align-items: center;
             text-align: center;
             background-color: white;
-            border: dotted 3px rgb(65, 65, 65);
+            color: rgb(0, 0, 0);
+            border: solid 3px rgb(255, 0, 255);
 
         }
 
-        .text-white {
-            color: rgb(0, 0, 0);
+        .red {
+            height: 14em;
             font-size: 4rem;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(203, 22, 45);
+            color: rgb(255, 255, 255);
             border: solid 3px rgb(255, 0, 255);
+
         }
 
 
+        @media screen and (max-width: 768px) {
+
+            body {
+                background-color: rgb(255, 255, 255);
+            }
+
+            .mond-klein,
+            .mond-gross {
+                color: rgb(255, 255, 255);
+            }
+
+            .nav {
+                background-color: rgb(0, 0, 0);
+            }
+
+            .nav li a {
+                color: rgb(255, 255, 255);
+            }
+
+            .normal {
+                color: rgb(0, 0, 0);
+            }
+
+            .white {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+
+            .red {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 0, 34);
+            }
+
+        }
 
 
-        /*____________MOND____________*/
+        /*__MOND_________________________________________________________*/
         .himmel {
             display: flex;
             justify-content: center;
@@ -60,19 +101,20 @@
         }
 
         .mond {
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border-radius: 50%;
-            flex-basis: 70vw;
+            flex-basis: 56vh;
             display: flex;
-            /*font-size: 10rem;*/
             justify-content: center;
             flex-direction: column;
             border: solid 3px rgb(83, 255, 241);
-            /*transition: all 5s ease-in-out;*/
+            /*transition: all 500s ease-in-out;*/
         }
+
 
         .oben {
             display: flex;
+            flex-direction: row;
             border: solid 1px greenyellow;
             height: 28vh;
 
@@ -80,6 +122,7 @@
 
         .unten {
             display: flex;
+            flex-direction: row;
             border: solid 1px rgb(234, 255, 47);
             height: 28vh;
 
@@ -88,27 +131,46 @@
         .right,
         .left {
             flex-basis: 50%;
+            flex-grow:0;
+
         }
 
         .right {
-            transform: translateY(40px);
+            transform:translate(-16px, 40px);
             border: dotted 3px rgb(47, 85, 255);
             text-align: left;
-            flex-direction: row;
 
         }
 
 
         .left {
-            flex-basis: 50%;
+            transform: translateX(16px);
             border: solid 1px rgb(47, 85, 255);
             text-align: right;
+            display: flex;
+            align-items: flex-end;
 
         }
+
+        @media screen and (max-width: 768px) {
+            .mond {
+                background-color: rgb(0, 0, 0);
+
+            }
+        }
     </style>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
 </head>
 
 <body>
+    <ul class="nav">
+        <li>
+            <a href="../index.html">back</a>
+        </li>
+    </ul>
     <div class="abstand_klein">
     </div>
 
@@ -122,21 +184,21 @@
         <div class="mond">
             <div class="oben">
                 <div class="left">
-                    <!---<div class="mond-klein">Dr</div>-->
-                    <div class="mond-gross">MO</div>
+                    <div class="mond-klein">Dr</div>
+                    <div class="mond-gross_left">MO</div>
                 </div>
                 <div class="right">
-                    <div class="mond-gross">ND</div>
-                   <!---<div class="mond-klein">isch es</div>-->
+                    <div class="mond-gross_right">ND</div>
+                    <!--<div class="mond-klein">isch es</div>-->
                 </div>
             </div>
             <div class="unten">
                 <div class="left">
                     <!--<div class="mond-klein">wysses runds</div>-->
-                    <div class="mond-gross">LO</div>
+                    <div class="mond-gross_left">LO</div>
                 </div>
                 <div class="right">
-                    <div class="mond-gross">CH</div>
+                    <div class="mond-gross_right">CH</div>
                 </div>
             </div>
         </div>
@@ -158,20 +220,42 @@
     <div class="abstand_gross">
     </div>
     <div class="white">
-        <div class="text-white">
-            Schtunge zeut i däm viu z grosse bett
-        </div>
+        Schtunge zeut i däm viu z grosse bett
     </div>
 
     <div class="abstand_gross">
     </div>
     <div class="normal">
-    U Ha gseh
-    Wie sech d wäut wacker dräit
-    ...nume nid um mi...</div>
+        U Ha gseh
+        Wie sech d wäut wacker dräit
+        ...nume nid um mi...</div>
 
     <div class="abstand_gross">
     </div>
+
+    <div class="normal">
+        U Jitz bisch du cho
+        Grad jitz
+        Won I's nümm hätti dänkt</div>
+
+    <div class="abstand_gross">
+    </div>
+    <div class="normal">
+        U Luegsch dry
+        Wie wenn's öppis schöns z gwinne gäb
+        Für di U für mi
+        Im schlimmschte fau nume e nacht</div>
+
+    <div class="abstand_gross">
+    </div>
+    <div class="red">
+        I boue mir myni tröim uuf rund um di
+        U Male se scharlachrot a
+        I brönne mir di name z mitts i mys härz
+        Chönnt schwöre dass I ewig blybe we üs nüt
+        Drzwüsche chunnt
+    </div>
+
 
 
 </body>
