@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: chocolate;
+    }
+
+    .trigger{
+        display: flex;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 10%;
+        background-color: bisque;
+        margin: 20px;
+        box-shadow: 2px 2px 10px rgba(36, 36, 36, 0.6);
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+    }
+
+    .trigger:hover .eins {
+        transform: rotate(10deg);
+    }
+
+    .trigger:hover .zwei {
+        transform: rotate(20deg);
+    }
+    .trigger:hover .drei {
+        transform: rotate(30deg);
+    }
+    .trigger:hover .vier {
+        transform: rotate(40deg);
+    }
+    .trigger:hover .funf{
+        transform: rotate(50deg);
+    }
+
+    .txt {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        top: 200px;
+        left: 50px;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+    }
+
+    .trigger2:hover .txt2 {
+        transform: translate(0px, 20px);
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .trigger2:hover .txt3 {
+        transform: translate(0px, 40px);
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .trigger2:hover .txt4 {
+        transform: translate(0px, 60px);
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .trigger2:hover .txt5 {
+        transform: translate(0px, 80px);
+        color: rgba(255, 255, 255, 0.2);
+    }
+
+    .trigger2:hover .txt6 {
+        transform: translate(0px, 100px);
+        color: rgba(255, 255, 255, 0.0);
+    }
+
+</style>
+
+<body>
+    <div class="trigger">
+        <div class="box eins"></div>
+        <div class="box zwei"></div>
+        <div class="box drei"></div>
+        <div class="box vier"></div>
+        <div class="box funf"></div>
+    </div>
+
+    <div class="trigger2">
+        <div class="txt txt1">MOVE THAT SH*T</div>
+        <div class="txt txt2">MOVE THAT SH*T</div>
+        <div class="txt txt3">MOVE THAT SH*T</div>
+        <div class="txt txt4">MOVE THAT SH*T</div>
+        <div class="txt txt5">MOVE THAT SH*T</div>
+        <div class="txt txt6">MOVE THAT SH*T</div>
+    </div>
+
+
+
+</body>
+</html>
