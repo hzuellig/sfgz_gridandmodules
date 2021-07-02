@@ -9,23 +9,19 @@
     <link rel="stylesheet" href="https://use.typekit.net/jkg6vgm.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <title>Songpage Kunzite, Minerals</title>
 </head>
 
-<script>
-    /* Open when someone clicks on the span element */
-    function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-    }
-
-    /* Close when someone clicks on the "x" symbol inside the overlay */
-    function closeNav(y) {
-        document.getElementById("myNav").style.width = "0%";
-    }
-
-</script>
-
 <body>
+    
+    <audio id="player" src="Kunzite-Minerals-96.mp3"></audio>
+    <div>
+        <button onclick="document.getElementById('player').play()">Play</button>
+        <button onclick="document.getElementById('player').pause()">Pause</button>
+    </div>
 
     <!-- Burger -->
     <img src="img/menu.png" class="burger" onclick="openNav()">
@@ -42,11 +38,11 @@
         <!-- Content -->
         <div class="box-overlay-content">
             <div class="overlay-content">
-                <p>Tag 1</p>
+                <p class="menu-header">Tag 1</p>
                 <a href="/process/tag1/tag1-1.html">Übung 1</a>
             </div>
             <div class="overlay-content">
-                <p>Tag 2</p>
+                <p class="menu-header">Tag 2</p>
                 <a href="process/tag2/tag2-1.html">Übung 1</a>
                 <a href="process/tag2/position.html">Übung 2</a>
                 <a href="process/tag2/justify-content.html">Übung 3</a>
@@ -59,7 +55,7 @@
         </div>
         <div class="box-overlay-content">
             <div class="overlay-content">
-                <p style="color: #818181;">Code & Design: Sario Haladjian</p>
+                <p class="tx-footer">Code & Design: Sario Haladjian</p>
             </div>
         </div>
 
@@ -77,7 +73,7 @@
 </div>
 
 <div class="cont3 tx-center">
-    <h1 class="">BAD MATH</h3>
+    <h2 class="">BAD MATH</h2>
 </div>
 
 <div class="cont3 tx-center">
@@ -97,7 +93,23 @@
     </div>
 </div>
 
+<div class="cont5 tx-center">
+    <h3>STILL A LITTLE LIGHT</h3>
+    <h2>SHINING THROUGH </br>A PRISM</h2>
+</div>
+
+<div class="cont6 tx-center">
+    <h3>STILL A LITTLE TIME</h3>
+    <h2>WE CAN DISAPPEAR, MAGICIAN</h2>
+</div>
+
+<div class="cont7 tx-center">
+    <h3>JUST GOTTA MAKE</h3>
+    <h2>AIM WITH </br>PRECISION</h2>
+</div>
 
 </body>
+
+
 
 </html>
