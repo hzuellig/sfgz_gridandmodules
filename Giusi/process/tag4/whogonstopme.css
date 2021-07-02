@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: rgb(255, 240, 250);
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color: black;
+
+  font-family: 'Raleway', sans-serif;
+  color: var(--font-color);
+  text-transform: uppercase;
+}
+
+/* #canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: painted;
+ transform: scaleY(0.5) translateY(-50%); 
+border: 1px solid red;
+} */
+
+/* CONTROLLER */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 4em;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 2px solid var(--font-color);
+  mix-blend-mode: difference;
+
+  font-size: 1.2em;
+  letter-spacing: 0.5em;
+}
+
+#play {
+  opacity: 1;
+}
+#pause {
+  opacity: 1;
+}
+#restart {
+  opacity: 1;
+}
+#stop {
+  font-weight: 700;
+}
+
+.controler {
+  /* border: 3px solid var(--font-color); */
+  height: 100%;
+  width: 100%;
+  /* background-color: black; */
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.controler div {
+  transform: rotate(270deg);
+  transition: all 50ms linear;
+}
+.controler:hover div {
+  margin-left: -0.5em;
+}
+
+/* MAIN-CONTAINER, horizontal scrollable */
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: max-content;
+
+  font-weight: 900;
+
+  display: flex;
+
+  /* border: 1px solid red; */
+}
+
+/* ANIMATIONS */
+
+.weight-animation {
+  transition: font-weight linear 1000ms;
+}
+
+.anaglyph-effect {
+  text-shadow: 0.01em 0.01em 0em red, -0.01em -0.01em 0em cyan;
+}
+
+/* GRID ELEMENTS */
+
+.helpgrid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(1fr);
+
+  opacity: 0;
+}
+
+.helpgrid div {
+  border-bottom: 1px solid yellow;
+  opacity: 0.7;
+}
+
+.row {
+  min-width: 300px;
+  height: 100%;
+  position: relative;
+  padding: 0 3vh;
+}
+
+.row > div {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 0.036em;
+}
+
+span {
+  opacity: 0;
+  -webkit-text-stroke: 0.01em var(--font-color);
+  -webkit-text-fill-color: transparent;
+  color: var(--font-color); /* Fallback: assume this color ON TOP of image */
+}
+
+.cell-20 {
+  height: 20%;
+  width: 100%;
+  font-size: 25vh;
+  line-height: 0.8;
+}
+.cell-25 {
+  height: 25%;
+  width: 100%;
+  /* background-color: blue; */
+  font-size: 40vh;
+  line-height: 0.73;
+}
+.cell-33 {
+  height: 33%;
+  width: 100%;
+  /* background-color: blue; */
+  font-size: 40vh;
+  line-height: 0.73;
+}
+.cell-40 {
+  height: 40%;
+  width: 100%;
+  /* background-color: blue; */
+  font-size: 40vh;
+  line-height: 0.73;
+}
+.cell-50 {
+  height: 50%;
+  width: 100%;
+  font-size: 68vh;
+  line-height: 0.73;
+}
+.cell-80 {
+  height: 80%;
+  width: 100%;
+  font-size: 110vh;
+  line-height: 0.73;
+}
+.cell-100 {
+  height: 100%;
+  width: 100%;
+  font-size: 130vh;
+  line-height: 0.8;
+}
+
+/* SQUARE STYLES */
+
+.square {
+  width: 100%;
+  height: 100%;
+  background-color: var(--font-color);
+  transition: transform 200ms linear;
+  position: relative;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+  .controler div {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    transform: rotate(0deg);
+  }
+
+  nav {
+    width: 100vw;
+    height: 4em;
+    flex-direction: row;
+    border-bottom: 2px solid var(--font-color);
+    border-right: none;
+  }
+
+  .controler:hover div {
+    margin-bottom: -0.3em;
+    margin-left: unset;
+  }
+
+  .main-container {
+    top: 72px;
+    bottom: 0;
+    left: 0em;
+  }
+
+  .helpgrid {
+    top: 72px;
+  }
+}
