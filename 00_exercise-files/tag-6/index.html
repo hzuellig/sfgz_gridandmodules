@@ -5,7 +5,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="javascript/css/btn.css" />
     <title>Programm Tag 6</title>
+    <style>
+        body.night{
+            background-color: black;
+            color:white;
+        }
+        body.night a{
+            color:white;
+        }
+
+        body.night .btn{
+            background-color: rgba(255, 219, 239, 0.85);
+            color:black;
+        }
+    </style>
 </head>
 <body>
 <nav><a href="../../index.html">Home</a></nav>
@@ -13,7 +28,11 @@ SFGZ, Tag 6
 
 <container>
 <div class="halbtag">
+    <button class="btn" onclick="toggleFarbe()">Toggle Day/Night</button>
+    <button class="btn" onclick="playAudio()">Play Audio</button>
 
+    <audio src="sounds/mixkit-melodical-flute-music-notification-2310.wav"  ></audio>
+    <script src="javascript/js/play.js"></script>
     <ul>
         <li>
             <a target="_blank" href="zip.zip">Download Example Files</a>
@@ -71,30 +90,17 @@ SFGZ, Tag 6
     <p><a target="_blank" href="praesi.html">Informationen und Ablauf</a></p>
 
 </div>
-<div class="halbtag">
 
-
-    <h1>Individueller Support und Besprechungen</h1>
-
-    <div class="slot">
-        <time>13:30</time><student>Sario</student>
-    </div>
-    <div class="slot">
-        <time>13:40</time><student>Mirjam</student>
-    </div>
-    <div class="slot">
-        <time>13:50</time><student>Catharina</student>
-    </div>
-
-
-    <div class="slot">
-        <time>14:00</time><student>Flavia</student>
-    </div>
-    <div class="slot">
-        <time>Ab 14:10</time><student>Nach Bedarf</student>
-    </div>
-
-</div>
 </container>
+<script>
+    function toggleFarbe(){
+        document.querySelector("body").classList.toggle("night");
+    }
+    function playAudio(){
+        let audioel = document.querySelector("audio");
+        audioel.play();
+
+    }
+</script>
 </body>
 </html>
