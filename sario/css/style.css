@@ -36,9 +36,19 @@ h3 {
 
 p {
   padding: 8px;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+a {
+  font-size: 20px;
   font-weight: 200;
 }
 
+.tx-footer {
+  color: #818181; 
+  font-size: 28px;
+}
 /*-- Align/Transform --*/
 .flexxi {
   display: flex;
@@ -59,6 +69,11 @@ p {
 
 /*-- Containers --*/
 
+#play-pause-button{
+  font-size: 50px;
+  cursor: pointer;
+}
+
 .intro {
   display: flex;
 }
@@ -67,8 +82,6 @@ p {
   margin-top: 130px;
   width: calc(50vw - 40px);
 }
-
-
 
 .cont2 {
   margin-top: 130px;
@@ -121,17 +134,34 @@ p {
   left: 0;
   width: 100%;
 }
+--*/
+
+.cont5 {
+  margin: 60vh 0 60vh 0;
+  justify-content: center;
+}
+
+.cont6 {
+  margin: 60vh 0 60vh 0;
+  justify-content: center;
+}
+
+.cont7 {
+  margin: 60vh 0 60vh 0;
+  justify-content: center;
+}
 
 /*-- Animations --*/
 
 .txt-glow1{
-  animation: glow 1s ease-in-out 200ms;
+  animation: glow 1s linear 200ms;
 animation-iteration-count: infinite;
 }
 
 .txt-glow2{
-  animation: glow 1s ease-in-out 400ms;
+  animation: glow 1s linear 400ms;
 animation-iteration-count: infinite;
+
 }
 
 @keyframes glow {
@@ -263,7 +293,7 @@ ul li:hover {
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 24px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -272,14 +302,14 @@ ul li:hover {
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover,
 .overlay a:focus {
-  color: #f1f1f1;
+  color: #b3627a;
 }
 
 .homebtn {
   position: relative;
-  font-size: 60px;
-  font-weight: 600;
-  color: #85475a !important;
+  font-size: 28px !important;
+  font-weight: 600!important;
+  color: rgba(161,202,207,1) !important;
 }
 
 .homebtn:hover {
@@ -301,5 +331,10 @@ ul li:hover {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+
+  .tx-footer {
+    color: #818181; 
+    font-size: 20px;
   }
 }
