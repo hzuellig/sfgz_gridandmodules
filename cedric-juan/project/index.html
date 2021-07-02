@@ -176,23 +176,36 @@
                 });
 
 
-                $('.canvas-item').each(function() {
-                    console.log('each worked');
-                    $(this).on("click", function(){
-                        console.log('click worked');
-                        var displaytext = $(this).find("span").text();
-                        $('.display .display-item > span').text(displaytext);
-                    });
-                });
+                // $('.canvas-item').each(function() {
+                //     console.log('each worked');
+                //     $(this).on("click", function(){
+                //         console.log('click worked');
+                //         var displaytext = $(this).find("span").text();
+                //         $('.display .display-item > span').text(displaytext);
+                //     });
+                // });
 
+                $.fn.removeClassStartingWith = function (filter) {
+                    $(this).removeClass(function (index, className) {
+                        return (className.match(new RegExp("\\S*" + filter + "\\S*", 'g')) || []).join(' ')
+                    });
+                    return this;
+                };
 
                 jQuery(document).ready(function() {
                     $('.canvas-item').each(function() {
                         console.log('each worked');
                         $(this).on("click", function(){
+                            var getPressWord = $(this).attr('id');
                             console.log('click worked');
                             var displaytext = $(this).find("span").text();
-                            $('.display .display-item > span').text(displaytext);
+                            //$('.display .display-item > span').text(displaytext);
+                            // $('.display .display-item > *').addClass('display-hidden');
+                            $('body').removeClassStartingWith('bodyactive-');
+                            $('.display .display-item > *').removeClassStartingWith('active-');
+                            console.log(getPressWord);
+                            $('body').addClass('bodyactive-'+getPressWord);
+                            $('.display .display-item > *').filter('.display-'+getPressWord).addClass('active-'+getPressWord);
                         });
                     });
                 });
@@ -389,15 +402,20 @@
                         var currentData = 0;
                         var audioVarElement = '';
                         var $this = $(this);
-                        console.log($this);
+                        //console.log($this);
+                        console.log('gseht guet us');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement1.currentTime = 0;
                             audioElement1.play();
+
+                            console.log('gseht guet us ide first-page');
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement17.currentTime = 0;
                             audioElement17.play();
+
+                            console.log('gseht guet us id second-page');
                         }
 
                         $("#status").text("Status: Playing");
@@ -406,11 +424,11 @@
                     $('#makeit').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement2.currentTime = 0;
                             audioElement2.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement18.currentTime = 0;
                             audioElement18.play();
                         }
@@ -419,11 +437,11 @@
                     $('#doit').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement3.currentTime = 0;
                             audioElement3.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement19.currentTime = 0;
                             audioElement19.play();
                         }
@@ -432,11 +450,11 @@
                     $('#makesus').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement4.currentTime = 0;
                             audioElement4.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement20.currentTime = 0;
                             audioElement20.play();
                         }
@@ -445,11 +463,11 @@
                     $('#harder').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement5.currentTime = 0;
                             audioElement5.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement21.currentTime = 0;
                             audioElement21.play();
                         }
@@ -458,11 +476,11 @@
                     $('#better').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement6.currentTime = 0;
                             audioElement6.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement22.currentTime = 0;
                             audioElement22.play();
                         }
@@ -471,11 +489,11 @@
                     $('#faster').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement7.currentTime = 0;
                             audioElement7.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement23.currentTime = 0;
                             audioElement23.play();
                         }
@@ -484,11 +502,11 @@
                     $('#stronger').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement8.currentTime = 0;
                             audioElement8.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement24.currentTime = 0;
                             audioElement24.play();
                         }
@@ -497,15 +515,15 @@
                     $('#morethan').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement9.currentTime = 0;
                             audioElement9.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement25.currentTime = 0;
                             audioElement25.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement33.currentTime = 0;
                             audioElement33.play();
                         }
@@ -514,15 +532,15 @@
                     $('#hour').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement10.currentTime = 0;
                             audioElement10.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement26.currentTime = 0;
                             audioElement26.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement34.currentTime = 0;
                             audioElement34.play();
                         }
@@ -531,15 +549,15 @@
                     $('#our').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement11.currentTime = 0;
                             audioElement11.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement27.currentTime = 0;
                             audioElement27.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement35.currentTime = 0;
                             audioElement35.play();
                         }
@@ -548,15 +566,15 @@
                     $('#never').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement12.currentTime = 0;
                             audioElement12.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement28.currentTime = 0;
                             audioElement28.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement36.currentTime = 0;
                             audioElement36.play();
                         }
@@ -565,15 +583,15 @@
                     $('#ever').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement13.currentTime = 0;
                             audioElement13.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement29.currentTime = 0;
                             audioElement29.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement37.currentTime = 0;
                             audioElement37.play();
                         }
@@ -582,15 +600,15 @@
                     $('#after').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement14.currentTime = 0;
                             audioElement14.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement30.currentTime = 0;
                             audioElement30.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement38.currentTime = 0;
                             audioElement38.play();
                         }
@@ -599,15 +617,15 @@
                     $('#workis').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement15.currentTime = 0;
                             audioElement15.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement31.currentTime = 0;
                             audioElement31.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement39.currentTime = 0;
                             audioElement39.play();
                         }
@@ -616,15 +634,15 @@
                     $('#over').click(function() {
                         var currentPageState = $(document).find('body').attr('class');
 
-                        if(currentPageState == 'first-page') {
+                        if(currentPageState.indexOf('first-page') >= 0){
                             audioElement16.currentTime = 0;
                             audioElement16.play();
                         }
-                        if(currentPageState == 'second-page') {
+                        if(currentPageState.indexOf('second-page') >= 0){
                             audioElement32.currentTime = 0;
                             audioElement32.play();
                         }
-                        if(currentPageState == 'third-page') {
+                        if(currentPageState.indexOf('third-page') >= 0){
                             audioElement40.currentTime = 0;
                             audioElement40.play();
                         }
@@ -661,15 +679,15 @@
                         <div class="page">
                             <div class="page-item">
                                 <div id="button-play" class="page-item-button">
-                                    <div class="page-item-button-text">Play</div>
+                                    <div class="page-item-button-text">&vrtri;</div>
                                     <div class="page-item-button-key">I</div>
                                 </div>
                                 <div id="button-pause" class="page-item-button">
-                                    <div class="page-item-button-text">Pause</div>
+                                    <div class="page-item-button-text">&FilledSmallSquare;</div>
                                     <div class="page-item-button-key">O</div>
                                 </div>
                                 <div id="button-reset" class="page-item-button">
-                                    <div class="page-item-button-text">Reset</div>
+                                    <div class="page-item-button-text">&orarr;</div>
                                     <div class="page-item-button-key">P</div>
                                 </div>
                             </div>
@@ -682,29 +700,46 @@
                         </div>
                         <div class="display">
                             <div class="display-item">
+
+                            <svg class="display-backdrop" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+                                        <path d="M 8 0 L 0 0 0 8" fill="none" stroke="gray" stroke-width="0.5" />
+                                    </pattern>
+                                    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                                        <rect width="80" height="80" fill="url(#smallGrid)" />
+                                        <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1" />
+                                    </pattern>
+                                </defs>
+
+                                <rect width="100%" height="100%" fill="url(#grid)" />
+                            </svg>
+
+
+
                                 <div class="display-item-shadow"></div>
                                 <!-- <span class="display-text">display</span> -->
 
 
-                                <span class="display-text display-workit">work it</span>
-                                <!-- <span class="display-text display-makeit">make it</span> -->
-                                <!-- <span class="display-text display-doit">do it</span> -->
-                                <!-- <span class="display-text display-makesus">makes us</span> -->
+                                <span class="display-text display-workit display-hidden">work it</span>
+                                <span class="display-text display-makeit display-hidden">make it</span>
+                                <span class="display-text display-doit display-hidden">do it</span>
+                                <span class="display-text display-makesus display-hidden">makes us</span>
 
-                                <!-- <span class="display-text display-harder">harder</span> -->
-                                <!-- <span class="display-text display-better">better</span> -->
-                                <!-- <span class="display-text display-faster">faster</span> -->
-                                <!-- <span class="display-text display-stronger">stronger</span> -->
+                                <span class="display-text display-harder display-hidden">harder</span>
+                                <span class="display-text display-better display-hidden">better</span>
+                                <span class="display-text display-faster display-hidden">faster</span>
+                                <span class="display-text display-stronger display-hidden">stronger</span>
 
-                                <!-- <span class="display-text display-morethan">more than</span> -->
-                                <!-- <span class="display-text display-hour">hour</span> -->
-                                <!-- <span class="display-text display-our">our</span> -->
-                                <!-- <span class="display-text display-never">never</span> -->
+                                <span class="display-text display-morethan display-hidden">more than</span>
+                                <span class="display-text display-hour display-hidden">hour</span>
+                                <span class="display-text display-our display-hidden">our</span>
+                                <span class="display-text display-never display-hidden">never</span>
 
-                                <!-- <span class="display-text display-ever">ever</span> -->
-                                <!-- <span class="display-text display-after">after</span> -->
-                                <!-- <span class="display-text display-workis">work is</span> -->
-                                <!-- <span class="display-text display-over">over</span> -->
+                                <span class="display-text display-ever display-hidden">ever</span>
+                                <span class="display-text display-after display-hidden">after</span>
+                                <span class="display-text display-workis display-hidden">work is</span>
+                                <span class="display-text display-over display-hidden">over</span>
                             </div>
                         </div>
                         <div class="canvas">

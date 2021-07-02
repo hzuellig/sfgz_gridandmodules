@@ -97,3 +97,16 @@ h2 {
             display: flex;
           }
 
+
+          .text-fluss {
+            font-family: 'Raleway', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 1.5vw;
+            line-height: 140%;
+            padding-left: 40px;
+            letter-spacing: 3px;
+            flex-basis:auto;
+            flex-direction: column;
+            text-align: left;
+
+              }

@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
 
+
 body {
-    background: #2A2B45;
+    /*background: #2A2B45;*/
+    background: linear-gradient(180deg, #463C5F 0%, #2A2B45 61.46%, #2A2B45 95.31%);
+    background-size: cover;
     margin    : 0;
     padding   : 0;
+    overflow-x: hidden;
 }
 
+
 section {
-    height: 99vh;
-    width : 99vw;
+    height: 100vh;
+    width : 100vw;
 }
 
 .row {
@@ -40,6 +45,19 @@ section {
     border-radius: 50px;
 }
 
+.scrolldown {
+    position        : absolute;
+    top             : 5vh;
+    font-family     : 'Antic Didone', serif;
+    color           : #967892;
+    font-size       : 1.25em;
+    line-height     : 23vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+
+}
+
 .aerosmith {
     writing-mode    : vertical-rl;
     text-orientation: mixed;
@@ -52,12 +70,14 @@ section {
     left            : 90vw;
 }
 
+
 .dreamonrechts {
     writing-mode    : vertical-rl;
     text-orientation: mixed;
     font-family     : 'Berkshire Swash';
     font-size       : 4vh;
     color           : #2A2B45;
+    opacity         : 0.5;
     text-shadow     :
         -1px -1px 0 #967892,
         1px -1px 0 #967892,
@@ -107,6 +127,18 @@ section {
     background             : linear-gradient(to bottom, #f3d6ef9a 0%, #96789225 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.sun {
+    width : 1px;
+    height: 1px;
+    left  : 65vw;
+
+    position                 : absolute;
+    animation-name           : sunanimation;
+    animation-duration       : 10s;
+    animation-iteration-count: infinite;
+    transition               : all 1s ease-in-out;
 }
 
 .sing {
@@ -229,24 +261,14 @@ section {
     display         : flex;
     align-items     : center;
     color           : #967892;
+
+    animation-name           : move;
+    animation-duration       : 3s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transform                : translateY(0);
 }
-.dreamuntil:hover {
-    writing-mode    : vertical-rl;
-    text-orientation: mixed;
-    font-family     : 'Berkshire Swash';
-    font-size       : 17vh;
-    line-height     : 28.5vh;
-    width           : 100%;
-    display         : flex;
-    align-items     : center;
-    color           : #967892;
-}
-.glow {
-    color: #ffffff;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
+
 @keyframes ChorAnimation {
     0% {
         color    : #fff;
@@ -303,15 +325,44 @@ section {
 
 }
 
+@keyframes sunanimation {
+    0% {
+        border-radius   : 50%;
+        transform       : scale(1);
+        background-color: #2a2b454b;
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #F2BBA0, 0 0 30px #F2BBA0, 0 0 40px #F2BBA0,
-            0 0 50px #F19FA1, 0 0 60px #F19FA1, 0 0 70px #F19FA1;
     }
 
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #F2BBA0, 0 0 40px #F2BBA0, 0 0 50px #F2BBA0,
-            0 0 60px #F2BBA0, 0 0 70px #F2BBA0, 0 0 80px #F2BBA0;
+    50% {
+        border-radius   : 50%;
+        transform       : scale(2000);
+        background-color: #ac8ca74b;
+
     }
+
+    100% {
+        border-radius   : 50%;
+        transform       : scale(1);
+        background-color: #2a2b454b;
+    }
+}
+
+body::-webkit-scrollbar {
+    width : 1px;
+    /* width of the entire scrollbar */
+    height: 1px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2A2B45;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2a2b45;
+    /* color of the scroll thumb */
+    border-radius   : 2px;
+    /* roundness of the scroll thumb */
+    border          : 1px solid #2A2B45;
+    /* creates padding around scroll thumb */
 }

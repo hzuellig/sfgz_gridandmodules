@@ -6,23 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_song_3.css">
-    <title>Document</title>
+    <title>Song_3</title>
     <style>
-        body {
-            background-color: black;
-        }
-
         .normal {
             color: white;
             font-size: 4rem;
             display: flex;
             justify-content: center;
             align-content: center;
+            text-align: center;
             border: solid 3px rgb(255, 0, 255);
-            margin-top: 50px;
-            margin-bottom: 100px;
         }
 
+        .abstand_gross {
+            height: 500px;
+            border: dotted 3px rgb(65, 65, 65);
+
+        }
+
+        .abstand_klein {
+            height: 250px;
+            border: dotted 3px rgb(170, 96, 96);
+
+        }
+
+        .white {
+            height: 14em;
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            border: dotted 3px rgb(65, 65, 65);
+
+        }
+
+        .text-white {
+            color: rgb(0, 0, 0);
+            font-size: 4rem;
+            display: flex;
+            border: solid 3px rgb(255, 0, 255);
+        }
+
+
+
+
+        /*____________MOND____________*/
         .himmel {
             display: flex;
             justify-content: center;
@@ -32,22 +62,27 @@
         .mond {
             background-color: white;
             border-radius: 50%;
-            flex-basis: 50vw;
-            font-size: 6rem;
+            flex-basis: 70vw;
             display: flex;
+            /*font-size: 10rem;*/
             justify-content: center;
-            align-items: center;
             flex-direction: column;
             border: solid 3px rgb(83, 255, 241);
-            transition: all 5s ease-in-out;
+            /*transition: all 5s ease-in-out;*/
         }
 
         .oben {
             display: flex;
+            border: solid 1px greenyellow;
+            height: 28vh;
+
         }
 
         .unten {
             display: flex;
+            border: solid 1px rgb(234, 255, 47);
+            height: 28vh;
+
         }
 
         .right,
@@ -57,38 +92,87 @@
 
         .right {
             transform: translateY(40px);
+            border: dotted 3px rgb(47, 85, 255);
+            text-align: left;
+            flex-direction: row;
+
+        }
+
+
+        .left {
+            flex-basis: 50%;
+            border: solid 1px rgb(47, 85, 255);
+            text-align: right;
+
         }
     </style>
 </head>
 
 <body>
+    <div class="abstand_klein">
+    </div>
+
     <div class="normal">
-        Die isch ja filmryf<br>
+        Die isch ja filmryf</br>
         Die szene i dere frytignacht
+    </div>
+    <div class="abstand_gross">
     </div>
     <div class="himmel">
         <div class="mond">
             <div class="oben">
                 <div class="left">
-                    MO
+                    <!---<div class="mond-klein">Dr</div>-->
+                    <div class="mond-gross">MO</div>
                 </div>
                 <div class="right">
-                    ND
+                    <div class="mond-gross">ND</div>
+                   <!---<div class="mond-klein">isch es</div>-->
                 </div>
             </div>
             <div class="unten">
                 <div class="left">
-                    LO
+                    <!--<div class="mond-klein">wysses runds</div>-->
+                    <div class="mond-gross">LO</div>
                 </div>
                 <div class="right">
-                    CH
+                    <div class="mond-gross">CH</div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="abstand_gross">
+    </div>
+
     <div class="normal">
         U Luegt glych zur wösch uus win I
     </div>
+    <div class="abstand_gross">
+    </div>
+
+    <div class="normal">
+        Hie bin I lang
+        Viu z lang allei gsi
+        U Ha fläsche ghöut
+    </div>
+    <div class="abstand_gross">
+    </div>
+    <div class="white">
+        <div class="text-white">
+            Schtunge zeut i däm viu z grosse bett
+        </div>
+    </div>
+
+    <div class="abstand_gross">
+    </div>
+    <div class="normal">
+    U Ha gseh
+    Wie sech d wäut wacker dräit
+    ...nume nid um mi...</div>
+
+    <div class="abstand_gross">
+    </div>
+
 
 </body>
 

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: black;
+            font-family: 'Roboto', sans-serif;
+
+            font-size: 10vw;
+        }
+
+        .container {
+            margin-left: 217.5px;
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw;
+            grid-template-rows: 17.2vh 17.2vh 17.2vh 17.2vh 17.2vh;
+        }
+
+
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+        }
+
+        .box2 {
+            grid-column-start: 6;
+            grid-column-end: 8;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+        }
+
+        .box3 {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+        }
+
+        .box4 {
+            grid-column-start: 6;
+            grid-column-end: 8;
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+        }
+
+        .box5 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 6;
+
+
+        }
+
+        .box6 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 6;
+
+        }
+
+        .box7 {
+            grid-column-start: 5;
+            grid-column-end: 8;
+            grid-row-start: 4;
+            grid-row-end: 6;
+
+        }
+
+        .give {
+            opacity: 65%;
+            color: #C01DB0;
+            line-height: 65%;
+            font-size: 26.5vw;
+            animation: giveslide 12s ease-in-out;
+
+        }
+
+        @keyframes giveslide {
+            0% {
+                transform: translateX(-80vw);
+            }
+
+            50% {
+                transform: translateX(0vw);
+            }
+
+            100% {
+                transform: translateX(0vw);
+            }
+        }
+
+        .gn {
+            color: #1DB6C0;
+            line-height: 76.7%;
+            font-size: 26vw;
+            animation: gnslide 17s ease-in-out;
+
+        }
+
+        @keyframes gnslide {
+            0% {
+                transform: translateX(80vw);
+            }
+
+            50% {
+                transform: translateX(0vw);
+            }
+
+            100% {
+                transform: translateX(0vw);
+            }
+        }
+
+        .s {
+            line-height: 72%;
+            font-size: 37vw;
+            color: black;
+            margin-top: 60px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #ffffff;
+            text-shadow: 0 0 2rem #ffffff;
+            animation: flicker-in-1 2s linear both;
+        }
+
+        @keyframes flicker-in-1 {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0;
+            }
+
+            10.1% {
+                opacity: 1;
+            }
+
+            10.2% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            20.1% {
+                opacity: 1;
+            }
+
+            20.6% {
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 0;
+            }
+
+            30.1% {
+                opacity: 1;
+            }
+
+            30.5% {
+                opacity: 1;
+            }
+
+            30.6% {
+                opacity: 0;
+            }
+
+            45% {
+                opacity: 0;
+            }
+
+            45.1% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            55% {
+                opacity: 1;
+            }
+
+            55.1% {
+                opacity: 0;
+            }
+
+            57% {
+                opacity: 0;
+            }
+
+            57.1% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            60.1% {
+                opacity: 0;
+            }
+
+            65% {
+                opacity: 0;
+            }
+
+            65.1% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            75.1% {
+                opacity: 0;
+            }
+
+            77% {
+                opacity: 0;
+            }
+
+            77.1% {
+                opacity: 1;
+            }
+
+            85% {
+                opacity: 1;
+            }
+
+            85.1% {
+                opacity: 0;
+            }
+
+            86% {
+                opacity: 0;
+            }
+
+            86.1% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes s-blend {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .me {
+            margin-top: 50px;
+            color: #1DB6C0;
+            line-height: 76.7%;
+            font-size: 7.8vw;
+            text-shadow: 0 0 2rem #1DB6C0;
+
+        }
+
+
+        .drehen {
+            transform: rotate(90deg);
+            display: inline-block;
+        }
+
+        .drehen- {
+            transform: rotate(-90deg);
+            display: inline-block;
+        }
+
+        .a {
+            line-height: 100%;
+            font-size: 7.8vw;
+            color: black;
+            margin-left: 40px;
+            margin-top: 32px;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #C01DB0;
+
+
+        }
+
+
+
+
+        .dana {
+            margin-right: 7px;
+            text-align: end;
+            line-height: 100%;
+            font-size: 3vw;
+            color: black 0;
+            margin-top: 3px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #ffffff;
+            text-shadow: 0 0 2rem #ffffff;
+            animation: flicker-in-1 4s linear both;
+
+        }
+
+        @media only screen and (max-width: 1524px) {
+            body {
+                background-color: white;
+            }
+
+            .s {
+                color: white;
+            }
+
+            .a {
+                color: white;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: #1DB6C0;
+            }
+
+            .gn {
+                line-height: 60%;
+                color: #C01DB0;
+            }
+
+            .dana {
+                color: #C01DB0;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: #C01DB0;
+
+            }
+
+            .give {
+                opacity: 100%;
+                text-shadow: 0 0 2rem #1DB6C0;
+                color: #1DB6C0;
+                line-height: 100%;
+            }
+
+            .fakear {
+                color: white;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: #C01DB0;
+            }
+
+            .picked {
+                color: white;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: white
+            }
+
+            .looked {
+                color: #C01DB0;
+            }
+
+        }
+
+
+
+        .fakear {
+            text-align: start;
+            line-height: 100%;
+            font-size: 3vw;
+            color: black;
+            margin-top: 60px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #1DB6C0;
+            animation: flicker-in-1 4s linear both;
+
+        }
+
+
+        .rp {
+
+            display: flex;
+            width: 100%;
+            height: 100px;
+            justify-content: center;
+            flex-wrap: wrap;
+
+
+        }
+
+        .remember {
+            font-size: 80px;
+            color: #1DB6C0;
+            margin-right: 20px;
+        }
+
+        .picked {
+            animation: mover 1s infinite alternate;
+            font-size: 80px;
+            margin-top: 150px;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #ffffff
+        }
+
+
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-150px);
+            }
+        }
+
+
+        .rose {
+            font-size: 80px;
+            background-image: linear-gradient(90deg, yellow, red, purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slidein 10s infinite;
+
+        }
+
+        .animationrose {
+            animation: slideinright 10s infinite;
+
+        }
+
+        @media only screen and (max-width: 1424px) {
+            .container {
+                margin-left: 100px;
+            }
+
+        }
+
+        .eck {
+            position: fixed;
+            width: 30vw;
+            height: 30vw;
+            right: 100px;
+            top: 572px;
+
+            background: #C01DB0;
+            filter: blur(10vw);
+        }
+
+        .eck2 {
+            z-index: -1;
+            position: fixed;
+            width: 30vw;
+            height: 30vw;
+            left: 200px;
+            top: 200px;
+
+            background: #1DB6C0;
+            filter: blur(150px);
+        }
+
+        .raum {
+            width: 100%;
+            height: 300px;
+        }
+
+        .raum2 {
+            width: 100%;
+            height: 600px;
+        }
+
+
+
+        .container1 {
+            padding-top: 600px;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+
+
+        }
+
+        .never {
+            font-size: 4vw;
+            color: black;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: black;
+            animation: swing-out-top-bck 2s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+        }
+
+        @keyframes swing-out-top-bck {
+            0% {
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: rotateX(-100deg);
+                transform: rotateX(-100deg);
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                opacity: 0;
+            }
+        }
+
+
+
+
+
+        .looked {
+            animation: swing-out-top-bck 4s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+            font-size: 4vw;
+            color: blanchedalmond;
+        }
+
+        .froze {
+            animation: swing-out-top-bck 6s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+            font-size: 4vw;
+            color: #1DB6C0;
+        }
+
+
+        @keyframes flickerAnimation {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+
+        .animate-flicker {
+            -webkit-animation: flickerAnimation 3s infinite;
+            -moz-animation: flickerAnimation 3s infinite;
+            -o-animation: flickerAnimation 3s infinite;
+            animation: flickerAnimation 3s infinite;
+        }
+
+        @keyframes slidein {
+            0% {
+                transform: translateX(-80vw);
+            }
+
+            100% {
+                transform: translateX(80vw);
+            }
+        }
+
+        @keyframes slideinright {
+            0% {
+                transform: translateX(80vw);
+            }
+
+            100% {
+                transform: translateX(-80vw);
+            }
+        }
+
+
+
+        .containermp3 {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .containermoon {
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 1500px;
+
+
+        }
+
+        .moon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            box-shadow:
+                inset 0 0 50px #fff,
+                inset 20px 0 80px #f0f,
+                inset -20px 0 80px #0ff,
+                inset 20px 0 300px #f0f,
+                inset -20px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+            animation: flickerAnimation 5s infinite;
+
+
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .moonlight {
+            font-size: 3vw;
+            color: blanchedalmond;
+            opacity: 65%;
+            animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+        }
+
+        @keyframes tracking-in-contract {
+            0% {
+                letter-spacing: 1em;
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                letter-spacing: normal;
+                opacity: 1;
+            }
+        }
+
+        a {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 10px;
+            font-size: 40px;
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+            animation: flicker-in-1 2s linear both;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="eck "></div>
+    <div class="eck2 "></div>
+    <div class="container">
+        <div class=" box1">
+            <div class="give">GIVE</div>
+        </div>
+        <div class=" box2">
+            <div class="dana ">dana <br> williams </div>
+        </div>
+        <div class=" box3">
+            <div class="me animate-flicker">ME</div>
+        </div>
+        <div class=" box4">
+            <div class="a ">A</div>
+        </div>
+        <div class=" box5">
+            <div class="fakear drehen- animate-flicker">fakear ft.</div>
+        </div>
+        <div class=" box6">
+            <div class="s ">SI</div>
+        </div>
+        <div class=" box7">
+            <div class="gn">GN</div>
+        </div>
+    </div>
+
+    <div class="raum2"></div>
+
+
+    <div class="rp">
+        <div class="remember">Remember the night you</div>
+        <div class="picked">picked me up?</div>
+    </div>
+
+    <div class="raum"></div>
+
+    <div class="rp">
+        <div class="rose">we drove till the sun rose</div>
+    </div>
+    <div class="rp">
+        <div class="rose animationrose">we drove till the sun rose</div>
+    </div>
+
+
+    <div class="raum"></div>
+
+
+    <div class="container1">
+        <div class="never ">Ill <br> never forget</div>
+        <div class="looked">how you<br> looked at me</div>
+        <div class="froze">that was <br>when the time froze</div>
+    </div>
+
+    <div class="raum"></div>
+
+    <div class="containermoon">
+        <div class="moon">
+            <div class="moonlight">moonlight</div>
+        </div>
+    </div>
+
+    <div><a href="/">BACK</a></div>
+
+
+    <div class="containermp3">
+        <div>
+            <audio controls autoplay>
+                <source src="Give.mp3" type="audio/ogg">
+                <source src="Give.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

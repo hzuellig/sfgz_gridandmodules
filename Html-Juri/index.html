@@ -6,39 +6,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .box {
+            width: 130px;
+            height: 130px;
+
+            animation-name: meineAnimation;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            background: linear-gradient(122.77deg, #FFFFFF -27.32%, rgba(176, 176, 176, 0.833333) 13.4%, rgba(118, 118, 118, 0.528455) 54.71%, rgba(84, 84, 84, 0) 85.99%);
+            transform: rotate(24.57deg);
+            border-radius: 50%;
+
+        }
+
+        .box2 {
+            width: 100vh;
+            height: 20px;
+            color: yellowgreen;
+        }
+
+
+        a {
+            font-size: 1.5em;
+            margin-top: 1em;
+            color: black;
+            margin-top: 5em;
+            margin: 3em;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+
+        }
+
+
+        .center {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            flex-direction: row;
+        }
+
+
+
+        @keyframes meineAnimation {
+            0% {
+                border: 50%;
+                transform: scale(1.3);
+
+            }
+
+
+            50% {
+                border: 50%;
+                transform: scale(1) translateX(100vw);
+                border-radius: 50%;
+            }
+
+            100% {
+                border: 50%;
+                transform: scale(1.3);
+            }
+
+
+        }
+    </style>
+
+
+
 </head>
 
+
+
+
 <body>
+    <b>
+        <a href="../Html-Juri/index.html">Main Page</a>
 
-    <h1>Tag 1</h2>
+        <a href="process/About-Me.html">About me</a>
 
-    <ul> 
-        <li>
-            <a href="tag1/tag1-1.html">Übung 1</a>
-        </li>
+        <a href="process/Mein-Song.html">Mein-Song</a>
 
-        <li>
-            <a href="tag1/tag1-2.html">Übung 2</a>
-        </li>
+        <a href="process/index.html">Process</a>
 
-    </ul>
+    </b>
 
-    <h1>Tag 2</h1>
+    <div class="center">
+        <div class="box">
 
-    </ul>
-        <li>
-            <a href="tag2/tag2-1.html">Übung 3</a>
-        </li>
+        </div>
 
-    </ul>
+    </div>
 
 
-<!-- das ding wird wieder später eingeblendet -->
-    <!-- <h1>Tag 1</h1>
-    <a href="tag1/tag1-1.html">Über mich</a><br/>
-    <a href="tag1/tag1-2.html">Erste Variante Lyrics</a>
-    <h1>Tag 2</h1>
-    <a href="tag2/tag2-1.html">Bildwelten</a> -->
+
+
 </body>
 
 </html>

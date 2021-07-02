@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_song_5.css">
+    <title>Song_5</title>
+    <style>
+        .normal {
+            color: white;
+            font-size: 8vw;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            /*border: solid 3px rgb(255, 0, 255);*/
+        }
+
+        /*__ROTATE_________________________________________________________*/
+
+        .trigger,
+        .eins,
+        .zwei,
+        .drei,
+        .vier,
+        .funf,
+        .sechs,
+        .sieben,
+        .acht,
+        .neun,
+        .zehn,
+        .elf,
+        .zwolf,
+        .dreizehn,
+        .vierzehn,
+        .funfzehn,
+        .sechzehn {
+            display: flex;
+            flex-direction: row;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+
+        .trigger:hover .eins {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 0s;
+        }
+
+        .trigger:hover .zwei {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 0.2s;
+        }
+
+        .trigger:hover .drei {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 0.4s;
+        }
+
+        .trigger:hover .vier {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 0.6s;
+        }
+
+        .trigger:hover .funf {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 0.8s;
+        }
+
+        .trigger:hover .sechs {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 1s;
+        }
+
+        .trigger:hover .sieben {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 1.2s;
+        }
+
+        .trigger:hover .acht {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 1.4s;
+        }
+
+        .trigger:hover .neun {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 1.6s;
+        }
+
+        .trigger:hover .zehn {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 1.8s;
+        }
+
+        .trigger:hover .elf {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 2s;
+        }
+
+        .trigger:hover .zwolf {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 2.2s;
+        }
+
+        .trigger:hover .dreizehn {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 2.4s;
+        }
+
+        .trigger:hover .vierzehn {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 2.6s;
+        }
+
+        .trigger:hover .funfzehn {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 2.8s;
+        }
+
+        .trigger:hover .sechzehn {
+            transform: rotate(360deg);
+            transform-origin: center;
+            transition-delay: 3s;
+        }
+
+
+
+        /*__ABSTÄNDE_________________________________________________________*/
+
+
+        .abstand_gross {
+            height: 50vh;
+            /*border: dotted 3px rgb(65, 65, 65);*/
+
+        }
+
+        .abstand_klein {
+            height: 20vh;
+            /*border: dotted 3px rgb(170, 96, 96);*/
+
+        }
+
+        /*__GROSS_________________________________________________________*/
+
+        .white_background {
+            height: 80vh;
+            font-size: 8vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            color: rgb(0, 0, 0);
+            /*border: solid 3px rgb(255, 0, 255);*/
+        }
+
+        .white_up {
+            /*height: 20vh;*/
+            display: flex;
+            padding-top: 50px;
+            align-items: center;
+            text-align: center;
+            white-space: nowrap;
+            /*border: solid 3px rgb(255, 0, 255);*/
+            position: absolute;
+        }
+
+        .white_down {
+            height: 20vh;
+            display: flex;
+            padding-top: 400px;
+            align-items: center;
+            text-align: center;
+            /*border: solid 3px rgb(255, 0, 255);*/
+            position: absolute;
+        }
+
+        .white_gross {
+            color: rgb(0, 0, 0);
+            padding-top: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /*border: solid 3px rgb(255, 0, 255);*/
+            animation-name: gross;
+            animation-duration: 15s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @media screen and (max-width: 768px) {
+            .white_background {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+                /*border: solid 3px rgb(255, 0, 255);*/
+            }
+
+            .white_gross {
+                color: rgb(255, 255, 255);
+            }
+        }
+
+
+
+
+        @keyframes gross {
+            0% {
+                font-size: 8vw;
+                padding-top: 250px;
+
+            }
+
+            50% {
+                font-size: 80vw;
+                padding-top: 0px;
+
+            }
+
+            100% {
+                font-size: 8vw;
+                padding-top: 250px;
+
+            }
+        }
+
+
+        .red {
+            height: 14em;
+            font-size: 8vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(203, 22, 45);
+            color: rgb(255, 255, 255);
+            padding-left: 50px;
+            padding-right: 50px;
+            /*border: solid 3px rgb(255, 0, 255);*/
+
+        }
+
+        /*__MEDIA QUERY_________________________________________________________*/
+        @media screen and (max-width: 768px) {
+
+            body {
+                background-color: rgb(255, 255, 255);
+            }
+
+            .mond-gross_left,
+            .mond-gross_right {
+                color: rgb(255, 255, 255);
+                font-size: 10rem;
+            }
+
+            .mond-klein_left {
+                color: rgb(255, 255, 255);
+                font-size: 1.5rem;
+                padding-left: 80px;
+            }
+
+            .mond-klein_left_abstand {
+                color: rgba(0, 0, 0, 0);
+                font-size: 1rem;
+            }
+
+            .mond-klein_right {
+                color: rgb(255, 255, 255);
+                font-size: 1.5rem;
+                white-space: nowrap;
+            }
+
+            .nav {
+                background-color: rgb(0, 0, 0);
+            }
+
+            .nav li a {
+                color: rgb(255, 255, 255);
+            }
+
+            .normal {
+                color: rgb(0, 0, 0);
+            }
+
+            .white {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+
+            }
+
+            .red {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 0, 34);
+
+            }
+
+        }
+
+
+        /*__MOND_________________________________________________________*/
+        .himmel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 90vh;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+
+        .mond_aussen {
+            height: 90vh;
+            width: 90vh;
+            display: flex;
+            /*justify-content: center;
+            flex-direction: column;*/
+            /*border: solid 3px rgb(83, 255, 241);*/
+
+        }
+
+
+        .mond {
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            height: 90vh;
+            width: 90vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            /*border: solid 3px rgb(83, 255, 241);*/
+            animation-name: mond;
+            animation-duration: 20s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+
+        }
+
+
+        @keyframes mond {
+            0% {
+                height: 90vh;
+                width: 90vh;
+            }
+
+            50% {
+                height: 5vh;
+                width: 5vh;
+            }
+
+            100% {
+                height: 90vh;
+                width: 90vh;
+            }
+        }
+
+
+        .oben {
+            display: flex;
+            flex-direction: row;
+            /*border: solid 1px rgb(255, 0, 200);*/
+            height: 45vh;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            flex-grow: 0;
+            flex-shrink: 0;
+
+        }
+
+        .unten {
+            display: flex;
+            flex-direction: row;
+            /*border: solid 1px rgb(234, 255, 47);*/
+            height: 45vh;
+            align-items: flex-start;
+            padding-top: 15px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        .right,
+        .left {
+            flex-basis: 50%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            display: flex;
+
+        }
+
+        .right {
+            transform: translate(-22px, 40px);
+            /*border: dotted 3px rgb(47, 85, 255);*/
+            align-items: flex-end;
+
+        }
+
+
+        .left {
+            transform: translateX(20px);
+            /*border: solid 1px rgb(47, 85, 255);*/
+            align-items: flex-end;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .mond {
+                background-color: rgb(0, 0, 0);
+                height: 50vh;
+                width: 50vh;
+                flex-grow: 0;
+                flex-shrink: 0;
+                padding: 20px;
+            }
+
+            .oben {
+                height: 25vh;
+                padding-bottom: 20px;
+            }
+
+            .unten {
+                height: 25vh;
+                padding: 0;
+            }
+
+            .right {
+                transform: translate(-10px, 40px);
+            }
+
+            .left {
+                transform: translateX(10px);
+            }
+        }
+    </style>
+
+    <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="../index.html">back</a>
+        </li>
+    </ul>
+    <div class="abstand_klein">
+    </div>
+
+    <div class="normal">
+        Die isch ja filmryf</br>
+        Die szene i dere frytignacht
+    </div>
+    <div class="abstand_gross">
+    </div>
+    <div class="himmel">
+        <div class="mond_aussen">
+            <div class="mond">
+                <div class="oben">
+                    <div class="left">
+                        <div class="mond-klein_left_abstand">____</div>
+                        <div class="mond-klein_left">Dr</div>
+                        <div class="mond-gross_left">MO</div>
+                    </div>
+                    <div class="right">
+                        <div class="mond-gross_right">ND</div>
+                        <div class="mond-klein_right">isch es</div>
+                    </div>
+                </div>
+                <div class="unten">
+                    <div class="left">
+                        <div class="mond-klein_left_abstand">_._</div>
+                        <div class="mond-klein_left">wysses runds</div>
+                        <div class="mond-gross_left">LO</div>
+                    </div>
+                    <div class="right">
+                        <div class="mond-gross_right">CH</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="abstand_klein">
+    </div>
+
+    <div class="normal">
+        U Luegt glych zur wösch uus win I
+    </div>
+    <div class="abstand_gross">
+    </div>
+
+    <div class="normal">
+        Hie bin I lang
+        Viu z lang allei gsi
+        U Ha fläsche ghöut
+    </div>
+    <div class="abstand_gross">
+    </div>
+    <div class="white_background">
+        <div class="white_up">
+            Schtunge zeut i däm viu z</div>
+        <div class="white_gross">grosse</div>
+        <div class="white_down">bett</div>
+    </div>
+
+    <div class="abstand_gross">
+    </div>
+    <div class="normal">
+        U Ha gseh wie sech</div>
+    <div class="normal">
+        <div class="trigger">
+            <div class="eins">d</div>
+            <div class="">&nbsp;&nbsp;</div>
+            <div class="zwei">w</div>
+            <div class="drei">ä</div>
+            <div class="vier">u</div>
+            <div class="funf">t</div>
+            <div class="">&nbsp;&nbsp;</div>
+            <div class="sechs">w</div>
+            <div class="sieben">a</div>
+            <div class="acht">c</div>
+            <div class="neun">k</div>
+            <div class="zehn">e</div>
+            <div class="elf">r</div>
+            <div class="">&nbsp;&nbsp;</div>
+            <div class="zwolf">d</div>
+            <div class="dreizehn">r</div>
+            <div class="vierzehn">ä</div>
+            <div class="funfzehn">i</div>
+            <div class="sechzehn">t</div>
+        </div>
+    </div>
+
+
+    <div class="abstand_klein">
+    </div>
+
+
+
+
+    <div class="normal">...nume nid um mi...</div>
+
+    <div class="abstand_gross">
+    </div>
+
+    <div class="normal">
+        U Jitz bisch du cho
+        Grad jitz
+        Won I's nümm hätti dänkt</div>
+
+    <div class="abstand_gross">
+    </div>
+    <div class="normal">
+        U Luegsch dry
+        Wie wenn's öppis schöns z gwinne gäb
+        Für di U für mi
+        Im schlimmschte fau nume e nacht</div>
+
+    <div class="abstand_gross">
+    </div>
+    <div class="red">
+        I boue mir myni tröim uuf rund um di
+        U Male se scharlachrot a
+        I brönne mir di name z mitts i mys härz
+        Chönnt schwöre dass I ewig blybe we üs nüt
+        Drzwüsche chunnt
+    </div>
+
+
+
+</body>
+
+</html>

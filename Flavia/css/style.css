@@ -10,6 +10,14 @@ body {
     src        : url(../process/css/RedHatDisplay-MediumItalic.ttf);
 }
 
+.menu {
+    list-style-type : none;
+    margin          : 0;
+    padding         : 0;
+    overflow        : hidden;
+    background-color: #967892;
+}
+
 h1 {
     font-weight   : 500;
     color         : #F2C9A0;
@@ -31,7 +39,8 @@ ul {
     margin          : 0;
     padding         : 0;
     overflow        : hidden;
-    background-color: #01001e;
+    background-color: #24253b;
+
 }
 
 li {
@@ -43,7 +52,7 @@ li a {
     color          : white;
     text-align     : center;
     padding        : 20px 25px;
-    text-decoration: none;
+    text-decoration: wavy;
 }
 
 li a:hover {
@@ -53,9 +62,11 @@ li a:hover {
 a:link {
     color: #fff;
 }
+
 a:visited {
     color: #fff;
 }
+
 a:hover {
-    color: #01001e;
+    color: #24253b;
 }

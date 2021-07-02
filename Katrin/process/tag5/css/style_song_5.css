@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    font-family: staatliches;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+
+}
+.mond-klein_left {
+    color: black;
+    font-size: 2rem;
+    padding-left: 0px;
+    margin: 0;
+    text-align: right;
+}
+.mond-klein_left_abstand {
+    color: rgba(0, 0, 0, 0);
+    font-size: 2rem;
+    padding-left: 30px;
+    margin: 0;
+    text-align: right;
+}
+
+.mond-klein_right {
+    color: black;
+    font-size:2rem;
+    padding-right: 50px;
+    margin: 0;
+}
+
+.mond-gross_left {
+    color: black;
+    font-size: 15rem;
+    padding: 0px;
+    margin: 0;
+    line-height: 73%;
+    text-align: right;
+}
+
+.mond-gross_right {
+    color: black;
+    font-size: 15rem;
+    padding: 0;
+    margin: 0;
+    line-height: 73%;
+}
+
+
+/*p{
+    color: rgb(255, 255, 255);
+    font-family: open sans;
+    font-size:1.5rem;
+    padding-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 10px;$$$
+}*/
+
+
+/*_NAVIGATION________________________________________________________________*/
+
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    background-color: rgb(255, 255, 255);
+    text-align:left;
+    padding: 10px 10px 10px 40px;
+}
+.nav li{
+    flex-basis: auto;
+    flex-grow:1;
+    list-style-type: none;
+    font-size:2rem;
+}
+
+.nav li a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+.nav li a:hover{
+    text-decoration-line: overline;
+}
+
+/*_LINKS IN INDEX PROCESS_____________________________________________________
+
+.links{
+    padding-left: 40px;
+
+}
+.links li{
+    list-style-type:none;
+}
+
+.links li a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    font-size:1.2rem;
+    font-family: open sans;
+
+}
+
+.links li a:hover{
+color: rgb(122, 122, 122)}
+
+___________________________________________________________________________*/
