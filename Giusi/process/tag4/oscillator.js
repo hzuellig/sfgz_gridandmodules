@@ -13,7 +13,8 @@ document.querySelector('#restart').onclick = restartAudio;
 let horizontalScroll;
 let animationControl;
 
-window.onresize = () => calcFrameSpeed();
+
+
 
 function startScroll() {
   let speedFrame = document.querySelector('.speedFrame');
@@ -23,6 +24,7 @@ function startScroll() {
   };
   window.scrollBy({ top: 0, left: calcFrameSpeed() });
   horizontalScroll = requestAnimationFrame(startScroll);
+    window.onresize = () => calcFrameSpeed();
 }
 
 function playAudio() {
