@@ -192,10 +192,18 @@
                     return this;
                 };
 
+                var startscreen = 0;
+
                 jQuery(document).ready(function() {
                     $('.canvas-item').each(function() {
                         console.log('each worked');
                         $(this).on("click", function(){
+
+                            if (startscreen == 0){
+                                $('.display-main').remove();
+                                startscreen = 1;
+                            }
+
                             var getPressWord = $(this).attr('id');
                             console.log('click worked');
                             var displaytext = $(this).find("span").text();
@@ -721,6 +729,7 @@
                                 <!-- <span class="display-text">display</span> -->
 
 
+                                <span class="display-text display-main"><span class="main-artist">daft punk</span><span class="main-by">&hyphen;</span><span class="main-title"><span class="main-title-block">HARDER</span><span class="main-title-block">better</span><span class="main-title-block">Faster</span><span class="main-title-block">Stronger</span></span></span>
                                 <span class="display-text display-workit display-hidden">work it</span>
                                 <span class="display-text display-makeit display-hidden">make it</span>
                                 <span class="display-text display-doit display-hidden">do it</span>
