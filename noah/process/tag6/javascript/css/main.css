@@ -1,0 +1,53 @@
+body {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    min-height:100vh;
+    justify-content: space-between;
+
+}
+
+.spalte {
+    flex-basis: 400px;
+    flex-shrink:0;
+
+}
+.nav{
+    display:flex;
+    justify-content: space-between;
+}
+.nav li{
+    flex-basis: auto;
+    flex-grow:1;
+    list-style-type: none;
+
+    font-size:1.5rem;
+}
+
+.nav li a{
+    color:black;
+}
+ul.nav{
+    flex-direction:column;
+}
+
+
+
+article {
+    position: relative;
+    background-color: lightskyblue;
+    top: 0px;
+    left: 0px;
+    max-width: 600px;
+    min-height: 80vh;
+    margin-bottom: 2rem;
+    transition: all 2s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+article.myclass {
+    background-color: rgb(189, 202, 130);
+}
