@@ -10,23 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+
     <title>Songpage Kunzite, Minerals</title>
 </head>
 
 <body>
-    
-    <audio id="player" src="Kunzite-Minerals-96.mp3"></audio>
-    <div>
-        <button onclick="document.getElementById('player').play()">Play</button>
-        <button onclick="document.getElementById('player').pause()">Pause</button>
+
+    <!-- Play Button -->
+    <div class="play-btn">
+        <a id="play-pause-button" class="fa fa-play"></a>
+        <audio id="player" src="Kunzite-Minerals-96.mp3"></audio>
     </div>
 
     <!-- Burger -->
     <img src="img/menu.png" class="burger" onclick="openNav()">
 
-    <!-- Menu -->
+    <!-- Menu Overlay -->
     <div id="myNav" class="overlay">
 
         <!-- Button close -->
@@ -35,78 +34,93 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         </div>
 
-        <!-- Content -->
+        <!-- Links -->
         <div class="box-overlay-content">
-            <div class="overlay-content">
-                <p class="menu-header">Tag 1</p>
-                <a href="/process/tag1/tag1-1.html">Übung 1</a>
-            </div>
-            <div class="overlay-content">
-                <p class="menu-header">Tag 2</p>
-                <a href="process/tag2/tag2-1.html">Übung 1</a>
-                <a href="process/tag2/position.html">Übung 2</a>
-                <a href="process/tag2/justify-content.html">Übung 3</a>
-                <a href="process/tag2/flex-direction.html">Übung 4</a>
-            </div>
-            <div class="overlay-content">
-                <p>Tag 3</p>
-                <a href="process/tag3/flex-grow.html.txt">Übung 1</a>
+
+            <div class="overlay-grid">
+                <div class="overlay-content">
+                    <p class="menu-header">Tag 1</p>
+                    <a href="/process/tag1/tag1-1.html">Übung</a>
+                </div>
+                <div class="overlay-content">
+                    <p class="menu-header">Tag 2</p>
+                    <a href="process/tag2/tag2-1.html">Übung</a>
+                </div>
+                <div class="overlay-content">
+                    <p>Tag 4</p>
+                    <a href="process/tag4/tag4-1.html">Übung 1</a>
+                    <a href="process/tag4/tag4-2.html">Übung 2</a>
+                </div>
+                <div class="overlay-content">
+                    <p>Tag 5</p>
+                    <a href="process/tag5/tag5-1.html">Übung 1</a>
+                </div>
+                <div class="overlay-content">
+                    <p>Tag 6</p>
+                    <a href="process/tag6/01-exp-audio.html">Übung 1</a>
+                    <a href="process/tag6/02-exp-audio.html">Übung 2</a>
+                </div>
             </div>
         </div>
-        <div class="box-overlay-content">
+        <!-- Footer-TXT -->
             <div class="overlay-content">
-                <p class="tx-footer">Code & Design: Sario Haladjian</p>
+                <p class="tx-footer">Song by Kunzite</p>
+                <p class="tx-footer">Design & Code by Sario Haladjian</p>
             </div>
+
+    </div>
+
+    <div class="intro side-margin">
+        <div class="cont1">
+            <h3>LOVE IT HOW THE</h3>
+            <h2>SOUND IS INVISIBLE?</h2>
         </div>
-
+        <div class="cont2 rot90">
+            <h3>FEEL IT IN THE</h3>
+            <h2>BONE AND THE MINERAL?</h2>
+        </div>
+        <div class="sun"></div>
     </div>
 
-<div class="intro side-margin">
-<div class="cont1">
-    <h3>LOVE IT HOW THE</h3>
-    <h2 class="txt-glow1">SOUND IS INVISIBLE?</h2>
-</div>
-<div class="cont2 rot90">
-    <h3>FEEL IT IN THE</h3>
-    <h2 class="txt-glow2">BONE AND THE MINERAL?</h2>
-</div>
-</div>
-
-<div class="cont3 tx-center">
-    <h2 class="">BAD MATH</h2>
-</div>
-
-<div class="cont3 tx-center">
-    <h3>ENOUGH OF THE</h3>
-    <div class="flexxi divison"> 
-        <h2 class="divi1">DIVI</h2>
-        <h2 class="divi2">SION</h2>
+    <div class="cont3 tx-center">
+        <h2 class="">BAD MATH</h2>
     </div>
-</div>
 
-<div class="cont4 tx-center">
-    <img class="countd" src="img/countd.png">
-    
-    <div class="cont4-wrptxt">
-    <h2 class="cont4-txt1">COUNTDOWN </br>FOR THE</h2>
-    <h3 class="cont4-txt2">HUMAN I WAS GIVEN</h3>
+    <div class="cont3 tx-center">
+        <h3>ENOUGH OF THE</h3>
+        <div class="flexxi divison">
+            <h2 class="divi1">DIVI</h2>
+            <h2 class="divi2">SION</h2>
+        </div>
     </div>
-</div>
 
-<div class="cont5 tx-center">
-    <h3>STILL A LITTLE LIGHT</h3>
-    <h2>SHINING THROUGH </br>A PRISM</h2>
-</div>
+    <div class="cont4 tx-center">
+        <img class="countd" src="img/countd.png">
 
-<div class="cont6 tx-center">
-    <h3>STILL A LITTLE TIME</h3>
-    <h2>WE CAN DISAPPEAR, MAGICIAN</h2>
-</div>
+        <div class="cont4-wrptxt">
+            <h2 class="cont4-txt1">COUNTDOWN </br>FOR THE</h2>
+            <h3 class="cont4-txt2">HUMAN I WAS GIVEN</h3>
+        </div>
+    </div>
 
-<div class="cont7 tx-center">
-    <h3>JUST GOTTA MAKE</h3>
-    <h2>AIM WITH </br>PRECISION</h2>
-</div>
+    <div class="cont5 tx-center">
+        <h3>STILL A LITTLE LIGHT</h3>
+        <h2 class="prism">SHINING THROUGH </br>A PRISM</h2>
+    </div>
+
+    <div class="cont6 tx-center">
+        <h3>STILL A LITTLE TIME</h3>
+        <h2 class="hide">WE CAN DISAPPEAR, MAGICIAN</h2>
+    </div>
+
+    <div class="cont7 tx-center">
+        <h3>JUST GOTTA MAKE</h3>
+        <h2>AIM WITH </br>PRECISION</h2>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://codepen.io/shshaw/pen/epmrgO"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 
