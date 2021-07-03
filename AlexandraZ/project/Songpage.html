@@ -5,12 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Song Page</title>
     <link rel="stylesheet" href="oblivion.css">
     <style>
+        .animation_row1 {
+            width: 100%;
+            height: 40vh;
+            border: 1px solid #74CAA4;
+            overflow: hidden;
+        }
+        
+        .animation_row1.five_col {
+            display: flex;
+        }
+        
+        .animation_row1.five_col div {
+            display: flex;
+            border: 1px solid #74CAA4;
+            flex-basis: 20vw;
+        }
+        
         section {
             height: 100vh;
             display: flex;
+        }
+        
+        section.first {
+            flex-direction: row;
+        }
+        
+        section.second {
+            flex-direction: column;
         }
         
         .left {
@@ -53,6 +78,22 @@
             transition: all 1s ease-in;
         }
         
+        .walk {
+            animation-name: walk;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes walk {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
         @keyframes lefttoright {
             0% {
                 transform: translateX(0px);
@@ -65,22 +106,189 @@
             }
         }
         
+        .animation_row1 {
+            position: relative;
+        }
+        
+        .animation_row1_flex {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            animation-name: box-blink;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes box-blink {
+            0% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            35% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            36% {
+                background-color: white;
+                color: white;
+            }
+            37% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            78% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            79% {
+                background-color: white;
+                color: white;
+            }
+            80% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            95% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            96% {
+                background-color: white;
+                color: white;
+            }
+            100% {
+                background-color: white;
+                color: white;
+            }
+        }
+        
+        .animation_down_row1_h1 {
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            top: 0;
+            bottom: 0;
+            transform: translateY(-25px);
+        }
+        
+        .animation_down_row1_h1_normal {
+            transform: translateY(-25px);
+        }
+        
+        .animation_row1 .animation_down_row1_h1.first {
+            animation-name: move-first;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        .animation_row1 .animation_down_row1_h1.second {
+            animation-name: move-second;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        .animation_row1 .animation_down_row1_h1.third {
+            animation-name: move-third;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        .animation_row1 .animation_down_row1_h1.fourth {
+            animation-name: move-fourth;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes move-first {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        @keyframes move-second {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        @keyframes move-third {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(40px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        @keyframes move-fourth {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(60px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
         h1 {
             font-size: 40px;
+            text-align: center
         }
         
         h2 {
             font-size: 15px;
+            text-align: center
         }
         
         h3 {
             font-size: 9px;
+            text-align: center
+        }
+        
+        h4 {
+            font-size: 40px;
+            text-align: left;
+        }
+        
+        h5 {
+            font-size: 15px;
+            text-align: left;
+        }
+        
+        h6 {
+            font-size: 9px;
+            text-align: left;
+        }
+        
+        h6.h7 {
+            font-size: 70px;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <section>
+    <section class="first">
         <div class="left">
             <div class="top move">
                 Oblivion
@@ -93,31 +301,84 @@
         <div class="right">
             <ul class="menu">
                 <li>
-                    <a href="../project/">song page</a>
+                    <a href="Songpage.html">song page</a>
                 </li>
                 <li>
-                    <a href="../process/">process</a>
+                    <a href="../process/tag4/07-example.html">process</a>
                 </li>
                 <li>
                     <a href="about.html">about</a>
                 </li>
             </ul>
-            <h1>
-                This interactive Website rethinks the usual Web Standards <br> &nbsp;
-            </h1>
-            <h3>
+            <h4>
+                This website interactively plays with the lyrics of the song "Oblivion" <br>
+            </h4>
+            <h6>
                 HFIAD 2021
-            </h3>
-            <h2>
+            </h6>
+            <h5>
                 During the class of Grid Moduls we explored current webtrends and technologies. My project was build up on my chosen Song of Grimes «Oblivion». This Website shows a typographic interaction with the sound. Have fun exploring my site!
 
-            </h2>
-            <h3>
-                Educator: Hanna Züllig <br> + Design by Alexandra Ziegler
-            </h3>
+            </h5>
+            <h6>
+                Educator: Hanna Züllig <br> Design: Alexandra Ziegler
+            </h6>
 
 
         </div>
+    </section>
+
+    <section class="second">
+        <div class="animation_row1">
+            <h1 class="animation_down_row1_h1_normal">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 first">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 second">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 third">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 fourth">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+        </div>
+
+        </div>
+
+        <div class="animation_row1 animation_row1_flex">
+            <h6 class="walk h7">
+                I never walk about after dark
+            </h6>
+        </div>
+
+        <div class="animation_row1 five_col">
+            <div>
+                123
+            </div>
+            <div>
+                123
+            </div>
+            <div>
+                123
+            </div>
+            <div>
+                123
+            </div>
+            <div>
+                123
+            </div>
+        </div>
+
+        <div class="animation_row1">
+            <h1>
+                Cause someone could break your neck
+            </h1>
+        </div>
+
     </section>
 </body>
 
