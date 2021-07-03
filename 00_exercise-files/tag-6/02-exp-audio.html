@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,28 @@
     <link rel="stylesheet" href="javascript/css/btn.css" />
 
     <title>Example Embed Audio</title>
+    <style>
+        body.startanimation {
+            animation-name: meinAnim;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes meinAnim {
+            0% {
+                background-color: blue;
+            }
+            100% {
+                background-color: rgb(9, 255, 0);
+            }
+        }
+    </style>
 </head>
-<body>
-<button class="btn" onclick="playAudio()">Play Audio</button>
 
-    <audio src="sounds/mixkit-melodical-flute-music-notification-2310.wav"  ></audio>
+<body>
+    <button class="btn" onclick="playAudio()">Play Audio</button>
+
+    <audio src="sounds/mixkit-melodical-flute-music-notification-2310.wav"></audio>
     <script src="javascript/js/play.js"></script>
 </body>
 
