@@ -9,6 +9,7 @@ section.sec1{
     height: 100vh;
     box-sizing: border-box;
     background-size: cover ;
+
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 100%;
 	animation: gradient 15s ease infinite;
@@ -36,7 +37,7 @@ nav .brand{
 nav .brand h2{
      margin: 0;
      padding: 0;
-     color: #fff; 
+     color: rgb(0, 0, 0); 
      font-size: 1.5em;
 }
 
@@ -115,7 +116,7 @@ nav ul li a:hover:before
   background-image: url('https://i.imgur.com/yGmrlyg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  border-top: solid 1em #ffffff;
+  border-top: solid 1em #070202;
 }
 
 .masthead-intro {
