@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+           
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red ;
+            animation-name: meineAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            margin: 5em;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(39, 172, 21);
+            animation-name: meineAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            margin: 5em;
+        }
+
+        .third {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(39, 172, 21);
+            animation-name: meineAnimation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            margin: 5em;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+            height: 100vh;
+            flex-direction: column;
+
+        }
+
+
+        @keyframes meineAnimation {
+            0% {
+                border: 0%;
+                transform: scale(1.3);
+            }
+
+           
+            50% {
+                border: 50%;
+                transform: scale(0.6);
+                border-radius: 50%;
+            }
+
+            100% {
+                border: 0%;
+                transform: scale(1.3);
+            }
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="center">
+        <div class="box"></div>
+        
+
+
+
+    </div>
+
+
+</body>
+
+</html>

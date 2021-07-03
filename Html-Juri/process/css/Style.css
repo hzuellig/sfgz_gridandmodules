@@ -1,0 +1,99 @@
+body{
+    background-image: rgb(0, 0, 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+h1{
+    font-size:10em;
+    text-align: center;
+    
+}
+
+h2{
+    font-size:7em;
+     text-align: center;
+}
+
+h3{
+    font-size:5em;
+}
+
+h4{
+    font-size:3em;
+}
+
+h5{
+    font-size:2em;
+
+}
+h6{
+    font-size:1em;
+}
+
+.Box1 {
+    width: 200px;
+    height: 200px;
+    align-self: auto;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: groove;
+    padding: 4em;
+    margin: 3em;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgb(34, 34, 34), 20px 20px 20px;
+
+    
+}
+
+.Box2 {
+
+    width: 1000px;
+    height: 1000px;
+    border-style:double;
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(2,0,36);
+    border-radius: 50%;
+    box-shadow: rgb(200, 200, 200);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 100%, rgb(112, 112, 112) 42%rgb(0, 0, 0) 100%);
+ 
+}
+
+.Box3 {
+
+    width: 300px;
+    height: 200xpx;
+    border-style:double;
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(2,0,36);
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(112, 112, 112) 42%rgb(0, 0, 0) 100%);
+ 
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    text-align: center;
+
+}
+
+li{
+    position: sticky;
+    top: 0px;
+    background: dimgray;
+
+}
