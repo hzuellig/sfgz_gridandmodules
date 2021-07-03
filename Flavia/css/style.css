@@ -1,9 +1,5 @@
-body {
-    background-color: #2a2b45;
-    font-family     : "Red Hat";
-    margin          : 0;
-    padding         : 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
 
 @font-face {
     font-family: "Red Hat";
@@ -15,7 +11,7 @@ body {
     margin          : 0;
     padding         : 0;
     overflow        : hidden;
-    background-color: #967892;
+    background-color: #96789200;
 }
 
 h1 {
@@ -35,6 +31,7 @@ p {
 
 
 ul {
+    font-family     : 'Antic Didone', serif;
     list-style-type : none;
     margin          : 0;
     padding         : 0;
