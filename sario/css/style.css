@@ -1,6 +1,11 @@
 body {
   font-family: soleil, sans-serif;
-  background: linear-gradient(180deg, rgba(161,202,207,1) 0%, rgba(232,221,167,1) 35%, rgba(133,71,90,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(161, 202, 207, 1) 0%,
+    rgba(232, 221, 167, 1) 35%,
+    rgba(133, 71, 90, 1) 100%
+  );
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -38,6 +43,7 @@ p {
   padding: 8px;
   font-weight: 400;
   font-size: 28px;
+  margin: 0px;
 }
 
 a {
@@ -46,34 +52,44 @@ a {
 }
 
 .tx-footer {
-  color: #818181; 
+  color: #818181;
   font-size: 28px;
-}
-/*-- Align/Transform --*/
-.flexxi {
-  display: flex;
+  font-weight: 200;
+  padding: 0px 45px 20px 45px;
 }
 
-.tx-center {
-  text-align: center;
+/*-- Header --*/
+.burger {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 60px;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 
-.center {
-  margin: auto;
-  width: 80%;
-}
-
-.side-margin {
-  margin: 0px 40px 40px 40px;
-}
-
-/*-- Containers --*/
-
-#play-pause-button{
-  font-size: 50px;
+.burger:hover {
+  transform: scale(1.05) rotate(62deg);
+  transform-origin: center;
   cursor: pointer;
 }
 
+.play-btn {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+}
+
+.fa-play {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.fa-pause {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/*-- Containers --*/
 .intro {
   display: flex;
 }
@@ -83,23 +99,35 @@ a {
   width: calc(50vw - 40px);
 }
 
+.sun{
+  position: absolute;
+  top: 25vh;
+  left: 10vh;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(255,214,0,0.7) 0%, rgba(248,107,47,0.4) 100%);
+  border-radius: 50%;
+  z-index: -10;
+  box-shadow: 0px 0px 200px #DBA632;
+}
+
 .cont2 {
   margin-top: 130px;
   width: calc(50vw - 40px);
   margin-left: calc(50vw - 40px);
 }
 
-.rot90{
+.rot90 {
   transform: rotate(-270deg);
   transform-origin: top left;
 }
 
-.cont3{
+.cont3 {
   margin: 60vh 0 60vh 0;
   justify-content: center;
 }
 
-.cont3 h1{
+.cont3 h1 {
   transform: scale(1.1);
 }
 
@@ -113,7 +141,7 @@ a {
   margin: 60vh 40px 60vh 40px;
 }
 
-.cont4-wrptxt{
+.cont4-wrptxt {
   position: absolute;
   top: 40vh;
   left: 0;
@@ -141,6 +169,12 @@ a {
   justify-content: center;
 }
 
+.prism {
+  background: linear-gradient(110deg, rgba(252,74,74,1) 0%, rgba(244,238,91,1) 25%, rgba(112,244,91,1) 50%, rgba(91,171,244,1) 75%, rgba(204,91,244,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .cont6 {
   margin: 60vh 0 60vh 0;
   justify-content: center;
@@ -153,46 +187,57 @@ a {
 
 /*-- Animations --*/
 
-.txt-glow1{
-  animation: glow 1s linear 200ms;
-animation-iteration-count: infinite;
+.sun {
+  animation: wander 30s ease-in-out 100ms;
+  animation-iteration-count: infinite;
+}
+@keyframes wander { 
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(35vw, -35vh);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
-.txt-glow2{
-  animation: glow 1s linear 400ms;
-animation-iteration-count: infinite;
-
+.divi1 {
+  animation: divison1 1s ease-in-out 200ms;
+  animation-iteration-count: infinite;
 }
 
-@keyframes glow {
-  0% {font-weight: 400;}
-  50% {font-weight: 600;;}
-  100% {font-weight: 400;;}
-}
-
-.divi1{
-animation: divison1 1s ease-in-out 200ms;
-animation-iteration-count: infinite;
-}
-
-.divi2{
+.divi2 {
   animation: divison2 1s ease-in-out 200ms;
   animation-iteration-count: infinite;
 }
 
 @keyframes divison1 {
-  0% {transform: translate(0px, 0px);}
-  20% {transform: translate(-80px, 0px);}
-  100% {transform: translate(0px, 0px);}
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-80px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
 @keyframes divison2 {
-  0% {transform: translate(0px, 0px);}
-  20% {transform: translate(80px, 0px);}
-  100% {transform: translate(0px, 0px);}
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(80px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
-.countd{
+.countd {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -202,10 +247,52 @@ animation-iteration-count: infinite;
 }
 
 @keyframes countdrot {
-  0% {transform: rotate(0deg);}
-  50% {transform: rotate(180deg);}
-  100% {transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
+.prism {
+  background: linear-gradient(140deg, rgba(252,74,74,1) 0%, rgba(244,238,91,1) 20%, rgba(112,244,91,1) 40%, rgba(91,171,244,1) 60%, rgba(204,91,244,1) 80%, rgba(252,74,74,1) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  opacity: 0.8
+}
+  
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  .hide {
+    animation: hide 2s linear infinite;
+    opacity: 0.8
+  }
+
+  @keyframes hide {
+    0% {
+        opacity: 0.1;
+    }
+    30% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
 
 /*-- Menu --*/
 
@@ -235,22 +322,6 @@ ul li:hover {
   background-color: rgba(255, 255, 255, 0.418);
 }
 
-.burger {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  width: 60px;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-}
-
-.burger:hover {
-  transform: scale(1.05) rotate(62deg);
-  transform-origin: center;
-  cursor: pointer;
-}
-
 /* The Overlay (background) */
 .overlay {
   height: 100%;
@@ -276,8 +347,12 @@ ul li:hover {
 }
 
 .box-overlay-content {
-  display: flex;
   padding: 0px 45px 20px 45px;
+}
+
+.overlay-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Position the content inside the overlay */
@@ -308,8 +383,8 @@ ul li:hover {
 .homebtn {
   position: relative;
   font-size: 28px !important;
-  font-weight: 600!important;
-  color: rgba(161,202,207,1) !important;
+  font-weight: 600 !important;
+  color: rgba(161, 202, 207, 1) !important;
 }
 
 .homebtn:hover {
@@ -334,7 +409,26 @@ ul li:hover {
   }
 
   .tx-footer {
-    color: #818181; 
+    color: #818181;
     font-size: 20px;
+    display: flex;
   }
+}
+
+/*-- Align/Transform --*/
+.flexxi {
+  display: flex;
+}
+
+.tx-center {
+  text-align: center;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+}
+
+.side-margin {
+  margin: 0px 40px 40px 40px;
 }
