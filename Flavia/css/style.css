@@ -20,7 +20,7 @@ body {
 
 .spalte.show {
     display    : block;
-    padding-top: 30px;
+    padding-top: 2.5em;
 }
 
 /* body.show .spalte {
@@ -138,6 +138,7 @@ li a {
     color          : white;
     text-align     : left;
     padding        : 20px 25px;
+    margin-bottom  : 1em;
     text-decoration: none;
     border         : 1px solid #f2c9a000;
 }

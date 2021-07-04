@@ -20,7 +20,7 @@
                     <h1>Tag 1</h1>
                 </div>
             </button>
-            <ul class="menu spalte align-center">
+            <ul class="menu spalte">
                 <li class=""> <a href="tag1/tag1-1.html">Erste Übung</a>
                 </li>
                 <li> <a href="tag1/tag1-2.html">Erstes Layout «Dream On»</a>
@@ -108,7 +108,9 @@
 
 </body>
 <script>
+
     function toggleMenu(event) {
+        // let menus = document.querySelectorAll('ul.menu.spalte');
         let tagMenu = event.nextElementSibling;
         tagMenu.classList.toggle('show');
     }
