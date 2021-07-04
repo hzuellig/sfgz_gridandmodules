@@ -8,20 +8,24 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="process/css/day6.css" />
 
-    <title>Flavia Bachmann</title>
+    <title>Dream On - Aerosmith</title>
 
 </head>
 
-<body>
+<body class="cursor">
 
-    <ul class="menu">
-        <li> <a href="process/index.html">Prozess</a> </li>
-        <li> <a href="about.html">About Me</a> </li>
-    </ul>
     <section>
         <div class="box_scroll mobile_hidden scrolldown">scroll down
         </div>
-
+        <div>
+            <button type="button" class="slide" onclick="toggleMenu(this)">
+                <div>more</div>
+            </button>
+            <ul class="menu spalte">
+                <li> <a href="process/index.html">Prozess</a> </li>
+                <li> <a href="about.html">About Me</a> </li>
+            </ul>
+        </div>
         <div>
             <iframe class="spotify mobile_hidden" src="https://open.spotify.com/embed/track/0PbikrOTyOsJ8hLTPvRPKH"
                 width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -90,11 +94,11 @@
         </div>
         <div class="circle1">
         </div>
-        <div> <img class="moon2" src="process/tag6/image/cloud_2387 × 2387.png">
+        <div> <img class="moon2  mobile_hidden" src="process/tag6/image/cloud2.png">
         </div>
         <div class="circle2 mobile_hidden">
         </div>
-        <div> <img class="moon3" src="process/tag6/image/cloud2_2387 × 2387.png">
+        <div> <img class="moon3" src="process/tag6/image/cloud1.png">
         </div>
         <div class="moon4 mobile_hidden">
         </div>
@@ -137,19 +141,23 @@
         </div>
     </section>
     <section>
-        <div class="moon1 mobile_hidden">
-        </div>
         <div class="circle1">
         </div>
-        <div> <img class="moon2" src="process/tag6/image/cloud_2387 × 2387.png">
+        <div> <img class="moon2  mobile_hidden" src="process/tag6/image/cloud3.png">
         </div>
         <div class="circle2 mobile_hidden">
         </div>
-        <div> <img class="moon3" src="process/tag6/image/cloud2_2387 × 2387.png">
+        <div> <img class="moon5" src="process/tag6/image/cloud4.png">
         </div>
-        <div class="moon4 mobile_hidden">
+        <div> <img class="fin1 mobile_hidden" src="process/tag6/image/cloud5.png">
         </div>
     </section>
 </body>
+<script>
+    function toggleMenu(event) {
+        let moreMenu = event.nextElementSibling;
+        moreMenu.classList.toggle('show');
+    }
+</script>
 
 </html>

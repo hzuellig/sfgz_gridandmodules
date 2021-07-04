@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
+
+
 body {
-    /*background: #2A2B45;*/
     background: linear-gradient(180deg, #463C5F 0%, #2A2B45 61.46%, #2A2B45 95.31%);
-    background-size: cover;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
+
 section {
     height: 100vh;
-    width: 100vw;
+    width : 100vw;
 }
 
 .row {
@@ -19,93 +18,99 @@ section {
 }
 
 .links {
-    flex-basis: 55%;
+    flex-basis  : 55%;
     margin-right: 10px;
-    margin-left: 10px;
-    text-align: right;
+    margin-left : 10px;
+    text-align  : right;
 }
 
 .rechts {
-    flex-basis: 45%;
+    flex-basis  : 45%;
     margin-right: 10px;
-    margin-left: 10px;
-    text-align: left;
+    margin-left : 10px;
+    text-align  : left;
 }
 
 .spotify {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 4.5vh;
-    left: 77vw;
-    border-radius: 50px;
+    display      : flex;
+    width        : 80px;
+    height       : 80px;
+    position     : absolute;
+    top          : 4.5vh;
+    left         : 77vw;
+    padding      : 10px;
+    border       : 1px solid #F2C9A0;
+    border-radius: 50%;
 }
 
 .box_scroll {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+    width          : 100vw;
+    height         : 100vh;
+    position       : absolute;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
 }
 
-.scrolldown {
-    font-family: 'Antic Didone', serif;
-    color: #967892;
-    font-size: 1.25em;
-    text-align: center;
-    animation-name: scrolldown;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: all 1s ease-in;
-}
+.cursor {
+    cursor: url("../tag6/image/cursor.png"), auto;
+  }
 
-img {
-    width: 10px;
-    align-items: center;
+.scrolldown {
+    font-family              : 'Antic Didone', serif;
+    color                    : #967892;
+    font-size                : 1.25em;
+    text-align               : center;
+    animation-name           : scrolldown;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transition               : all 1s ease-in;
+    cursor: url("../tag6/image/cursor_arrow.png"), auto;
 }
 
 .aerosmith {
-    writing-mode: vertical-rl;
+    writing-mode    : vertical-rl;
     text-orientation: mixed;
-    font-family: 'Berkshire Swash';
-    font-size: 8vh;
-    color: #967892;
-    position: absolute;
-    text-align: center;
-    top: 5vh;
-    left: 90vw;
+    font-family     : 'Berkshire Swash';
+    font-size       : 8vh;
+    color           : #967892;
+    position        : absolute;
+    text-align      : center;
+    top             : 5vh;
+    left            : 90vw;
 }
 
 .dreamonrechts {
-    writing-mode: vertical-rl;
+    writing-mode    : vertical-rl;
     text-orientation: mixed;
-    font-family: 'Berkshire Swash';
-    font-size: 4vh;
-    color: #2A2B45;
-    mix-blend-mode: luminosity;
-    text-shadow: -1px -1px 0 #967892, 1px -1px 0 #967892, -1px 1px 0 #967892, 1px 1px 0 #967892;
+    font-family     : 'Berkshire Swash';
+    font-size       : 4vh;
+    color           : #2A2B45;
+    mix-blend-mode  : overlay;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        1px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        1px 1px 0 #967892;
 }
 
 .fixed {
-    top: 5vh;
-    left: 85vw;
+    top     : 5vh;
+    left    : 85vw;
     position: fixed;
 }
 
 .verse {
-    font-family: 'Antic Didone', serif;
-    color: #fff;
-    font-size: 2em;
+    font-family    : 'Antic Didone', serif;
+    color          : #fff;
+    font-size      : 2em;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
 }
 
 .mirror {
-    color: #f3d6efb9;
+    color     : #f3d6efb9;
     transition: all 1.5s ease-in;
 }
 
@@ -114,290 +119,317 @@ img {
 }
 
 .mirrornormal {
-    font-size: 5em;
+    font-size  : 5em;
     line-height: 0.69em;
 }
 
 .gone {
-    font-size: 2.5em;
-    background: linear-gradient(to right, #f3d6efb9 0%, #96789213 70%);
+    font-size              : 2.5em;
+    background             : linear-gradient(to right, #f3d6efb9 0%, #96789213 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .dawn {
-    font-size: 5em;
-    line-height: 0.9em;
-    background: linear-gradient(to bottom, #f3d6ef9a 0%, #96789225 80%);
+    font-size              : 5em;
+    line-height            : 0.9em;
+    background             : linear-gradient(to bottom, #f3d6ef9a 0%, #96789225 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .sun {
-    width: 1px;
-    height: 1px;
-    left: 67vw;
-    border-radius: 50%;
-    position: absolute;
-    animation-name: sunanimation;
-    animation-duration: 10s;
+    width                    : 1px;
+    height                   : 1px;
+    left                     : 67vw;
+    border-radius            : 50%;
+    position                 : absolute;
+    animation-name           : sunanimation;
+    animation-duration       : 10s;
     animation-iteration-count: infinite;
-    transition: all 1s ease-in-out;
+    transition               : all 1s ease-in-out;
 }
 
 .circle1 {
-    width: 450px;
-    height: 450px;
-    left: 10vw;
+    width        : 450px;
+    height       : 450px;
+    left         : 10vw;
     border-radius: 50%;
-    border: 1px solid #c4a6bf56;
-    position: absolute;
-    margin-top: 30px;
+    border       : 1px solid #c4a6bf56;
+    position     : absolute;
+    margin-top   : 30px;
 }
 
 .circle2 {
-    width: 610px;
-    height: 610px;
-    left: 70vw;
+    width        : 610px;
+    height       : 610px;
+    left         : 70vw;
     border-radius: 50%;
-    border: 1px solid #F2C9A0;
-    position: absolute;
-    margin-top: 200px;
+    border       : 1px solid #F2C9A0;
+    position     : absolute;
+    margin-top   : 200px;
 }
 
 .moon1 {
-    width: 700px;
-    height: 700px;
-    left: 20vw;
+    width        : 700px;
+    height       : 700px;
+    left         : 20vw;
     border-radius: 50%;
-    border: 1px solid #F2C9A0;
-    position: absolute;
-    margin-top: 50px;
+    border       : 1px solid #F2C9A0;
+    position     : absolute;
+    margin-top   : 50px;
 }
 
 .moon2 {
-    width: 500px;
-    height: 500px;
-    left: 50vw;
-    opacity: 0.0;
-    position: absolute;
+    width     : 550px;
+    height    : 550px;
+    left      : 47vw;
+    opacity   : 0.0;
+    position  : absolute;
+    transition: all 1s ease-in-out;
 }
 
 .moon2:hover {
-    animation-name: imageopacity;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    transition: all 1s ease-in-out;
+    opacity: 0.8;
 }
 
 .moon3 {
-    width: 400px;
-    height: 400px;
-    left: 5vw;
-    opacity: 0.0;
-    position: absolute;
-    margin-top: 150px;
+    width     : 400px;
+    height    : 400px;
+    left      : 28vw;
+    opacity   : 0.0;
+    position  : absolute;
+    margin-top: 430px;
     transition: all 1s ease-in-out;
-    background-color: blue;
-    animation-play-state: paused;
-    animation-name: imageopacity;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
 }
 
 .moon3:hover {
-    animation-play-state: running;
+    opacity: 0.8;
 }
 
 .moon4 {
-    width: 800px;
-    height: 800px;
-    left: 80vw;
+    width        : 800px;
+    height       : 800px;
+    left         : 80vw;
     border-radius: 50%;
-    border: 1px solid #c4a6bf4f;
-    position: absolute;
+    border       : 1px solid #c4a6bf4f;
+    position     : absolute;
+}
+
+.moon5 {
+    width     : 600px;
+    height    : 600px;
+    left      : 20vw;
+    opacity   : 0.0;
+    position  : absolute;
+    margin-top: 150px;
+    transition: all 2s ease-in-out;
+}
+
+.moon5:hover {
+    opacity: 0.8;
+}
+
+.fin1 {
+    width     : 150px;
+    height    : 150px;
+    left      : 89vw;
+    opacity   : 0.0;
+    position  : absolute;
+    margin-top: 660px;
+    transition: all 2s ease-in-out;
+}
+
+.fin1:hover {
+    opacity: 0.8;
 }
 
 .sing {
-    writing-mode: vertical-lr;
+    writing-mode    : vertical-lr;
     text-orientation: upright;
-    text-align: end;
-    font-family: 'Antic Didone', serif;
-    font-size: 1.25em;
-    line-height: 23vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
+    text-align      : end;
+    font-family     : 'Antic Didone', serif;
+    font-size       : 1.25em;
+    line-height     : 23vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
 }
 
 .box {
-    animation-name: ChorAnimation;
-    animation-duration: 2s;
+    animation-name           : ChorAnimation;
+    animation-duration       : 2s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: all 1s ease-in;
+    animation-direction      : alternate;
+    transition               : all 1s ease-in;
 }
 
 .biggerbox {
-    animation-name: ChorBiggerAnimation;
-    animation-duration: 2s;
+    animation-name           : ChorBiggerAnimation;
+    animation-duration       : 2s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: all 2s ease-in;
+    animation-direction      : alternate;
+    transition               : all 2s ease-in;
 }
 
 .biggestbox {
-    animation-name: ChorBiggestAnimation;
-    animation-duration: 2s;
+    animation-name           : ChorBiggestAnimation;
+    animation-duration       : 2s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: all 1s ease-in;
+    animation-direction      : alternate;
+    transition               : all 1s ease-in;
 }
 
 .dreamonoutline {
-    writing-mode: vertical-rl;
+    writing-mode    : vertical-rl;
     text-orientation: mixed;
-    font-family: 'Berkshire Swash';
-    font-size: 17vh;
-    line-height: 28.5vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: #2A2B45;
-    text-shadow: -1px -1px 0 #967892, 1px -1px 0 #967892, -1px 1px 0 #967892, 1px 1px 0 #967892;
-    animation-name: move;
-    animation-duration: 3s;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #2A2B45;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        1px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        1px 1px 0 #967892;
+    animation-name           : move;
+    animation-duration       : 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transform: translateY(0);
+    animation-direction      : alternate;
+    transform                : translateY(0);
 }
 
 .dreamonoutline:hover {
-    writing-mode: vertical-rl;
+    writing-mode    : vertical-rl;
     text-orientation: mixed;
-    font-family: 'Berkshire Swash';
-    font-size: 17vh;
-    line-height: 28.5vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: #967892;
-    text-shadow: -1px -1px 0 #967892, 1px -1px 0 #967892, -1px 1px 0 #967892, 1px 1px 0 #967892;
-    animation-name: move;
-    animation-duration: 3s;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #967892;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        1px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        1px 1px 0 #967892;
+    animation-name           : move;
+    animation-duration       : 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transform: translateY(0);
+    animation-direction      : alternate;
+    transform                : translateY(0);
 }
 
 .second {
     animation-delay: 0.5s;
-    opacity: 0.9;
+    opacity        : 0.9;
 }
 
 .third {
     animation-delay: 1s;
-    opacity: 0.8;
+    opacity        : 0.8;
 }
 
 .forth {
     animation-delay: 1.5s;
-    opacity: 0.7;
+    opacity        : 0.7;
 }
 
 .fifth {
     animation-delay: 2s;
-    opacity: 0.6;
+    opacity        : 0.6;
 }
 
 .sixth {
     animation-delay: 2s;
-    opacity: 0.5;
+    opacity        : 0.5;
 }
 
 .seventh {
     animation-delay: 2s;
-    opacity: 0.4;
+    opacity        : 0.4;
 }
 
 .dreamuntil {
-    writing-mode: vertical-rl;
+    writing-mode    : vertical-rl;
     text-orientation: mixed;
-    font-family: 'Berkshire Swash';
-    font-size: 17vh;
-    line-height: 28.5vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: #967892;
-    animation-name: move;
-    animation-duration: 3s;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #967892;
+
+    animation-name           : move;
+    animation-duration       : 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transform: translateY(0);
+    animation-direction      : alternate;
+    transform                : translateY(0);
 }
 
-@keyframes imageopacity {
-    0% {
-        opacity: 0.0;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 0.0;
-    }
-}
 
 @keyframes scrolldown {
     0% {
-        color: #fff;
-        opacity: 0.9;
+        color    : #fff;
+        opacity  : 0.9;
         transform: translateY(0);
+
     }
+
     100% {
-        color: #967892;
-        opacity: 1;
+        color    : #967892;
+        opacity  : 1;
         transform: translateY(2px);
     }
 }
 
 @keyframes ChorAnimation {
     0% {
-        color: #fff;
-        opacity: 0.9;
+        color    : #fff;
+        opacity  : 0.9;
         transform: translateY(0);
+
     }
+
     100% {
-        color: #967892;
-        opacity: 1;
+        color    : #967892;
+        opacity  : 1;
         transform: translateY(10px);
     }
 }
 
 @keyframes ChorBiggerAnimation {
     0% {
-        color: #fff;
-        opacity: 0.5;
+        color        : #fff;
+        opacity      : 0.5;
         margin-bottom: 20px;
     }
+
     100% {
-        color: #967892;
-        opacity: 0.9;
+        color        : #967892;
+        opacity      : 0.9;
         margin-bottom: 50px;
+
     }
 }
 
 @keyframes ChorBiggestAnimation {
     0% {
-        color: #fff;
-        opacity: 0.9;
+        color        : #fff;
+        opacity      : 0.9;
         margin-bottom: 10px;
     }
+
     100% {
-        color: #967892;
-        opacity: 1;
+        color        : #967892;
+        opacity      : 1;
         margin-bottom: 70px;
+
     }
 }
 
@@ -405,22 +437,28 @@ img {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(90px);
     }
+
 }
 
 @keyframes sunanimation {
     0% {
-        transform: scale(1);
+        transform       : scale(1);
         background-color: #ac8ca700;
+
     }
+
     50% {
-        transform: scale(2000);
+        transform       : scale(2000);
         background-color: #ac8ca72a;
+
     }
+
     100% {
-        transform: scale(1);
+        transform       : scale(1);
         background-color: #ac8ca700;
     }
 }
@@ -428,55 +466,64 @@ img {
 @media screen and (max-width:768px) {
     body {
         background: linear-gradient(180deg, #2A2B45 0%, #2A2B45 61.46%, #463C5F 95.31%);
-        font-size: 80%;
+        font-size : 80%;
     }
+
     .mobile_hidden {
         display: none;
     }
+
     .dreamonoutline {
-        font-size: 10vh;
-        line-height: 10vh;
-        margin-left: 20px;
+        font-size   : 10vh;
+        line-height : 10vh;
+        margin-left : 20px;
         margin-right: 40px;
     }
+
     .dreamonoutline:hover {
-        font-size: 10vh;
-        line-height: 10vh;
-        margin-left: 20px;
+        font-size   : 10vh;
+        line-height : 10vh;
+        margin-left : 20px;
         margin-right: 40px;
     }
+
     .dreamuntil {
-        font-size: 10vh;
-        line-height: 10vh;
+        font-size     : 10vh;
+        line-height   : 10vh;
         text-transform: capitalize;
-        margin-left: 20px;
-        margin-right: 40px;
+        margin-left   : 20px;
+        margin-right  : 40px;
     }
+
     .sing {
-        font-size: 1.25em;
+        font-size  : 1.25em;
         line-height: 10vh;
     }
+
     @keyframes sunanimation {
         0% {
-            border-radius: 50%;
-            transform: scale(1);
+            border-radius   : 50%;
+            transform       : scale(1);
             background-color: #ffeb9d00;
         }
+
         50% {
-            border-radius: 50%;
-            transform: scale(1000);
+            border-radius   : 50%;
+            transform       : scale(1000);
             background-color: #e7a1fd3a;
         }
+
         100% {
-            border-radius: 50%;
-            transform: scale(1);
+            border-radius   : 50%;
+            transform       : scale(1);
             background-color: #ffeb9d00;
         }
+
     }
 }
 
 body::-webkit-scrollbar {
-    width: 2px;
+    width : 2px;
     height: 2px;
 }
 
@@ -486,6 +533,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: #967892;
-    border-radius: 2px;
-    border: 1px solid #967892;
+    border-radius   : 2px;
+    border          : 1px solid #967892;
 }

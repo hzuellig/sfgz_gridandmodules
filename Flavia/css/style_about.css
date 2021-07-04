@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
+
+@font-face {
+    font-family: "Red Hat";
+    src        : url(../process/css/RedHatDisplay-MediumItalic.ttf);
+}
+
+body {
+    background-color: #463C5F;
+    background-size : cover;
+    font-family     : "Red Hat";
+    margin          : 0;
+    padding         : 0;
+}
+
+h1 {
+    font-family   : "Red Hat";
+    font-weight   : 500;
+    color         :#F2C9A0;
+    padding-left  : 50px;
+    font-size     : 2em;
+    letter-spacing: 3px;
+}
+
+p {
+    font-family     : 'Antic Didone', serif;
+    color         :#fff;
+    padding-left: 50px;
+    font-size   : 1.5em;
+    line-height : 130%;
+
+}
+
+
+.orangeitalic {
+    color     : #F19FA1;
+    font-style: italic;
+    font-size : 0.8em;
+
+}
+
+.menu {
+    list-style-type : none;
+    margin          : 0;
+    padding-top     : 20px;
+    overflow        : hidden;
+    background-color: #ffffff00;
+}
+
+ul {
+    font-family     : 'Antic Didone', serif;
+    list-style-type : none;
+    margin-top      : 0;
+    padding         : 0;
+    overflow        : hidden;
+    background-color: #2A2B45;
+}
+
+li {
+    flex-direction: column;
+    width         : fit-content;
+    padding-left  : 1.5vw;
+}
+
+li a {
+    display        : block;
+    color          : white;
+    text-align     : left;
+    padding        : 20px 25px;
+    text-decoration: none;
+    border         : 1px solid #F2C9A000;
+}
+
+li a:hover {
+    border       : 1px solid #F2C9A0;
+    border-radius: 10px;
+}
+
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: #F2C9A0;
+}
+
+
+body::-webkit-scrollbar {
+    width : 2px;
+    height: 2px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2a2b45;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #967892;
+    border-radius   : 2px;
+    border          : 1px solid #967892;
+}

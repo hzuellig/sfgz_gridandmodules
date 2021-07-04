@@ -6,21 +6,102 @@
     src        : url(../process/css/RedHatDisplay-MediumItalic.ttf);
 }
 
+body {
+    background     : #463C5F;
+    background-size: cover;
+    margin         : 0;
+    padding        : 0;
+}
+
+
+.spalte {
+    display: none;
+}
+
+.spalte.show {
+    display    : block;
+    padding-top: 30px;
+}
+
+/* body.show .spalte {
+    display    : block;
+    padding-top: 40px;
+} */
+
+button {
+    top          : 4.5vh;
+    margin-bottom: 1.5vh;
+    margin-left  : 1.5vw;
+    aspect-ratio : 1;
+    font-family  : 'Antic Didone', serif;
+}
+
+.slide {
+    font-size       : 1.25em;
+    color           : #463C5F;
+    padding         : 30px;
+    outline         : 0;
+    border          : 1px solid #F2C9A0;
+    border-radius   : 50%;
+    cursor          : pointer;
+    position        : relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.slide i {
+    opacity   : 0;
+    font-size : 13px;
+    transition: 0.2s;
+    position  : absolute;
+    right     : 10px;
+    top       : 21px;
+    transition: transform 1;
+}
+
+.slide div {
+    transition: transform 0.8s;
+}
+
+.slide:hover div {
+    transform: translateX(-6px);
+    color    : #fff;
+}
+
+.slide::after {
+    content         : "";
+    background-color: #967892;
+    width           : 100%;
+    z-index         : -1;
+    position        : absolute;
+    border-radius   : 50%;
+    height          : 100%;
+    top             : 7px;
+    left            : 7px;
+}
+
+.slide:hover i {
+    opacity   : 1;
+    transform : translateX(-6px);
+    transition: 1s all ease-in;
+}
+
 .menu {
     list-style-type : none;
-    margin          : 0;
-    padding         : 0;
+    margin          : 10px;
+    padding-top     : 10px;
     overflow        : hidden;
-    background-color: #96789200;
+    background-color: #ffffff00;
 }
 
 h1 {
-    font-weight   : 500;
+    font-family   : "Red Hat";
+    font-weight   : 600;
     color         : #F2C9A0;
-    padding-left  : 30px;
-    font-size     : 4em;
+    margin        : 0.5vh;
+    font-size     : 2em;
     letter-spacing: 3px;
 }
+
 
 p {
     color       : #F2C9A0;
@@ -29,31 +110,41 @@ p {
     line-height : 130%;
 }
 
+.rowTag {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    align-items    : center;
+    padding        : 50px;
+}
 
 ul {
     font-family     : 'Antic Didone', serif;
     list-style-type : none;
-    margin          : 0;
-    padding         : 0;
+    position        : absolute;
+    margin-top      : 0;
+    padding-left    : 1.5vw;
     overflow        : hidden;
-    background-color: #24253b;
-
+    background-color: #2A2B45;
 }
 
 li {
-    float: left;
+    flex-direction: column;
+    width         : fit-content;
 }
 
 li a {
     display        : block;
     color          : white;
-    text-align     : center;
+    text-align     : left;
     padding        : 20px 25px;
-    text-decoration: wavy;
+    text-decoration: none;
+    border         : 1px solid #f2c9a000;
 }
 
 li a:hover {
-    background-color: #F19FA1;
+    border       : 1px solid #F2C9A0;
+    border-radius: 10px;
 }
 
 a:link {
@@ -65,5 +156,21 @@ a:visited {
 }
 
 a:hover {
-    color: #24253b;
+    color: #F2C9A0;
+}
+
+
+body::-webkit-scrollbar {
+    width : 2px;
+    height: 2px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2a2b45;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #967892;
+    border-radius   : 2px;
+    border          : 1px solid #967892;
 }
