@@ -54,7 +54,7 @@ section {
 
 .cursor {
     cursor: url("../tag6/image/cursor.png"), auto;
-  }
+}
 
 .scrolldown {
     font-family              : 'Antic Didone', serif;
@@ -66,7 +66,7 @@ section {
     animation-iteration-count: infinite;
     animation-direction      : alternate;
     transition               : all 1s ease-in;
-    cursor: url("../tag6/image/cursor_arrow.png"), auto;
+    cursor                   : url("../tag6/image/cursor_arrow.png"), auto;
 }
 
 .aerosmith {
@@ -79,6 +79,7 @@ section {
     text-align      : center;
     top             : 5vh;
     left            : 90vw;
+    cursor          : url("../tag6/image/cursor_arrow.png"), auto;
 }
 
 .dreamonrechts {
@@ -93,6 +94,7 @@ section {
         1px -1px 0 #967892,
         -1px 1px 0 #967892,
         1px 1px 0 #967892;
+    cursor: url("../tag6/image/cursor_arrow.png"), auto;
 }
 
 .fixed {
@@ -236,7 +238,7 @@ section {
     left      : 89vw;
     opacity   : 0.0;
     position  : absolute;
-    margin-top: 660px;
+    margin-top: 75vh;
     transition: all 2s ease-in-out;
 }
 
@@ -313,10 +315,10 @@ section {
     align-items     : center;
     color           : #967892;
     text-shadow     :
-        -1px -1px 0 #967892,
-        1px -1px 0 #967892,
-        -1px 1px 0 #967892,
-        1px 1px 0 #967892;
+        -1px -1px 0 #F2C9A0,
+        2px -2px 0 #F2C9A0,
+        -1px 1px 0 #F2C9A0,
+        2px 2px 0 #F2C9A0;
     animation-name           : move;
     animation-duration       : 3s;
     animation-iteration-count: infinite;
@@ -364,7 +366,6 @@ section {
     display         : flex;
     align-items     : center;
     color           : #967892;
-
     animation-name           : move;
     animation-duration       : 3s;
     animation-iteration-count: infinite;
@@ -372,6 +373,27 @@ section {
     transform                : translateY(0);
 }
 
+.dreamuntil:hover {
+    writing-mode    : vertical-rl;
+    text-orientation: mixed;
+    font-family     : 'Berkshire Swash';
+    font-size       : 17vh;
+    line-height     : 28.5vh;
+    width           : 100%;
+    display         : flex;
+    align-items     : center;
+    color           : #F2C9A0;
+    text-shadow     :
+        -1px -1px 0 #967892,
+        2px -1px 0 #967892,
+        -1px 1px 0 #967892,
+        2px 2px 0 #967892;
+    animation-name           : move;
+    animation-duration       : 3s;
+    animation-iteration-count: infinite;
+    animation-direction      : alternate;
+    transform                : translateY(0);
+}
 
 @keyframes scrolldown {
     0% {
