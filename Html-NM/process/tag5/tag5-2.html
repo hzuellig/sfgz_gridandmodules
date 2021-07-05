@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body {
+    display: flex;
+    justify-content: space-between;
+}
+div {
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+@media screen and (max-width:768px){
+    body {
+        flex-direction: column;
+    }
+    .mobile-hidden {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    
+<div>Box1</div>
+<div>Box2</div>
+<div class="mobile-hidden">Box3</div>
+<div>Box4</div>
+<div>Box5</div>
+
+</body>
+</html>

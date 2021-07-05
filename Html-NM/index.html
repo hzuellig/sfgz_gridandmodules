@@ -8,383 +8,154 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
-    <title>Test</title>
+    <link rel="stylesheet" href="../process/css/stylesheet.css">
+    <title>Moon River</title>
 
-    <style>
-        body {
-            background-color: #e0a96d;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-        .div {
-            font-family: ;
-        }
-
-        .topnav {
-            position: relative;
-            overflow: hidden;
-            background-color: #e0a96d;
-        }
-
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: #ddc3a5;
-        }
-
-        .topnav a.active {
-            background-color: #201e20;
-            color: white;
-        }
-
-        .topnav-centered a {
-            float: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .topnav-right {
-            float: right;
-        }
-
-        #backtotop {
-            position: fixed;
-            bottom: 10px;
-            float: right;
-            right: 20%;
-            left: 90%;
-            max-width: 30px;
-            width: 100%;
-            background-color: #ddc3a5;
-            padding: .5px;
-
-        }
-
-        /*On Hover Color Change*/
-        #backtotop:hover {
-            background-color: #201e20;
-        }
-
-        .row {
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            flex-direction: column;
-            flex: wrap;
-            font-size: 20px;
-            padding: 2%;
-        }
-
-        .row:hover {
-            -moz-box-shadow: inset 0 0 10px #000000;
-            -webkit-box-shadow: inset 0 0 10px #000000;
-            box-shadow: inset 0 0 10px #000000;
-        }
-
-        .row-white:hover {
-            -moz-box-shadow: inset 0 0 5px #ffffff;
-            -webkit-box-shadow: inset 0 0 15px #ffffff;
-            box-shadow: inset 0 0 20px #ffffff;
-        }
-
-        .row:hover .letterspacing {
-            letter-spacing: 20px;
-            transition-duration: 2s;
-            transition-timing-function: ease-in-out;
-        }
-
-        .dropbtn {
-            background-color: #e0a96d;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #ddc3a5;
-        }
-
-        .heart {
-            margin: 0 auto;
-            position: relative;
-            width: 10px;
-            height: 10px;
-            text-align: center;
-            line-height: 10px;
-            animation: beat 1.5s ease 0s infinite;
-            font-family: 'Mate SC', cursive;
-        }
-
-        .heart span {
-            font-size: 3rem;
-            color: white;
-            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
-        }
-
-        .heart:before,
-        .heart:after {
-            position: absolute;
-            width: 10%;
-            height: 10%;
-            top: 0;
-            left: 0;
-            opacity: 0.4;
-            border-radius: inherit;
-        }
-
-        .heart:before {
-            z-index: -2;
-            animation: beat-before 1.5s ease-out 200ms infinite;
-        }
-
-        .heart:after {
-            z-index: -1;
-            animation: beat-after 1.5s ease-out 400ms infinite;
-        }
-
-        @keyframes beat {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(2.1);
-            }
-        }
-
-        @keyframes beat-before {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(0.8);
-            }
-        }
-
-        @keyframes beat-after {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.6);
-            }
-        }
-
-        .section-white {
-            padding-top: 15px;
-            background-color: rgb(255, 255, 255);
-            padding-bottom: 15px;
-            width: 80%;
-            height: 170px;
-            cursor: pointer;
-        }
-
-        .section-black {
-            padding-top: 15px;
-            background-color: rgb(255, 255, 255);
-            padding-bottom: 15px;
-            width: 60%;
-            height: 90px;
-            position: relative;
-            z-index: 1;
-            cursor: pointer;
-        }
-
-        @media screen and (max-width:768px) {
-            .topnav-right {
-                display: none;
-            }
-            .topnav-centered {
-                display: none;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Top navigation -->
-    <div class="topnav">
 
-        <!-- mittlerer Link -->
-        <div class="topnav-centered">
-            <a href="#backtotop" class="active">Moon River</a>
-        </div>
+    <div class="background-container">
+        <div class="stars"></div>
 
-        <!-- linkgsbündiges Menü -->
-        <a href="#design">Design</a>
-        <div class="dropdown">
-            <a href="#process" class="dropbtn">Process</a>
-            <div class="dropdown-content">
-                <a href="#Tag1">Tag 1</a>
-                <a href="#Tag2">Tag 2</a>
-                <a href="#Tag3">Tag 3</a>
-                <a href="#Tag4">Tag 4</a>
-            </div>
-        </div>
-
-        <!-- rechtsbündiges Menü -->
-        <div class="topnav-right">
+    <!-- Menü -->
+    <!-- rechtsbündiges Menü 1 -->
+    <div class="dropdown" style="float:right">
+        <button class="dropbtn">About</button>
+        <div class="dropdown-content">
             <a href="#song">Song</a>
+            <a href="#design">Design</a>
+            <a href="#design">Impressum</a>
         </div>
     </div>
 
+    <!-- rechtsbündiges Menü 2 -->
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn">Process</button>
+        <div class="dropdown-content">
+            <a href="#Tag1">Tag 1</a>
+            <a href="#Tag2">Tag 2</a>
+            <a href="#Tag3">Tag 3</a>
+            <a href="#Tag4">Tag 4</a>
+            <a href="#Tag5">Tag 5</a>
+            <a href="#Tag6">Tag 6</a>
+        </div>
+    </div>
 
+    <!-- mittlers Menü -->
+    <div class="dropdown">
+        <button class="dropbtn" href="#backtotop">Moon River</button>
+    </div>
+
+
+    <!-- Pfeil back to top -->
     <button id="backtotop"><a href="#top" style="color: white; font-size: 40px;">↑</a></button>
 
+    <!-- Mond im Hintergrund -->
+    <img src="/process/css/moon.png" alt="Moon" class="moon">
 
+    <!-- Titel -->
     <div style="text-align: center;">
-        <h style="font-family: 'Mate SC', serif; font-size: 55px;">Moon River</h>
-        <p style="font-family: 'Mate SC', serif; font-size: 34px;">from “Breakfast at Tiffany’s”</p>
+        <h style="font-family: 'Mate SC', serif; font-size: 55px; color: white; transform: translate(0px, 0px);">Moon
+            River</h>
+        <p style="font-family: 'Mate SC', serif; font-size: 34px; color: lightgrey; transform: translate(0px, 0px);">
+            from “Breakfast at Tiffany’s”</p>
     </div>
     <div>
-        <div style="font-family: 'Mate SC', serif; font-size: 21px;">♪=88</div>
+        <div style="font-family: 'Mate SC', serif; font-size: 21px; color: white;">♪=88</div>
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px;">
-        <div>Moooooon river,</div>
-        <div>wider than a mile</div>
-        <div>I'm crossing you in style</div>
-        <div>some dayyyyy</div>
+
+    <!-- Lyrics -->
+    <div class="row section-white" style="transform: translate(0px, 0px);">
+        <div>Moon river, wider than a mile</div>
+        <div>I'm crossing you in style some day</div>
     </div>
-    <div class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -70px)">
-        <div>Oh, dreeeeam</div>
-        <div>maker,</div>
-        <div class="heart">you heart</div>
-        <div>I'm crossing you</div>
+    <div class="row row-white section-black" style="transform: translate(0px, -70px)">
+        <div>Oh, dream, maker your</div>
+        <div class="heart" ;">heart</div>
         <div>breaker</div>
     </div>
-    <div class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -120px); padding-top: 70px;">
-        <div>Wherever you're goin'</div>
+    <div class="row section-white" style="transform: translate(0px, -120px);">
+        <div style="padding-top: 70px;">Wherever you're goin'</div>
         <div>I'm goin' your way</div>
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -120px)">
-        <div>Twooooo drifters,</div>
-        <div>off to see the world</div>
-        <div>There's such a lot of wooorld</div>
-        <div class="letterspacing" style="font-size: 200%; color: #ddc3a5; font-family: 'Mate SC', serif;">to see</div>
+    <div class="row section-white" style="transform: translate(0px, -120px)">
+        <div>Two drifters, off to see the world</div>
+        <div>There's such a lot of world</div>
+        <div class="letterspacing">to see</div>
     </div>
-    <div class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -180px)">
+    <div class="row row-white section-black" style="transform: translate(0px, -180px)">
         <div>We're after the same rainbow's end</div>
         <div>Waitin' 'round the bend</div>
         <div>My huckleberry friend</div>
     </div>
-    <div class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -240px); padding-top:70px">
-        <div>Mooooon river</div>
-        <div>and meeeee</div>
+    <div class="row section-white" style="transform: translate(0px, -240px);">
+        <div style="padding-top: 45px;">Moon river</div>
+        <div class="andme">and me</div>
     </div>
-    <div class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -300px)">
+
+    <!-- Informationen -->
+    <div class="row row-white section-black" style="transform: translate(0px, -300px)">
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -360px)">
+    <div class="row section-white" style="transform: translate(0px, -360px)">
     </div>
-    <div id="song" class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -420px)">
+    <div id="song" class="row row-white section-black" style="transform: translate(0px, -420px)">
         Song
     </div>
-    <div class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -480px); padding-top: 70px;">
+    <div class="row section-white" style="padding-top: 70px; transform: translate(0px, -480px);">
         <audio controls autoplay>
-            <source src="../process/css/moonriver.mp3" type="audio/mpeg">
+            <source src="../process/css/moonriver.mp3" type="audio/mpeg" style="padding-top: 100px;">
         </audio>
     </div>
-    <div class="row section-white" style="border-color: black; border: solid 2px; transform: translate(0px, -480px)">
+    <div class="row section-white" style="transform: translate(0px, -480px)">
     </div>
-    <div id="design" class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -540px)">
+    <div id="design" class="row row-white section-black" style="transform: translate(0px, -540px)">
         Design
     </div>
-    <div class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -600px); padding-top: 70px;">
-        <a href="https://www.figma.com/file/3c7c0TZmMrRu6Cmk87qQWj/grids-and-modules?node-id=0%3A1"
+    <div class="row section-white" style="transform: translate(0px, -600px);">
+        <a style="padding-top: 70px;" href="https://www.figma.com/file/3c7c0TZmMrRu6Cmk87qQWj/grids-and-modules?node-id=0%3A1"
             target="_blank">Figma Design</a>
     </div>
-    <div id="process" class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -660px)">
+    <div id="process" class="row row-white section-black" style="transform: translate(0px, -660px)">
         Process
     </div>
-    <div id="Tag1" class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -720px); padding-top: 70px;">
-        <a href="/process/tag1/tag1-1.html" target="_blank">Tag1-1<br></a>
+    <div id="Tag1" class="row section-white" style="transform: translate(0px, -720px);">
+        <a style="padding-top: 40px;" href="/process/tag1/tag1-1.html" target="_blank">Tag1-1<br></a>
         <a href="/process/tag1/tag1-2.html" target="_blank">Tag1-2<br></a>
         <a href="/process/tag1/tag1-3.html" target="_blank">Tag1-3<br></a>
         <a href="/process/tag1/tag1-4.html" target="_blank">Tag1-4<br></a>
         <a href="/process/tag1/tag1-5.html" target="_blank">Tag1-5</a>
     </div>
-    <div id="Tag2" class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -720px); padding-top: 10px;">
+    <div id="Tag2" class="row section-white" style="transform: translate(0px, -720px); padding-top: 10px;">
         <a href="/process/tag2/tag2-2.html" target="_blank">Tag2-2<br></a>
         <a href="/process/tag2/tag2-3.html" target="_blank">Tag2-3</a>
     </div>
-    <div class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -780px)">
+    <div class="row row-white section-black" style="transform: translate(0px, -780px)">
     </div>
-    <div id="Tag3" class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -840px); padding-top: 70px;">
-        <a href="/process/tag3/tag3-1.html" target="_blank">Tag3-1</a>
+    <div id="Tag3" class="row section-white" style="transform: translate(0px, -840px);">
+        <a style="padding-top: 70px;" href="/process/tag3/tag3-1.html" target="_blank">Tag3-1</a>
     </div>
-    <div class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -890px)">
+    <div class="row row-white section-black" style="transform: translate(0px, -890px)">
     </div>
-    <div id="Tag4" class="row section-white"
-        style="border-color: black; border: solid 2px; transform: translate(0px, -960px); padding-top: 70px;">
-        <a href="/process/tag4/tag4-1.html" target="_blank">Tag4-1<br></a>
+    <div id="Tag4" class="row section-white" style="transform: translate(0px, -960px);">
+        <a style="padding-top: 50px;" href="/process/tag4/tag4-1.html" target="_blank">Tag4-1<br></a>
         <a href="/process/tag4/tag4-2.html" target="_blank">Tag4-2<br></a>
         <a href="/process/tag4/tag4-3.html" target="_blank">Tag4-3</a>
     </div>
-    <div class="row row-white section-black"
-        style="background-color: black; color: white; transform: translate(0px, -1020px)">
+    <div class="row row-white section-black" style="transform: translate(0px, -1020px)">
     </div>
-    <div id="Tag4" class="row section-white"
-    style="border-color: black; border: solid 2px; transform: translate(0px, -1080px); padding-top: 70px;">
-    <a href="/process/tag5/tag5-1.html" target="_blank">Tag5-1<br></a>
-    <a href="/process/tag5/tag5-2.html" target="_blank">Tag5-2</a>
-</div>
-    <div style="font-family: 'Mate SC', serif; font-size: 14px; text-align: center; transform: translate(0px, -1080px); padding-top: 70px;"">
+    <div id="Tag5" class="row section-white" style="transform: translate(0px, -1080px);">
+        <a style="padding-top: 70px;" href="/process/tag5/tag5-1.html" target="_blank">Tag5-1<br></a>
+        <a href="/process/tag5/tag5-2.html" target="_blank">Tag5-2</a>
+    </div>
+    <div id="Tag6" class="row section-white" style="transform: translate(0px, -1080px);">
+        <a style="padding-top: 70px;" href="/process/tag6/tag6-1.html" target="_blank">Tag6-1<br></a>
+        <a href="/process/tag6/tag6-2.html" target="_blank">Tag6-2</a>
+    </div>
+
+    <!-- Abschluss -->
+    <div
+        style="font-family: 'Mate SC', serif; font-size: 14px; text-align: center; transform: translate(0px, -1080px); padding-top: 70px; color: lightgrey;">
         <p>Design by Natascha Alenka Meili</p>
     </div>
 </body>
