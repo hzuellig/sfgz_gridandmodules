@@ -262,11 +262,8 @@ body {
 
 /* Device size */
 @media screen and (max-width:768px) {
-    .topnav-right {
+    .dropbtn {
         display: none;
     }
 
-    .topnav-centered {
-        display: none;
-    }
 }
