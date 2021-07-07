@@ -1,0 +1,775 @@
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.95;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+  margin: 25px;
+  
+}
+
+@media only screen and (max-width: 900px) {
+  .overlay {
+    background-color: rgb(24, 0, 24);
+  }
+}
+
+.overlay-content {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  top: 15%;
+  width: 100%;
+  text-align: left;
+  flex-wrap: nowrap;
+  line-height: 160%;
+  padding-left: 20px;
+}
+
+
+.overlay a {
+  padding: 8px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: rgb(24, 0, 24);
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 900px) {
+  .overlay a {
+    color: white;
+  }
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: rgb(24, 0, 24);
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 900px) {
+  .overlay a:hover, .overlay a:focus {
+    color: white;
+  }
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  right: 60px;
+  font-size: 70px;
+}
+
+
+.menunavi {
+  font-family: 'Zilla Slab', serif;
+  color: rgb(24, 0, 24);
+  font-size: 2em;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-align: left;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .menunavi {
+    color: white;
+  }
+}
+
+.menuburger {
+  position: fixed;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  margin-right: 0;
+  margin-left: 95%;
+  margin-top: 10px;
+}
+
+
+
+body {
+  background-color: rgb(24, 0, 24);
+  font-family: 'Raleway', sans-serif;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  margin: 0px;    
+  overflow-x: hidden;
+}
+
+
+  .einzug {
+    margin-left: 60%;
+  }
+
+
+h1 {
+    font-family: 'Zilla Slab', serif;
+    color: rgb(24, 0, 24);
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    font-weight: 50;
+    font-size: 5vw;
+    text-align: left;
+    line-height: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 30%;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+}
+
+
+
+h2 {
+    font-family: 'Zilla Slab', serif;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    font-size: 22vw;
+    text-align: left;
+    line-height: 80%;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 30%;    
+}
+
+h3 {
+  position: relative;
+  font-family: 'Zilla Slab', serif;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  color: rgb(24, 0, 24);
+  font-size: 18vw;
+  text-align: left;
+  line-height: 80%;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 5%;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  text-transform:uppercase;
+}
+
+  h3::before {
+    content: attr(data-text);
+    position: absolute;
+    white-space: nowrap;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    border-right: 5px solid white; 
+    animation: animate 7s linear infinite;
+    
+  }
+
+  
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 10vw;
+    padding-left: 40px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    animation-name: animation1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+h5 {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4vw;
+    padding-left: 40px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+h6 {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    padding: 10px;
+    padding-left: 40px;
+    letter-spacing: 3px;
+}
+
+.boxen{
+  display:flex;
+   flex-direction:column;
+   font-size: 0.8em;
+}
+
+.boxen span{
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(55, 0, 0);
+  font-size: 2em;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  padding-left: 40px;
+  letter-spacing: 3px;
+  line-height:150%;
+} 
+
+article.myclass .saetze{
+   display:flex;
+    flex-direction: column;
+    font-size: 1vw;
+    -webkit-animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	  animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation-duration: 3s;
+}
+
+.saetze span{
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(55, 0, 0);
+    font-size: 2em;
+    padding: 10px;
+    padding-left: 40px;
+    letter-spacing: 1px;
+    line-height:150%;   
+} 
+
+
+.right{
+  text-align: right;
+}   
+
+ .section {
+   padding-top: 200px;
+   background-color: rgb(255, 255, 255);
+   padding-bottom: 200px;
+ }
+
+ .raum {
+  padding-top: 200px;
+  background-color: rgb(24, 0, 24);
+  padding-bottom: 200px;
+}
+
+
+.raum2 {
+  padding-top: 5px;
+  background-color: rgb(24, 0, 24);
+  padding-bottom: 100px;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    justify-content: space-around;
+    text-align: center;
+
+
+  }
+
+  .item {
+    width: 100%;
+    height: 100px;
+    margin: 10px;
+    font-family: 'Zilla Slab', serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px rgb(24, 0, 24);
+    font-size: 4em;
+    letter-spacing: 3px;
+
+  }
+
+  .item:hover {
+    color: rgb(24, 0, 24);
+  }
+
+  .item2 {
+    width: 100%;
+    height: 100px;
+    padding-top: 50px;
+    font-family: 'Zilla Slab', serif;
+    color: rgb(24, 0, 24);
+    font-size: 10em;
+    letter-spacing: 3px;
+    -webkit-animation: shake-horizontal 1.2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-horizontal 1.2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation-iteration-count:infinite;
+  }
+
+  .item3 {
+    width: 100%;
+    height: 100px;
+    margin: 10px;
+    font-family: 'Zilla Slab', serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px rgb(24, 0, 24);
+    font-size: 6em;
+    letter-spacing: 3px;
+  }
+
+  .item3:hover {
+    color: rgb(24, 0, 24);
+  }
+
+
+
+  .heart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    justify-content: space-around;
+    padding-top: 10px;  
+}
+
+    .text-heart {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    padding: 10px;
+    padding-left: 40px;
+    letter-spacing: 3px;
+    flex-basis:auto;
+      }
+
+      .text-heart2 {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 10em;
+        padding: 10px;
+        padding-left: 40px;
+        letter-spacing: 3px;
+        flex-basis:auto;
+        -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	      animation: heartbeat 1.5s ease-in-out infinite both;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      .text-heart3 {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 5em;
+        padding: 10px;
+        padding-left: 40px;
+        letter-spacing: 3px;
+        flex-basis:auto;
+        animation-name: animation3;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+      }
+
+      article.myclass .text-fluss {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 2.5em;
+        padding: 10px;
+        padding-left: 40px;
+        letter-spacing: 3px;
+        flex-basis:column;
+        overflow: hidden; 
+            border-right: .2em solid rgb(255, 255, 255); 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            animation-play-state: paused;
+            animation: 
+              typing 3.5s steps(30, end),
+              blink-caret .75s step-end infinite;
+          }
+  
+
+      .go {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-around;
+        }
+      
+    
+      .text {
+        width: 100%;
+        height: 100px;
+        margin: 10px;
+        font-family: 'Zilla Slab', serif;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 10px rgb(24, 0, 24);
+        font-size: 2em;
+        letter-spacing: 3px;
+        writing-mode:sideways-lr;
+        flex-basis: 20px;
+    
+      }
+
+      article.myclass .text2 {
+        width: 100%;
+        height: 100px;
+        font-family: 'Zilla Slab', serif;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 10px rgb(24, 0, 24);
+        font-size: 5em;
+        letter-spacing: 3px;
+        flex-basis: 20px;
+        -webkit-animation: roll-in-right 0.6s ease-out both;
+	      animation: roll-in-right 0.6s ease-out both;
+        animation-duration: 2s;
+      }
+
+      article.myclass .text3 {
+        width: 100%;
+        height: 100px;
+        margin: 10px;
+        font-family: 'Zilla Slab', serif;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 10px rgb(24, 0, 24);
+        font-size: 10em;
+        letter-spacing: 3px;
+        writing-mode: sideways-lr;
+        flex-basis: 20px;  
+        -webkit-animation: roll-in-right 0.6s ease-out both;
+	      animation: roll-in-right 0.6s ease-out both;
+        animation-duration: 4s;
+      }
+
+      article.myclass .text4 {
+        width: 100%;
+        height: 30%;
+        font-family: 'Zilla Slab', serif;
+        color: rgb(24, 0, 24);
+        font-size: 20vw;
+        letter-spacing: 3px;
+        writing-mode: vertical-rl;
+        flex-basis: 20px;
+        -webkit-animation: roll-in-left 0.6s ease-out both;
+	      animation: roll-in-left 0.6s ease-out both;
+        animation-duration: 2s;
+       
+  }
+      
+  
+      .impressum {
+        font-family: 'Raleway', sans-serif;
+        color:rgb(24, 0, 24);
+        font-size: 1em;
+        text-align:right;
+        background-color: rgb(255, 255, 255);
+        margin: 0px;
+        margin-bottom: -200px;
+        padding: 80px;
+
+  }
+
+  .div {
+    
+    width: 200px;
+    border: 15px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    margin: 0px;
+    margin-left: 10%;
+    margin-bottom: 20px; 
+    animation-duration: 5s;
+    animation-name: fadeOut;
+    animation-iteration-count: infinite;
+  }
+
+
+
+
+  .div3 {
+    
+    width: 200px;
+    border: 15px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    margin: 0px;
+    margin-left: 20%;
+    margin-bottom: 20px; 
+    animation-duration: 10s;
+    animation-name: fadeOut;
+    animation-iteration-count: infinite;
+   
+  }
+
+  .div4 {
+    
+    width: 200px;
+    border: 15px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    margin: 0px;
+    margin-left: 60%;
+    margin-bottom: 20px;
+    animation-duration: 15s;
+    animation-name: fadeOut;
+    animation-iteration-count: infinite; 
+ 
+   
+  }
+
+
+
+  @keyframes animation1 {
+    0% {
+        transform: rotate(40deg)
+    }
+
+    50% {
+        transform: rotate(700deg)
+    }
+
+    100% {
+        transform: rotate(40deg)
+    }
+}
+
+@keyframes animation2 {
+  0% {
+      color: rgb(24, 0, 24);
+  }
+
+  50% {
+      color: rgb(255, 255, 255)
+  }
+
+  100% {
+    color: rgb(24, 0, 24);
+  }
+}
+
+@keyframes animation3 {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(240deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation4 {
+  0% {
+      transform: scale(1.3);
+  }
+
+  50% {
+      border-radius: 50%;
+      transform: scale(0.7);
+  }
+
+  100% {
+      border-radius: 0%;
+      transform: scale(1.3);
+  }
+}
+
+
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+}
+@keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+}
+
+
+
+@keyframes animate 
+{
+  0%,10%,100% 
+  {
+    width: 0;
+  }
+
+  70%,90% 
+  {
+    width: 100%;
+  }
+
+}
+
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  90% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;} 
+} 
+
+
+@keyframes swing-in-top-bck {
+  0% {
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+@keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+            transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in-right {
+  0% {
+    -webkit-transform: translateX(800px) rotate(540deg);
+            transform: translateX(800px) rotate(540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+ 
+
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+
+
