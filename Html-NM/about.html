@@ -1,12 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="process/css/stylesheet.css">
+    <title>Impressum</title>
+
+
+    <style>
+        /* Hintergrund */
+        @keyframes move-background {
+            from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+            }
+
+            to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+            }
+        }
+
+        @-webkit-keyframes move-background {
+            from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+            }
+
+            to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+            }
+        }
+
+        @-moz-keyframes move-background {
+            from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+            }
+
+            to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+            }
+        }
+
+        @-webkit-keyframes move-background {
+            from {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+            }
+
+            to {
+                -webkit-transform: translate3d(1000px, 0px, 0px);
+            }
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .stars {
+            background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: -3;
+        }
+
+        .twinkling {
+            width: 10000px;
+            height: 100%;
+            background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+            background-size: 1000px 1000px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -2;
+
+            -moz-animation: move-background 70s linear infinite;
+            -ms-animation: move-background 70s linear infinite;
+            -o-animation: move-background 70s linear infinite;
+            -webkit-animation: move-background 70s linear infinite;
+            animation: move-background 70s linear infinite;
+
+        }
+
+        .clouds {
+            width: 10000px;
+            height: 100%;
+            background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+            background-size: 1000px 1000px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+
+            -moz-animation: move-background 150s linear infinite;
+            -ms-animation: move-background 150s linear infinite;
+            -o-animation: move-background 150s linear infinite;
+            -webkit-animation: move-background 150s linear infinite;
+            animation: move-background 150s linear infinite;
+        }
+
+        img {
+            height: 70vh;
+            width: 70vh;
+            position: absolute;
+            z-index: 3;
+            right: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="/">Main Page</a>
+    <!-- Hintergrund -->
+    <div class="background-container">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+
+        <!-- Impressum -->
+        <div>
+            <a style="font-family: 'Mate SC', serif; font-size: 55px; color: white; text-align: center;">Impressum</a>
+        </div>
+        <div style="color: white;">
+            <a>Kontakt-Adresse<br>
+                Natascha Alenka Meili<br>
+                Grundrebenstrasse 23<br>
+                8932 Mettmenstetten<br>
+                Schweiz<br>
+                E-Mail: natascha.meili@stud.sfgz.ch<br><br>
+
+                Vertretungsberechtigte Person(en)<br>
+                Natascha Alenka Meili, Studentin an der SFGZ<br><br>
+
+                Haftungsausschluss<br>
+                Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität,
+                Zuverlässigkeit und Vollständigkeit der Informationen.<br>
+                Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem
+                Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der
+                Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.<br>
+                Alle Angebote sind unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das
+                gesamte Angebot ohne besondere Ankündigung zu verändern, zu ergänzen, zu löschen oder die
+                Veröffentlichung zeitweise oder endgültig einzustellen.<br><br>
+
+                Haftungsausschluss für Links<br>
+                Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird
+                jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten
+                erfolgen auf eigene Gefahr des jeweiligen Nutzers.<br><br>
+
+                Urheberrechte<br>
+                Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser
+                Website, gehören ausschliesslich Natascha Alenka Meili oder den speziell genannten Rechteinhabern. Für
+                die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus
+                einzuholen.<br></a>
+
+
+        </div>
+
+    </div>
 </body>
+
 </html>

@@ -11,64 +11,109 @@
 
 <body>
     <ul class="menu">
-        <li> <a href="../index.html">Home</a> </li>
+        <li> <a href="../index.html">Zum Song</a> </li>
     </ul>
-    <h1>Tag 1</h1>
-    <ul>
-        <li> <a href="tag1/tag1-1.html">Übung 1</a>
-        </li>
-        <li> <a href="tag1/tag1-2.html">Erstes Layout «Dream On»</a>
-        </li>
-        <li> <a href="tag1/Dream-On.html">Zweites Layout «Dream On»</a>
-        </li>
-        <li> <a href="https://bit.ly/2SBDbIm">Figma Layout</a>
-        </li>
-    </ul>
-    <h1>Tag 2</h1>
-    <ul>
-        <li> <a href="tag2/tag2-1.html">Übung 1</a>
-        </li>
-        <li><a href="tag2/tag2-2.html">Übung 2</a>
-        </li>
-        <li><a href="tag2/position.html">Übung 3</a>
-        </li>
-        <li><a href="tag2/flex-direction.html">Übung 4</a>
-        </li>
-        <li><a href="tag2/justify-content.html">Übung 5</a>
-        </li>
-        <li> <a href="tag2/Bilderreihe.html">Bilderreihe</a>
-        </li>
-    </ul>
-    <h1>Tag 3</h1>
-    <ul>
-        <li> <a href="tag3/flex-basis.html">Übung 1</a>
-        </li>
-        <li> <a href="tag3/flex-grow.html">Übung 2</a>
-        </li>
-        <li> <a href="tag3/Dream-On-Aerosmith.html">Drittes Layout «Dream On»</a></li>
-    </ul>
-    <h1>Tag 4</h1>
-    <ul>
-        <li> <a href="tag4/01-translate.html">Übung 1</a></li>
-        <li> <a href="tag4/02-rotate.html">Übung 2</a></li>
-        <li> <a href="tag4/03-scale.html">Übung 3</a></li>
-        <li> <a href="tag4/04-skew.html">Übung 4</a></li>
-        <li> <a href="tag4/05-combine.html">Übung 5</a></li>
-        <li> <a href="tag4/05-transition.html">Übung 5.1</a></li>
-        <li> <a href="tag4/06-example.html">Übung 6</a></li>
-        <li> <a href="tag4/07-example.html">Übung 7</a></li>
-        <li> <a href="tag4/08-example.html">Übung 8</a></li>
-        <li> <a href="tag4/animation.html">Animation</a></li>
-        <li> <a href="tag4/test.html">Test</a></li>
-        <li> <a href="tag4/Dream-On-Aerosmith_D4.html">Viertes Layout «Dream On»</a></li>
-    </ul>
-    <h1>Tag 5</h1>
-    <ul>
-        <li> <a href="tag5/01-example.html">Übung 1</a></li>
-        <li> <a href="tag5/media-query-example.html">Übung 2</a></li>
-        <li> <a href="tag5/test-responsive.html">Übung 3</a></li>
-        <li> <a href="tag5/Dream-On-Aerosmith_D5.html">Fünftes Layout «Dream On»</a></li>
-    </ul>
+    <div class="rowTag">
+        <div>
+            <button type="button" class="slide" onclick="toggleMenu(this)">
+                <div>
+                    <h1>Tag 1</h1>
+                </div>
+            </button>
+            <ul class="menu spalte">
+                <li class=""> <a href="tag1/tag1-1.html">Erste Übung</a>
+                </li>
+                <li> <a href="tag1/tag1-2.html">Erstes Layout «Dream On»</a>
+                </li>
+                <li> <a href="tag1/Dream-On.html">Zweites Layout «Dream On»</a>
+                </li>
+                <li> <a href="https://bit.ly/2SBDbIm">Figma Layout</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <button type="button" class="slide" onclick="toggleMenu(this)">
+                <div>
+                    <h1>Tag 2</h1>
+                </div>
+            </button>
+            <ul class="menu spalte">
+                <li> <a href="tag2/tag2-1.html">Übung Box</a>
+                </li>
+                <li><a href="tag2/tag2-2.html">Motivation</a>
+                </li>
+                <li><a href="tag2/position.html">Position</a>
+                </li>
+                <li><a href="tag2/flex-direction.html">Flex Direction</a>
+                </li>
+                <li><a href="tag2/justify-content.html">Justify Content</a>
+                </li>
+                <li> <a href="tag2/Bilderreihe.html">Bilderreihe</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <button type="button" class="slide" onclick="toggleMenu(this)">
+                <div>
+                    <h1>Tag 3</h1>
+                </div>
+            </button>
+            <ul class="menu spalte">
+                <li> <a href="tag3/flex-basis.html">Flex Basis</a>
+                </li>
+                <li> <a href="tag3/flex-grow.html">Flex Grow</a>
+                </li>
+                <li> <a href="tag3/Dream-On-Aerosmith.html">Drittes Layout «Dream On»</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <button type="button" class="slide" onclick="toggleMenu(this)">
+                <div>
+                    <h1>Tag 4</h1>
+                </div>
+            </button>
+            <ul class="menu spalte">
+                <li> <a href="tag4/01-translate.html">Translate</a></li>
+                <li> <a href="tag4/02-rotate.html">Rotate</a></li>
+                <li> <a href="tag4/03-scale.html">Scale</a></li>
+                <li> <a href="tag4/04-skew.html">Skew</a></li>
+                <li> <a href="tag4/05-combine.html">Combine</a></li>
+                <li> <a href="tag4/05-transition.html">Transition</a></li>
+                <li> <a href="tag4/06-example.html">Beispiel 1</a></li>
+                <li> <a href="tag4/07-example.html">Beispiel 2</a></li>
+                <li> <a href="tag4/08-example.html">Beispiel 3</a></li>
+                <li> <a href="tag4/animation.html">Animation</a></li>
+                <li> <a href="tag4/test.html">Test</a></li>
+                <li> <a href="tag4/Dream-On-Aerosmith_D4.html">Viertes Layout «Dream On»</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <button type="button" class="slide" onclick="toggleMenu(this)">
+                <div>
+                    <h1>Tag 5</h1>
+                </div>
+            </button>
+            <ul class="menu spalte">
+                <li> <a href="tag5/01-example.html">Media Query 1</a></li>
+                <li> <a href="tag5/media-query-example.html">Media Query 2</a></li>
+                <li> <a href="tag5/test-responsive.html">Test Responsive</a></li>
+                <li> <a href="tag5/Dream-On-Aerosmith_D5.html">Fünftes Layout «Dream On»</a></li>
+            </ul>
+        </div>
+    </div>
+
 </body>
+<script>
+
+    function toggleMenu(event) {
+        // let menus = document.querySelectorAll('ul.menu.spalte');
+        let tagMenu = event.nextElementSibling;
+        tagMenu.classList.toggle('show');
+    }
+</script>
 
 </html>

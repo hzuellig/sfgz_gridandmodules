@@ -1,0 +1,19 @@
+.btn {
+    position: relative;
+
+    display: block;
+    padding: 10px;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+    background-color: rgba(10, 4, 12, 0.85);
+    color: #ecf0f1;
+
+    transition: background-color .3s;
+}
+

@@ -59,12 +59,14 @@ h2 {
 .sun {
     background: linear-gradient(180deg, #FFE032 0%, #E0A925 19%, #8A1500 68.22%, #420900 95.85%);
     border-radius: 50%;
+    top: 0;
+    left: 0;
     width: 50vh;
     height: 50vh;
     position: fixed;
     align-items: center;
     margin-left: 70em;
-    margin-top: -20rem;
+    
     
 }
 
@@ -307,9 +309,9 @@ ul li{
     filter: blur(0px);
 
 }
-ul:hover li
+ul.blow li
 {
-    animation: smoke 2s linear forwards;
+    animation: smoke 2s infinite linear;
 }
 
 @keyframes smoke
@@ -364,7 +366,7 @@ ul li:nth-child(5)
     background-image: url(../1.png);
     background-repeat: repeat-x;
     -webkit-background-clip: text;
-    animation: animate3 15s linear infinite
+    animation: animate3 15s linear infinite;
 
 }
 

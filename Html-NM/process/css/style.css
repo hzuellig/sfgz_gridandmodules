@@ -1,6 +1,6 @@
 body 
 {
-    background-color: rgb(231, 211, 203);
+    background-color: #F2C5C4);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -217,67 +217,72 @@ body
 {
     position: absolute;
 
-    font-family: Ribeye Marrow;
+    font-family: Shadows Into Light;
     font-style: normal;
     font-weight: normal;
     font-size: 144px;
-    line-height: 197px;
-    color: #FF00F5;
+    line-height: 231px;
+
+    color: #E38AA7;
 }
 
 .heart 
 {
     position: absolute;
 
-    font-family: Playball;
+    font-family: Shadows Into Light;
     font-style: normal;
     font-weight: normal;
     font-size: 144px;
-    line-height: 180px;
-    color: #FF0404;
+    line-height: 231px;
+
+    color: #F2C5C4;
 }
 
 .goin 
 {
     position: absolute;
 
-    font-family: Shojumaru;
+    font-family: Shadows Into Light;
     font-style: normal;
     font-weight: normal;
-    font-size: 89px;
-    line-height: 118px;
-    color: #19D22B;
+    font-size: 144px;
+    line-height: 231px;
+
+    color: #AEDCE3;
 }
 
 .see 
 {
     position: absolute;
 
-    font-family: Yatra One;
+    font-family: Shadows Into Light;
     font-style: normal;
     font-weight: normal;
     font-size: 144px;
-    line-height: 213px;
-    color: #08FBFB;
+    line-height: 231px;
+    
+    color: #E48AA6;
 }
 
 .river 
 {
     position: absolute;
     
-    font-family: Montserrat;
+    font-family: Shadows Into Light;
     font-style: normal;
     font-weight: normal;
-    font-size: 89px;
-    line-height: 108px;
-    color: #0038FF;
+    font-size: 144px;
+    line-height: 231px;
+    
+    color: #AEDDE3;
 }
 
 .rainbow
 {
-    font-family: sans-serif;
+    font-family: fantasy;
     font-size: 52px;
-    background: linear-gradient(to right, #FF0404, #19D22B, #08FBFB, #0038FF); 
+    background: linear-gradient(to right, #E38AA7, #AEDCE3, #F0EBDD, #F2C5C4); 
  
     position: absolute;
 
