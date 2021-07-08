@@ -660,7 +660,7 @@
             color: white;
             position: absolute;
             top: 3200px;
-            left: 1300px;
+            left: 1500px;
             animation:color-me-in 6s ease-in-out infinite ;
 
         }
@@ -670,7 +670,7 @@
             color: white;
             position: absolute;
             top: 3800px;
-            left: 1300px;
+            left: 1500px;
             animation:color-me-in 6s ease-in-out infinite ;
         }
 
