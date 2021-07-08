@@ -5,24 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+
+    <title>Test Audio</title>
+    <style>
+         :root {
+            /*************************** Page-wide variables ****************************/
+            --scalesize: 1;
+            /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 3vw;
+        }
+        
+        .head {
+            margin-top: 100px;
+            transform: scale(var(--scalesize));
+            width: 400px;
+            height: 400px;
+            transform-origin: bottom center;
+            border-radius: 50%;
+            /* CSS Variablen können auch für Farben im RGB Modus benutzt werden */
+            background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8);
+            box-shadow: 0px 0px 100px 10px rgb(100, calc(var(--scalesize) * 100), 100);
+        }
+        /* some fun with pseudo elements */
+        
+        .head:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: -30px;
+            top: -30px;
+            border-radius: 120px;
+            box-shadow: 0px 0px 100px 10px #ff4a46;
+        }
+        
+        .button {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        const minscale = 0.3; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+        const maxscale = 4; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+    </script>
 </head>
 
 <body>
-<ul class="nav">
-    <li>
-        <a href="about.html">About me</a>
-    </li>
-    <li>
-        <a href="process/index.html">Prozess</a>
-    </li>
+    <audio src="BigBillBroonzy-BabyPleaseDontGo1.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
 
-</ul>
+    <div class="head">
+    </div>
 
-
-<h1>(Hier kommt dann die  finale Version zum Song)</h1>
-
+    <a onclick="togglePlay()" class="button trigger">Dance</a>
 </body>
+<script src="audio.js"></script>
 
 </html>
