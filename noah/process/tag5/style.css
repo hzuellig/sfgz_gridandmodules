@@ -656,7 +656,7 @@
         }
 
         .tried {
-            font-size: 7vw;
+            font-size: 5vw;
             color: white;
             position: absolute;
             top: 4500px;
@@ -666,7 +666,7 @@
         }
 
         .but {
-            font-size: 7vw;
+            font-size: 5vw;
             color: white;
             position: absolute;
             top: 5100px;
