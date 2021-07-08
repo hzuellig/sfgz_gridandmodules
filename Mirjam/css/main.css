@@ -1,0 +1,363 @@
+
+/* NAVIGATION --------------------------------------------------------------------------------------------------------------------- */
+
+.nav{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-end;
+    border: 1px;
+}
+
+.titel{
+    margin:40px;
+    color: black;
+    font-family: "acumin-pro";
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+.listItem {
+    font-family: "acumin-pro";
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    background-color:#FFAF46 ;
+    border-radius: 60px;
+    margin-right: 40px;
+
+}
+
+.listItem a{
+    color: black;
+    text-decoration: none;
+}
+
+.listItem a:hover{
+    color:white;
+}
+
+
+.btn {
+    font-size: 1.1em;
+    padding: 10px;
+    font-family: "acumin-pro";
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    border-width: 0;
+    outline: none;
+    border-radius: 60px;
+    background-color:#FFAF46;
+    color:black;
+}
+
+.btn:hover{
+    color:white;
+}
+
+
+
+
+/* MENU --------------------------------------------------------------------------------------------------------------------- */
+
+h2{
+    font-family: "acumin-pro";
+    font-size: 1.8em;
+}
+
+a { font-family: "acumin-pro";
+    font-size: 1em;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+a:hover{
+    color: white;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu div {
+    padding: 10px;
+    font-weight: 700;
+    background-color: #FFAF46;
+    border: 3px solid white;
+}
+
+.navcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px;
+}
+
+.item{
+    width: 16%;
+}
+
+/* STRUKTUR --------------------------------------------------------------------------------------------------------------------- */
+
+section{    
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    }
+
+
+
+
+.container1{
+    margin-bottom: 60px;
+}
+    
+
+
+ /* SMALLTEXT  -------------------------------------------------------------------------------------------------------- */
+  
+ .smalltext{
+    font-family: "acumin-pro";
+    font-weight: bold;
+    color:  black;
+    line-height: 160%;
+    padding: 40px;
+  }
+   
+
+    .smalltext.right{
+    text-align: right;
+    }
+
+
+
+
+/* A SOUND A SOUND --------------------------------------------------------------------------------------------------------*/
+
+
+.background{
+    position: absolute;
+    z-index: -1;
+    left: 5vw;
+    top: 20vw;
+  }
+
+.backgroundright{
+    position: absolute;
+    z-index: -1;
+    right: 5vw;
+    top: 20vw;
+    }
+
+section.myclass .zeile{
+    animation-name: scale;
+    animation-duration: 3s;
+  }
+
+.uppercase1{
+    font-family: "acumin-pro-extra-condensed";
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 8vw;
+    line-height: 50%;
+    color: #F0F2F0;
+}
+
+.uppercase2{
+    font-family: "acumin-pro-extra-condensed";
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 14vw;
+    line-height: 50%;
+    color: #F0F2F0;
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* BOLDTEXT --------------------------------------------------------------------------------------------------------*/
+
+
+.boldtext.right{
+    text-align: right;
+    font-size: 9vw;
+    line-height: 100%;
+    font-family: "acumin-pro";
+    font-weight: bold;
+    align-self: flex-end;
+    }
+ 
+    
+.boldtext.left{
+    text-align: right;
+    font-size: 9vw;
+    line-height: 100%;
+    font-family: "acumin-pro";
+    font-weight: bold;
+    transform: rotate(-180deg);
+    }
+
+
+.highlight-green{
+   position: relative;
+ }
+
+ .highlight-green:after{
+   content: "";
+   display: inline-block;
+   position: absolute;
+   width: 0;
+   height: 90%;
+   z-index: -1; 
+   top:0;
+   bottom:0;
+   left: 0;
+   background: linear-gradient(to top, #8DA091 50%, transparent 50%);
+ }
+
+
+
+section.myclass .highlight-green:after{
+    animation-name: highlight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+.highlight-orange{
+    position: relative;
+  }
+  
+  .highlight-orange:after  {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    z-index: -1; 
+    top:0;
+    bottom:0;
+    left:0;
+    background: linear-gradient(to top, #FFAF46 50%, transparent 50%);
+  
+ 
+  }
+ 
+ section.myclass .highlight-orange:after{
+    animation-name: highlight;
+    animation-duration: 1s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+
+ }
+
+@keyframes highlight {
+0% {
+width: 0;
+opacity: 0;
+}
+
+100% {
+width: 100%;
+opacity: 1;
+}
+
+}
+
+
+/* RESPONSIVE --------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1090px){
+    /* RESPONSIVE NAVIGATION */
+    .nav{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
+
+    .titel{
+       margin-bottom: 40px;
+    }
+
+
+    .listItem {
+        font-family: "acumin-pro";
+        font-weight: bold;
+        padding: 10px 20px 10px 20px;
+        background-color:#FFAF46 ;
+        border-radius: 60px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    .background{
+        position: absolute;
+        z-index: -1;
+        left: 5vw;
+        top: 100vw;
+      }
+    
+    .backgroundright{
+        position: absolute;
+        z-index: -1;
+        right: 5vw;
+        top: 100vw;
+        }
+
+    .uppercase1{ 
+        font-size: 15vw;
+    }
+
+    .uppercase2{ 
+        font-size:20vw;
+    }
+
+
+    .boldtext.right{
+        font-size: 12vw;
+    }
+    .boldtext.left{
+        font-size: 12vw;
+        margin-bottom: 50px;
+    }
+}
+/* RESPONSIVE MENU */
+
+@media screen and (max-width: 1080px){
+
+    .navcontainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 40px;
+    }
+    
+    .item{
+        width: 85%;
+    }
+}
