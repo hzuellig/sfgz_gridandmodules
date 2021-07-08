@@ -659,7 +659,7 @@
             font-size: 5vw;
             color: white;
             position: absolute;
-            top: 4100px;
+            top: 3400px;
             left: 1000px;
             animation:color-me-in 6s ease-in-out infinite ;
 
@@ -669,7 +669,7 @@
             font-size: 5vw;
             color: white;
             position: absolute;
-            top: 4700px;
+            top: 4000px;
             left: 1000px;
             animation:color-me-in 6s ease-in-out infinite ;
         }
