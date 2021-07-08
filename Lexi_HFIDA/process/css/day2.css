@@ -1,0 +1,80 @@
+body {
+    background-color: bisque;
+    font-family: Montserrat;
+    display: inline-block;
+    
+
+}
+
+div {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    border-style: dotted;
+    border-color: blueviolet;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.box2 {
+    width: 400px;
+    height: 400px;
+    margin: 3em;
+    border-style: double;
+    border-color: chartreuse;
+
+
+}
+
+.box3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 250px;
+    border-radius: 3px 40px 80px 7px;
+    background-image: linear-gradient(cornflowerblue, rebeccapurple);
+    box-shadow: 5px 10px 10px lightcoral;
+
+}
+
+
+
+
+.box3:hover {
+    background-image: linear-gradient(lightpink, lightblue);
+    box-shadow: 5px 20px 20px purple, -5px -20px 20px greenyellow;
+    ;
+}
+
+li {
+    display: inline;
+}
+
+button {
+    color: hotpink;
+    border-style: dotted;
+
+}
+
+span {
+    display: block;
+    margin: auto 0;
+    height: 20px;
+}
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}

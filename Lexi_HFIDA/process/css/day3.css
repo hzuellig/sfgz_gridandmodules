@@ -1,0 +1,89 @@
+.box {
+    flex-direction: row;
+    display: flex;
+    height: 100vw;
+    border-top: aqua;
+
+}
+.left, .right{
+    flex-basis:50vw;
+}
+img{
+    width:100%;
+   
+   /* width: 850px;
+    height: 850px;
+    left: -130px;
+    top: 215px;*/
+}
+
+body {
+    position: relative;
+    width: 1440px;
+    height: 900px;
+
+    background: #B79363;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vw;
+
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.smoke{
+    height: 100vh;
+    width: 100vw;
+
+}
+
+
+.first{
+    height: 1.5vw;
+    overflow-y: hidden;
+}
+.second{
+    height: 2vw;
+    overflow-y: hidden;
+}
+.third{
+    height: 2.5vw;
+    overflow-y: hidden;
+}
+.fourth{
+    height: 3vw;
+    overflow-y: hidden;
+}
+.fifth{
+    height: 4vw;
+    overflow-y: hidden;
+}
+
+
+.sixth{
+    overflow-y: hidden;
+    height: 2vw;
+}
+
+.sixth p{
+    position: relative;
+    bottom: 2vw;
+}
+
+
+
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}

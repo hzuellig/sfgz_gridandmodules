@@ -1,0 +1,83 @@
+body {
+    background: #F2EADF;
+    margin-left: 40px;
+    font-family: 'Montserrat', Courier, monospace;
+    
+}
+
+
+p {
+    color: #260801;
+
+}
+
+a {
+    color: #260801;
+}
+
+
+.pb {
+    border-radius: 100%;
+    margin: 30px;
+
+}
+
+
+.rainbow-text {
+    animation-duration: 3.115s;
+}
+
+.rainbow-text {
+    background: linear-gradient(53.13deg, #FFD33D 0, #FB8532 16.02%, #EA4A5A 28.06%, #8A63D2 56.92%, #2188FF 72.93%, #34D058 84%, #FFD33D 100%);
+    background-size: auto;
+    background-clip: border-box;
+    background-clip: text;
+    display: inline-block;
+    color: transparent;
+    text-emphasis-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 6.28s alternate infinite;
+    animation-duration: 6.28s;
+    background-size: 300%;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% center
+    }
+
+    62.8% {
+        background-position: 100% center
+    }
+
+    100% {
+        background-position: 200% center
+    }
+}
+
+p.tx-regenb {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.wrap{
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: dotted;
+    border-color: #260801;
+    padding: 20px;
+}
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em;
+    display: inline-block;
+    color: #260801;
+    text-decoration: none;
+}
+
+

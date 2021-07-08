@@ -1,0 +1,58 @@
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}
+.box {
+    color: lightslategrey;
+}
+
+.box1 {
+    width: 4em;
+    color: lightslategrey;
+    transform: scale(5, 1);
+    transform-origin: top left;
+}
+
+.box2 {
+
+    width: 4em;
+    color: lightslategrey;
+}
+
+.box3 {
+
+    width: 4em;
+    color: lightslategrey;
+}
+
+.box4 {
+    width: 4em;
+    color: lightslategrey;
+    transform: scale(0.5, 1);
+    transform-origin: top left;
+}
+
+.box5 {
+
+    width: 4em;
+    color: lightslategrey;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.flex{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
