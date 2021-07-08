@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+
+    <title>Example -- Absolute Position and Transform</title>
+
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            height:100vh;
+          }
+        .zeile{
+            position:absolute;
+            top:10px;
+            left:10px;
+            font-size:4rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .second{
+            transform:translateY(20px);
+        }
+        .third{
+            transform:translateY(40px);
+        }
+        .forth{
+            transform:translateY(60px);
+        }
+        .fifth{
+            transform:translateY(80px);
+        }
+    </style>
+</head>
+<body>
+<div class="transforms">
+    <div class="zeile first">MOVE MOVE MOVE </div>
+    <div class="zeile second">MOVE MOVE MOVE </div>
+    <div class="zeile third">MOVE MOVE MOVE </div>
+    <div class="zeile forth">MOVE MOVE MOVE </div>
+    <div class="zeile fifth">MOVE MOVE MOVE </div>
+</div>
+
+</body>
+</html>
