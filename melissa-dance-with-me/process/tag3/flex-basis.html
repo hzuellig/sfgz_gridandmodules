@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://hzuellig.github.io/sfgz_gridandmodules/00_exercise-files/tag-3/flex-basis.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>flex-basis</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="./flex-basis_files/css2" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .box div {
+            font-weight: 700;
+            border: 1px dotted red;
+            padding: 6px;
+            flex-basis: 20px;
+            line-height: 120%;
+            /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
+            writing-mode: vertical-rl;
+        }
+        
+        .exp {
+            margin: 10px;
+            border: 1px dotted blue;
+            width: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="exp">
+        flex-direction:row; flex-basis: 20px;
+        <div class="box mainrow">
+            <div>Dream On</div>
+            <div>Dream On</div>
+            <div>Dream On</div>
+            <div>Dream On</div>
+            <div>Dream On</div>
+            <div>Dream On</div>
+        </div>
+
+
+    </div>
+
+
+
+</body></html>
