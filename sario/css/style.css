@@ -1,3 +1,4 @@
+/*-- Basics --*/
 body {
   font-family: soleil, sans-serif;
   background: linear-gradient(
@@ -6,9 +7,8 @@ body {
     rgba(232, 221, 167, 1) 35%,
     rgba(133, 71, 90, 1) 100%
   );
-  height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: white;
   font-size: 2rem;
   font-weight: 200;
@@ -16,8 +16,19 @@ body {
   overflow-x: hidden;
 }
 
-/*-- TYPO --*/
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 30px 30px 30px 30px;
+  align-items: center;
+  z-index: 10;
+}
 
+/*-- TYPO --*/
 h1 {
   font-size: 19vw;
   font-weight: 600;
@@ -60,25 +71,16 @@ a {
 
 /*-- Header --*/
 .burger {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  width: 60px;
+  width: 50px;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
 
 .burger:hover {
-  transform: scale(1.05) rotate(62deg);
+  transform: scale(1.1) rotate(62deg);
   transform-origin: center;
   cursor: pointer;
-}
-
-.play-btn {
-  position: fixed;
-  top: 20px;
-  left: 30px;
 }
 
 .fa-play {
@@ -89,32 +91,32 @@ a {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/*-- Containers --*/
-.intro {
-  display: flex;
+/*-- Align/Transform --*/
+.tx-center {
+  text-align: center;
 }
 
-.cont1 {
-  margin-top: 130px;
-  width: calc(50vw - 40px);
+.center {
+  margin: auto;
+  width: 80%;
 }
 
-.sun{
-  position: absolute;
-  top: 25vh;
-  left: 10vh;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, rgba(255,214,0,0.7) 0%, rgba(248,107,47,0.4) 100%);
-  border-radius: 50%;
-  z-index: -10;
-  box-shadow: 0px 0px 200px #DBA632;
+.side-margin {
+  margin: 0px 40px 40px 40px;
 }
 
-.cont2 {
-  margin-top: 130px;
-  width: calc(50vw - 40px);
-  margin-left: calc(50vw - 40px);
+.spacing {
+  margin: 10vh 0px 10vh 0px;
+}
+
+.rot15 {
+  transform: rotate(-12.5deg);
+  transform-origin: center left;
+}
+
+.rot-15 {
+  transform: rotate(12.5deg);
+  transform-origin: center left;
 }
 
 .rot90 {
@@ -122,87 +124,258 @@ a {
   transform-origin: top left;
 }
 
+/*-- Containers --*/
+/* Intro */
+.sun {
+  position: absolute;
+  top: -10vh;
+  right: -10vh;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 0, 0.7) 0%,
+    rgba(248, 107, 47, 0.4) 100%
+  );
+  border-radius: 50%;
+  z-index: -10;
+  box-shadow: 0px 0px 200px #dba632;
+}
+
+.ball {
+  position: absolute;
+  top: -10vh;
+  left: -10vh;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(
+    circle,
+    rgba(244, 43, 103, 0.7) 0%,
+    rgba(244, 22, 218, 0.666) 100%
+  );
+  border-radius: 50%;
+  z-index: -12;
+  box-shadow: 0px 0px 20px #ee39bb;
+}
+
+.intro-txt {
+  transform: rotate(75deg) translate(-3vw, 21vw);
+  transform-origin: right bottom;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cont1 {
+  margin-top: 5vw;
+  margin-left: -0.7vw;
+  transform-origin: left top;
+}
+
+.cont2 {
+  margin-top: 25vw;
+  margin-left: 1.7vw;
+  transform-origin: left top;
+}
+
+/*-- Lyrics --*/
+.wrapper {
+  padding: 0px 3vw 10vw 3vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  row-gap: 5vh;
+}
+
+.wrapper * {
+  min-width: 0;
+  display: grid;
+  align-self: center;
+}
+
+/* Math */
 .cont3 {
-  margin: 60vh 0 60vh 0;
-  justify-content: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
-.cont3 h1 {
-  transform: scale(1.1);
-}
-
-.divison {
-  justify-content: center;
-}
-
+/* Division */
 .cont4 {
-  position: relative;
-  width: 100%;
-  margin: 60vh 40px 60vh 40px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
-.cont4-wrptxt {
-  position: absolute;
-  top: 40vh;
-  left: 0;
-  width: 100%;
-}
-
-/*
-.cont4-txt1{
-  position: absolute;
-  top: 40vh;
-  left: 0;
-  width: 100%;
-}
-
-.cont4-txt2{
-  position: absolute;
-  top: 70vh;
-  left: 0;
-  width: 100%;
-}
---*/
-
+/* Countdown */
 .cont5 {
-  margin: 60vh 0 60vh 0;
-  justify-content: center;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.countd {
+  width: 150%;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  align-self: start !important;
+  transform: rotate(-12.5deg);
+}
+
+/* Prism */
+.cont6 {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
 }
 
 .prism {
-  background: linear-gradient(110deg, rgba(252,74,74,1) 0%, rgba(244,238,91,1) 25%, rgba(112,244,91,1) 50%, rgba(91,171,244,1) 75%, rgba(204,91,244,1) 100%);
+  background: linear-gradient(
+    110deg,
+    rgba(252, 74, 74, 1) 0%,
+    rgba(244, 238, 91, 1) 25%,
+    rgba(112, 244, 91, 1) 50%,
+    rgba(91, 171, 244, 1) 75%,
+    rgba(204, 91, 244, 1) 100%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.cont6 {
-  margin: 60vh 0 60vh 0;
-  justify-content: center;
+/* Magician */
+.cont7 {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
 }
 
-.cont7 {
-  margin: 60vh 0 60vh 0;
-  justify-content: center;
+/* Aim */
+.cont8 {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+
+/*-- Footer --*/
+.forest {
+  width: 100vw;
+  height: auto;
+  transform: translateY(20px);
+}
+
+.black {
+  background-color: black;
+  padding: 50px 30px 50px 30px;
 }
 
 /*-- Animations --*/
-
 .sun {
-  animation: wander 30s ease-in-out 100ms;
+  animation: wander 15s ease-in-out 0ms;
   animation-iteration-count: infinite;
 }
-@keyframes wander { 
+
+@keyframes wander {
   0% {
     transform: translate(0px, 0px);
   }
-  50% {
-    transform: translate(35vw, -35vh);
+  40% {
+    transform: translate(-55vw, 43vh);
+  }
+  60% {
+    transform: translate(-55vw, 43vh);
   }
   100% {
     transform: translate(0px, 0px);
   }
 }
 
+.ball {
+  animation: wander2 8s linear 2s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes wander2 {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: .3;
+  }
+  6% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*--  --*/
+.intro-txt {
+  animation: flicker 2s ease-in-out 0s;
+  animation-iteration-count: infinite;
+  opacity: 0.1;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.cont1 {
+  animation: comin 2s ease-in-out 0s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.cont2 {
+  animation: comin 2s ease-in-out 0s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+@keyframes comin {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--  --*/
+.math-txt {
+  animation: explode 1s infinite;
+  opacity: 1;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1, 1);
+  }
+  80% {
+    transform: scale(10, 10);
+    opacity: 0;
+  }
+  90% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--  --*/
 .divi1 {
   animation: divison1 1s ease-in-out 200ms;
   animation-iteration-count: infinite;
@@ -236,13 +409,9 @@ a {
     transform: translate(0px, 0px);
   }
 }
-
+/*--  --*/
 .countd {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  animation: countdrot 1s ease-in-out 200ms;
+  animation: countdrot 2s ease-in-out 200ms;
   animation-iteration-count: infinite;
 }
 
@@ -257,42 +426,115 @@ a {
     transform: rotate(360deg);
   }
 }
-
+/*--  --*/
 .prism {
-  background: linear-gradient(140deg, rgba(252,74,74,1) 0%, rgba(244,238,91,1) 20%, rgba(112,244,91,1) 40%, rgba(91,171,244,1) 60%, rgba(204,91,244,1) 80%, rgba(252,74,74,1) 100%);
-  background-size: 200% auto;
+  background: linear-gradient(
+    to right,
+    rgba(252, 74, 74, 1),
+    rgba(244, 238, 91, 1),
+    rgba(112, 244, 91, 1),
+    rgba(91, 171, 244, 1),
+    rgba(204, 91, 244, 1),
+    rgba(252, 74, 74, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400% 100%;
+
+   /* 
+  background: linear-gradient(
+    20deg,
+    rgba(252, 74, 74, 1) 0%,
+    rgba(244, 238, 91, 1) 20%,
+    rgba(112, 244, 91, 1) 40%,
+    rgba(91, 171, 244, 1) 60%,
+    rgba(204, 91, 244, 1) 80%,
+    rgba(252, 74, 74, 1) 100%
+  );
+  
+ background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 5s linear infinite;
-  opacity: 0.8
+  */
+  animation: shine 8s ease-in-out infinite;
+  opacity: 0.8;
 }
-  
+
 @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
-  }
+  0%,100% {
+    background-position: 0 0;
+}
 
-  .hide {
-    animation: hide 2s linear infinite;
-    opacity: 0.8
-  }
+50% {
+    background-position: 100% 0;
+}
 
-  @keyframes hide {
-    0% {
-        opacity: 0.1;
-    }
-    30% {
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.1;
-    }
+  /* to {
+    background-position: 200% center;
+  } */
+}
+
+/*--  --*/
+.hide {
+  animation: hide 2s linear infinite;
+  opacity: 1;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
   }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--  --*/
+.prec-txt {
+  animation: rot-prec 2s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes rot-prec {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(-12.5deg);
+  }
+  50% {
+    transform: rotate(-12.5deg);
+  }
+  80% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
 /*-- Menu --*/
 
@@ -327,7 +569,7 @@ ul li:hover {
   height: 100%;
   width: 0%;
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   left: 0;
   top: 0;
   background-color: rgb(0, 0, 0); /* Black fallback color */
@@ -397,11 +639,12 @@ ul li:hover {
   font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+/* Media Queries */
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
   }
+
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
@@ -413,22 +656,4 @@ ul li:hover {
     font-size: 20px;
     display: flex;
   }
-}
-
-/*-- Align/Transform --*/
-.flexxi {
-  display: flex;
-}
-
-.tx-center {
-  text-align: center;
-}
-
-.center {
-  margin: auto;
-  width: 80%;
-}
-
-.side-margin {
-  margin: 0px 40px 40px 40px;
 }
