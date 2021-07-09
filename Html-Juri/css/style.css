@@ -1,0 +1,16 @@
+.container {
+    background-color: khaki;
+    width:  100%;
+    height: 200px;
+    display: flex;
+
+}
+
+.item {
+
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+
+}
