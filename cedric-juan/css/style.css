@@ -1740,7 +1740,7 @@ body.very-light-mode #very-light-switcher {
 .footer > .footer-container > .footer-inner > .footer-bottom .footer-section-content b {font-weight: 500;color: #ffffff;}
 
 
-@media(max-height:730px){
+@media(max-height:940px){
     .page > .page-item:nth-child(3)::before {bottom: calc(45% - 5.5px);}
     .footer .footer-section-title {
         height: 16px;
