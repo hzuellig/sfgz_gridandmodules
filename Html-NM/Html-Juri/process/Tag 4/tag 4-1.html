@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag 4</title>
+
+    <style>
+        body {
+            display: flex;
+
+        }
+
+        .box {
+            transition: all 1s ease-in-out;
+            background-color: rgb(0, 0, 0);
+            height: 200px;
+            width: 200px;
+            border-radius: 20%;
+            box-shadow: 10px 5px 5px rgb(83, 83, 83);
+            transform: scale(0.9);
+            margin: 2em;
+        }
+
+        .second:hover {
+            transform: scale(1.2);
+        }
+
+        .third:hover {
+            transform: scale(1.2);
+            transition-delay: 0.5s;
+        }
+
+        .fourth:hover {
+            transform: scale(1.2) rotate(3deg);
+            transition-delay: 0.2s;
+        }
+
+        .fifth:hover {
+            transform: scale(0.4) rotate(10deg);
+            transition-delay: 0.6s;
+        }
+
+        .test {
+            background-color: darkblue;
+            height: 200px;
+            width: 100px;
+            box-shadow: rgb(155, 155, 155) 10px 10px 10px;
+            transform: rotate(0deg);
+            margin-left: 2em;
+        }
+
+
+        .trigger {
+            border: 1px blue;
+        }
+
+       
+        .trigger:hover .second {
+            transform: rotate(10deg);
+            transition-delay: 0.5s;
+            border-radius: 50%;
+            background-color: darkgreen;
+        }
+
+        .trigger:hover .third {
+            transform: rotate(15deg);
+            transition-delay: 1s;
+            border-radius: 50%;
+            background-color: darkgreen;
+        }
+
+        .trigger:hover .fourth {
+            transform: rotate(20deg);
+            transition-delay: 1.5s;
+            border-radius: 50%;
+            background-color: darkgreen;
+        }
+
+        .trigger:hover .fifth {
+            transform: rotate(25deg);
+            transition-delay: 2s;
+            border-radius: 50%;
+            background-color: darkgreen;
+        }
+
+        .trigger:hover .box {
+            transform: rotate(30deg);
+            transition-delay: 2.5s;
+            border-radius: 50%;
+            background-color: darkgreen;
+        }
+
+
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <div class="trigger">
+        <div class="box second"></div>
+        <div class="box third"></div>
+        <div class="box fourth"></div>
+        <div class="box fifth"></div>
+        <div class="box"></div>
+
+    </div>
+
+
+
+</body>
+
+</html>
