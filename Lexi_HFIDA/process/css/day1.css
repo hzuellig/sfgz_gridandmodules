@@ -2,7 +2,7 @@ body {
     background: #F2EADF;
     margin-left: 40px;
     font-family: 'Montserrat', Courier, monospace;
-    text-align: center;
+    
 }
 
 
@@ -62,7 +62,7 @@ p.tx-regenb {
 }
 
 div.wrap{
-    text-align: left;
+    text-align: center;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -70,4 +70,14 @@ div.wrap{
     border-color: #260801;
     padding: 20px;
 }
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em;
+    display: inline-block;
+    color: #260801;
+    text-decoration: none;
+}
+
 

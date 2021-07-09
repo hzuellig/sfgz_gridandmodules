@@ -1,6 +1,14 @@
 body {
     background-color: bisque;
+    font-family: Montserrat;
+    display: inline-block;
+    
 
+}
+
+div {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .box1 {
@@ -36,12 +44,7 @@ body {
 }
 
 
-body {
-    font-family: Montserrat;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-}
+
 
 .box3:hover {
     background-image: linear-gradient(lightpink, lightblue);
@@ -65,3 +68,13 @@ span {
     height: 20px;
 }
 
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}

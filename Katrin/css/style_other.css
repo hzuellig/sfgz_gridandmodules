@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    font-family: staatliches;
+}
+
+body {
+    padding: 0;
+    margin : 0;
+}
+
+h1 {
+    color        : rgb(0, 0, 0);
+    font-size    : 3rem;
+    padding-left : 40px;
+    margin-top   : 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    color        : rgb(0, 0, 0);
+    font-family  : open sans;
+    font-size    : 1.5rem;
+    padding-left : 40px;
+    margin-top   : 40px;
+    margin-bottom: 10px;
+}
+
+.p2 {
+    color       : rgb(0, 0, 0);
+    font-family : open sans;
+    font-size   : 1rem;
+    padding-left: 40px;
+
+}
+
+
+.box {
+    display       : flex;
+    padding-left  : 40px;
+    padding-right : 40px;
+    margin-top    : 40px;
+    margin-bottom : 10px;
+    flex-direction: row;
+}
+
+
+.container {
+    display    : flex;
+    width      : auto;
+    align-items: flex-end;
+}
+
+.bild {
+    width         : 100%;
+    height        : auto;
+    -webkit-filter: grayscale(1);
+    filter        : grayscale(1);
+}
+
+.bild:hover {
+    -webkit-filter     : none;
+    filter             : none;
+    transition-duration: 2s;
+
+}
+
+
+
+
+/*_NAVIGATION________________________________________________________________*/
+
+
+.nav {
+    display         : flex;
+    justify-content : space-between;
+    background-color: rgb(0, 0, 0);
+    text-align      : left;
+    padding         : 10px 10px 10px 40px;
+    /*width         : 100%;
+    position        : sticky;*/
+}
+
+.nav li {
+    flex-basis     : auto;
+    flex-grow      : 1;
+    list-style-type: none;
+    font-size      : 1.5rem;
+}
+
+.nav li a {
+    color          : rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    text-decoration-line: overline;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .nav {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .nav li a {
+        color    : rgb(255, 255, 255);
+        font-size: 1.5rem;
+
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 1300px) {
+
+    .nav li {
+        font-size: 2rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*__ABSTÄNDE_________________________________________________________*/
+
+
+.abstand_gross {
+    height  : 50vh;
+    /*border: dotted 3px rgb(65, 65, 65);*/
+}
+
+.abstand_klein {
+    height  : 20vh;
+    /*border: dotted 3px rgb(170, 96, 96);*/
+}
+
+@media screen and (max-width: 768px) {
+
+    .abstand_gross {
+        height  : 30vh;
+        /*border: dotted 3px rgb(65, 65, 65);*/
+    }
+
+    .abstand_klein {
+        height  : 10vh;
+        /*border: dotted 3px rgb(170, 96, 96);*/
+    }
+}
+
+
+
+
+
+
+
+
+
+/*_LINKS IN INDEX PROCESS_____________________________________________________*/
+
+.links {
+    padding-left  : 40px;
+    display       : flex;
+    flex-direction: row;
+}
+
+.links li {
+    list-style-type: none;
+}
+
+.links li a {
+    color          : rgb(0, 0, 0);
+    text-decoration: none;
+    font-size      : 1.2rem;
+    font-family    : open sans;
+    padding-right  : 20px;
+
+
+}
+
+.links li a:hover {
+    text-decoration: underline;
+
+}
+
+
+
+
+/*_Meida Query____________________________________________________________________*/
+
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        color        : rgb(255, 255, 255);
+        font-size    : 2rem;
+        padding-left : 40px;
+        margin-top   : 40px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color        : rgb(255, 255, 255);
+        font-family  : open sans;
+        font-size    : 1.5rem;
+        padding-left : 40px;
+        margin-top   : 40px;
+        margin-bottom: 10px;
+    }
+
+    .p2 {
+        color       : rgb(255, 255, 255);
+        font-family : open sans;
+        font-size   : 1rem;
+        padding-left: 0;
+        padding-top : 20px;
+
+    }
+
+    .box {
+
+        flex-direction: column;
+    }
+
+    .bild {
+        scale: 0.8;
+    }
+
+
+
+    .nav {
+        display         : flex;
+        justify-content : space-between;
+        background-color: rgb(255, 255, 255);
+        text-align      : left;
+        padding         : 10px 10px 10px 40px;
+    }
+
+    .nav li a {
+        color: rgb(0, 0, 0);
+
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .links li a {
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+}

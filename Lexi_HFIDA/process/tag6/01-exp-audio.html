@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example Embed Audio</title>
+    <link rel="stylesheet" href="../css/btn.css">
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        
+        .btns {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em 0.5em 6em 0.5em;
+    text-align: left !important;
+}
+.btn {
+    height: 2em;
+    width: 10em;
+    font-size: large;
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3rem;
+}
+    </style>
+</head>
+
+<body>
+    <a href="../../about.html" class="btns">zurück</a> <br/>
+    <!-- Schaue das Beispiel hier an https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio -->
+    <button class="btn" onclick="playAudio()"> Play Audio</button>
+    <audio src="sounds/mixkit-melodical-flute-music-notification-2310.wav" />
+
+</body>
+<div>
+    <script src="javascript/js/play.js">
+    </script>
+</div>
+
+</html>

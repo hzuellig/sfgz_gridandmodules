@@ -656,21 +656,21 @@
         }
 
         .tried {
-            font-size: 5vw;
+            font-size: 7vw;
             color: white;
             position: absolute;
-            top: 3400px;
-            left: 1100px;
+            top: 4500px;
+            left: 1400px;
             animation:color-me-in 6s ease-in-out infinite ;
 
         }
 
         .but {
-            font-size: 5vw;
+            font-size: 7vw;
             color: white;
             position: absolute;
-            top: 4000px;
-            left: 1100px;
+            top: 5100px;
+            left: 1400px;
             animation:color-me-in 6s ease-in-out infinite ;
         }
 

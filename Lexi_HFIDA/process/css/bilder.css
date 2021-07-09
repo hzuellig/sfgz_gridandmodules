@@ -58,3 +58,13 @@ h1{
     margin-left:35px;
     font-weight: 500;
 }
+.btn {
+    border-radius: 2px;
+    border: 1px solid white;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: white;
+    text-decoration: none;
+    margin: 0.5em;
+}
+

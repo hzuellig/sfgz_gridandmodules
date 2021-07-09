@@ -65,11 +65,11 @@
 
 h2{
     font-family: "acumin-pro";
-    font-size: 1.2em;
+    font-size: 1.8em;
 }
 
 a { font-family: "acumin-pro";
-    font-size: 18px;
+    font-size: 1em;
     text-decoration: none;
     list-style-type: none;
     color: black;
@@ -84,7 +84,7 @@ a:hover{
     justify-content: center;
 }
 .menu div {
-    padding: 20px;
+    padding: 10px;
     font-weight: 700;
     background-color: #FFAF46;
     border: 3px solid white;
@@ -99,7 +99,7 @@ a:hover{
 }
 
 .item{
-    width: 31%;
+    width: 16%;
 }
 
 /* STRUKTUR --------------------------------------------------------------------------------------------------------------------- */
@@ -230,16 +230,15 @@ section.myclass .zeile{
    bottom:0;
    left: 0;
    background: linear-gradient(to top, #8DA091 50%, transparent 50%);
-   animation-name: highlight;
-   animation-duration: 1s;
-   animation-fill-mode: forwards;
-   animation-play-state: paused;
  }
 
 
 
 section.myclass .highlight-green:after{
-    animation-play-state: running;
+    animation-name: highlight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 
@@ -258,15 +257,15 @@ section.myclass .highlight-green:after{
     bottom:0;
     left:0;
     background: linear-gradient(to top, #FFAF46 50%, transparent 50%);
+  
+ 
+  }
+ 
+ section.myclass .highlight-orange:after{
     animation-name: highlight;
     animation-duration: 1s;
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
-    animation-play-state: paused; 
-  }
- 
- section.myclass .highlight-orange:after{
-     animation-play-state: running;
 
  }
 
@@ -288,8 +287,6 @@ opacity: 1;
 
 @media screen and (max-width: 1090px){
     /* RESPONSIVE NAVIGATION */
-
-
     .nav{
         position: relative;
         top: 0px;
@@ -348,8 +345,10 @@ opacity: 1;
         font-size: 12vw;
         margin-bottom: 50px;
     }
-
+}
 /* RESPONSIVE MENU */
+
+@media screen and (max-width: 1080px){
 
     .navcontainer{
         display: flex;
@@ -359,6 +358,6 @@ opacity: 1;
     }
     
     .item{
-        width: 80%;
+        width: 85%;
     }
 }

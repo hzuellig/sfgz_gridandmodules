@@ -5,6 +5,16 @@ body {
     
 }
 
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}
 .trigger {
     margin: 2em;
     top: 10px;
@@ -63,7 +73,7 @@ body {
     z-index: 6;
 }
 
-@media screen and (max-width: 700px) {
+ @media screen and (max-width: 700px) {
     body{
         background-color: lime;
     }

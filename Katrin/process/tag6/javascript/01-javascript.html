@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/btn.css" />
+
+    <title>JavaScript Intro</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            flex: 0 0 100%;
+            text-align: center;
+        }
+
+        body.night {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" onclick="toggleFarbe()">Toggle Day/Night</button>
+    <h1>bonjour - good night</h1>
+</body>
+
+<script>
+    function toggleFarbe() {
+        //https://developer.mozilla.org/de/docs/Web/API/Document/querySelector
+
+        let el = document.querySelector('body');
+        el.classList.toggle('night');
+
+
+        //https://www.w3schools.com/howto/howto_js_toggle_class.asp
+    }
+</script>
+
+</html>

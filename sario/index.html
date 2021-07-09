@@ -16,14 +16,17 @@
 
 <body>
 
+<div class="header">
+    
     <!-- Play Button -->
     <div class="play-btn">
         <a id="play-pause-button" class="fa fa-play"></a>
-        <audio id="player" src="Kunzite-Minerals-96.mp3"></audio>
+        <audio autoplay id="player" src="Kunzite-Minerals-96.mp3"></audio>
     </div>
 
     <!-- Burger -->
     <img src="img/menu.png" class="burger" onclick="openNav()">
+</div>
 
     <!-- Menu Overlay -->
     <div id="myNav" class="overlay">
@@ -40,7 +43,7 @@
             <div class="overlay-grid">
                 <div class="overlay-content">
                     <p class="menu-header">Tag 1</p>
-                    <a href="/process/tag1/tag1-1.html">Übung</a>
+                    <a href="process/tag1/tag1-1.html">Übung</a>
                 </div>
                 <div class="overlay-content">
                     <p class="menu-header">Tag 2</p>
@@ -62,68 +65,97 @@
                 </div>
             </div>
         </div>
+
         <!-- Footer-TXT -->
-            <div class="overlay-content">
-                <p class="tx-footer">Song by Kunzite</p>
-                <p class="tx-footer">Design & Code by Sario Haladjian</p>
-            </div>
+        <div class="overlay-content">
+            <p class="tx-footer">Song by Kunzite</p>
+            <p class="tx-footer">Design & Code by Sario Haladjian</p>
+        </div>
 
     </div>
 
-    <div class="intro side-margin">
-        <div class="cont1">
+    <!-- Intro -->
+    <div class="sun"></div>
+    <div class="ball"></div>
+    <div class="ball2"></div>
+
+    <div class="intro">
+        <div class="cont1 rot15">
             <h3>LOVE IT HOW THE</h3>
             <h2>SOUND IS INVISIBLE?</h2>
         </div>
-        <div class="cont2 rot90">
+
+        <div class="cont2 rot15">
             <h3>FEEL IT IN THE</h3>
-            <h2>BONE AND THE MINERAL?</h2>
+            <h2>BONE</br>AND THE MINERAL?</h2>
         </div>
-        <div class="sun"></div>
-    </div>
-
-    <div class="cont3 tx-center">
-        <h2 class="">BAD MATH</h2>
-    </div>
-
-    <div class="cont3 tx-center">
-        <h3>ENOUGH OF THE</h3>
-        <div class="flexxi divison">
-            <h2 class="divi1">DIVI</h2>
-            <h2 class="divi2">SION</h2>
+        <div class="intro-txt">
+            <h2>DON'T</br>YOU</h2>
         </div>
     </div>
 
-    <div class="cont4 tx-center">
+    <!-- Lyrics -->
+    <div class="wrapper">
+
+        <!-- Math -->
+        <div class="cont3 rot15">
+            <h2 class="math-txt">BAD MATH</h2>
+        </div>
+
+        <!-- Division -->
+        <div class="cont4 rot-15">
+            <h3>ENOUGH OF THE</h3>
+            <div class="divison">
+                <h2 class="divi1">DIVI-</h2>
+                <h2 class="divi2">SION</h2>
+            </div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="cont5 rot15">
+
+            <div class="cont4-wrptxt">
+                
+                <h2>COUNTDOWN </br>FOR THE</h2>
+                <h3>HUMAN I WAS GIVEN</h3>
+            </div>
+        </div>
+
         <img class="countd" src="img/countd.png">
 
-        <div class="cont4-wrptxt">
-            <h2 class="cont4-txt1">COUNTDOWN </br>FOR THE</h2>
-            <h3 class="cont4-txt2">HUMAN I WAS GIVEN</h3>
+        <!-- Prism -->
+        <div class="cont6 rot-15">
+            <h3>STILL A LITTLE LIGHT</h3>
+            <h2 class="prism">SHINING THROUGH </br>A PRISM</h2>
+        </div>
+
+        <!-- Magician -->
+        <div class="cont7 rot15">
+            <h3>STILL A LITTLE TIME</h3>
+            <h2 class="hide">WE CAN DISAPPEAR, MAGICIAN</h2>
+        </div>
+
+        <!-- Aim -->
+        <div class="cont8 rot-15">
+            <h3>JUST GOTTA MAKE</h3>
+            <h2>AIM WITH</h2>
+            <h2 class="prec-txt">PRECISION</h2>
         </div>
     </div>
 
-    <div class="cont5 tx-center">
-        <h3>STILL A LITTLE LIGHT</h3>
-        <h2 class="prism">SHINING THROUGH </br>A PRISM</h2>
+    <div class="footer">
+        <img class="forest" src="img/tannenwald.png">
+    </div>
+    <div class="black">
+        <p>Minerals – Kunzite</p>
+        <p>Design & Code – Sario Haladjian</p>
     </div>
 
-    <div class="cont6 tx-center">
-        <h3>STILL A LITTLE TIME</h3>
-        <h2 class="hide">WE CAN DISAPPEAR, MAGICIAN</h2>
-    </div>
-
-    <div class="cont7 tx-center">
-        <h3>JUST GOTTA MAKE</h3>
-        <h2>AIM WITH </br>PRECISION</h2>
-    </div>
-
+    <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://codepen.io/shshaw/pen/epmrgO"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 </body>
-
-
 
 </html>
