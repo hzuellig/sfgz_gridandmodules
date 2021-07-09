@@ -11,8 +11,7 @@ body{
     font-weight: bold;
     text-align: center;
     z-index: 1000;
-   
-  
+ 
   }
 
 section.sec1{
@@ -143,7 +142,7 @@ h1 {
     margin-left: 0em;
     border: 2px black;
     margin-left: 2em;
-    z-index: 10;
+    z-index: 10001;
 
 
 }
@@ -157,7 +156,7 @@ h2 {
     margin-left: 3em;
     align-content: center;
     border: 2px black;
-    z-index: 10;
+    z-index: 1000;
 
 
 }
@@ -194,7 +193,7 @@ h2 {
     position: fixed;
     align-items: center;
     margin-left: 72vw;
-    z-index: 1;
+    z-index: -2;
     
     
 }
@@ -239,7 +238,7 @@ h2 {
 
 .sun {
     animation-name: sun;
-    animation-duration: 180s;
+    animation-duration: 150s;
     animation-iteration-count: infinite;
     z-index: 1;
 }
@@ -247,11 +246,11 @@ h2 {
 @keyframes sun {
 
     0%{
-        transform: translateY(39vw);
+        transform: translateY(52vw);
     }
 
     100%{
-        transform: translateY(-50vw);
+        transform: translateY(-27vw);
     }
 
 }
@@ -310,6 +309,7 @@ ul{
     margin: 0;
     padding: 0;
     display: flex;
+    
 }
 
 ul li{
@@ -380,6 +380,7 @@ ul li:nth-child(5)
     background-image: url(../1.png);
     background-repeat: repeat-x;
     -webkit-background-clip: text;
+    background-clip: unset;
     animation: animate3 15s linear infinite;
 
 }
@@ -412,7 +413,9 @@ ul li:nth-child(5)
 .Low {
     animation-name: Low;
     animation-duration: 6s;
-    animation-delay: 1s;
+    animation-delay: 0s;
+    float:right;
+    margin-right: 32vw;
     animation-iteration-count: infinite;
    
 
@@ -421,21 +424,16 @@ ul li:nth-child(5)
 @keyframes Low{
 
     0%{
-
-        transform: translateX(0vw), translateY(0vw), rotate(0);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    transform: translateY(0vw);
            
     }
-
-
-    80%{
-        transform: translateX(0vw) translateY(0vw) rotate(-360deg); 
-        color: #ffffff6e; 
-    
-    }
     100%{
-        transform: translateX(0vw) translateY(0vw) rotate(-360deg); 
-        color: #ffffff; 
-    
+        transform: translateY(10vw);
+        opacity: 0;
     }
 }
 
@@ -444,13 +442,15 @@ ul li:nth-child(5)
 .wavyy {
     position: relative;
     -webkit-box-reflect: below 12px linear-gradient(transparent,rgba(12, 2, 58, 0.2));
+    background: url(process/1.png);
 
 }
 
 .wavyy span{
     position: relative;
     display: inline-block;
-    font-size: 1em;
+    font-size: 2em;
+
     animation: wavy  ease-in-out infinite;
     animation-delay: calc(0.1s * var(--i));
     animation-duration: 10s;
@@ -538,3 +538,147 @@ ul li:nth-child(5)
 .container span:hover:after
 {
     transform: rotateY(deg) scale(1.1 , 1) skewY(6deg);}
+
+
+.transform{
+    display: block;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+@keyframes move{
+    
+    0%{
+        transform: translateX(-10em);
+        scale: 1;
+        color: rgb(0, 0, 0);
+    }
+
+    50%{
+        scale: 1.5;
+        transform: translateX(0em);
+        color: rgb(255, 255, 255);
+        
+    }
+
+    100%{
+        scale: 1;
+        transform: translateX(100vw);
+        color: rgba(0, 0, 0, 0);
+    }
+
+}
+
+.first{
+    animation-delay: -2s;
+    opacity: 0.25;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.second{
+    animation-delay: 1.2s;
+    opacity: 0.5;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.third{
+    animation-delay: -1.5s;
+    opacity: 0.2.5;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.third{
+    animation-delay: 2s;
+    opacity: 0.3;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.fourth{
+    animation-delay: 2.5s;
+    opacity: 0.4;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.fifth{
+    animation-delay: 3s;
+    opacity: 0.5;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.sixth{
+    animation-delay: 3.5s;
+    opacity: 0.6;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.seventh{
+    animation-delay: 4s;
+    opacity: 0.7;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.eigth{
+    animation-delay: 4.5s;
+    opacity: 0.8;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.eigth{
+    animation-delay: 5.2s;
+    opacity: 0.9;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.ninth{
+    animation-delay: 5.6s;
+    opacity: 1;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+.alone
+{
+    animation-name: alone;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes alone {
+    0%{
+        opacity: 1;
+    }
+
+    30%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
