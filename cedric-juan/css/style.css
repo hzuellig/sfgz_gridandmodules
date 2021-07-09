@@ -1751,6 +1751,14 @@ body.very-light-mode #very-light-switcher {
         margin-top: 0;
         font-size: 12px;
     }
+
+    .footer > .footer-container > .footer-inner > .footer-middle .tutorial-list > li .tutorial-text {
+        height: 20px;
+        width: 20px;
+        font-size: 14px;
+        line-height: 15px;
+    }
+
     .footer > .footer-container > .footer-inner > .footer-top {
         height: calc(30% - 20px);
     }
@@ -1759,5 +1767,6 @@ body.very-light-mode #very-light-switcher {
     }
     .footer > .footer-container > .footer-inner > .footer-bottom {
         height: 14%;
+        padding-top: 13px;
     }
 }
