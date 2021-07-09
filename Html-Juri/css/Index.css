@@ -90,6 +90,8 @@ nav ul li a:before
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .5s;
+    z-index: -1;
+
 }
 nav ul li a:hover:before
 {
@@ -207,6 +209,7 @@ h2 {
     top: 0vw;
     left: 0vw;
     border: 0px solid black;
+    z-index: 100;
 
 }
 
@@ -295,6 +298,8 @@ ul{
     margin: 0;
     padding: 0;
     display: flex;
+    margin-left: 14.em;
+    margin-top: -1.2em;
     
 }
 
@@ -305,11 +310,12 @@ ul li{
     font-weight: bold;
     letter-spacing: 10px;
     filter: blur(0px);
+    
 
 }
 ul.blow li
 {
-    animation: smoke 2s infinite linear;
+    animation: smoke 3s infinite linear;
     
 }
 

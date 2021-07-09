@@ -4,7 +4,11 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-    
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
     
     
 .header{
