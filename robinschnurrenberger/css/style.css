@@ -1,0 +1,304 @@
+* {
+	font-family: Proxima Nova;
+	cursor: crosshair;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	padding: 50px;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*
+body::-webkit-scrollbar {
+	display: none;
+}
+*/
+main {
+	height: calc(100vh - 100px);
+	width: calc(100vw - 100px);
+	background-color: #DFB450;
+}
+
+nav {
+	z-index: 10000;
+}
+
+.home,
+.hunter,
+.about,
+.artist {
+	position: fixed;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+.home {
+	top: 0;
+	margin: 14px 0 14px 0;
+	left: calc(50% - 25.92px);
+}
+
+.artist {
+	bottom: 0;
+	margin: 14px 0 14px 0;
+	left: calc(50% - 31.68px);
+}
+
+.about {
+	left: 0;
+	top: calc(50% - 27.5px);
+	transform: rotate(-90deg);
+}
+
+.hunter {
+	right: 0;
+	top: calc(50% - 29.4px);
+	transform: rotate(90deg);
+}
+
+.home:hover,
+.hunter:hover,
+.about:hover,
+.artist:hover {
+    color: #902920;
+}
+
+.portrait {
+	width: 38vmax;
+	left: 50%;
+	transform: translateX(-60%);
+	position: absolute;
+	bottom: 50px;
+}
+
+.marquee {
+	position: relative;
+	width: 100vw;
+	max-width: 100%;
+	height: 244px;
+	top: calc(50% - 122px);
+	overflow-x: hidden;
+}
+
+.content {
+	font-size: 200px;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.track {
+	position: absolute;
+	white-space: nowrap;
+	will-change: transform;
+	animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.container {
+	text-align: center;
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+	display: table;
+}
+
+.impressum p,
+h3 {
+	margin: 0;
+}
+
+.impressum {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.songtext-wrap {
+	margin: 0;
+	height: calc(100% - 100px);
+	width: calc(100% - 100px);
+	padding: 50px;
+}
+
+.songtext {
+	margin: 0;
+	padding-bottom: 100px;
+	font-size: 3.5rem;
+	font-weight: 400;
+}
+
+.white {
+	width: 100%;
+	position: fixed;
+	height: 50px;
+	bottom: 0;
+	z-index: 100;
+	background: white;
+	left: 0;
+}
+
+.white.top {
+	top: 0;
+}
+
+.background {
+	background-color: #DFB450;
+	position: fixed;
+	top: 50px;
+	left: 50px;
+	right: 50px;
+	bottom: 50px;
+	z-index: -1;
+}
+
+:root {
+	--background: #005;
+	--primary: #88D5BF;
+	--secondary: #5D6BF8;
+	--third: #e27fcb;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.info-bild {
+	float: left;
+	padding: 50px 25px 50px 50px;
+}
+
+.info-content {
+	float: right;
+	padding-left: 25px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+}
+
+.info-bild,
+.info-content {
+	width: 50%;
+	height: 100%;
+}
+
+.info-text p {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 3rem;
+}
+
+.info-img {
+	background-image: url("../media/info-bild.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+#play-pause-button {
+	font-size: 30px;
+	cursor: pointer;
+	position: relative;
+	top: calc(50% - 15px);
+	left: calc(50% - 13px);
+}
+
+.fa-play:before,
+.fa-pause:before {
+	color: white;
+}
+
+.blob {
+	height: 100px;
+	position: fixed;
+	bottom: 100px;
+	right: 100px;
+	margin: 0;
+}
+
+.shape {
+	animation: morph 8s ease-in-out infinite;
+	border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	height: 100px;
+	transition: all 1s ease-in-out;
+	width: 100px;
+	z-index: 5;
+}
+
+@keyframes morph {
+	0% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+		background: #1a1a1a
+	}
+	50% {
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+		background: #1a1a1a
+	}
+	100% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+		background: #1a1a1a;
+	}
+}
+
+.flier {
+	pointer-events: none;
+}
+
+.flier>* {
+	animation: fly 50s linear infinite;
+	pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+@keyframes fly {
+	98.001%,
+	0% {
+		display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+	15.001%,
+	18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+	40.001%,
+	43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+	65.001%,
+	68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
