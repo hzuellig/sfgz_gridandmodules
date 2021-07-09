@@ -7,7 +7,6 @@
 :root {
   --font-color: rgb(255, 240, 250);
   --cy: calc(100vh / 100);
-  --scale: 200;
 }
 
 body {
@@ -24,18 +23,6 @@ body {
   color: var(--font-color);
   text-transform: uppercase;
 }
-
-/* #canvas {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: painted;
- transform: scaleY(0.5) translateY(-50%); 
-border: 1px solid red;
-} */
 
 /* CONTROLLER */
 
@@ -64,11 +51,13 @@ nav {
 #pause {
   opacity: 1;
 }
-#restart {
+#volume {
   opacity: 1;
 }
+#volume input {
+  width: 14vmin;
+}
 #stop {
-  font-weight: 700;
 }
 
 .testdiv {
@@ -114,32 +103,21 @@ nav {
 
 /* ANIMATIONS */
 
-.weight-animation {
-  font-variation-settings: 'wght' calc(var(--scale) * 6);
-}
-
-.anaglyph-effect {
-  text-shadow: 0.01em 0.01em 0em red, -0.01em -0.01em 0em cyan;
-}
-
-.shrink-animation {
-  transform-origin: left center;
-}
-
-.test-class {
-  color: red;
+.font-m {
+  font-size: calc(6 * var(--cy)) !important;
+  font-weight: 200;
+  padding: 0 4em;
 }
 
 .vertical-text {
-  display: flex !important;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center !important;
+  width: calc(30 * var(--cy)) !important;
 }
 
 .vertical-text div {
-  /* background-color: red; */
   transform: rotate(90deg);
   font-size: calc(38 * var(--cy));
+  position: absolute;
 }
 
 .strobo {
@@ -160,26 +138,6 @@ nav {
   }
 }
 
-/* .klappe {
-  cursor: pointer;
-}
-
-.klappe div {
-  animation: klappweg 2s ease-in-out 1 0.5s backwards;
-  animation-play-state: paused;
-  transform-origin: top center;
-}
-
-.klappe:hover div {
-  animation-play-state: running;
-}
-
-@keyframes klappweg {
-  100% {
-    transform: rotateX(90deg);
-  }
-} */
-
 /* GRID ELEMENTS */
 
 .helpgrid {
@@ -192,7 +150,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(1fr);
 
-  opacity: 0.4;
+  display: none;
 }
 
 .helpgrid div {
@@ -200,14 +158,14 @@ nav {
   opacity: 0.7;
 }
 
-.row {
+.column {
   /* min-width: 300px; */
   height: 100%;
   position: relative;
-  padding: 0 3vh;
+  padding: 0 0;
 }
 
-.row > div {
+.column > div {
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
@@ -215,15 +173,18 @@ nav {
   position: relative;
 }
 
-.row img {
+.column img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 0 0.036em;
+}
+
+.first-column {
+  margin-left: 7em;
 }
 
 .flash-animation {
-  opacity: 0;
+  opacity: calc(var(--sound) / 200);
   -webkit-text-stroke: 0.01em var(--font-color);
   -webkit-text-fill-color: transparent;
   color: var(--font-color);
@@ -244,7 +205,8 @@ nav {
 }
 .cell-33 {
   height: 33%;
-  width: 100%;
+  max-width: 100;
+  overflow-x: hidden;
   /* background-color: blue; */
   font-size: calc(45.5 * var(--cy));
 
@@ -264,6 +226,14 @@ nav {
 
   line-height: 0.73;
 }
+
+.cell-60 {
+  height: 60%;
+  width: 100%;
+  font-size: calc(62 * var(--cy));
+  line-height: 0.73;
+}
+
 .cell-80 {
   height: 80%;
   width: 100%;
@@ -277,6 +247,28 @@ nav {
   font-size: calc(130 * var(--cy));
 
   line-height: 0.8;
+}
+
+.text-on-image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  margin: 0 0.15em;
+}
+
+.text-on-image > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  font-weight: 400;
+  padding-bottom: 2em;
+}
+.text-on-image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* SQUARE STYLES */
@@ -305,11 +297,16 @@ nav {
     flex-direction: row;
     border-bottom: 2px solid var(--font-color);
     border-right: none;
+    position: fixed !important;
   }
 
   .controler:hover div {
     margin-bottom: -0.3em;
     margin-left: unset;
+  }
+
+  .first-column {
+    margin-left: 1em;
   }
 
   .main-container {
@@ -320,5 +317,94 @@ nav {
 
   .helpgrid {
     top: 72px;
+  }
+}
+
+input[type='range'] {
+  width: 100%;
+  margin: 0px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: none;
+  border: 2px solid var(--font-color);
+  border-radius: 0px;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: 0px;
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border: 0.9px solid #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: none;
+  border: 2px solid var(--font-color);
+}
+input[type='range']::-moz-range-track {
+  background: none;
+  border: 2px solid var(--font-color);
+  border-radius: 0;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border: 0.9px solid #ffffff;
+  cursor: pointer;
+}
+input[type='range']::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 0px 0;
+  color: transparent;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+input[type='range']::-ms-fill-lower {
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 2.6px;
+}
+input[type='range']::-ms-fill-upper {
+  background: #ffffff;
+  border: 0;
+  border-radius: 2.6px;
+}
+input[type='range']::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border: 0.9px solid #ffffff;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type='range']:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+input[type='range']:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type='range'] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
 }

@@ -2,29 +2,23 @@ const file = document.querySelector('#file-input');
 const canvas = document.querySelector('#canvas');
 const h3 = document.querySelector('#name');
 const audio = document.querySelector('#audio');
-
 // CSS VALUES
-
 const lyricsContainer = document.querySelector('.main-container');
 
 function calcHeightContainer() {
   const root = document.documentElement;
   let containerY = lyricsContainer.clientHeight;
   root.style.setProperty('--cy', containerY / 100 + 'px');
-  console.log(containerY);
 }
 
 calcHeightContainer();
-window.onresize = () => {
-  calcHeightContainer();
-};
+window.onresize = () => calcHeightContainer();
 
 // CONTROL MUSIC
-
 document.querySelector('#play').onclick = playAudio;
 document.querySelector('#pause').onclick = pauseAudio;
 document.querySelector('#stop').onclick = stopAudio;
-document.querySelector('#restart').onclick = restartAudio;
+// document.querySelector('#restart').onclick = muteAudio;
 
 let horizontalScroll;
 let animationControl;
@@ -41,9 +35,12 @@ function startScroll() {
   horizontalScroll = requestAnimationFrame(startScroll);
 }
 
+let source, audioCtx;
+
 function playAudio() {
-  if (audio.paused) {
-    // startScroll();
+  if (source == undefined) {
+    audioCtx = new AudioContext();
+    source = audioCtx.createMediaElementSource(audio);
   }
   audio.play();
 }
@@ -55,9 +52,9 @@ function pauseAudio() {
 }
 
 function stopAudio() {
-  pauseAudio();
-  audio.currentTime = 0;
   window.scrollTo({ left: 0, behavior: 'smooth' });
+  audio.currentTime = 0;
+  pauseAudio();
 }
 
 function restartAudio() {
@@ -68,30 +65,32 @@ function restartAudio() {
 
 // ANALYSE AUDIO
 
-var audioCtx;
+const volume = document.querySelector('#volume input');
 
 audio.onplay = function () {
-  audioCtx = new AudioContext();
   const analyser = audioCtx.createAnalyser();
   const gainNode = audioCtx.createGain();
   const biquadFilter = audioCtx.createBiquadFilter();
   analyser.fftSize = 64;
 
-  const source = audioCtx.createMediaElementSource(audio);
-
   const bufferLength = analyser.frequencyBinCount;
   const dataArray = new Uint8Array(bufferLength);
   analyser.getByteTimeDomainData(dataArray);
+  let audioGain = volume.value;
+
+  volume.oninput = function () {
+    gainNode.gain.value = volume.value;
+  };
 
   // Connect the source to be analysed
+  source.connect(gainNode);
   source.connect(biquadFilter);
-  biquadFilter.connect(gainNode);
   biquadFilter.connect(analyser);
-  source.connect(audioCtx.destination);
+  gainNode.connect(audioCtx.destination);
 
-  biquadFilter.type = 'bandpass';
-  biquadFilter.frequency.value = 60;
-  biquadFilter.gain.value = 0;
+  biquadFilter.type = 'lowpass';
+  biquadFilter.frequency.value = 30;
+  gainNode.gain.value = audioGain;
 
   function draw() {
     animationControl = requestAnimationFrame(draw);
@@ -103,24 +102,24 @@ audio.onplay = function () {
     }
     sum = sum / bufferLength;
 
-    const root = document.documentElement;
-    root.style.setProperty('--scale', sum);
+    // const root = document.documentElement;
+    // root.style.setProperty('--sound', sum);
 
     const shrinkingElements = document.querySelectorAll('.shrink-animation');
     const weightedTextes = document.querySelectorAll('.weight-animation');
-    const anaglyphElements = document.querySelectorAll('.anaglyph-effect');
+    const anaglyphElements = document.querySelectorAll('.anaglyph');
     const flashElements = document.querySelectorAll('.flash-animation');
 
     for (let shrinker of shrinkingElements) {
       shrinker.style.transform = `scale(${sum / 150})`;
     }
 
-    // for (let text of weightedTextes) {
-    //   text.style.fontWeight = `${sum * 1}`;
-    // }
+    for (let text of weightedTextes) {
+      text.style.fontWeight = `${sum * 6}`;
+    }
 
     for (let flashElement of flashElements) {
-      flashElement.style.opacity = `${sum / 150}`;
+      flashElement.style.opacity = `${sum / 250}`;
     }
 
     for (let anaglyphText of anaglyphElements) {

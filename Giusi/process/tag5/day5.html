@@ -15,21 +15,20 @@
 </head>
 
 <body>
-
-    <canvas id="canvas"></canvas>
-    <div id="player">
-        <audio id="audio" src="audio/whoGonStopMe.mp3"></audio>
-    </div>
-
     <nav>
+        <div id="player">
+            <audio id="audio" src="/audio/whoGonStopMe_short.mp3"></audio>
+        </div>
         <div id="play" class="controler">
             <div>play</div>
         </div>
         <div id="pause" class="controler">
             <div>pause</div>
         </div>
-        <div id="restart" class="controler">
-            <div>restart</div>
+        <div id="volume" class="controler">
+            <div>
+                <input type="range" min="0" max="1" step="0.025">
+            </div>
         </div>
         <div id="stop" class="controler">
             <div>stop</div>
@@ -48,19 +47,16 @@
 
     <section class="main-container">
 
-        <div class="row">
-            <div class="cell-100">
-            </div>
-        </div>
 
-        <div class="row speedFrame">
+
+        <div class="column first-column">
             <div class="cell-20 weight-animation">i can't</div>
             <div class="cell-80">
                 <div class="square shrink-animation"></div>
             </div>
         </div>
 
-        <div class="row">
+        <div class="column">
             <div class="cell-20">stop</div>
             <div class="cell-20"><span class="flash-animation">
                     breathe</span></div>
@@ -69,13 +65,12 @@
             <div class="cell-20">stop</div>
         </div>
 
-        <div class="row" style="margin-right: -32em;">
-            <div class="cell-33"></div>
-            <div class="cell-33"></div>
-            <div class="cell-33 shrink-animation" style="left: -1.2em;">stop</div>
+        <div class="column" style="margin-right: calc(var(--cy) * -65);">
+            <div class="cell-40"></div>
+            <div class="cell-60 shrink-animation" style="left: -1.1em; mix-blend-mode: difference;">stop</div>
         </div>
 
-        <div class="row">
+        <div class="column">
             <div class="cell-33">stop</div>
             <div class="cell-33 ">
                 <div class="square strobo"></div>
@@ -84,112 +79,147 @@
             <div class="cell-33">stop</div>
         </div>
 
-        <div class="row">
+        <div class="column shrink-animation">
+
+            <div class="cell-50">
+                <img class="" src="/images/blm_people_sitting.jpg" alt="">
+            </div>
+            <div class="cell-50">
+                <img class="" src="/images/blm_people_sitting.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="cell-20"></div>
+            <div class="cell-20"></div>
+            <div class="anaglyph cell-20 font-m">This is something like the holocaust</div>
+            <div class="cell-20"></div>
+            <div class="cell-20"></div>
+        </div>
+
+
+        <div class="column">
+            <div class="cell-20 ">millions</div>
+            <div class="cell-40 flash-animation">
+                <img src="/images/blm_tears.jpg" alt="" style="  padding: 0 0.036em;
+                ">
+            </div>
+            <div class="cell-20">millions</div>
+            <div class="cell-20">millions</div>
+        </div>
+
+
+        <div class="column">
+            <div class="cell-20"></div>
+            <div class="anaglyph cell-20 font-m" style="align-items: flex-start;">of
+                our people lost
+            </div>
+            <div class="cell-20"></div>
+            <div class="cell-20 shrink-animation font-m">
+                Bow our heads and pray to the Lord
+            </div>
+            <div class="cell-20"></div>
+        </div>
+
+        <div class="column">
+            <div class="cell-33">
+                Til
+            </div>
+            <div class="cell-33">
+                I
+            </div>
+            <div class="cell-33">
+                die
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="cell-33">
+                I'm a
+            </div>
+            <div class="cell-33 anaglyph">
+                fuck
+            </div>
+            <div class="cell-33">
+                ing
+            </div>
+        </div>
+
+        <div class="column">
             <div class="cell-100 vertical-text">
                 <div class="weight-animation">
-                    stop
+                    ball
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class="anaglyph-effect cell-20" style="font-size: 6vh">This is something like the holocaust</div>
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-        </div>
 
-
-        <div class="row">
-            <div class="cell-20 ">millions</div>
-            <div class="cell-40 flash-animation">
-                <img src="/images/377968a8-b72c-48ef-81a4-102eb69895d6.webp" alt="">
-            </div>
-            <div class="cell-20">millions</div>
-            <div class="cell-20">millions</div>
-        </div>
-
-
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="anaglyph-effect cell-20" style="font-size: 6vh;align-items: flex-start;">of our people lost
-            </div>
+        <div class="column">
             <div class="cell-20"></div>
             <div class="cell-20"></div>
-            <div class="cell-20"></div>
-        </div>
-
-
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class="cell-20 shrink-animation" style="font-size: 6vh">
-                Bow our heads and pray to the Lord
+            <div class=" cell-20 font-m font-m">
+                Now who gon'stop <span class="anaglyph"> me?</span>
             </div>
             <div class="cell-20"></div>
             <div class="cell-20"></div>
         </div>
-
-
-        <div class="row">
-            <div class="cell-33">
-                Til I die i'm
-            </div>
-            <div class="cell-33">
-                a fucking
-            </div>
-            <div class=" cell-33">
-                ball
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class=" cell-20" style="font-size: 6vh">
-                Now who gon'stop me?
-            </div>
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-        </div>
-
-
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-        </div>
-
-
-        <div class="row">
-            <div class="cell-25"></div>
+        <div class="column">
+            <div class="cell-25">Who</div>
             <div class=" cell-25">
-                Who gon' stop me
+                gon'
             </div>
-            <div class=" cell-50">
-                huh?
+            <div class=" cell-25">
+                stop
+            </div>
+            <div class=" cell-25">
+                me
             </div>
         </div>
 
+        <div class="column">
+            <div class=" cell-100">
+                <img class="anaglyph" src="/images/cooper-baumgartner-lZsbDaUAaA4-unsplash.jpg" alt="">
+            </div>
+        </div>
 
-        <div class="row">
+        <div class="column">
+            <div class=" cell-25">
+                h
+            </div>
+            <div class=" cell-25">
+                u
+            </div>
+            <div class=" cell-25">
+                h
+            </div>
+            <div class=" cell-25">
+                ?
+            </div>
+        </div>
+
+        <div class="column">
             <div class="cell-20"></div>
             <div class="cell-20"></div>
-            <div class=" cell-20" style="font-size: 6vh">
+            <div class=" cell-20 font-m">
                 Who gon' stop me?
             </div>
             <div class="cell-20"></div>
             <div class="cell-20"></div>
         </div>
 
+        <div class="column">
+            <div class="cell-25"></div>
+            <div class=" cell-50">
+                <img class="shrink-animation" src="/images/icantbreathe.jpg" alt="">
+            </div>
+            <div class="cell-25"></div>
+        </div>
 
-        <div class="row">
+
+        <div class="column">
             <div class="cell-20"></div>
             <div class="cell-20"></div>
-            <div class=" cell-20" style="font-size: 6vh">
+            <div class=" cell-20 font-m">
                 Who gon' stop me, huh?
             </div>
             <div class="cell-20"></div>
@@ -197,49 +227,127 @@
         </div>
 
 
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class=" cell-20" style="font-size: 6vh">
-                Now who gon'stop me? Who gon' stop me, huh?
-                Who gon' stop me? Who gon' stop me, huh?
-                Black cards, black cars, black on black, black broads
-                Whole lotta money in a black bag
-                Black strap: you know what that's for
+        <div class="column">
 
-                [Jay-Z, Kanye West:]
-                Who gon' stop me, huh?
-                Who gon' stop me, huh?
-                Yeah, who gon' stop me?
-                No brakes, I need State Farm
-                So many watches, I need eight arms
-                One neck but got eight charms
-                Who gon' stop me, huh?</div>
+            <div class=" cell-20">
+                Black cards
+            </div>
+            <div class=" cell-20">
+                black cars
+            </div>
+            <div class=" cell-20">
+                black on
+            </div>
+            <div class=" cell-20">
+                black
+            </div>
+            <div class=" cell-20">
+                black broads
+            </div>
+
+        </div>
+
+        <div class="column">
+            <div class="cell-100">
+                <div class="text-on-image">
+                    <img src="/images/blm_police_hug.jpg" alt="">
+                    <div class="font-m">
+                        Whole lotta money in a black bag <br>
+                        Black strap: you know what that's <span class="anaglyph">fooor</span>
+                    </div>
+                </div>
+            </div>
+            <div class=" cell-20 font-m">
+            </div>
+        </div>
+
+        <div class="column">
             <div class="cell-20"></div>
+            <div class="cell-20">
+                Who gon' <span class="shrink-animation flash-animation">stop</span> me?
+            </div>
+
+            <div class="cell-20">
+                HUH? Yeah
+            </div>
+            <div class="cell-20">
+                who gon' stop me?
+            </div>
             <div class="cell-20"></div>
         </div>
 
+        <div class="column">
+            <div class="cell-100 font-m">
+                <div>
+                    No brakes, I need State Farm <br>
+                    So many <span class="anaglyph">watches</span> , <br> I need eight arms <br>
+                    One neck but got eight charms <br>
+                </div>
+            </div>
+        </div>
 
-        <div class="row">
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
-            <div class=" cell-20" style="font-size: 6vh">
-                Now who gon'stop me? Who gon' stop me, huh?
-                Who gon' stop me? Who gon' stop me, huh?
-                Black cards, black cars, black on black, black broads
-                Whole lotta money in a black bag
-                Black strap: you know what that's for
+        <div class="column">
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+                Who
+            </div>
+        </div>
+        <div class="column">
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+                gon'
+            </div>
+            <div class="cell-25">
+            </div>
 
-                [Jay-Z, Kanye West:]
-                Who gon' stop me, huh?
-                Who gon' stop me, huh?
-                Yeah, who gon' stop me?
-                No brakes, I need State Farm
-                So many watches, I need eight arms
-                One neck but got eight charms
-                Who gon' stop me, huh?</div>
-            <div class="cell-20"></div>
-            <div class="cell-20"></div>
+
+        </div>
+        <div class="column">
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+                stop
+            </div>
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+            </div>
+        </div>
+        <div class="column">
+            <div class="cell-25">
+                me
+            </div>
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+            </div>
+            <div class="cell-25">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="cell-100 anaglyph  weight-animation">
+                huh?
+            </div>
+        </div>
+
+        <div class="column imprint">
+            <div class="cell-100 font-m">
+                <div>
+                    <strong>Code and Design</strong> <br> Giuseppe Di Guglielmo <br>
+                    <strong>Music</strong> Who gon' stop me <br>
+                    by<strong>Jay-Z & Kanye West</strong> <br>
+                    <strong>Professor</strong> Hanna Züllig <br>
+                </div>
+            </div>
         </div>
 
 
