@@ -59,7 +59,14 @@ p {
 
 a {
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
+  color: rgba(161, 202, 207, 1) !important;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.a:hover {
+  color: #b3627a !important;
 }
 
 .tx-footer {
