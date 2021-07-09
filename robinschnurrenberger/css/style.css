@@ -16,11 +16,11 @@ body {
 	align-items: center;
 	justify-content: center;
 }
-/*
+
 body::-webkit-scrollbar {
 	display: none;
 }
-*/
+
 main {
 	height: calc(100vh - 100px);
 	width: calc(100vw - 100px);
