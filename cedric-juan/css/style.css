@@ -1738,3 +1738,26 @@ body.very-light-mode #very-light-switcher {
 .footer > .footer-container > .footer-inner > .footer-bottom .footer-section-content {}
 .footer > .footer-container > .footer-inner > .footer-bottom .footer-section-content span {}
 .footer > .footer-container > .footer-inner > .footer-bottom .footer-section-content b {font-weight: 500;color: #ffffff;}
+
+
+@media(max-height:730px){
+    .page > .page-item:nth-child(3)::before {bottom: calc(45% - 5.5px);}
+    .footer .footer-section-title {
+        height: 16px;
+        font-size: 16px;
+    }
+    .footer > .footer-container > .footer-inner > .footer-middle .tutorial-list {
+        padding-top: 15px;
+        margin-top: 0;
+        font-size: 12px;
+    }
+    .footer > .footer-container > .footer-inner > .footer-top {
+        height: calc(30% - 20px);
+    }
+    .footer > .footer-container > .footer-inner > .footer-middle {
+        height: calc(56% - 20px);
+    }
+    .footer > .footer-container > .footer-inner > .footer-bottom {
+        height: 14%;
+    }
+}
