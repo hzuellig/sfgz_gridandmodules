@@ -3,12 +3,13 @@ body {
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-
 }
-container{
-    display:flex;
+
+container {
+    display: flex;
     flex-wrap: wrap;
 }
+
 a {
     color: black;
 }
@@ -22,9 +23,9 @@ main {
 .halbtag {
     padding: 20px;
     min-width: 600px;
-    flex-basis:300px;
-    flex-grow:1;
-    flex-shrink:0;
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -37,22 +38,25 @@ h2 {
     font-weight: 600;
 }
 
-span{
+span {
     color: rgb(128, 109, 137);
-    font-weight:600;
+    font-weight: 600;
 }
-span::before{
-    content:"@todo ";
+
+span::before {
+    content: "@todo ";
     display: inline-block;
-    padding-right:0.5em;
+    padding-right: 0.5em;
 }
 
-.slot{
-    display:flex;
+.slot {
+    display: flex;
 }
 
-time{
+time {
     flex-basis: 200px;
-    flex-grow:0;
+    flex-grow: 0;
     flex-shrink: 1;
 }
+
+.containermenu a {}
