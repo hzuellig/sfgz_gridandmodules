@@ -1,0 +1,411 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: rgb(255, 240, 250);
+  --cy: calc(100vh / 100);
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color: black;
+
+  font-family: 'Raleway', sans-serif;
+  color: var(--font-color);
+  text-transform: uppercase;
+}
+
+/* CONTROLLER */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 4em;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 2px solid var(--font-color);
+  mix-blend-mode: difference;
+
+  font-size: 1.2em;
+  letter-spacing: 0.5em;
+}
+
+.imprint div {
+  line-height: 1.2em;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+}
+
+#play {
+  opacity: 1;
+}
+#pause {
+  opacity: 1;
+}
+#volume {
+  opacity: 1;
+}
+#volume input {
+  width: 14vmin;
+}
+#stop {
+  opacity: 1;
+}
+
+.controler {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.controler div {
+  transform: rotate(270deg);
+  transition: all 50ms linear;
+}
+.controler:hover div {
+  margin-left: -0.5em;
+}
+
+/* MAIN-CONTAINER, horizontal scrollable */
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: max-content;
+
+  font-weight: 900;
+
+  display: flex;
+}
+
+/* ANIMATIONS */
+
+.font-m {
+  font-size: calc(6 * var(--cy)) !important;
+  font-weight: 200;
+  padding: 0 4em;
+}
+
+.vertical-text {
+  justify-content: center !important;
+  width: calc(30 * var(--cy)) !important;
+}
+
+.vertical-text div {
+  transform: rotate(90deg);
+  font-size: calc(38 * var(--cy));
+  position: absolute;
+}
+
+.strobo {
+  animation: strobo 600ms ease infinite alternate;
+  background-color: white !important;
+  mix-blend-mode: difference;
+}
+.strobo:hover {
+  animation-duration: 50ms;
+}
+@keyframes strobo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    /* filter: invert(1); */
+  }
+}
+
+/* GRID ELEMENTS */
+
+.helpgrid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(1fr);
+
+  display: none;
+}
+
+.helpgrid div {
+  border-bottom: 1px solid yellow;
+  opacity: 0.7;
+}
+
+.column {
+  /* min-width: 300px; */
+  height: 100%;
+  position: relative;
+  padding: 0 0;
+}
+
+.column > div {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.first-column {
+  margin-left: 7em;
+}
+
+.flash-animation {
+  opacity: calc(var(--sound) / 200);
+  -webkit-text-stroke: 0.01em var(--font-color);
+  -webkit-text-fill-color: transparent;
+  color: var(--font-color);
+}
+
+.cell-20 {
+  height: 20%;
+  width: 100%;
+  font-size: calc(27 * var(--cy));
+  line-height: 0.9;
+}
+.cell-25 {
+  height: 25%;
+  width: 100%;
+  /* background-color: blue; */
+  font-size: calc(34.5 * var(--cy));
+  line-height: 0.73;
+}
+.cell-33 {
+  height: 33%;
+  max-width: 100;
+  overflow-x: hidden;
+  /* background-color: blue; */
+  font-size: calc(45.5 * var(--cy));
+
+  line-height: 0.73;
+}
+.cell-40 {
+  height: 40%;
+  width: 100%;
+  font-size: calc(40 * var(--cy));
+
+  line-height: 0.73;
+}
+.cell-50 {
+  height: 50%;
+  width: 100%;
+  font-size: calc(68 * var(--cy));
+
+  line-height: 0.73;
+}
+
+.cell-60 {
+  height: 60%;
+  width: 100%;
+  font-size: calc(62 * var(--cy));
+  line-height: 0.73;
+}
+
+.cell-80 {
+  height: 80%;
+  width: 100%;
+  font-size: calc(110 * var(--cy));
+
+  line-height: 0.73;
+}
+.cell-100 {
+  height: 100%;
+  width: 100%;
+  font-size: calc(130 * var(--cy));
+
+  line-height: 0.8;
+}
+
+.text-on-image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  margin: 0 0.15em;
+}
+
+.text-on-image > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  font-weight: 400;
+  padding-bottom: 2em;
+}
+.text-on-image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* SQUARE STYLES */
+
+.square {
+  width: 100%;
+  height: 100%;
+  background-color: var(--font-color);
+  transition: transform 200ms linear;
+  position: absolute;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+  .controler div {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    transform: rotate(0deg);
+  }
+
+  nav {
+    width: 100vw;
+    height: calc(100vh - 100 * var(--cy));
+    flex-direction: row;
+    border-bottom: 2px solid var(--font-color);
+    border-right: none;
+    position: fixed !important;
+  }
+
+  .controler:hover div {
+    margin-bottom: -0.3em;
+    margin-left: unset;
+  }
+
+  .first-column {
+    margin-left: 1em;
+  }
+
+  .main-container {
+    top: 72px;
+    bottom: 0;
+    left: 0em;
+  }
+
+  .helpgrid {
+    top: 72px;
+  }
+}
+
+input[type='range'] {
+  width: 100%;
+  margin: 0px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: none;
+  border: 2px solid var(--font-color);
+  border-radius: 0px;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: 0px;
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border: 0.9px solid #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: none;
+  border: 2px solid var(--font-color);
+}
+input[type='range']::-moz-range-track {
+  background: none;
+  border: 2px solid var(--font-color);
+  border-radius: 0;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border: 0.9px solid #ffffff;
+  cursor: pointer;
+}
+input[type='range']::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 0px 0;
+  color: transparent;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+input[type='range']::-ms-fill-lower {
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 2.6px;
+}
+input[type='range']::-ms-fill-upper {
+  background: #ffffff;
+  border: 0;
+  border-radius: 2.6px;
+}
+input[type='range']::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border: 0.9px solid #ffffff;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type='range']:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+input[type='range']:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type='range'] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
