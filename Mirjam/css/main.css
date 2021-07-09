@@ -127,7 +127,7 @@ section{
     font-weight: bold;
     color:  black;
     line-height: 160%;
-    padding: 40px;
+    padding: 30px 40px 30px 40px;
   }
    
 
@@ -197,7 +197,7 @@ section.myclass .zeile{
 
 .boldtext.right{
     text-align: right;
-    font-size: 9vw;
+    font-size: 8vw;
     line-height: 100%;
     font-family: "acumin-pro";
     font-weight: bold;
@@ -207,7 +207,7 @@ section.myclass .zeile{
     
 .boldtext.left{
     text-align: right;
-    font-size: 9vw;
+    font-size: 8vw;
     line-height: 100%;
     font-family: "acumin-pro";
     font-weight: bold;

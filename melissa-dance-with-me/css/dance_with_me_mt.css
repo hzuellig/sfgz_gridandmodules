@@ -526,16 +526,7 @@ article.myclass .saetze{
     animation-name: fadeOut;
     animation-iteration-count: infinite; 
  
-   
   }
-
-  .audio {
-  margin: 20px;
-  background-image: url("img/lautsprechergefulltes-audio-tool");
-  
-  }
-
-
 
 
   @keyframes animation1 {
