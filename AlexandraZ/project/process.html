@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="oblivion.css">
+    <title>Process</title>
+</head>
+<style>
+    @font-face {
+        font-family: "Sporting Grotesque Regular";
+        src: url("../process/css/Sporting_Grotesque-Regular_web.ttf")
+    }
+    
+    section {
+        height: 100vh;
+        display: flex;
+    }
+    
+    section.first {
+        flex-direction: row;
+    }
+    
+    section.second {
+        flex-direction: column;
+    }
+    
+    .left {
+        background-color: black;
+        flex-basis: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #C4C4C4;
+        overflow: hidden;
+    }
+    
+    .right {
+        background-color: #74CAA4;
+        flex-basis: 40%;
+        color: #74CAA4;
+    }
+    
+    .right.menu {
+        font-size: 50px;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .menu a:hover {
+        color: #ffffff;
+    }
+    
+    .top {
+        font-size: 100px;
+    }
+    
+    .bottom {
+        font-size: 100px;
+    }
+    
+    .move {
+        animation-name: lefttoright;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: all 1s ease-in;
+    }
+    
+    @keyframes lefttoright {
+        0% {
+            transform: translateX(0px);
+        }
+        50% {
+            transform: translateX(30%);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+</style>
+
+<body>
+
+    <section class="first">
+        <div class="left">
+            <div class="top move">
+                process
+            </div>
+            <div class="bottom move">
+                process
+            </div>
+
+        </div>
+        <div class="right">
+            <ul class="menu">
+                <li>
+                    <a href="Songpage.html">song page</a>
+                </li>
+                <li>
+                    <a href="process.html">process</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+            </ul>
+
+            <div class="right menu">
+                <ul class="menu">
+                    <ul class="nav">
+                        <li>
+                            <a href="../process/tag1/GrimesSite1.html">Tag 1</a>
+                        </li>
+                        <li>
+                            <a href="../process/tag2/tag2-2.html">Tag 2</a>
+                        </li>
+                        <li>
+                            <a href="../process/tag3/flex-grow.html">Tag 3</a>
+                        </li>
+                        <li>
+                            <a href="../process/tag4/07-example.html">Tag 4</a>
+                        </li>
+                        <li>
+                            <a href="../process/tag5/tag5-1.html">Tag 5</a>
+                        </li>
+                        <li>
+                            <a href="../process/Tag6/02-exp-audio.html">Tag 6</a>
+                        </li>
+            </div>
+
+</body>
+
+</html>
