@@ -298,8 +298,8 @@ ul{
     margin: 0;
     padding: 0;
     display: flex;
-    margin-left: 14.em;
-    margin-top: -1.2em;
+    margin-left: 14.4em;
+    margin-top: -1.18em;
     
 }
 
@@ -316,6 +316,9 @@ ul li{
 ul.blow li
 {
     animation: smoke 3s infinite linear;
+    top: 0;
+    left: 0;
+
     
 }
 
@@ -649,7 +652,13 @@ ul li:nth-child(5)
 {
     animation-name: alone;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 13s;
+}
+
+.alonee{
+    animation-name: alonee;
+    animation-iteration-count: infinite;
+    animation-duration: 13s;
 }
 
 @keyframes alone {
@@ -668,6 +677,27 @@ ul li:nth-child(5)
     }
 
 }
+
+@keyframes alonee{
+    0%{
+        transform: translateX(0);
+    }
+
+    30%{
+        transform: translateX(40vw) translateY(-3vw);
+    }
+
+    70%{
+        transform: translateX(40vw) translateY(-3vw);
+    }
+
+
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
 
 
 
