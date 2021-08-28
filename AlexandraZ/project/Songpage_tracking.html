@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Page</title>
+    <link rel="stylesheet" href="oblivion.css">
+    <style>
+        .animation_row1 {
+            width: 100%;
+            height: 40vh;
+            border: 1px solid #74CAA4;
+            overflow: hidden;
+        }
+        
+        .animation_row1.five_col {
+            display: flex;
+        }
+        
+        .animation_row1.five_col div {
+            display: flex;
+            border: 1px solid #74CAA4;
+            flex-basis: 20vw;
+        }
+        
+        section {
+            height: 100vh;
+            display: flex;
+        }
+        
+        section.first {
+            flex-direction: row;
+        }
+        
+        section.second {
+            flex-direction: column;
+        }
+        
+        .left {
+            background-color: black;
+            flex-basis: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #C4C4C4;
+            overflow: hidden;
+        }
+        
+        .right {
+            background-color: #74CAA4;
+            flex-basis: 40%;
+            color: black;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .menu a:hover {
+            color: #ffffff;
+        }
+        
+        .top {
+            font-size: 100px;
+        }
+        
+        .bottom {
+            font-size: 100px;
+        }
+        
+        .move {
+            animation-name: lefttoright;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition: all 1s ease-in;
+        }
+        
+        .walk {
+            animation-name: walk;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes walk {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        @keyframes lefttoright {
+            0% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(30%);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        .animation_row1 {
+            position: relative;
+        }
+        
+        .animation_row1_flex {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            animation-name: box-blink;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes box-blink {
+            0% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            35% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            36% {
+                background-color: white;
+                color: white;
+            }
+            37% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            78% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            79% {
+                background-color: white;
+                color: white;
+            }
+            80% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            95% {
+                background-color: #000000;
+                color: #C4C4C4;
+            }
+            96% {
+                background-color: white;
+                color: white;
+            }
+            100% {
+                background-color: white;
+                color: white;
+            }
+        }
+        
+        .animation_down_row1_h1 {
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            top: 0;
+            bottom: 0;
+            transform: translateY(-25px);
+        }
+        
+        .animation_down_row1_h1_normal {
+            transform: translateY(-25px);
+        }
+        
+        .animation_row1 .animation_down_row1_h1.first {
+            animation-name: move-first;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        .animation_row1 .animation_down_row1_h1.second {
+            animation-name: move-second;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        .animation_row1 .animation_down_row1_h1.third {
+            animation-name: move-third;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        .animation_row1 .animation_down_row1_h1.fourth {
+            animation-name: move-fourth;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes move-first {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        @keyframes move-second {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        @keyframes move-third {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(40px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        @keyframes move-fourth {
+            0% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: translateY(60px);
+            }
+            100% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        .einmitten {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .kreis {
+            width: 2vw;
+            height: 2vw;
+            background-color: white;
+            border-radius: 50%;
+            animation-name: point;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            overflow: hidden;
+        }
+        
+        @keyframes point {
+            0% {
+                border-radius: 50%;
+                transform: scale(1);
+            }
+            100% {
+                border-radius: 0%;
+                transform: scale(10);
+            }
+        }
+        
+        .glitch {
+            animation: glitch 1s linear infinite;
+        }
+        
+        @keyframes glitch {
+            2%,
+            64% {
+                transform: translate(2px, 0) skew(0deg);
+            }
+            4%,
+            60% {
+                transform: translate(-2px, 0) skew(0deg);
+            }
+            62% {
+                transform: translate(0, 0) skew(5deg);
+            }
+        }
+        
+        .glitch:before,
+        .glitch:after {
+            content: attr(title);
+            position: absolute;
+            left: 0;
+        }
+        
+        .glitch:before {
+            animation: glitchTop 1s linear infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+        }
+        
+        @keyframes glitchTop {
+            2%,
+            64% {
+                transform: translate(2px, -2px);
+            }
+            4%,
+            60% {
+                transform: translate(-2px, 2px);
+            }
+            62% {
+                transform: translate(13px, -1px) skew(-13deg);
+            }
+        }
+        
+        .glitch:after {
+            animation: glitchBotom 1.5s linear infinite;
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+            -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        }
+        
+        @keyframes glitchBotom {
+            2%,
+            64% {
+                transform: translate(-2px, 0);
+            }
+            4%,
+            60% {
+                transform: translate(-2px, 0);
+            }
+            62% {
+                transform: translate(-22px, 5px) skew(21deg);
+            }
+        }
+        
+        h1 {
+            font-size: 40px;
+            text-align: center
+        }
+        
+        h1.boxschrift {
+            font-size: 70px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        h2 {
+            font-size: 15px;
+            text-align: center
+        }
+        
+        h3 {
+            font-size: 9px;
+            text-align: center
+        }
+        
+        h4 {
+            font-size: 40px;
+            text-align: left;
+        }
+        
+        h5 {
+            font-size: 15px;
+            text-align: left;
+        }
+        
+        h6 {
+            font-size: 9px;
+            text-align: left;
+        }
+        
+        h6.h7 {
+            font-size: 70px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        h6.h8 {
+            font-size: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        h1.h9 {
+            -webkit-text-stroke: white;
+            color: black;
+        }
+        
+        @media screen and (max-width: 768px) {
+            section {
+                height: auto;
+            }
+            .animation_row1 {
+                height: auto;
+            }
+            section.first {
+                flex-direction: column;
+            }
+            .right {
+                order: -1;
+            }
+            .mobile_hidden {
+                display: none;
+            }
+            .animation_row1.five_col div {
+                flex-basis: calc(50vw - 10px);
+                flex-shrink: 0;
+            }
+            .animation_row1.five_col {
+                flex-wrap: wrap;
+            }
+            .animation_row1.five_col div.full-mobile {
+                flex-basis: calc(100vw - 10px);
+                height: 20vw;
+            }
+            @keyframes point {
+                0% {
+                    border-radius: 80%;
+                    transform: scale(1);
+                }
+                100% {
+                    border-radius: 0%;
+                    transform: scale(1, 10);
+                    width: calc(100vw - 10px);
+                }
+            }
+        }
+        
+        .glow {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 2em;
+            letter-spacing: 4px;
+            overflow: hidden;
+            background: linear-gradient(90deg, #000, #fff, #000);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: animate 3s linear infinite;
+        }
+        
+        @keyframes glow {
+            0% {
+                background-position: -500%;
+            }
+            100% {
+                background-position: 500%;
+            }
+        }
+        
+        .fontcolorred {
+            color: red;
+        }
+        
+        .fontcolorblue {
+            color: blue;
+        }
+        
+        .fontsizelarge {
+            font-size: xxx-large;
+        }
+    </style>
+    <script>
+        function profiling() {
+
+            let pAge = getUserAge();
+            pAge.then(function(success) {
+                let h = document.getElementsByTagName("h6");
+                h[0].innerText = success.age;
+                console.log("A: " + success.age);
+            });
+
+            let pGender = getUserGender();
+            pGender.then(function(success) {
+                console.log("G: " + success.gender);
+                let h = document.body.getElementsByTagName("h6");
+                h[0].innerText = h[0].innerText + " " + success.gender;
+            });
+
+            let pInterest = getUserInterest();
+            pInterest.then(function(success) {
+                console.log("I: " + success.interest);
+                let h = document.body.getElementsByTagName("h6");
+                h[0].innerText = h[0].innerText + " " + success.interest;
+            });
+
+            let pFull = getUserProfile();
+            pFull.then(function(success) {
+                console.log("F: " + success.profile.ageBucket);
+                let h = document.body.getElementsByTagName("h6");
+                h[0].innerText = h[0].innerText + " " + success.profile.ageBucket;
+                let myage = success.profile.ageBucket
+                let tl = document.getElementById("h4title");
+                if (myage.startsWith("26")) {
+                    tl.className = "fontcolorred";
+                } else if (myage.startsWith("36")) {
+                    tl.className = "fontcolorblue";
+                } else if (myage.startsWith("56") || myage.startsWith("6")) {
+                    tl.className = "fontsizelarge";
+                }
+            });
+        };
+
+        function getUserAge() {
+            console.log("..loading Age.");
+            return fetch("http://localhost:8888/api/getdata/v2/", {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({
+                    "age": data.age
+                }))
+                //.then(data => console.log(data))
+        }
+
+        function getUserGender() {
+            console.log("..loading Gender.");
+            return fetch("http://localhost:8888/api/getdata/v1/", {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({
+                    "gender": data.gender
+                }))
+                //.then(data => console.log(data))
+        }
+
+        function getUserInterest() {
+            console.log("..loading Interest.");
+            return fetch("http://localhost:8888/api/getdata/v5/", {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({
+                    "interest": data.interestBucket
+                }))
+                //.then(data => console.log(data))
+        }
+
+        function getUserProfile() {
+            console.log("..loading profile.");
+            return fetch("http://localhost:8888/api/getdata/v5/", {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({
+                    "profile": data
+                }))
+                //.then(data => console.log(data))
+        }
+    </script>
+
+</head>
+
+<body onload="profiling();">
+
+    <button class="btn" onclick="playAudio()">Play Audio</button>
+
+    <audio src="Sound/Grimes-Oblivion.mp3" autoplay="autoplay"></audio>
+    <script src="../process/Tag6/javascript/js/play.js"></script>
+
+
+
+    <section class="first">
+        <div class="left">
+            <div class="top move">
+                Oblivion
+            </div>
+            <div class="bottom move">
+                Grimes
+            </div>
+
+        </div>
+        <div class="right">
+            <ul class="menu">
+                <li>
+                    <a href="Songpage.html">song page</a>
+                </li>
+                <li>
+                    <a href="process.html">process</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+            </ul>
+            <h4 id="h4title">
+                This website interactively plays with the lyrics of the song "Oblivion" <br>
+            </h4>
+            <h6>
+                HFIAD 2021
+            </h6>
+            <h5>
+                During the class of Grid Moduls we explored current webtrends and technologies. My project was build up on my chosen Song of Grimes «Oblivion». This Website shows a typographic interaction with the sound. Have fun exploring my site!
+
+            </h5>
+            <h6>
+                Educator: Hanna Züllig <br> Design: Alexandra Ziegler
+            </h6>
+
+
+        </div>
+    </section>
+
+    <section class="second">
+        <div class="animation_row1">
+            <h1 class="animation_down_row1_h1_normal">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 first">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 second">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 third mobile_hidden">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+            <h1 class="animation_down_row1_h1 fourth mobile_hidden">
+                scroll scroll scroll scroll scroll scroll scroll scroll
+            </h1>
+        </div>
+
+        </div>
+
+        <div class="animation_row1 animation_row1_flex">
+            <h6 class="walk h7">
+                I never walk about after dark
+            </h6>
+        </div>
+
+        <div class="animation_row1 five_col">
+            <div class="einmitten">
+                <h1 class="boxschrift">
+                    It‘s
+                </h1>
+            </div>
+            <div class="einmitten">
+                <h1 class="boxschrift">
+                    my
+                </h1>
+            </div>
+            <div class="einmitten full-mobile">
+                <h1 class="point kreis">
+                </h1>
+            </div>
+            <div class="einmitten">
+                <h1 class="boxschrift">
+                    of
+                </h1>
+            </div>
+            <div class="einmitten">
+                <h1 class="boxschrift">
+                    view
+                </h1>
+            </div>
+        </div>
+
+        <div class="animation_row1 animation_row1_flex">
+            <h1 class="h9">
+                Cause someone could break your neck
+            </h1>
+        </div>
+
+        <div class="animation_row1">
+            <h1 class="animation_down_row1_h1_normal">
+                See you on a dark night See you on a dark night
+            </h1>
+            <h1 class="animation_down_row1_h1 first">
+                See you on a dark night See you on a dark night
+            </h1>
+            <h1 class="animation_down_row1_h1 second">
+                See you on a dark night See you on a dark night
+            </h1>
+        </div>
+
+        <div class="animation_row1 animation_row1_flex">
+            <h1 class="walk h8">
+                See you on a dark night See you on a dark night
+            </h1>
+        </div>
+
+
+
+    </section>
+</body>
+
+</html>
