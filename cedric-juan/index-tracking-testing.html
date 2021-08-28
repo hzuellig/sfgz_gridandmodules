@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid & Modules - Cédric Juan</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-3.6.0.min.js" ></script>
+        <script>
+          function profiling(){
+
+          let pAge = getUserAge();
+          pAge.then(function(success){
+
+              let h = document.body.getElementsByTagName("h1");
+    	      h[0].innerText = h[0].innerText + ", " + success.age;
+    	      console.log("A: "+success.age);
+
+              if(success.age >= 18 && success.age <= 35) {
+                  jQuery("#MainContainer").css('background', '#451223');
+              } else {
+                  jQuery("#MainContainer").css('background', '#122345');
+              }
+              //h[0].addStyle('', '') = success.age;
+              console.log("A: "+success.age);
+          });
+
+          let pGender = getUserGender();
+          pGender.then(function(success){
+              console.log("G: "+success.gender);
+              let h = document.body.getElementsByTagName("h2");
+              h[0].innerText = h[0].innerText + " " + success.gender;
+          });
+
+          let pInterest = getUserInterest();
+          pInterest.then(function(success){
+              console.log("I: "+success.interest);
+              let h = document.body.getElementsByTagName("a");
+              h[0].innerText = h[0].innerText + " " + success.interest;
+          });
+
+          let pFull = getUserProfile();
+          pFull.then(function(success){
+              console.log("F: "+success.profile.ageBucket);
+              let h = document.body.getElementsByTagName("h1");
+              //h[0].innerText = h[0].innerText + " " + success.profile.ageBucket;
+              let myage = success.profile.ageBucket
+              let tl = document.getElementById("MainContainer");
+              if (myage.startsWith("26")) {
+              tl.className = tl.className + " " + "fontcolorred";
+              } else if (myage.startsWith("36")){
+              tl.className = tl.className + " " + "fontcolorblue";
+              } else if (myage.startsWith("56") || myage.startsWith("6")){
+              tl.className = tl.className + " " + "fontsizelarge";
+              }
+          });
+          };
+          function getUserAge(){
+          console.log("..loading Age.");
+          return fetch("http://localhost:8888/api/getdata/v2/",
+                  {
+                  referrerPolicy: 'no-referrer-when-downgrade',
+                  mode: 'cors'
+                  })
+              .then(response => response.json())
+              .then(data => ({"age" : data.age}))
+              //.then(data => console.log(data))
+          }
+          function getUserGender(){
+          console.log("..loading Gender.");
+          return fetch("http://localhost:8888/api/getdata/v1/",
+                  {
+                  referrerPolicy: 'no-referrer-when-downgrade',
+                  mode: 'cors'
+                  })
+              .then(response => response.json())
+              .then(data => ({"gender" : data.gender}))
+              //.then(data => console.log(data))
+          }
+          function getUserInterest(){
+          console.log("..loading Interest.");
+          return fetch("http://localhost:8888/api/getdata/v5/",
+                  {
+                  referrerPolicy: 'no-referrer-when-downgrade',
+                  mode: 'cors'
+                  })
+              .then(response => response.json())
+              .then(data => ({"interest" : data.interestBucket}))
+              //.then(data => console.log(data))
+          }
+          function getUserProfile(){
+          console.log("..loading profile.");
+          return fetch("http://localhost:8888/api/getdata/v5/",
+                  {
+                  referrerPolicy: 'no-referrer-when-downgrade',
+                  mode: 'cors'
+                  })
+              .then(response => response.json())
+              .then(data => ({"profile" : data}))
+              //.then(data => console.log(data))
+          }
+        </script>
+        <style>
+            html, body {
+                overflow: auto;
+            }
+            .main {height: auto;}
+
+            .info-card p:not([class]) {line-height: 1.4;font-size: 14px;}
+            .home-project-details {color: rgba(255,255,255,0.8);}
+            .home-project-details b {font-weight:500;color: #ffffff;}
+
+            .fontcolorred {color:#fae0e0}
+            .fontcolorblue {color:#cfd1f7}
+            .fontsizelarge {font-weight: 900 !important;text-shadow: 3px 3px 6px #191618;}
+        </style>
+    </head>
+    <body onload="profiling();">
+
+        <!-- >div class="header" w3-include-html="includes/nav.html"></div-->
+        <div class="main">
+            <div id="MainContainer" class="main-container">
+                <div class="main-inner">
+                    <div class="info-card">
+                        <a href="project/index.html">Zum Projekt (Finale Version)--></a></a>
+                    </div>
+                    <div class="info-card">
+                        <h1>Cédric Juan</h1>
+                        <h2>SFGZ - Modul: Grid & Modules - 07.2021</h2>
+
+                        <p class="home-project-details">Projekt: <b>Dance with me</b><br />Song: <b>Harder, Better, Faster, Stronger</b><br />Artist: <b>Daft Punk</b></p>
+
+                        <p>Inspiriert durch eine Drum-Machine oder Launchpad, kann mittels Tasten die Songtexte abgespielt werden. Dabei kann eine Instrumental Version des Songs abgespielt werden um im Stil von Karaoke mitzusingen. Viel Spass!</p>
+                    </div>
+                    <div class="info-card">
+                        <a href="process/tag1/tag1-1.html">Tag 1 (folgt...)</a></a>
+                    </div>
+                    <div class="info-card">
+                        <a href="process/tag2/tag2-1.html">Tag 2 (folgt...)</a></a>
+                    </div>
+                    <div class="info-card">
+                        <a href="process/tag3/tag3-1.html">Tag 3 (folgt...)</a></a>
+                    </div>
+                    <div class="info-card">
+                        <a href="process/tag4/tag4-1.html">Tag 4 (folgt...)</a></a>
+                    </div>
+                    <div class="info-card">
+                        <a href="process/tag5/tag5-1.html">Tag 5 (folgt...)</a></a>
+                    </div>
+                    <div class="info-card">
+                        <a href="process/tag6/tag6-1.html">Tag 6 (folgt...)</a></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+
+
+
+
+        <script>
+        includeHTML();
+        </script>
+    </body>
+</html>
