@@ -1,8 +1,8 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "acumin-pro";
 }
 
-a { font-family: Arial, Helvetica, sans-serif;
+a { font-family: "acumin-pro";
     font-size: 18px;
     text-decoration: none;
     list-style-type: none;
@@ -28,9 +28,9 @@ a:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 100vw;
 }
 
 .item{
-    width: 400px;
+    width: 33vw;
 }

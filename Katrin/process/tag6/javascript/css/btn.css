@@ -1,0 +1,20 @@
+.btn {
+    position: relative;
+
+    display: block;
+    padding: 30px;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 5px 7px rgba(43, 45, 196, 0.6);
+
+    background-color: rgba(107, 16, 138, 0.85);
+    color: #ecf0f1;
+    font-size: 4rem;
+
+    transition: background-color .3s;
+}
+

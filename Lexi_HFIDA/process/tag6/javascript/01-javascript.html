@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/btn.css" />
+
+    <title>JavaScript Intro</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            display:flex;
+            min-height:100vh;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        h1{
+            font-size:2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            flex: 0 0 100%;
+            text-align: center;
+        }
+        body.night{
+            background-color:rgb(14, 14, 14);
+            color:rgb(245, 244, 244);
+        }
+        .btns {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}
+    </style>
+</head>
+
+<body>
+    <a href="../../../about.html" class="btns">zurück</a>
+    <button class="btn" onclick="toggleFarbe()">Toggle Day/Night</button>
+    <h1>bonjour - good night</h1>
+    <p>This is a Nightmode page and we love it.</p>
+</body>
+
+<script>
+    function toggleFarbe(){
+        //https://developer.mozilla.org/de/docs/Web/API/Document/querySelector
+       //https://www.w3schools.com/howto/howto_js_toggle_class.asp
+       let el = document.querySelector('body');
+       el.classList.toggle('night');
+    }
+</script>
+
+</html>

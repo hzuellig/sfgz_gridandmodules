@@ -326,59 +326,7 @@
 
         }
 
-        @media only screen and (max-width: 1200px) {
-            body {
-                background-color: white;
-            }
-
-            .s {
-                color: white;
-            }
-
-            .a {
-                color: white;
-                -webkit-text-stroke-width: 3px;
-                -webkit-text-stroke-color: #1DB6C0;
-            }
-
-            .gn {
-                line-height: 60%;
-                color: #C01DB0;
-            }
-
-            .dana {
-                color: #C01DB0;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: #C01DB0;
-
-            }
-
-            .give {
-                opacity: 100%;
-                text-shadow: 0 0 2rem #1DB6C0;
-                color: #1DB6C0;
-                line-height: 100%;
-            }
-
-            .fakear {
-                color: white;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: #C01DB0;
-            }
-
-            .picked {
-                color: white;
-                -webkit-text-stroke-width: 3px;
-                -webkit-text-stroke-color: white
-            }
-
-
-
-            .looked {
-                color: #C01DB0;
-            }
-
-        }
+        
 
 
 
@@ -420,7 +368,7 @@
             
             animation: mover 0s infinite alternate;
             font-size: 80px;
-            margin-top: 150px;
+            margin-top: 80px;
             -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: #ffffff
         }
@@ -437,14 +385,14 @@
             }
 
             100% {
-                transform: translateY(-150px);
+                transform: translateY(-80px);
             }
         }
 
 
         .rose {
             font-size: 80px;
-            background-image: linear-gradient(90deg, yellow, red, purple);
+            background-image: linear-gradient(90deg, purple, red, purple);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: slidein 10s infinite;
@@ -499,88 +447,75 @@
 
 
         .container1 {
-            padding-top: 600px;
+            padding-top: 300px;
             display: flex;
+            flex-direction: column;
             width: 100%;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
             align-items: center;
 
 
         }
 
-        .never {
-        height: auto;
-        border: 1px solid red;
+        .nlf {
+            margin: 30px;
         }
+
+       
         
-        .never div{
+        .never {
             font-size: 4vw;
-            color: black;
-            -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color: black;
-            animation: swing-out-top-bck 0s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
-            animation-iteration-count: infinite;
-            opacity: 0;
+            color: #C01DB0;
+            animation: skaleB 4s infinite;
+            
            
         }
-        .never:hover div{
-animation-duration: 5s;
+       
+
+        
+        
+        .looked {
+            animation: skaleC 4s infinite;
+            font-size: 4vw;
+            color: white;
+            
+            
+           
         }
         
-        
 
-        @keyframes swing-out-top-bck {
-            0% {
-                -webkit-transform: rotateX(-100deg);
-                transform: rotateX(-100deg);
-                -webkit-transform-origin: top;
-                transform-origin: top;
-                
-                opacity: 0;
-            }
-
-            50% {
-                -webkit-transform: rotateX(0deg);
-                transform: rotateX(0deg);
-                -webkit-transform-origin: top;
-                transform-origin: top;
-                opacity: 1;
-            }
+        .froze {
+            animation: skaleB 4s infinite;
+            font-size: 4vw;
+            color: #1DB6C0;
             
         }
 
+        @keyframes skaleB {
+            0% {
+                transform:scale(1)
+            }
+            50% {
+                transform:scale(1.5)
+            }
+        }
+        @keyframes skaleC {
+            0% {
+                transform:scale(1.5)
+            }
+            50% {
+                
+                transform:scale(1)
+            }
+            100% {
+                
+                transform:scale(1.5)
+            }
+        }
 
 
-
-
-        .looked {
-            animation: swing-out-top-bck 4s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
-            font-size: 4vw;
-            color: blanchedalmond;
-        }
-        .looked div{
-            font-size: 4vw;
-            color: black;
-            -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color: black;
-            animation: swing-out-top-bck 0s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
-            animation-iteration-count: infinite;
-            opacity: 0;
-           
-        }
-        .looked:hover div{
-animation-duration: 5s;
-        }
-
-        .froze {
-            animation: swing-out-top-bck 0s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
-            font-size: 4vw;
-            color: #1DB6C0 0%;
-        }
-        .froze:hover {
-            color: #1DB6C0;;
-        }
+        
 
         
 
@@ -638,12 +573,13 @@ animation-duration: 5s;
         }
 
         .containermoon {
-            margin-top: 300px;
+            margin-top: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
             height: 1500px;
+            animation: spin 7s infinite ease;
 
 
         }
@@ -665,6 +601,7 @@ animation-duration: 5s;
                 -10px 0 80px #f0f,
                 10px 0 80px #0ff;
             animation: flickerAnimation 5s infinite;
+            
 
 
         }
@@ -717,12 +654,62 @@ animation-duration: 5s;
         a:hover {
             text-decoration: underline;
         }
+
+        .tried {
+            font-size: 7vw;
+            color: white;
+            position: absolute;
+            top: 4500px;
+            left: 1400px;
+            animation:color-me-in 6s ease-in-out infinite ;
+
+        }
+
+        .but {
+            font-size: 7vw;
+            color: white;
+            position: absolute;
+            top: 5100px;
+            left: 1400px;
+            animation:color-me-in 6s ease-in-out infinite ;
+        }
+
+        @keyframes color-me-in {
+            0% {
+              color: #1DB6C0;
+            }
+            
+            25% {
+                color: white;
+            }
+            50% {
+                color: black;
+            }
+            75% {
+                color: #C01DB0;
+            }
+            100% {
+                color: #1DB6C0;
+              }
+          }
+
+          .shine {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 2rem #ffffff;
+
+          }
+
+
+
     .containerI {
+        margin-top: 200px;
         display: flex;
         font-size: 10vw;
+        width: 100%;
     }
     .i {
         color: black;
+        font-size: 8vw;
             
 
 
@@ -735,6 +722,7 @@ animation-duration: 5s;
     }
     .i2 {
         color: black;
+        font-size: 8vw;
             
 
 
@@ -745,3 +733,232 @@ animation-duration: 5s;
         text-shadow: 0 0 2rem #1DB6C0;
 
     }
+
+    .containerpfeil {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        
+    }
+
+    .pfeil {
+        color: #C01DB0;
+        font-size: 3vw;
+        text-shadow: 0 0 2rem #C01DB0;
+        
+    }
+    
+    .pfeil2 {
+        color: #1DB6C0;
+        font-size: 3vw;
+        text-shadow: 0 0 2rem #1DB6C0;
+    }
+    
+    .pfeil3 {
+        color: white;
+        font-size: 3vw;
+        text-shadow: 0 0 2rem white;
+        
+    }
+
+    .containerYou {
+        margin-top: 600px;
+        font-size: 5vw;
+        display: flex;
+        justify-content: center;
+        
+
+    }
+    .admit {
+        color: #1DB6C0;
+    }
+    
+    .you {
+        color: rgb(255, 255, 255);
+            text-shadow: 0 0 2rem #ffffff;
+            animation: skaleYou 4s ease-in-out infinite;
+            
+            
+    }
+
+    @keyframes skaleYou {
+        0% {
+            transform:scale(1) 
+            
+        }
+        50% {
+            transform:scale(1.5)
+            
+        }
+        100% {
+            transform:scale(1)
+            
+        }
+    }
+
+    .containertime {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 600px;
+        font-size: 4vw;
+    }
+
+    .time {
+        color: white;
+
+    }
+
+    .time:hover {
+        color: #1DB6C0;
+            text-shadow: 0 0 2rem #1DB6C0;
+    }
+
+    .time1 {
+        color: white;
+
+    }
+
+    .time1:hover {
+        color: #C01DB0;
+            text-shadow: 0 0 2rem #C01DB0;
+    }
+
+    .time2 {
+        color: white;
+
+    }
+
+    .time2:hover {
+        color: #1DB6C0;
+            text-shadow: 0 0 2rem #1DB6C0;
+    }
+
+    .time3 {
+        color: white;
+
+    }
+
+    .time3:hover {
+        color: #C01DB0;
+            text-shadow: 0 0 2rem #C01DB0;
+    }
+
+    .containerImpressum {
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        height: 400px;
+        align-items: center;
+        background-color: black;
+        font-size: 1vw;
+        color: white;
+    }
+
+    .impressum {
+        margin-left: 40px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        body {
+            background-color: white;
+        }
+
+        .s {
+            color: white;
+        }
+
+        .a {
+            color: white;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #1DB6C0;
+        }
+
+        .gn {
+            line-height: 35%;
+            color: #C01DB0;
+        }
+
+        .dana {
+            color: #C01DB0;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #C01DB0;
+
+        }
+
+        .give {
+            opacity: 100%;
+            text-shadow: 0 0 2rem #1DB6C0;
+            color: #1DB6C0;
+            line-height: 100%;
+        }
+
+        .fakear {
+            color: white;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #C01DB0;
+        }
+
+        .picked {
+            color: #C01DB0;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #C01DB0;
+        }
+
+
+
+        .looked {
+            color: #C01DB0;
+        }
+
+        .containertime {
+            color: black;
+        }
+        .time {
+            color: black;
+    
+        }
+        .time1 {
+            color: black;
+    
+        }
+        .time2 {
+            color: black;
+    
+        }
+        .time3 {
+            color: black;
+    
+        }
+        .i {
+            color: white;
+            font-size: 8vw;
+                }
+                .i:hover {
+                    color: black;
+                    text-shadow: 0 0 2rem black;
+            
+
+    }
+
+    .moon {
+        box-shadow:
+                inset 0 0 50px rgb(0, 0, 0),
+                inset 20px 0 80px #f0f,
+                inset -20px 0 80px #0ff,
+                inset 20px 0 300px #f0f,
+                inset -20px 0 300px #0ff,
+                0 0 50px rgb(0, 0, 0),
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+    }
+    .moonlight {
+        color: black;
+    }
+}
+
+    
+    
+    
+    

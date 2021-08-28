@@ -74,5 +74,16 @@ p{
     bottom: 2vw;
 }
 
-.lexi{
-    text-shadow: 0px 2vw 0px #B79363, 0px 4vw 0px black;}
+
+
+
+.btn {
+    border-radius: 2px;
+    border: 1px solid #260801;
+    padding: 0.5em !important;
+    display: inline-block !important;
+    color: #260801;
+    text-decoration: none;
+    margin: 0.5em;
+    text-align: left !important;
+}

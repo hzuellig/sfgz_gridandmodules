@@ -67,7 +67,6 @@ flex-direction: column;
 
 
 .zeile{
-  
     animation-name: scale;
     animation-duration: 3s;
   }

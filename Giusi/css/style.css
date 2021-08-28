@@ -79,6 +79,22 @@ header strong span::before {
   left: 0.07em;
 }
 
+.project-btn {
+  background-color: black;
+  color: white;
+  padding: 0.3em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  cursor: pointer !important;
+}
+
+.project-btn a:after {
+  display: none;
+}
+
 #about {
   padding-right: 2em;
 }

@@ -1,33 +1,66 @@
-.nav ul {
-    list-style-type: none;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px;
-    margin: 0px;
-    height: 55px;
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(24, 0, 24);
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.95;
+}
+
+.overlay-content {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: white;
+  opacity: 0.5;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
   }
-  
-  .nav li a:hover {
-    background-color: rgb(24, 0, 24);
-    color: rgb(255, 255, 255);
-    margin: 0px;
-    padding: 18px;
-  }
-  
-  .nav li a {
-    display: block;
-    color: rgb(24, 0, 24);
-    text-align: center;
-    padding: 18px;
-    margin: 0px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-  
-  
+}
+
+.menuburger {
+  position: fixed;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  margin-right: 0;
+  margin-left: 95%;
+  margin-top: 10px;
+}
+ 
   h1 {
               font-family: 'Zilla Slab', serif;
               color: white;
