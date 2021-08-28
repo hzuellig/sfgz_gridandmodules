@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/day6.css" />
+    <title>Dream on</title>
+    <style>
+        .fontcolorred {
+            font-family: 'Antic Didone', serif;
+            font-size: 2em;
+            font-weight: bolder;
+            color: rgb(225, 0, 255);
+            font-style: italic;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fontcolorblue {
+            font-family: 'Antic Didone', serif;
+            font-size: 2em;
+            font-weight: bolder;
+            color: rgb(75, 105, 145);
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fontsizebolder {
+            font-family: 'Antic Didone', serif;
+            color: rgb(255, 255, 255);
+            font-size: 2em;
+            font-weight: bolder;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+
+    <script>
+        function profiling() {
+
+            let pAge = getUserAge();
+            pAge.then(function (success) {
+                let h = document.getElementById("h4title");
+                h.innerText = success.age;
+                console.log("A: " + success.age);
+            });
+
+            let pGender = getUserGender();
+            pGender.then(function (success) {
+                console.log("G: " + success.gender);
+                let h = document.getElementById("h4title");
+                h.innerText = h.innerText + " " + success.gender;
+            });
+
+            let pInterest = getUserInterest();
+            pInterest.then(function (success) {
+                console.log("I: " + success.interest);
+                let h = document.getElementById("h4title");
+                h.innerText = h.innerText + " " + success.interest;
+            });
+
+            let pFull = getUserProfile();
+            pFull.then(function (success) {
+                console.log("F: " + success.profile.ageBucket);
+                let h = document.getElementById("h4title");
+                h.innerText = h.innerText + " " + success.profile.ageBucket;
+                let myage = success.profile.ageBucket
+                let tl = document.getElementById("h4title");
+                if (myage.startsWith("26")) {
+                    tl.className = "fontcolorred";
+                } else if (myage.startsWith("36")) {
+                    tl.className = "fontcolorblue";
+                } else if (myage.startsWith("56") || myage.startsWith("6")) {
+                    tl.className = "fontsizebolder";
+                }
+            });
+        };
+        function getUserAge() {
+            console.log("..loading Age.");
+            return fetch("http://localhost:8888/api/getdata/v2/",
+                {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({ "age": data.age }))
+            //.then(data => console.log(data))
+        }
+        function getUserGender() {
+            console.log("..loading Gender.");
+            return fetch("http://localhost:8888/api/getdata/v1/",
+                {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({ "gender": data.gender }))
+            //.then(data => console.log(data))
+        }
+        function getUserInterest() {
+            console.log("..loading Interest.");
+            return fetch("http://localhost:8888/api/getdata/v5/",
+                {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({ "interest": data.interestBucket }))
+            //.then(data => console.log(data))
+        }
+        function getUserProfile() {
+            console.log("..loading profile.");
+            return fetch("http://localhost:8888/api/getdata/v5/",
+                {
+                    referrerPolicy: 'no-referrer-when-downgrade',
+                    mode: 'cors'
+                })
+                .then(response => response.json())
+                .then(data => ({ "profile": data }))
+            //.then(data => console.log(data))
+        }
+
+
+    </script>
+
+
+</head>
+
+<body onload="profiling();">
+    <section>
+        <div class="box_scroll mobile_hidden scrolldown" id="h4title">YOUR TRACKED
+        </div>
+
+        <div>
+            <iframe class="spotify mobile_hidden" src="https://open.spotify.com/embed/track/0PbikrOTyOsJ8hLTPvRPKH"
+                width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="aerosmith mobile_hidden">
+            a Song by Aerosmith
+        </div>
+
+        <div class="dreamonrechts fixed">
+            Dream on Dream on Dream on Dream on Dream on
+        </div>
+    </section>
+    <section>
+        <div class="row verse">
+            <div class="links mobile_hidden">
+                Every time when I look in the</div>
+            <div class="trigger rechts mirrornormal ">
+                MIRROR
+                <div class="mirror trigger">MIRROR</div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="row verse">
+            <div class="links mobile_hidden">
+                All these lines on <br>
+                my face getting clearer</div>
+            <div class="rechts gone">
+                THE PAST IS GONE
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row verse">
+            <div class="links mobile_smaller">
+                <div class="sun"></div>
+            </div>
+            <div class="rechts">
+                And it went by,<br>
+                <span class="dawn">
+                    LIKE <br>
+                    DUSK <br>
+                    TO <br>
+                    DAWN</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div class="row sing">
+                <div class="box">sing with me <br>
+                    <span class="biggerbox mobile_hidden"></span>sing for the year <br></span>
+                    <span class="biggestbox">sing for the laughter <br></span>
+                    <span class="biggerbox">and sing for the tear <br></span>
+                    <span class="biggerbox mobile_hidden">sing with me <br></span>
+                    <span class="biggestbox mobile_hidden">if its just for today <br></span>
+                    <span class="biggerbox mobile_hidden">maybe tomorrow the good lord<br></span>
+                    <span class="biggestbox mobile_hidden">will take you away</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <span class="dreamonoutline"> Dream on <br></span>
+            <span class="dreamonoutline second"> Dream on <br></span>
+            <span class="dreamonoutline third"> Dream on <br></span>
+            <span class="dreamonoutline forth"> Dream on <br></span>
+            <span class="dreamonoutline fifth mobile_hidden"> Dream on <br></span>
+            <span class="dreamonoutline sixth mobile_hidden"> Dream on <br></span>
+            <span class="dreamonoutline seventh mobile_hidden"> Dream on</span>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <span class="dreamuntil">true<br></span>
+            <span class="dreamuntil second">come<br></span>
+            <span class="dreamuntil third">dreams<br></span>
+            <span class="dreamuntil forth">your<br></span>
+            <span class="dreamuntil fifth mobile_hidden">until<br></span>
+            <span class="dreamuntil sixth mobile_hidden">Dream<br></span>
+            <span class="dreamuntil seventh"></span>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div class="row sing">
+                <div class="box">sing with me <br>
+                    <span class="biggerbox mobile_hidden"></span>sing for the year <br></span>
+                    <span class="biggestbox">sing for the laughter <br></span>
+                    <span class="biggerbox">and sing for the tear <br></span>
+                    <span class="biggerbox mobile_hidden">sing with me <br></span>
+                    <span class="biggestbox mobile_hidden">if its just for today <br></span>
+                    <span class="biggerbox mobile_hidden">maybe tomorrow the good lord<br></span>
+                    <span class="biggestbox mobile_hidden">will take you away</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="moon1 mobile_hidden">
+        </div>
+        <div class="circle1">
+        </div>
+        <div class="moon2 mobile_hidden">
+        </div>
+        <div class="circle2 mobile_hidden">
+        </div>
+        <div class="moon3">
+        </div>
+        <div class="moon4 mobile_hidden">
+        </div>
+    </section>
+</body>
+
+</html>
