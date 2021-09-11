@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mod Game</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+  </head>
+  <!--
+      Derived from:
+      https://codepen.io/jerrylow/pen/goKRwN
+      See also: https://speckyboy.com/pure-css-games/
+    -->
+  <body>
+    <form>
+      <input class="you" id="you-1" name="you" type="radio" />
+      <input class="you" id="you-2" name="you" type="radio" />
+      <input class="you" id="you-3" name="you" type="radio" />
+
+      <input class="skynet" id="skynet-1" name="skynet" type="radio" />
+      <input class="skynet" id="skynet-2" name="skynet" type="radio" />
+      <input class="skynet" id="skynet-3" name="skynet" type="radio" />
+
+      <div class="options">
+	<label class="r" for="you-1"></label>
+	<label class="p" for="you-2"></label>
+	<label class="s" for="you-3"></label>
+      </div>
+
+      <div class="game">
+	<div class="go">
+	  <label for="skynet-1"></label>
+	  <label for="skynet-2"></label>
+	  <label for="skynet-3"></label>
+	</div>
+      </div>
+      <div class="it">
+	<div class="r"></div>
+	<div class="p"></div>
+	<div class="s"></div>
+      </div>
+      <div class="results">
+	<div class="win">
+	  Wird sicher gut!
+	</div>
+	<div class="lose">
+	  Kein Bock auf Koalition!
+	</div>
+	<div class="tie">
+    Untergang
+	</div>
+	<button type="reset">Ach komm</button>
+      </div>
+    </form>
+  </body>
+</html>
