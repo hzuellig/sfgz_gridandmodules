@@ -1,0 +1,317 @@
+html,
+body,
+form {
+    height: 100%;
+}
+
+body {
+    background-image: url("Video_Flower.mp4");
+    background-size: cover;
+    font-family: "Leiko-Regular.otf";
+}
+
+@font-face {
+    font-family: "Leiko-Regular.otf";
+    src: url(Leiko-Regular.otf);
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    left: 50%;
+    opacity: 0.01;
+    position: fixed;
+    top: 50%;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+}
+
+.options label {
+    background-color: #E0D6AF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 120px;
+    margin: 10px auto;
+    transition: transform 0.2s;
+    transform: scale(1);
+    width: 120px;
+}
+
+.options label:hover {
+    background-color: #dce96d;
+    background-size: 65%;
+}
+
+.options label.r {
+    background-image: url("Retroflower_Blue.png");
+    background-size: 50%;
+}
+
+.options label.r:hover {
+    background-size: 55%;
+}
+
+.options label.p {
+    background-image: url("Retroflower_Grün.png");
+}
+
+.options label.s {
+    background-image: url("Retroflower_Lila.png");
+}
+
+input.you:checked~.options label {
+    transform: scale(0.8);
+}
+
+input.you:nth-of-type(1):checked~.options label.r,
+input.you:nth-of-type(2):checked~.options label.p,
+input.you:nth-of-type(3):checked~.options label.s {
+    background-color: #BFCCA3;
+    transform: scale(1.25);
+}
+
+.it {
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    width: 120px;
+}
+
+.it div {
+    background-color: #BFCCA3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    border-radius: 50%;
+    display: none;
+    height: 120px;
+    transform: scale(1.25);
+    width: 120px;
+}
+
+.it div.r {
+    background-image: url("Retroflower_Blue.png");
+    background-size: 50%;
+}
+
+.it div.p {
+    background-image: url("Retroflower_Grün.png");
+}
+
+.it div.s {
+    background-image: url("Retroflower_Lila.png");
+}
+
+.game {
+    border-radius: 50%;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    z-index: 10;
+}
+
+.game:before,
+.game:after {
+    align-items: center;
+    background: #dce96d;
+    color: white;
+    content: "Choose your Flowerpower";
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.game:after {
+    background: #dce96d;
+    content: "Bloom";
+    cursor: pointer;
+    font-size: 26px;
+    pointer-events: none;
+    transition: font 0.2s;
+    z-index: 1;
+}
+
+.game:hover:after {
+    font-size: 30px;
+}
+
+.game .go {
+    -webkit-animation-duration: 0.02s;
+    animation-duration: 0.02s;
+    -webkit-animation-name: random;
+    animation-name: random;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+.game .go:active {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.game label {
+    cursor: pointer;
+    height: 120px;
+    width: 120px;
+}
+
+.rotate {
+    -webkit-animation: rotate 5s normal linear infinite;
+    animation: rotate 5s normal linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25% {
+        -webkit-transform: rotate3d(0, 0, 1, 90deg);
+        transform: rotate3d(0, 0, 1, 90deg);
+    }
+    50% {
+        -webkit-transform: rotate3d(0, 0, 1, 180deg);
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+    75% {
+        -webkit-transform: rotate3d(0, 0, 1, 270deg);
+        transform: rotate3d(0, 0, 1, 270deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+input.skynet:checked~.game .go {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.spin @-webkit-keyframes random {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-240px);
+    }
+}
+
+@keyframes random {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-240px);
+    }
+}
+
+
+/**
+ * Start
+ **/
+
+input.you:checked~.game:before {
+    display: none;
+}
+
+
+/**
+ * Results
+ **/
+
+input#you-1:checked~input#skynet-1:checked~.results .tie,
+input#you-2:checked~input#skynet-2:checked~.results .tie,
+input#you-3:checked~input#skynet-3:checked~.results .tie {
+    display: flex;
+}
+
+input#you-1:checked~input#skynet-3:checked~.results .win,
+input#you-2:checked~input#skynet-1:checked~.results .win,
+input#you-3:checked~input#skynet-2:checked~.results .win {
+    display: flex;
+}
+
+input#you-1:checked~input#skynet-2:checked~.results .lose,
+input#you-2:checked~input#skynet-3:checked~.results .lose,
+input#you-3:checked~input#skynet-1:checked~.results .lose {
+    display: flex;
+}
+
+input#skynet-1:checked~.it .r,
+input#skynet-2:checked~.it .p,
+input#skynet-3:checked~.it .s {
+    display: flex;
+}
+
+input.you:checked~input.skynet:checked~.results {
+    display: flex;
+}
+
+.results {
+    align-items: center;
+    display: none;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.results .win,
+.results .lose,
+.results .tie {
+    align-items: center;
+    background: #dce96d;
+    border-radius: 50%;
+    color: white;
+    display: none;
+    font-size: 40px;
+    height: 140px;
+    justify-content: center;
+    width: 140px;
+}
+
+.results button {
+    background: #dce96d;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: wait;
+    height: 40px;
+    margin: 20px 0 -60px;
+    width: 80px;
+}
