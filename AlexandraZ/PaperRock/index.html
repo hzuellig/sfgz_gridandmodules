@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mod Game</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="page.css">
+</head>
+<!--
+      Derived from:
+      https://codepen.io/jerrylow/pen/goKRwN
+      See also: https://speckyboy.com/pure-css-games/
+    -->
+
+<body>
+
+    <video playsinline autoplay muted loop poster="Video_Flower.mp4">
+    <source src="Video_Flower.mp4" type="video/webm">
+    <source src="Video_Flower.mp4" type="video/mp4">
+  </video>
+
+    <form>
+        <input class="you" id="you-1" name="you" type="radio" />
+        <input class="you" id="you-2" name="you" type="radio" />
+        <input class="you" id="you-3" name="you" type="radio" />
+
+        <input class="skynet" id="skynet-1" name="skynet" type="radio" />
+        <input class="skynet" id="skynet-2" name="skynet" type="radio" />
+        <input class="skynet" id="skynet-3" name="skynet" type="radio" />
+
+        <div class="options">
+            <label class="r rotate" for="you-1"></label>
+            <label class="p rotate" for="you-2"></label>
+            <label class="s rotate" for="you-3"></label>
+        </div>
+
+        <div class="game">
+            <div class="go">
+                <label for="skynet-1"></label>
+                <label for="skynet-2"></label>
+                <label for="skynet-3"></label>
+            </div>
+        </div>
+        <div class="it ">
+            <div class="r"></div>
+            <div class="p"></div>
+            <div class="s"></div>
+        </div>
+        <div class="results">
+            <div class="win">
+                Freedom
+            </div>
+            <div class="lose">
+                Peace
+            </div>
+            <div class="tie">
+                Love Forever
+            </div>
+            <button type="reset">Again</button>
+        </div>
+    </form>
+</body>
+
+</html>
