@@ -1,0 +1,141 @@
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(24, 0, 24);
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.95;
+}
+
+.overlay-content {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: white;
+  opacity: 0.5;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.menuburger {
+  position: fixed;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  margin-right: 0;
+  margin-left: 95%;
+  margin-top: 10px;
+}
+ 
+  h1 {
+              font-family: 'Zilla Slab', serif;
+              color: white;
+              padding-bottom: 50px;
+              font-weight: 50;
+              font-size: 4em;
+                      }
+  
+  h2 {
+              color: rgb(255, 255, 255);
+              letter-spacing: 10px;
+              text-align: center;
+              padding: 0px;
+              margin: 0px;
+              margin-bottom: 10px;
+              padding-left: 80px;
+          }
+  
+  
+          body {
+            background-color: rgb(24, 0, 24);
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            padding: 0px;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 100px;
+            margin: 0px;
+        }
+  
+      
+          ul {
+              list-style-type: none;
+              background-color: rgb(255, 255, 255);
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              
+            }
+            
+            
+            
+            li a {
+              display: block;
+              background-color: rgb(255, 255, 255);
+              color: rgb(24, 0, 24);
+              text-align: center;
+              padding: 15px;
+              text-decoration: none;
+              margin: 0px;
+            }
+            
+            li a:hover {
+              background-color: rgb(24, 0, 24);
+              color: rgb(255, 255, 255);
+            }
+  
+            .container {
+              width: 100%;
+              height: 200px;
+              display: flex;
+            }
+  
+  
+            .text-fluss {
+              font-family: 'Raleway', sans-serif;
+              color: rgb(255, 255, 255);
+              font-size: 1.5vw;
+              line-height: 140%;
+              padding-left: 40px;
+              letter-spacing: 3px;
+              flex-basis:auto;
+              flex-direction: column;
+              text-align: left;
+  
+                }
